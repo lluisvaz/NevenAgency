@@ -58,7 +58,7 @@ export default function Home() {
             Home Services Marketing Agency
           </h2>
           
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-heading font-bold uppercase leading-[0.95] mb-6 md:mb-10 text-black tracking-tight">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-heading font-bold uppercase leading-[0.95] mb-6 md:mb-10 text-black tracking-tight">
             Championing<br />
             Hometown Heroes
           </h1>
