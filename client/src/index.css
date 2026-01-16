@@ -37,7 +37,7 @@
   --font-sans: 'Gabarito', sans-serif;
   --font-heading: 'Gabarito', sans-serif;
   
-  --radius: 0.25rem;
+  --radius: 0.25rem; /* 4px */
 }
 
 @layer base {
