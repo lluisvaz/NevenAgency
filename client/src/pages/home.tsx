@@ -19,13 +19,13 @@ export default function Home() {
       </div>
 
       {/* Navigation */}
-      <nav className="relative z-50 w-full px-6 py-4 flex items-center justify-between">
-        <div className="flex items-center gap-12">
+      <nav className="relative z-50 w-full px-4 md:px-6 py-4 flex items-center justify-between">
+        <div className="flex items-center gap-4 lg:gap-12">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 text-2xl font-bold font-heading tracking-tight text-black">
-            <CheckCircle2 className="w-8 h-8 text-black" strokeWidth={2.5} />
+          <Link href="/" className="flex items-center gap-2 text-xl md:text-2xl font-bold font-heading tracking-tight text-black shrink-0">
+            <CheckCircle2 className="w-6 h-6 md:w-8 md:h-8 text-black" strokeWidth={2.5} />
             <span>HOOK</span>
-            <span className="font-light text-gray-500 text-sm mt-1 ml-1 tracking-widest">AGENCY</span>
+            <span className="font-light text-gray-500 text-xs md:text-sm mt-1 ml-1 tracking-widest">AGENCY</span>
           </Link>
           
           {/* Desktop Menu */}
@@ -40,58 +40,58 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="hidden lg:flex items-center gap-6">
-          <div className="flex items-center gap-2 text-gray-800">
+        <div className="flex items-center gap-4 md:gap-6">
+          <div className="hidden sm:flex items-center gap-2 text-gray-800">
             <Phone className="w-4 h-4 text-primary" />
-            <span className="font-medium">612-473-3432</span>
+            <span className="font-medium text-sm md:text-base">612-473-3432</span>
           </div>
-          <button className="bg-primary text-black px-6 py-3 font-bold uppercase tracking-wide text-sm hover:bg-black hover:text-white transition-colors cursor-pointer">
+          <button className="bg-primary text-black px-4 md:px-6 py-2.5 md:py-3 font-bold uppercase tracking-wide text-[10px] md:text-sm hover:bg-black hover:text-white transition-colors cursor-pointer shrink-0">
             Schedule Intro Call
           </button>
         </div>
       </nav>
 
       {/* Hero Content */}
-      <main className="relative z-20 container mx-auto px-6 pt-32 lg:pt-48 pb-20">
+      <main className="relative z-20 container mx-auto px-4 md:px-6 pt-16 md:pt-32 lg:pt-48 pb-20">
         <div className="max-w-3xl">
           <h2 className="text-gray-600 font-bold tracking-widest text-sm mb-4 uppercase">
             Home Services Marketing Agency
           </h2>
           
-          <h1 className="text-7xl lg:text-9xl font-heading font-bold uppercase leading-[0.85] mb-10 text-black tracking-tight">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-heading font-bold uppercase leading-[0.95] mb-6 md:mb-10 text-black tracking-tight">
             Championing<br />
             Hometown Heroes
           </h1>
 
-          <div className="space-y-4 mb-12">
-            <div className="flex items-start gap-4">
-              <SlidersHorizontal className="w-6 h-6 text-gray-600 mt-1 shrink-0" />
-              <p className="text-lg font-medium text-black">
+          <div className="space-y-4 mb-8 md:mb-12">
+            <div className="flex items-start gap-3 md:gap-4">
+              <SlidersHorizontal className="w-5 h-5 md:w-6 md:h-6 text-gray-600 mt-1 shrink-0" />
+              <p className="text-base md:text-lg font-medium text-black">
                 <span className="font-bold">Proactive:</span> We make suggestions that actually move the needle each month.
               </p>
             </div>
             
-            <div className="flex items-start gap-4">
-              <PenTool className="w-6 h-6 text-gray-600 mt-1 shrink-0" />
-              <p className="text-lg font-medium text-black">
+            <div className="flex items-start gap-3 md:gap-4">
+              <PenTool className="w-5 h-5 md:w-6 md:h-6 text-gray-600 mt-1 shrink-0" />
+              <p className="text-base md:text-lg font-medium text-black">
                 <span className="font-bold">Cutting Edge:</span> We're always utilizing the latest technology and sharing that with you.
               </p>
             </div>
             
-            <div className="flex items-start gap-4">
-              <CircleDollarSign className="w-6 h-6 text-gray-600 mt-1 shrink-0" />
-              <p className="text-lg font-medium text-black">
+            <div className="flex items-start gap-3 md:gap-4">
+              <CircleDollarSign className="w-5 h-5 md:w-6 md:h-6 text-gray-600 mt-1 shrink-0" />
+              <p className="text-base md:text-lg font-medium text-black">
                 <span className="font-bold">Transparent ROI Partner:</span> We show you all the work we complete each month.
               </p>
             </div>
           </div>
 
-          <div className="flex flex-col sm:flex-row items-center gap-8 mb-20">
-            <button className="w-full sm:w-auto bg-primary text-black px-8 py-4 font-bold uppercase tracking-wide text-base hover:bg-black hover:text-white transition-colors cursor-pointer">
+          <div className="flex flex-col sm:flex-row items-center gap-6 md:gap-8 mb-12 md:mb-20">
+            <button className="w-full sm:w-auto bg-primary text-black px-6 md:px-8 py-3.5 md:py-4 font-bold uppercase tracking-wide text-sm md:text-base hover:bg-black hover:text-white transition-colors cursor-pointer">
               Get Started Now
             </button>
             
-            <a href="#" className="flex items-center gap-2 font-bold underline decoration-1 underline-offset-4 text-black hover:text-primary transition-colors">
+            <a href="#" className="flex items-center gap-2 font-bold underline decoration-1 underline-offset-4 text-black hover:text-primary transition-colors text-sm md:text-base">
               <Play className="w-4 h-4 fill-black" />
               Real Customer Experiences
             </a>
