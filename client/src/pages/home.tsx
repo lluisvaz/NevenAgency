@@ -29,7 +29,7 @@ export default function Home() {
           </Link>
           
           {/* Desktop Menu */}
-          <div className="hidden lg:flex items-center gap-6 text-base font-bold text-gray-800">
+          <div className="hidden lg:flex items-center gap-6 text-lg font-medium text-gray-800">
             <a href="#" className="hover:text-primary transition-colors">Pricing</a>
             <a href="#" className="hover:text-primary transition-colors">Website Results</a>
             <a href="#" className="hover:text-primary transition-colors">About</a>
