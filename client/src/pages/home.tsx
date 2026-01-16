@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div className="relative w-full overflow-x-hidden bg-white text-black font-sans">
       {/* Hero Section with Video */}
-      <section className="relative min-h-screen w-full overflow-hidden">
+      <section className="relative min-h-screen w-full overflow-hidden -mb-[1px]">
         {/* Background Video */}
         <div className="absolute inset-0 z-0">
           <video 
