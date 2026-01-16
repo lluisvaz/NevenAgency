@@ -1,5 +1,6 @@
 import { Link } from "wouter";
 import { CheckCircle2, Phone, SlidersHorizontal, PenTool, CircleDollarSign, Play, Star, Menu } from "lucide-react";
+import { LayoutGridIcon } from "@/components/ui/layout-grid-icon";
 import heroVideo from "@assets/generated_videos/aerial_view_of_roofers_working_on_a_house_roof.mp4";
 
 export default function Home() {
@@ -43,7 +44,7 @@ export default function Home() {
               Schedule Intro Call
             </button>
             <button className="md:hidden p-2 text-white">
-              <Menu size={24} />
+              <LayoutGridIcon size={24} />
             </button>
           </div>
         </nav>
