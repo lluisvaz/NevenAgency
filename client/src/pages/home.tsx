@@ -42,7 +42,7 @@ export default function Home() {
             <button className="bg-primary text-white px-4 md:px-6 py-2.5 md:py-3 font-bold uppercase tracking-wide text-xs md:text-sm hover:bg-black transition-colors cursor-pointer shrink-0 rounded-sm">
               Schedule Intro Call
             </button>
-            <button className="md:hidden p-2 text-gray-900">
+            <button className="md:hidden p-2 text-white">
               <Menu size={24} />
             </button>
           </div>
