@@ -15,7 +15,7 @@ export default function Home() {
           playsInline
           className="w-full h-full object-cover opacity-60" 
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/95 via-40% to-transparent z-10 hidden md:block" />
+        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/95 via-25% to-transparent z-10 hidden md:block" />
         <div className="absolute inset-0 bg-gradient-to-r from-white via-white/80 to-transparent z-10 md:hidden" />
       </div>
 
