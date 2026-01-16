@@ -150,5 +150,112 @@ export default function Home() {
         </div>
       </main>
     </div>
+      
+      {/* New Industry Section */}
+      <section className="bg-white py-24 md:py-32">
+        <div className="max-w-[1920px] mx-auto px-6 md:px-12 lg:px-24 xl:px-48">
+          <div className="bg-[#18181B] rounded-[2rem] p-8 md:p-16 relative overflow-hidden group">
+            {/* Top Border Effect (Thicker at top, fading out) */}
+            <div 
+              className="absolute inset-x-0 top-0 h-[3px] bg-[#323232] rounded-t-[2rem]"
+              style={{
+                maskImage: 'linear-gradient(to bottom, black, transparent)',
+                WebkitMaskImage: 'linear-gradient(to bottom, black, transparent)'
+              }}
+            />
+            {/* Subtle side borders */}
+            <div className="absolute inset-0 border border-[#323232]/20 rounded-[2rem] pointer-events-none" />
+
+            <div className="relative z-10 text-center mb-16">
+              <h2 className="text-[#A1A1AA] font-bold tracking-[0.2em] text-xs mb-4 uppercase">
+                Elevating Home Service Businesses
+              </h2>
+              <h3 className="text-white text-4xl md:text-5xl lg:text-6xl font-heading font-black uppercase tracking-tight">
+                We Love Serving Our Industry
+              </h3>
+            </div>
+
+            {/* Industry Cards Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+              {[
+                { title: 'Roofing', icon: <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /> },
+                { title: 'HVAC', icon: <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0M12 12l0 -9M12 12l9 0M12 12l0 9M12 12l-9 0" /> },
+                { title: 'Plumbing', icon: <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10zM12 18a6 6 0 1 0 0-12 6 6 0 0 0 0 12z" /> }
+              ].map((item, i) => (
+                <div 
+                  key={i}
+                  className="bg-[#27272A]/50 border border-[#3f3f46] rounded-xl p-8 flex items-center justify-center gap-4 hover:bg-[#27272A] transition-all cursor-pointer group/card"
+                >
+                  <svg 
+                    viewBox="0 0 24 24" 
+                    fill="none" 
+                    stroke="currentColor" 
+                    strokeWidth="1.5" 
+                    strokeLinecap="round" 
+                    strokeLinejoin="round" 
+                    className="w-10 h-10 text-white opacity-80 group-hover/card:scale-110 transition-transform"
+                  >
+                    {item.icon}
+                  </svg>
+                  <span className="text-white text-2xl font-black uppercase italic tracking-tighter">
+                    {item.title}
+                  </span>
+                </div>
+              ))}
+            </div>
+
+            {/* Footer Content */}
+            <div className="flex flex-col lg:flex-row items-center justify-between gap-12 pt-12 border-t border-[#3f3f46]/30">
+              <div className="max-w-xl text-left">
+                <h4 className="text-white text-xl md:text-2xl font-bold mb-6">
+                  Industry leaders recognize our work & endorse us
+                </h4>
+                <ul className="space-y-4 mb-8">
+                  {[
+                    "We're constantly learning about the trades",
+                    "Dedicated to driving more leads to your business",
+                    "We partner with the best in roofing, HVAC, plumbing and home services"
+                  ].map((text, i) => (
+                    <li key={i} className="flex items-center gap-3 text-sm md:text-base font-medium text-[#D1D5DB]">
+                      <CheckCircle2 className="w-4 h-4 text-[#A3E635] shrink-0" />
+                      {text}
+                    </li>
+                  ))}
+                </ul>
+                <div className="bg-[#09090B] rounded-2xl p-6 flex items-start gap-4 border border-[#27272A]">
+                  <p className="text-sm italic text-[#A1A1AA] leading-relaxed">
+                    "This last year we spent far less than before, and we generated well over a million dollars in sales from paid ads."
+                    <span className="block mt-2 font-bold not-italic text-white uppercase tracking-wider text-xs">
+                      Marcus Sheridan, Home Services Client
+                    </span>
+                  </p>
+                  <div className="w-12 h-12 rounded-full bg-gray-800 shrink-0 overflow-hidden border border-[#3f3f46]">
+                    <div className="w-full h-full bg-gradient-to-br from-gray-600 to-gray-800" />
+                  </div>
+                </div>
+              </div>
+
+              {/* Video Mockup */}
+              <div className="relative w-full lg:w-[480px] aspect-video rounded-2xl overflow-hidden shadow-2xl group/video">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10" />
+                <div className="absolute inset-0 flex items-center justify-center z-20">
+                  <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center cursor-pointer hover:scale-110 transition-transform shadow-lg">
+                    <Play className="w-6 h-6 fill-black text-black ml-1" />
+                  </div>
+                </div>
+                <div className="absolute bottom-4 left-4 right-4 z-20 flex justify-between items-end">
+                  <span className="text-white font-black uppercase text-2xl italic tracking-tighter">
+                    Clients & Coaches
+                  </span>
+                </div>
+                <div className="w-full h-full bg-[#18181B] flex items-end justify-center">
+                  <div className="w-full h-3/4 bg-gradient-to-t from-[#A3E635]/20 to-transparent" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
   );
 }
