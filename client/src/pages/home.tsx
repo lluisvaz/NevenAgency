@@ -42,8 +42,8 @@ export default function Home() {
 
           <div className="flex items-center gap-4 md:gap-6">
             <button className="hidden md:flex items-center gap-2 text-white hover:text-primary transition-colors cursor-pointer group">
-              <GlobeIcon size={32} className="text-white group-hover:text-primary" />
-              <ChevronDown size={20} className="text-gray-400 group-hover:text-primary" />
+              <GlobeIcon size={26} className="text-white group-hover:text-primary" />
+              <ChevronDown size={18} className="text-gray-400 group-hover:text-primary" />
             </button>
             <button className="hidden md:block bg-primary text-white px-4 md:px-6 py-2.5 md:py-3 font-bold uppercase tracking-wide text-xs md:text-sm hover:bg-white hover:text-black transition-colors cursor-pointer shrink-0 rounded-sm">
               Schedule Intro Call
