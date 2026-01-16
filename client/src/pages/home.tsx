@@ -19,6 +19,7 @@ export default function Home() {
           />
           <div className="absolute inset-0 bg-gradient-to-r from-white via-white/95 via-25% to-transparent z-10 hidden md:block" />
           <div className="absolute inset-0 bg-gradient-to-r from-white via-white/80 to-transparent z-10 md:hidden" />
+          <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-white to-transparent z-10" />
         </div>
 
         {/* Navigation */}
