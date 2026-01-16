@@ -44,7 +44,7 @@ export default function Home() {
               Schedule Intro Call
             </button>
             <button className="md:hidden p-2 text-white">
-              <LayoutGridIcon size={24} />
+              <LayoutGridIcon size={32} />
             </button>
           </div>
         </nav>
