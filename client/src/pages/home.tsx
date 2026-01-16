@@ -1,6 +1,7 @@
 import { Link } from "wouter";
-import { CheckCircle2, Phone, SlidersHorizontal, PenTool, CircleDollarSign, Play, Star, Menu } from "lucide-react";
+import { CheckCircle2, Phone, SlidersHorizontal, PenTool, CircleDollarSign, Play, Star, Menu, ChevronDown } from "lucide-react";
 import { LayoutGridIcon } from "@/components/ui/layout-grid-icon";
+import { GlobeIcon } from "@/components/ui/globe-icon";
 import heroVideo from "@assets/generated_videos/aerial_view_of_roofers_working_on_a_house_roof.mp4";
 
 export default function Home() {
@@ -40,6 +41,10 @@ export default function Home() {
           </div>
 
           <div className="flex items-center gap-4 md:gap-6">
+            <button className="flex items-center gap-2 text-white hover:text-primary transition-colors cursor-pointer group">
+              <GlobeIcon size={20} className="text-white group-hover:text-primary" />
+              <ChevronDown size={16} className="text-gray-400 group-hover:text-primary" />
+            </button>
             <button className="hidden md:block bg-primary text-white px-4 md:px-6 py-2.5 md:py-3 font-bold uppercase tracking-wide text-xs md:text-sm hover:bg-white hover:text-black transition-colors cursor-pointer shrink-0 rounded-sm">
               Schedule Intro Call
             </button>
