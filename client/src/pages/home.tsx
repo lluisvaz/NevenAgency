@@ -45,7 +45,7 @@ export default function Home() {
             <Phone className="w-4 h-4 text-primary" />
             <span className="font-medium text-sm md:text-base">612-473-3432</span>
           </div>
-          <button className="bg-primary text-white px-5 md:px-8 py-3 md:py-4 font-bold uppercase tracking-wide text-xs md:text-base hover:bg-black transition-colors cursor-pointer shrink-0 rounded-sm">
+          <button className="bg-primary text-white px-4 md:px-6 py-2.5 md:py-3 font-bold uppercase tracking-wide text-[10px] md:text-sm hover:bg-black transition-colors cursor-pointer shrink-0 rounded-sm">
             Schedule Intro Call
           </button>
         </div>
