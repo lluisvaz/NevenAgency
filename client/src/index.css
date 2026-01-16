@@ -3,11 +3,25 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@font-face {
+  font-family: 'Gabarito';
+  src: url('/fonts/Gabarito-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gabarito';
+  src: url('/fonts/Gabarito-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
 @theme inline {
-  --color-background: hsl(0 0% 100%); /* White background */
-  --color-foreground: hsl(0 0% 0%); /* Black text */
+  --color-background: hsl(0 0% 100%);
+  --color-foreground: hsl(0 0% 0%);
   
-  --color-primary: hsl(74 89% 68%); /* Neon Green #d4f23d approx */
+  --color-primary: hsl(74 89% 68%);
   --color-primary-foreground: hsl(0 0% 0%);
   
   --color-secondary: hsl(0 0% 0%);
@@ -20,8 +34,8 @@
   --color-input: hsl(0 0% 90%);
   --color-ring: hsl(74 89% 68%);
   
-  --font-sans: 'Inter', sans-serif;
-  --font-heading: 'Oswald', sans-serif;
+  --font-sans: 'Gabarito', sans-serif;
+  --font-heading: 'Gabarito', sans-serif;
   
   --radius: 0.25rem;
 }
