@@ -18,7 +18,7 @@ export default function Home() {
             className="w-full h-full object-cover" 
           />
           <div className="absolute inset-0 bg-gradient-to-r from-white via-white via-45% to-transparent z-10 hidden md:block" />
-          <div className="absolute inset-0 bg-gradient-to-r from-white via-white via-55% to-transparent z-10 md:hidden" />
+          <div className="absolute inset-0 bg-white/70 z-10 md:hidden" />
           <div className="absolute inset-x-0 bottom-0 h-[450px] bg-gradient-to-t from-white via-white/95 via-40% to-transparent z-10" />
         </div>
 
