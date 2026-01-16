@@ -149,6 +149,114 @@ export default function Home() {
           </div>
         </div>
       </main>
+
+      {/* New Section */}
+      <section className="bg-white py-24 w-full">
+        <div className="max-w-[1920px] mx-auto px-6 md:px-12 lg:px-24 xl:px-48">
+          <div 
+            className="relative overflow-hidden rounded-2xl bg-[#18181B] p-8 md:p-12 border border-[#323232]"
+            style={{
+              boxShadow: '0 -4px 0 0 #323232',
+              borderTopWidth: '4px',
+              borderLeftWidth: '1px',
+              borderRightWidth: '1px',
+              borderBottomWidth: '1px'
+            }}
+          >
+            <div className="max-w-4xl">
+              <h3 className="text-[#A1A1AA] font-bold tracking-widest text-xs mb-6 uppercase">
+                Elevating Home Service Businesses
+              </h3>
+              
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold uppercase leading-tight mb-12 text-white">
+                We Love Serving Our Industry
+              </h2>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-16">
+                <div className="bg-[#27272A]/50 border border-[#3F3F46] p-6 rounded-xl flex items-center gap-4 hover:bg-[#27272A] transition-colors cursor-pointer group">
+                   <div className="w-12 h-12 flex items-center justify-center text-white">
+                      <svg viewBox="0 0 24 24" className="w-8 h-8" fill="none" stroke="currentColor" strokeWidth="1.5">
+                        <path d="M3 12l9-9 9 9M5 10v10a1 1 0 001 1h3a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1h3a1 1 0 001-1V10" />
+                      </svg>
+                   </div>
+                   <span className="text-xl font-bold text-white uppercase tracking-tight">Roofing</span>
+                </div>
+
+                <div className="bg-[#27272A]/50 border border-[#3F3F46] p-6 rounded-xl flex items-center gap-4 hover:bg-[#27272A] transition-colors cursor-pointer group">
+                   <div className="w-12 h-12 flex items-center justify-center text-white">
+                      <svg viewBox="0 0 24 24" className="w-8 h-8" fill="none" stroke="currentColor" strokeWidth="1.5">
+                        <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0M12 12v-4M12 12l3 3M12 12l-3 3" />
+                        <path d="M12 7v1M12 16v1M7 12h1M16 12h1" />
+                      </svg>
+                   </div>
+                   <span className="text-xl font-bold text-white uppercase tracking-tight">HVAC</span>
+                </div>
+
+                <div className="bg-[#27272A]/50 border border-[#3F3F46] p-6 rounded-xl flex items-center gap-4 hover:bg-[#27272A] transition-colors cursor-pointer group">
+                   <div className="w-12 h-12 flex items-center justify-center text-white">
+                      <svg viewBox="0 0 24 24" className="w-8 h-8" fill="none" stroke="currentColor" strokeWidth="1.5">
+                        <path d="M12 3v18M3 12h18" strokeDasharray="2 2"/>
+                        <circle cx="12" cy="12" r="4" />
+                      </svg>
+                   </div>
+                   <span className="text-xl font-bold text-white uppercase tracking-tight">Plumbing</span>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div className="space-y-6">
+                  <h4 className="text-2xl font-bold text-white leading-tight">
+                    Industry leaders recognize our work & endorse us
+                  </h4>
+                  <ul className="space-y-3">
+                    <li className="flex items-center gap-3 text-[#A1A1AA]">
+                      <CheckCircle2 className="w-5 h-5 text-white shrink-0" />
+                      <span>We're constantly learning about the trades</span>
+                    </li>
+                    <li className="flex items-center gap-3 text-[#A1A1AA]">
+                      <CheckCircle2 className="w-5 h-5 text-white shrink-0" />
+                      <span>Dedicated to driving more leads to your business</span>
+                    </li>
+                    <li className="flex items-center gap-3 text-[#A1A1AA]">
+                      <CheckCircle2 className="w-5 h-5 text-white shrink-0" />
+                      <span>We partner with the best in roofing, HVAC, plumbing and home services</span>
+                    </li>
+                  </ul>
+                  
+                  <div className="bg-[#09090B] p-6 rounded-xl border border-[#27272A] relative overflow-hidden group">
+                    <p className="text-sm italic text-[#D1D1D6] mb-4 relative z-10">
+                      "This last year we spent far less than before, and we generated well over a million dollars in sales from paid ads."
+                    </p>
+                    <div className="flex items-center gap-3 relative z-10">
+                      <img src="https://avatar.vercel.sh/marcus" alt="Marcus" className="w-10 h-10 rounded-full border border-[#3F3F46]" />
+                      <div>
+                        <div className="text-xs font-bold text-white uppercase tracking-wider">Marcus Sheridan</div>
+                        <div className="text-[10px] text-[#71717A] uppercase">Home Services Client</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="relative aspect-video rounded-xl overflow-hidden group cursor-pointer">
+                   <img 
+                    src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&q=80" 
+                    alt="Clients and Coaches" 
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                   />
+                   <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+                      <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center text-black transition-transform group-hover:scale-110">
+                        <Play className="w-6 h-6 fill-current ml-1" />
+                      </div>
+                   </div>
+                   <div className="absolute bottom-4 left-4 bg-white/10 backdrop-blur-md px-3 py-1 rounded text-[10px] font-bold text-white uppercase tracking-widest border border-white/20">
+                      Clients & Coaches
+                   </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
