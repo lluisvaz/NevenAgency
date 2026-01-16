@@ -19,7 +19,7 @@ export default function Home() {
       </div>
 
       {/* Navigation */}
-      <nav className="relative z-50 w-full px-8 md:px-32 lg:px-48 py-4 md:py-6 flex items-center justify-between">
+      <nav className="relative z-50 w-full px-8 md:px-32 lg:px-48 py-8 flex items-center justify-between">
         <div className="flex items-center gap-4 lg:gap-12">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 shrink-0">
@@ -50,7 +50,7 @@ export default function Home() {
       </nav>
 
       {/* Hero Content */}
-      <main className="relative z-20 container-fluid px-8 md:px-32 lg:px-48 pt-8 md:pt-12 lg:pt-16 pb-20">
+      <main className="relative z-20 container-fluid px-8 md:px-32 lg:px-48 pt-16 md:pt-32 lg:pt-48 pb-20">
         <div className="max-w-3xl">
           <h2 className="text-gray-600 font-bold tracking-widest text-sm mb-4 uppercase">
             Home Services Marketing Agency
