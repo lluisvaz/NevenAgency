@@ -149,7 +149,6 @@ export default function Home() {
           </div>
         </div>
       </main>
-    </div>
       
       {/* New Industry Section */}
       <section className="bg-white py-24 md:py-32">
