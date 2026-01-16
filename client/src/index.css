@@ -21,8 +21,8 @@
   --color-background: hsl(0 0% 100%);
   --color-foreground: hsl(0 0% 0%);
   
-  --color-primary: hsl(74 89% 68%);
-  --color-primary-foreground: hsl(0 0% 0%);
+  --color-primary: #0464FE; /* Blue requested */
+  --color-primary-foreground: hsl(0 0% 100%);
   
   --color-secondary: hsl(0 0% 0%);
   --color-secondary-foreground: hsl(0 0% 100%);
@@ -32,7 +32,7 @@
   
   --color-border: hsl(0 0% 90%);
   --color-input: hsl(0 0% 90%);
-  --color-ring: hsl(74 89% 68%);
+  --color-ring: #0464FE;
   
   --font-sans: 'Gabarito', sans-serif;
   --font-heading: 'Gabarito', sans-serif;

@@ -45,7 +45,7 @@ export default function Home() {
             <Phone className="w-4 h-4 text-primary" />
             <span className="font-medium text-sm md:text-base">612-473-3432</span>
           </div>
-          <button className="bg-primary text-black px-4 md:px-6 py-2.5 md:py-3 font-bold uppercase tracking-wide text-[10px] md:text-sm hover:bg-black hover:text-white transition-colors cursor-pointer shrink-0">
+          <button className="bg-primary text-white px-4 md:px-6 py-2.5 md:py-3 font-bold uppercase tracking-wide text-[10px] md:text-sm hover:bg-black transition-colors cursor-pointer shrink-0">
             Schedule Intro Call
           </button>
         </div>
@@ -87,7 +87,7 @@ export default function Home() {
           </div>
 
           <div className="flex flex-col sm:flex-row items-center gap-6 md:gap-8 mb-12 md:mb-20">
-            <button className="w-full sm:w-auto bg-primary text-black px-6 md:px-8 py-3.5 md:py-4 font-bold uppercase tracking-wide text-sm md:text-base hover:bg-black hover:text-white transition-colors cursor-pointer">
+            <button className="w-full sm:w-auto bg-primary text-white px-6 md:px-8 py-3.5 md:py-4 font-bold uppercase tracking-wide text-sm md:text-base hover:bg-black transition-colors cursor-pointer">
               Get Started Now
             </button>
             
