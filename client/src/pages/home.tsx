@@ -36,7 +36,10 @@ export default function Home() {
             <div className="hidden lg:flex items-center gap-6 text-lg font-medium text-gray-300">
               <a href="#" className="hover:text-primary transition-colors">Pricing</a>
               <a href="#" className="hover:text-primary transition-colors">About</a>
-              <a href="#" className="hover:text-primary transition-colors">Services</a>
+              <a href="#" className="flex items-center gap-1 hover:text-primary transition-colors group">
+                Services
+                <ChevronDown size={14} className="text-gray-500 group-hover:text-primary transition-colors" />
+              </a>
             </div>
           </div>
 
