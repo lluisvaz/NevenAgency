@@ -41,7 +41,7 @@ export default function Home() {
           </div>
 
           <div className="flex items-center gap-4 md:gap-6">
-            <button className="flex items-center gap-2 text-white hover:text-primary transition-colors cursor-pointer group">
+            <button className="hidden md:flex items-center gap-2 text-white hover:text-primary transition-colors cursor-pointer group">
               <GlobeIcon size={32} className="text-white group-hover:text-primary" />
               <ChevronDown size={20} className="text-gray-400 group-hover:text-primary" />
             </button>
