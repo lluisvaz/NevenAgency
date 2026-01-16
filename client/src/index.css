@@ -18,20 +18,20 @@
 }
 
 @theme inline {
-  --color-background: hsl(0 0% 100%);
-  --color-foreground: hsl(0 0% 0%);
+  --color-background: hsl(0 0% 0%);
+  --color-foreground: hsl(0 0% 100%);
   
   --color-primary: #0464FE; /* Blue requested */
   --color-primary-foreground: hsl(0 0% 100%);
   
-  --color-secondary: hsl(0 0% 0%);
-  --color-secondary-foreground: hsl(0 0% 100%);
+  --color-secondary: hsl(0 0% 100%);
+  --color-secondary-foreground: hsl(0 0% 0%);
   
-  --color-muted: hsl(0 0% 90%);
-  --color-muted-foreground: hsl(0 0% 40%);
+  --color-muted: hsl(0 0% 10%);
+  --color-muted-foreground: hsl(0 0% 60%);
   
-  --color-border: hsl(0 0% 90%);
-  --color-input: hsl(0 0% 90%);
+  --color-border: hsl(0 0% 20%);
+  --color-input: hsl(0 0% 20%);
   --color-ring: #0464FE;
   
   --font-sans: 'Gabarito', sans-serif;
@@ -45,7 +45,7 @@
     @apply border-border;
   }
   body {
-    @apply font-sans antialiased bg-white text-black;
+    @apply font-sans antialiased bg-black text-white;
   }
   h1, h2, h3, h4, h5, h6 {
     @apply font-heading uppercase;
