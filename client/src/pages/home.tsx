@@ -19,13 +19,13 @@ export default function Home() {
       </div>
 
       {/* Navigation */}
-      <nav className="relative z-50 w-full px-4 md:px-6 py-4 flex items-center justify-between">
+      <nav className="relative z-50 w-full px-4 md:px-12 py-4 flex items-center justify-between">
         <div className="flex items-center gap-4 lg:gap-12">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 text-xl md:text-2xl font-bold font-heading tracking-tight text-black shrink-0">
             <CheckCircle2 className="w-6 h-6 md:w-8 md:h-8 text-black" strokeWidth={2.5} />
             <span>HOOK</span>
-            <span className="font-light text-gray-500 text-xs md:text-sm mt-1 ml-1 tracking-widest">AGENCY</span>
+            <span className="font-light text-gray-500 text-xs md:text-sm mt-1 ml-1 tracking-widest uppercase">AGENCY</span>
           </Link>
           
           {/* Desktop Menu */}
@@ -52,7 +52,7 @@ export default function Home() {
       </nav>
 
       {/* Hero Content */}
-      <main className="relative z-20 container mx-auto px-4 md:px-6 pt-16 md:pt-32 lg:pt-48 pb-20">
+      <main className="relative z-20 container-fluid px-4 md:px-12 pt-16 md:pt-32 lg:pt-48 pb-20">
         <div className="max-w-3xl">
           <h2 className="text-gray-600 font-bold tracking-widest text-sm mb-4 uppercase">
             Home Services Marketing Agency
