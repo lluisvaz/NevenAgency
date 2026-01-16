@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import { CheckCircle2, Phone, SlidersHorizontal, PenTool, CircleDollarSign, Play, Star } from "lucide-react";
+import { CheckCircle2, Phone, SlidersHorizontal, PenTool, CircleDollarSign, Play, Star, Menu } from "lucide-react";
 import heroVideo from "@assets/generated_videos/aerial_view_of_roofers_working_on_a_house_roof.mp4";
 
 export default function Home() {
@@ -33,22 +33,17 @@ export default function Home() {
             {/* Desktop Menu */}
             <div className="hidden lg:flex items-center gap-6 text-lg font-medium text-gray-800">
               <a href="#" className="hover:text-primary transition-colors">Pricing</a>
-              <a href="#" className="hover:text-primary transition-colors">Website Results</a>
               <a href="#" className="hover:text-primary transition-colors">About</a>
               <a href="#" className="hover:text-primary transition-colors">Services</a>
-              <a href="#" className="hover:text-primary transition-colors">Resources</a>
-              <a href="#" className="hover:text-primary transition-colors">Reviews</a>
-              <a href="#" className="hover:text-primary transition-colors">Contact Us</a>
             </div>
           </div>
 
           <div className="flex items-center gap-4 md:gap-6">
-            <div className="hidden sm:flex items-center gap-2 text-gray-800">
-              <Phone className="w-4 h-4 text-primary" />
-              <span className="font-medium text-sm md:text-base">612-473-3432</span>
-            </div>
             <button className="bg-primary text-white px-4 md:px-6 py-2.5 md:py-3 font-bold uppercase tracking-wide text-xs md:text-sm hover:bg-black transition-colors cursor-pointer shrink-0 rounded-sm">
               Schedule Intro Call
+            </button>
+            <button className="md:hidden p-2 text-gray-900">
+              <Menu size={24} />
             </button>
           </div>
         </nav>
