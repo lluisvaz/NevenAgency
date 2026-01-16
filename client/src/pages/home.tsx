@@ -40,7 +40,7 @@ export default function Home() {
           </div>
 
           <div className="flex items-center gap-4 md:gap-6">
-            <button className="hidden md:block bg-primary text-white px-4 md:px-6 py-2.5 md:py-3 font-bold uppercase tracking-wide text-xs md:text-sm hover:bg-white hover:text-black transition-colors cursor-pointer shrink-0 rounded-sm">
+            <button className="bg-primary text-white px-4 md:px-6 py-2.5 md:py-3 font-bold uppercase tracking-wide text-xs md:text-sm hover:bg-white hover:text-black transition-colors cursor-pointer shrink-0 rounded-sm">
               Schedule Intro Call
             </button>
             <button className="md:hidden p-2 text-white">
@@ -61,9 +61,28 @@ export default function Home() {
               Hometown Heroes
             </h1>
 
-            <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8 md:mb-12 max-w-2xl">
-              Sua empresa merece mais do que apenas "estar online". Nós eliminamos a adivinhação do seu marketing com estratégias <span className="text-white font-bold">proativas</span> e tecnologia de ponta, focadas em transformar cliques em contratos e garantir um <span className="text-white font-bold">ROI transparente</span> que você pode acompanhar em tempo real.
-            </p>
+            <div className="space-y-4 mb-8 md:mb-12">
+              <div className="flex items-start gap-3 md:gap-4">
+                <SlidersHorizontal className="w-5 h-5 md:w-6 md:h-6 text-gray-400 mt-1 shrink-0" />
+                <p className="text-base md:text-lg font-medium text-white">
+                  <span className="font-bold">Proactive:</span> We make suggestions that actually move the needle each month.
+                </p>
+              </div>
+              
+              <div className="flex items-start gap-3 md:gap-4">
+                <PenTool className="w-5 h-5 md:w-6 md:h-6 text-gray-400 mt-1 shrink-0" />
+                <p className="text-base md:text-lg font-medium text-white">
+                  <span className="font-bold">Cutting Edge:</span> We're always utilizing the latest technology and sharing that with you.
+                </p>
+              </div>
+              
+              <div className="flex items-start gap-3 md:gap-4">
+                <CircleDollarSign className="w-5 h-5 md:w-6 md:h-6 text-gray-400 mt-1 shrink-0" />
+                <p className="text-base md:text-lg font-medium text-white">
+                  <span className="font-bold">Transparent ROI Partner:</span> We show you all the work we complete each month.
+                </p>
+              </div>
+            </div>
 
             <div className="flex flex-col sm:flex-row items-center gap-6 md:gap-8 mb-12 md:mb-20">
               <button className="w-full sm:w-auto bg-primary text-white px-6 md:px-8 py-3.5 md:py-4 font-bold uppercase tracking-wide text-sm md:text-base hover:bg-white hover:text-black transition-colors cursor-pointer rounded-sm">
