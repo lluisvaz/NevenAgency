@@ -52,9 +52,9 @@ export default function Home() {
   return (
     <div className="relative w-full bg-black text-white font-sans min-h-screen">
       {/* Hero Section with Video */}
-      <section className="relative h-screen w-full overflow-hidden">
+      <section className="relative min-h-screen w-full overflow-hidden">
         {/* Background Video */}
-        <div className="absolute inset-0 z-0 pointer-events-none">
+        <div className="absolute inset-0 z-0">
           <video 
             src={heroVideo} 
             autoPlay 
