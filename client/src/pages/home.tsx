@@ -1,10 +1,18 @@
 import { Link } from "wouter";
-import { CheckCircle2, Phone, SlidersHorizontal, PenTool, CircleDollarSign, Play, Star, Menu, ChevronDown } from "lucide-react";
+import { useState } from "react";
+import { 
+  CheckCircle2, Phone, SlidersHorizontal, PenTool, CircleDollarSign, 
+  Play, Star, Menu, ChevronDown, ChevronUp, Globe, MapPin, 
+  BarChart3, Rocket, Building2, Terminal, Layers, Users,
+  Handshake, UserPlus, ArrowRight
+} from "lucide-react";
 import { LayoutGridIcon } from "@/components/ui/layout-grid-icon";
 import { GlobeIcon } from "@/components/ui/globe-icon";
 import heroVideo from "@assets/generated_videos/aerial_view_of_roofers_working_on_a_house_roof.mp4";
 
 export default function Home() {
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
+
   return (
     <div className="relative w-full overflow-x-hidden bg-black text-white font-sans">
       {/* Hero Section with Video */}
@@ -25,37 +33,133 @@ export default function Home() {
         </div>
 
         {/* Navigation */}
-        <nav className="relative z-50 w-full max-w-[1920px] mx-auto px-6 md:px-12 lg:px-24 xl:px-48 py-8 flex items-center justify-between">
-          <div className="flex items-center gap-4 lg:gap-12">
-            {/* Logo */}
-            <Link href="/" className="flex items-center gap-2 shrink-0">
-              <img src="/images/logo.png" alt="Logo" className="h-8 md:h-10 w-auto object-contain invert" />
-            </Link>
-            
-            {/* Desktop Menu */}
-            <div className="hidden lg:flex items-center gap-6 text-lg font-medium text-gray-300">
-              <a href="#" className="hover:text-primary transition-colors">Pricing</a>
-              <a href="#" className="hover:text-primary transition-colors">About</a>
-              <a href="#" className="flex items-center gap-1 hover:text-primary transition-colors group">
-                Services
-                <ChevronDown size={14} className="text-gray-500 group-hover:text-primary transition-colors" />
-              </a>
+        <header className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-300 ${isServicesOpen ? 'bg-white text-black shadow-lg' : 'bg-transparent text-white'}`}>
+          <nav className="w-full max-w-[1920px] mx-auto px-6 md:px-12 lg:px-24 xl:px-48 py-6 flex items-center justify-between">
+            <div className="flex items-center gap-4 lg:gap-12">
+              {/* Logo */}
+              <Link href="/" className="flex items-center gap-2 shrink-0">
+                <img 
+                  src="/images/logo.png" 
+                  alt="Logo" 
+                  className={`h-8 md:h-10 w-auto object-contain transition-all duration-300 ${!isServicesOpen ? 'invert' : ''}`} 
+                />
+              </Link>
+              
+              {/* Desktop Menu */}
+              <div className="hidden lg:flex items-center gap-6 text-sm font-semibold uppercase tracking-wider">
+                <a href="#" className={`hover:text-primary transition-colors ${isServicesOpen ? 'text-black' : 'text-white'}`}>Pricing</a>
+                <a href="#" className={`hover:text-primary transition-colors ${isServicesOpen ? 'text-black' : 'text-white'}`}>About</a>
+                <button 
+                  onClick={() => setIsServicesOpen(!isServicesOpen)}
+                  className={`flex items-center gap-1.5 px-4 py-2 rounded-full transition-all duration-300 ${
+                    isServicesOpen 
+                      ? 'bg-black text-white' 
+                      : 'hover:text-primary'
+                  }`}
+                >
+                  Services
+                  {isServicesOpen ? <ChevronUp size={14} /> : <ChevronDown size={14} />}
+                </button>
+                <a href="#" className={`hover:text-primary transition-colors ${isServicesOpen ? 'text-black' : 'text-white'}`}>Resources</a>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-4 md:gap-6">
+              <button className={`hidden md:flex items-center gap-2 transition-colors cursor-pointer group ${isServicesOpen ? 'text-black' : 'text-white'}`}>
+                <GlobeIcon size={26} className={isServicesOpen ? 'text-black' : 'text-white'} />
+                <ChevronDown size={18} className="text-gray-400 group-hover:text-primary" />
+              </button>
+              <button className="hidden md:block bg-primary text-white px-4 md:px-6 py-2.5 md:py-3 font-bold uppercase tracking-wide text-xs md:text-sm hover:bg-black transition-colors cursor-pointer shrink-0 rounded-sm">
+                Schedule Intro Call
+              </button>
+              <button className={`md:hidden p-2 ${isServicesOpen ? 'text-black' : 'text-white'}`}>
+                <LayoutGridIcon size={32} />
+              </button>
+            </div>
+          </nav>
+
+          {/* Mega Menu Dropdown */}
+          <div 
+            className={`absolute top-full left-0 right-0 bg-white border-t border-gray-100 overflow-hidden transition-all duration-500 ease-in-out ${
+              isServicesOpen ? 'max-h-[800px] opacity-100 visible' : 'max-h-0 opacity-0 invisible'
+            }`}
+          >
+            <div className="max-w-[1920px] mx-auto px-6 md:px-12 lg:px-24 xl:px-48 py-12 flex">
+              {/* Main Content */}
+              <div className="flex-1 grid grid-cols-3 gap-y-12 pr-12 border-r border-gray-100">
+                {/* Section 1 */}
+                <div className="space-y-6">
+                  <h4 className="text-[10px] font-bold text-gray-500 uppercase tracking-[0.2em]">Global Coverage</h4>
+                  <ul className="space-y-4">
+                    <li><a href="#" className="flex items-center gap-3 group"><Globe className="w-5 h-5 text-gray-400 group-hover:text-black" /><span className="text-sm font-semibold group-hover:text-primary">Country Explorer</span></a></li>
+                    <li><a href="#" className="flex items-center gap-3 group"><MapPin className="w-5 h-5 text-gray-400 group-hover:text-black" /><span className="text-sm font-semibold group-hover:text-primary">US State Explorer</span></a></li>
+                    <li><a href="#" className="flex items-center gap-3 group"><BarChart3 className="w-5 h-5 text-gray-400 group-hover:text-black" /><span className="text-sm font-semibold group-hover:text-primary">Compare Remote</span></a></li>
+                  </ul>
+                </div>
+
+                {/* Section 2 */}
+                <div className="space-y-6">
+                  <h4 className="text-[10px] font-bold text-gray-500 uppercase tracking-[0.2em]">Growth Stage</h4>
+                  <ul className="space-y-4">
+                    <li><a href="#" className="flex items-center gap-3 group"><Rocket className="w-5 h-5 text-gray-400 group-hover:text-black" /><span className="text-sm font-semibold group-hover:text-primary">Startups</span></a></li>
+                    <li><a href="#" className="flex items-center gap-3 group"><Building2 className="w-5 h-5 text-gray-400 group-hover:text-black" /><span className="text-sm font-semibold group-hover:text-primary">Mid-market</span></a></li>
+                    <li><a href="#" className="flex items-center gap-3 group"><Layers className="w-5 h-5 text-gray-400 group-hover:text-black" /><span className="text-sm font-semibold group-hover:text-primary">Enterprise</span></a></li>
+                  </ul>
+                </div>
+
+                {/* Section 3 */}
+                <div className="space-y-6">
+                  <h4 className="text-[10px] font-bold text-gray-500 uppercase tracking-[0.2em]">Platform</h4>
+                  <ul className="space-y-4">
+                    <li><a href="#" className="flex items-center gap-3 group"><Terminal className="w-5 h-5 text-gray-400 group-hover:text-black" /><span className="text-sm font-semibold group-hover:text-primary">Remote Embedded • API</span></a></li>
+                    <li><a href="#" className="flex items-center gap-3 group"><LayoutGridIcon className="w-5 h-5 text-gray-400 group-hover:text-black" /><span className="text-sm font-semibold group-hover:text-primary">Integrations</span></a></li>
+                    <li><a href="#" className="flex items-center gap-3 group"><Users className="w-5 h-5 text-gray-400 group-hover:text-black" /><span className="text-sm font-semibold group-hover:text-primary">HR Essentials</span></a></li>
+                  </ul>
+                </div>
+
+                {/* Section 4 */}
+                <div className="space-y-6">
+                  <h4 className="text-[10px] font-bold text-gray-500 uppercase tracking-[0.2em]">Partner With Us</h4>
+                  <ul className="space-y-4">
+                    <li><a href="#" className="flex items-center gap-3 group"><Handshake className="w-5 h-5 text-gray-400 group-hover:text-black" /><span className="text-sm font-semibold group-hover:text-primary">Strategic technology partners</span></a></li>
+                    <li><a href="#" className="flex items-center gap-3 group"><UserPlus className="w-5 h-5 text-gray-400 group-hover:text-black" /><span className="text-sm font-semibold group-hover:text-primary">Become a partner</span></a></li>
+                  </ul>
+                </div>
+              </div>
+
+              {/* Sidebar */}
+              <div className="w-[350px] pl-12 space-y-8">
+                <h4 className="text-[10px] font-bold text-gray-500 uppercase tracking-[0.2em]">Case Studies</h4>
+                
+                <div className="space-y-8">
+                  <div className="group cursor-pointer">
+                    <div className="aspect-[16/9] bg-[#0F0F23] rounded-lg mb-4 flex items-center justify-center overflow-hidden">
+                       <div className="text-white font-bold text-2xl italic tracking-tighter">theydo</div>
+                    </div>
+                    <h5 className="text-base font-bold mb-2 leading-tight group-hover:text-primary">
+                      Cultivating a Thriving Remote-First Culture in Partnership with Remote
+                    </h5>
+                    <p className="text-xs text-gray-500 mb-4 line-clamp-2">
+                      At a glance Discover the evolution of TheyDo, a pioneering journey management platform that has...
+                    </p>
+                    <a href="#" className="text-xs font-bold text-primary flex items-center gap-1">
+                      Learn More <ArrowRight size={12} />
+                    </a>
+                  </div>
+
+                  <div className="group cursor-pointer border-t border-gray-100 pt-6">
+                    <h5 className="text-base font-bold mb-2 leading-tight group-hover:text-primary">
+                      Reverse Tech's strategic partnership with Remote for contractor management and payroll
+                    </h5>
+                    <a href="#" className="text-xs font-bold text-primary flex items-center gap-1">
+                      Learn More <ArrowRight size={12} />
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-
-          <div className="flex items-center gap-4 md:gap-6">
-            <button className="hidden md:flex items-center gap-2 text-white hover:text-primary transition-colors cursor-pointer group">
-              <GlobeIcon size={26} className="text-white group-hover:text-primary" />
-              <ChevronDown size={18} className="text-gray-400 group-hover:text-primary" />
-            </button>
-            <button className="hidden md:block bg-primary text-white px-4 md:px-6 py-2.5 md:py-3 font-bold uppercase tracking-wide text-xs md:text-sm hover:bg-white hover:text-black transition-colors cursor-pointer shrink-0 rounded-sm">
-              Schedule Intro Call
-            </button>
-            <button className="md:hidden p-2 text-white">
-              <LayoutGridIcon size={32} />
-            </button>
-          </div>
-        </nav>
+        </header>
 
         {/* Hero Content */}
         <div className="relative z-20 w-full max-w-[1920px] mx-auto px-6 md:px-12 lg:px-24 xl:px-48 pt-16 md:pt-32 lg:pt-36 pb-20">
