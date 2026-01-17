@@ -92,49 +92,118 @@ export default function Home() {
           {/* Mega Menu Dropdown */}
           <div 
             className={`absolute top-full left-0 right-0 bg-white border-t border-gray-100 overflow-hidden transition-all duration-500 ease-in-out ${
-              isServicesOpen ? 'max-h-[800px] opacity-100 visible' : 'max-h-0 opacity-0 invisible'
+              isServicesOpen ? 'max-h-[1200px] opacity-100 visible' : 'max-h-0 opacity-0 invisible'
             }`}
           >
             <div className="max-w-[1920px] mx-auto px-6 md:px-12 lg:px-24 xl:px-48 py-12 flex">
               {/* Main Content */}
-              <div className="flex-1 grid grid-cols-3 gap-y-12 pr-12 border-r border-gray-100">
-                {/* Section 1 */}
-                <div className="space-y-6">
-                  <h4 className="text-[10px] font-bold text-gray-500 uppercase tracking-[0.2em]">Global Coverage</h4>
-                  <ul className="space-y-4">
-                    <li><a href="#" className="flex items-center gap-3 group"><Globe className="w-5 h-5 text-gray-400 group-hover:text-black" /><span className="text-sm font-semibold group-hover:text-primary">Country Explorer</span></a></li>
-                    <li><a href="#" className="flex items-center gap-3 group"><MapPin className="w-5 h-5 text-gray-400 group-hover:text-black" /><span className="text-sm font-semibold group-hover:text-primary">US State Explorer</span></a></li>
-                    <li><a href="#" className="flex items-center gap-3 group"><BarChart3 className="w-5 h-5 text-gray-400 group-hover:text-black" /><span className="text-sm font-semibold group-hover:text-primary">Compare Remote</span></a></li>
-                  </ul>
+              <div className="flex-1 space-y-12 pr-12 border-r border-gray-100">
+                {/* Global Coverage */}
+                <div className="group/section">
+                  <h4 className="text-[11px] font-bold text-gray-400 uppercase tracking-[0.2em] mb-8">Global Coverage</h4>
+                  <div className="grid grid-cols-3 gap-8">
+                    <a href="#" className="flex items-start gap-4 group/item">
+                      <Globe className="w-6 h-6 text-gray-400 group-hover/item:text-black mt-1" />
+                      <div className="space-y-1">
+                        <span className="text-lg font-bold group-hover/item:text-primary block transition-colors">Country Explorer</span>
+                        <p className="text-sm text-gray-500 opacity-0 group-hover/section:opacity-100 transition-opacity duration-300">Find global employment support by country</p>
+                      </div>
+                    </a>
+                    <a href="#" className="flex items-start gap-4 group/item">
+                      <MapPin className="w-6 h-6 text-gray-400 group-hover/item:text-black mt-1" />
+                      <div className="space-y-1">
+                        <span className="text-lg font-bold group-hover/item:text-primary block transition-colors">US State Explorer</span>
+                        <p className="text-sm text-gray-500 opacity-0 group-hover/section:opacity-100 transition-opacity duration-300">Simplify hiring across all US states</p>
+                      </div>
+                    </a>
+                    <a href="#" className="flex items-start gap-4 group/item">
+                      <BarChart3 className="w-6 h-6 text-gray-400 group-hover/item:text-black mt-1" />
+                      <div className="space-y-1">
+                        <span className="text-lg font-bold group-hover/item:text-primary block transition-colors">Compare Remote</span>
+                        <p className="text-sm text-gray-500 opacity-0 group-hover/section:opacity-100 transition-opacity duration-300">See how we stack up against others</p>
+                      </div>
+                    </a>
+                  </div>
+                  <div className="h-px bg-gray-100 w-full mt-12"></div>
                 </div>
 
-                {/* Section 2 */}
-                <div className="space-y-6">
-                  <h4 className="text-[10px] font-bold text-gray-500 uppercase tracking-[0.2em]">Growth Stage</h4>
-                  <ul className="space-y-4">
-                    <li><a href="#" className="flex items-center gap-3 group"><Rocket className="w-5 h-5 text-gray-400 group-hover:text-black" /><span className="text-sm font-semibold group-hover:text-primary">Startups</span></a></li>
-                    <li><a href="#" className="flex items-center gap-3 group"><Building2 className="w-5 h-5 text-gray-400 group-hover:text-black" /><span className="text-sm font-semibold group-hover:text-primary">Mid-market</span></a></li>
-                    <li><a href="#" className="flex items-center gap-3 group"><Layers className="w-5 h-5 text-gray-400 group-hover:text-black" /><span className="text-sm font-semibold group-hover:text-primary">Enterprise</span></a></li>
-                  </ul>
+                {/* Growth Stage */}
+                <div className="group/section">
+                  <h4 className="text-[11px] font-bold text-gray-400 uppercase tracking-[0.2em] mb-8">Growth Stage</h4>
+                  <div className="grid grid-cols-3 gap-8">
+                    <a href="#" className="flex items-start gap-4 group/item">
+                      <Rocket className="w-6 h-6 text-gray-400 group-hover/item:text-black mt-1" />
+                      <div className="space-y-1">
+                        <span className="text-lg font-bold group-hover/item:text-primary block transition-colors">Startups</span>
+                        <p className="text-sm text-gray-500 opacity-0 group-hover/section:opacity-100 transition-opacity duration-300">Tailored solutions for early-stage growth</p>
+                      </div>
+                    </a>
+                    <a href="#" className="flex items-start gap-4 group/item">
+                      <Building2 className="w-6 h-6 text-gray-400 group-hover/item:text-black mt-1" />
+                      <div className="space-y-1">
+                        <span className="text-lg font-bold group-hover/item:text-primary block transition-colors">Mid-market</span>
+                        <p className="text-sm text-gray-500 opacity-0 group-hover/section:opacity-100 transition-opacity duration-300">Scaling operations for established companies</p>
+                      </div>
+                    </a>
+                    <a href="#" className="flex items-start gap-4 group/item">
+                      <Layers className="w-6 h-6 text-gray-400 group-hover/item:text-black mt-1" />
+                      <div className="space-y-1">
+                        <span className="text-lg font-bold group-hover/item:text-primary block transition-colors">Enterprise</span>
+                        <p className="text-sm text-gray-500 opacity-0 group-hover/section:opacity-100 transition-opacity duration-300">Robust tools for global organizational scale</p>
+                      </div>
+                    </a>
+                  </div>
+                  <div className="h-px bg-gray-100 w-full mt-12"></div>
                 </div>
 
-                {/* Section 3 */}
-                <div className="space-y-6">
-                  <h4 className="text-[10px] font-bold text-gray-500 uppercase tracking-[0.2em]">Platform</h4>
-                  <ul className="space-y-4">
-                    <li><a href="#" className="flex items-center gap-3 group"><Terminal className="w-5 h-5 text-gray-400 group-hover:text-black" /><span className="text-sm font-semibold group-hover:text-primary">Remote Embedded • API</span></a></li>
-                    <li><a href="#" className="flex items-center gap-3 group"><LayoutGridIcon className="w-5 h-5 text-gray-400 group-hover:text-black" /><span className="text-sm font-semibold group-hover:text-primary">Integrations</span></a></li>
-                    <li><a href="#" className="flex items-center gap-3 group"><Users className="w-5 h-5 text-gray-400 group-hover:text-black" /><span className="text-sm font-semibold group-hover:text-primary">HR Essentials</span></a></li>
-                  </ul>
+                {/* Platform */}
+                <div className="group/section">
+                  <h4 className="text-[11px] font-bold text-gray-400 uppercase tracking-[0.2em] mb-8">Platform</h4>
+                  <div className="grid grid-cols-3 gap-8">
+                    <a href="#" className="flex items-start gap-4 group/item">
+                      <Terminal className="w-6 h-6 text-gray-400 group-hover/item:text-black mt-1" />
+                      <div className="space-y-1">
+                        <span className="text-lg font-bold group-hover/item:text-primary block transition-colors">Remote Embedded • API</span>
+                        <p className="text-sm text-gray-500 opacity-0 group-hover/section:opacity-100 transition-opacity duration-300">Integrate global HR directly into your app</p>
+                      </div>
+                    </a>
+                    <a href="#" className="flex items-start gap-4 group/item">
+                      <LayoutGridIcon className="w-6 h-6 text-gray-400 group-hover/item:text-black mt-1" />
+                      <div className="space-y-1">
+                        <span className="text-lg font-bold group-hover/item:text-primary block transition-colors">Integrations</span>
+                        <p className="text-sm text-gray-500 opacity-0 group-hover/section:opacity-100 transition-opacity duration-300">Connect with your favorite business tools</p>
+                      </div>
+                    </a>
+                    <a href="#" className="flex items-start gap-4 group/item">
+                      <Users className="w-6 h-6 text-gray-400 group-hover/item:text-black mt-1" />
+                      <div className="space-y-1">
+                        <span className="text-lg font-bold group-hover/item:text-primary block transition-colors">HR Essentials</span>
+                        <p className="text-sm text-gray-500 opacity-0 group-hover/section:opacity-100 transition-opacity duration-300">Core tools to manage your global team</p>
+                      </div>
+                    </a>
+                  </div>
+                  <div className="h-px bg-gray-100 w-full mt-12"></div>
                 </div>
 
-                {/* Section 4 */}
-                <div className="space-y-6">
-                  <h4 className="text-[10px] font-bold text-gray-500 uppercase tracking-[0.2em]">Partner With Us</h4>
-                  <ul className="space-y-4">
-                    <li><a href="#" className="flex items-center gap-3 group"><Handshake className="w-5 h-5 text-gray-400 group-hover:text-black" /><span className="text-sm font-semibold group-hover:text-primary">Strategic technology partners</span></a></li>
-                    <li><a href="#" className="flex items-center gap-3 group"><UserPlus className="w-5 h-5 text-gray-400 group-hover:text-black" /><span className="text-sm font-semibold group-hover:text-primary">Become a partner</span></a></li>
-                  </ul>
+                {/* Partner With Us */}
+                <div className="group/section">
+                  <h4 className="text-[11px] font-bold text-gray-400 uppercase tracking-[0.2em] mb-8">Partner With Us</h4>
+                  <div className="grid grid-cols-3 gap-8">
+                    <a href="#" className="flex items-start gap-4 group/item">
+                      <Handshake className="w-6 h-6 text-gray-400 group-hover/item:text-black mt-1" />
+                      <div className="space-y-1">
+                        <span className="text-lg font-bold group-hover/item:text-primary block transition-colors">Strategic technology partners</span>
+                        <p className="text-sm text-gray-500 opacity-0 group-hover/section:opacity-100 transition-opacity duration-300">Join our ecosystem of industry leaders</p>
+                      </div>
+                    </a>
+                    <a href="#" className="flex items-start gap-4 group/item">
+                      <UserPlus className="w-6 h-6 text-gray-400 group-hover/item:text-black mt-1" />
+                      <div className="space-y-1">
+                        <span className="text-lg font-bold group-hover/item:text-primary block transition-colors">Become a partner</span>
+                        <p className="text-sm text-gray-500 opacity-0 group-hover/section:opacity-100 transition-opacity duration-300">Grow your business by partnering with us</p>
+                      </div>
+                    </a>
+                  </div>
                 </div>
               </div>
 
