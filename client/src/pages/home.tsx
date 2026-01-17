@@ -100,12 +100,12 @@ export default function Home() {
               <div className="flex-1 space-y-12 pr-12 border-r border-gray-100">
                 {/* Search & Strategy */}
                 <div className="group/section">
-                  <h4 className="text-[11px] font-bold text-gray-400 uppercase tracking-[0.2em] mb-4">Search & Strategy</h4>
-                  <div className="grid grid-cols-3 gap-2">
+                  <h4 className="text-[11px] font-bold text-gray-400 uppercase tracking-[0.2em] mb-3">Search & Strategy</h4>
+                  <div className="grid grid-cols-3 gap-1">
                     <a href="#" className="flex items-start gap-3 p-3 rounded-lg hover:bg-[#F9FAFB] transition-all duration-300 group/item overflow-hidden">
                       <BarChart3 className="w-5 h-5 text-gray-400 group-hover/item:text-black mt-1 shrink-0" />
                       <div className="grid transition-all duration-300 grid-rows-[auto_0fr] group-hover/section:grid-rows-[auto_1fr]">
-                        <span className="text-base font-bold group-hover/item:text-primary block transition-colors leading-tight">Local SEO</span>
+                        <span className="text-base font-bold text-black block transition-colors leading-tight">Local SEO</span>
                         <div className="overflow-hidden">
                           <p className="text-[13px] text-gray-500 pt-1 transition-all duration-300">Dominate local search results in your service area</p>
                         </div>
@@ -114,7 +114,7 @@ export default function Home() {
                     <a href="#" className="flex items-start gap-3 p-3 rounded-lg hover:bg-[#F9FAFB] transition-all duration-300 group/item overflow-hidden">
                       <Terminal className="w-5 h-5 text-gray-400 group-hover/item:text-black mt-1 shrink-0" />
                       <div className="grid transition-all duration-300 grid-rows-[auto_0fr] group-hover/section:grid-rows-[auto_1fr]">
-                        <span className="text-base font-bold group-hover/item:text-primary block transition-colors leading-tight">AI Search Optimization</span>
+                        <span className="text-base font-bold text-black block transition-colors leading-tight">AI Search Optimization</span>
                         <div className="overflow-hidden">
                           <p className="text-[13px] text-gray-500 pt-1 transition-all duration-300">Future-proof your presence for AI-driven search</p>
                         </div>
@@ -123,24 +123,24 @@ export default function Home() {
                     <a href="#" className="flex items-start gap-3 p-3 rounded-lg hover:bg-[#F9FAFB] transition-all duration-300 group/item overflow-hidden">
                       <Globe className="w-5 h-5 text-gray-400 group-hover/item:text-black mt-1 shrink-0" />
                       <div className="grid transition-all duration-300 grid-rows-[auto_0fr] group-hover/section:grid-rows-[auto_1fr]">
-                        <span className="text-base font-bold group-hover/item:text-primary block transition-colors leading-tight">Organic SEO</span>
+                        <span className="text-base font-bold text-black block transition-colors leading-tight">Organic SEO</span>
                         <div className="overflow-hidden">
                           <p className="text-[13px] text-gray-500 pt-1 transition-all duration-300">Build long-term authority and organic traffic</p>
                         </div>
                       </div>
                     </a>
                   </div>
-                  <div className="h-px bg-gray-100 w-full mt-6"></div>
+                  <div className="h-px bg-gray-100 w-full mt-4"></div>
                 </div>
 
                 {/* Paid Media & Lead Gen */}
                 <div className="group/section">
-                  <h4 className="text-[11px] font-bold text-gray-400 uppercase tracking-[0.2em] mb-4">Paid Media & Lead Gen</h4>
-                  <div className="grid grid-cols-3 gap-2">
+                  <h4 className="text-[11px] font-bold text-gray-400 uppercase tracking-[0.2em] mb-3">Paid Media & Lead Gen</h4>
+                  <div className="grid grid-cols-3 gap-1">
                     <a href="#" className="flex items-start gap-3 p-3 rounded-lg hover:bg-[#F9FAFB] transition-all duration-300 group/item overflow-hidden">
                       <CircleDollarSign className="w-5 h-5 text-gray-400 group-hover/item:text-black mt-1 shrink-0" />
                       <div className="grid transition-all duration-300 grid-rows-[auto_0fr] group-hover/section:grid-rows-[auto_1fr]">
-                        <span className="text-base font-bold group-hover/item:text-primary block transition-colors leading-tight">Pay-Per-Click</span>
+                        <span className="text-base font-bold text-black block transition-colors leading-tight">Pay-Per-Click</span>
                         <div className="overflow-hidden">
                           <p className="text-[13px] text-gray-500 pt-1 transition-all duration-300">Instant leads through Google Ads and Bing</p>
                         </div>
@@ -149,7 +149,7 @@ export default function Home() {
                     <a href="#" className="flex items-start gap-3 p-3 rounded-lg hover:bg-[#F9FAFB] transition-all duration-300 group/item overflow-hidden">
                       <Users className="w-5 h-5 text-gray-400 group-hover/item:text-black mt-1 shrink-0" />
                       <div className="grid transition-all duration-300 grid-rows-[auto_0fr] group-hover/section:grid-rows-[auto_1fr]">
-                        <span className="text-base font-bold group-hover/item:text-primary block transition-colors leading-tight">LSA Management</span>
+                        <span className="text-base font-bold text-black block transition-colors leading-tight">LSA Management</span>
                         <div className="overflow-hidden">
                           <p className="text-[13px] text-gray-500 pt-1 transition-all duration-300">Maximize your Google Local Services Ads ROI</p>
                         </div>
@@ -158,24 +158,24 @@ export default function Home() {
                     <a href="#" className="flex items-start gap-3 p-3 rounded-lg hover:bg-[#F9FAFB] transition-all duration-300 group/item overflow-hidden">
                       <Layers className="w-5 h-5 text-gray-400 group-hover/item:text-black mt-1 shrink-0" />
                       <div className="grid transition-all duration-300 grid-rows-[auto_0fr] group-hover/section:grid-rows-[auto_1fr]">
-                        <span className="text-base font-bold group-hover/item:text-primary block transition-colors leading-tight">OTT Advertising</span>
+                        <span className="text-base font-bold text-black block transition-colors leading-tight">OTT Advertising</span>
                         <div className="overflow-hidden">
                           <p className="text-[13px] text-gray-500 pt-1 transition-all duration-300">Reach homeowners on streaming TV platforms</p>
                         </div>
                       </div>
                     </a>
                   </div>
-                  <div className="h-px bg-gray-100 w-full mt-6"></div>
+                  <div className="h-px bg-gray-100 w-full mt-4"></div>
                 </div>
 
                 {/* Creative & Content */}
                 <div className="group/section">
-                  <h4 className="text-[11px] font-bold text-gray-400 uppercase tracking-[0.2em] mb-4">Creative & Content</h4>
-                  <div className="grid grid-cols-3 gap-2">
+                  <h4 className="text-[11px] font-bold text-gray-400 uppercase tracking-[0.2em] mb-3">Creative & Content</h4>
+                  <div className="grid grid-cols-3 gap-1">
                     <a href="#" className="flex items-start gap-3 p-3 rounded-lg hover:bg-[#F9FAFB] transition-all duration-300 group/item overflow-hidden">
                       <PenTool className="w-5 h-5 text-gray-400 group-hover/item:text-black mt-1 shrink-0" />
                       <div className="grid transition-all duration-300 grid-rows-[auto_0fr] group-hover/section:grid-rows-[auto_1fr]">
-                        <span className="text-base font-bold group-hover/item:text-primary block transition-colors leading-tight">Website Design</span>
+                        <span className="text-base font-bold text-black block transition-colors leading-tight">Website Design</span>
                         <div className="overflow-hidden">
                           <p className="text-[13px] text-gray-500 pt-1 transition-all duration-300">High-converting websites for home services</p>
                         </div>
@@ -184,7 +184,7 @@ export default function Home() {
                     <a href="#" className="flex items-start gap-3 p-3 rounded-lg hover:bg-[#F9FAFB] transition-all duration-300 group/item overflow-hidden">
                       <Rocket className="w-5 h-5 text-gray-400 group-hover/item:text-black mt-1 shrink-0" />
                       <div className="grid transition-all duration-300 grid-rows-[auto_0fr] group-hover/section:grid-rows-[auto_1fr]">
-                        <span className="text-base font-bold group-hover/item:text-primary block transition-colors leading-tight">Digital PR</span>
+                        <span className="text-base font-bold text-black block transition-colors leading-tight">Digital PR</span>
                         <div className="overflow-hidden">
                           <p className="text-[13px] text-gray-500 pt-1 transition-all duration-300">Earn mentions and backlinks from top publications</p>
                         </div>
@@ -193,7 +193,7 @@ export default function Home() {
                     <a href="#" className="flex items-start gap-3 p-3 rounded-lg hover:bg-[#F9FAFB] transition-all duration-300 group/item overflow-hidden">
                       <Handshake className="w-5 h-5 text-gray-400 group-hover/item:text-black mt-1 shrink-0" />
                       <div className="grid transition-all duration-300 grid-rows-[auto_0fr] group-hover/section:grid-rows-[auto_1fr]">
-                        <span className="text-base font-bold group-hover/item:text-primary block transition-colors leading-tight">Social Media</span>
+                        <span className="text-base font-bold text-black block transition-colors leading-tight">Social Media</span>
                         <div className="overflow-hidden">
                           <p className="text-[13px] text-gray-500 pt-1 transition-all duration-300">Build a community and brand on social platforms</p>
                         </div>
@@ -202,7 +202,7 @@ export default function Home() {
                     <a href="#" className="flex items-start gap-3 p-3 rounded-lg hover:bg-[#F9FAFB] transition-all duration-300 group/item overflow-hidden">
                       <Users className="w-5 h-5 text-gray-400 group-hover/item:text-black mt-1 shrink-0" />
                       <div className="grid transition-all duration-300 grid-rows-[auto_0fr] group-hover/section:grid-rows-[auto_1fr]">
-                        <span className="text-base font-bold group-hover/item:text-primary block transition-colors leading-tight">Email Marketing</span>
+                        <span className="text-base font-bold text-black block transition-colors leading-tight">Email Marketing</span>
                         <div className="overflow-hidden">
                           <p className="text-[13px] text-gray-500 pt-1 transition-all duration-300">Nurture leads and increase customer lifetime value</p>
                         </div>
