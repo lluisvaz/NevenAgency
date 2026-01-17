@@ -173,7 +173,7 @@ export default function Home() {
         </header>
 
         {/* Hero Content */}
-        <div className="relative z-20 w-full max-w-[1920px] mx-auto px-6 md:px-12 lg:px-24 xl:px-48 pt-32 md:pt-48 lg:pt-56 pb-20">
+        <div className="relative z-20 w-full max-w-[1920px] mx-auto px-6 md:px-12 lg:px-24 xl:px-48 pt-48 md:pt-48 lg:pt-56 pb-20">
           <div className="max-w-3xl">
             <h2 className="text-gray-400 font-bold tracking-widest text-sm mb-4 uppercase">
               Home Services Marketing Agency
