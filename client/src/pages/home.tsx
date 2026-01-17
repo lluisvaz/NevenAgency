@@ -98,113 +98,99 @@ export default function Home() {
             <div className="max-w-[1920px] mx-auto px-6 md:px-12 lg:px-24 xl:px-48 py-12 flex">
               {/* Main Content */}
               <div className="flex-1 space-y-12 pr-12 border-r border-gray-100">
-                {/* Global Coverage */}
+                {/* Search & Strategy */}
                 <div className="group/section">
-                  <h4 className="text-[11px] font-bold text-gray-400 uppercase tracking-[0.2em] mb-4">Global Coverage</h4>
+                  <h4 className="text-[11px] font-bold text-gray-400 uppercase tracking-[0.2em] mb-4">Search & Strategy</h4>
                   <div className="grid grid-cols-3 gap-x-4 gap-y-2">
-                    <a href="#" className="flex items-start gap-4 p-4 rounded-lg hover:bg-[#F9FAFB] transition-colors group/item">
-                      <Globe className="w-6 h-6 text-gray-400 group-hover/item:text-black mt-1" />
-                      <div className="space-y-1">
-                        <span className="text-lg font-bold group-hover/item:text-primary block transition-colors">Country Explorer</span>
-                        <p className="text-sm text-gray-500 opacity-0 group-hover/section:opacity-100 transition-opacity duration-300">Find global employment support by country</p>
-                      </div>
-                    </a>
-                    <a href="#" className="flex items-start gap-4 p-4 rounded-lg hover:bg-[#F9FAFB] transition-colors group/item">
-                      <MapPin className="w-6 h-6 text-gray-400 group-hover/item:text-black mt-1" />
-                      <div className="space-y-1">
-                        <span className="text-lg font-bold group-hover/item:text-primary block transition-colors">US State Explorer</span>
-                        <p className="text-sm text-gray-500 opacity-0 group-hover/section:opacity-100 transition-opacity duration-300">Simplify hiring across all US states</p>
-                      </div>
-                    </a>
                     <a href="#" className="flex items-start gap-4 p-4 rounded-lg hover:bg-[#F9FAFB] transition-colors group/item">
                       <BarChart3 className="w-6 h-6 text-gray-400 group-hover/item:text-black mt-1" />
                       <div className="space-y-1">
-                        <span className="text-lg font-bold group-hover/item:text-primary block transition-colors">Compare Remote</span>
-                        <p className="text-sm text-gray-500 opacity-0 group-hover/section:opacity-100 transition-opacity duration-300">See how we stack up against others</p>
+                        <span className="text-lg font-bold group-hover/item:text-primary block transition-colors">Local SEO</span>
+                        <p className="text-sm text-gray-500 opacity-0 group-hover/section:opacity-100 transition-opacity duration-300">Dominate local search results in your service area</p>
                       </div>
                     </a>
-                  </div>
-                  <div className="h-px bg-gray-100 w-full mt-8"></div>
-                </div>
-
-                {/* Growth Stage */}
-                <div className="group/section">
-                  <h4 className="text-[11px] font-bold text-gray-400 uppercase tracking-[0.2em] mb-4">Growth Stage</h4>
-                  <div className="grid grid-cols-3 gap-x-4 gap-y-2">
-                    <a href="#" className="flex items-start gap-4 p-4 rounded-lg hover:bg-[#F9FAFB] transition-colors group/item">
-                      <Rocket className="w-6 h-6 text-gray-400 group-hover/item:text-black mt-1" />
-                      <div className="space-y-1">
-                        <span className="text-lg font-bold group-hover/item:text-primary block transition-colors">Startups</span>
-                        <p className="text-sm text-gray-500 opacity-0 group-hover/section:opacity-100 transition-opacity duration-300">Tailored solutions for early-stage growth</p>
-                      </div>
-                    </a>
-                    <a href="#" className="flex items-start gap-4 p-4 rounded-lg hover:bg-[#F9FAFB] transition-colors group/item">
-                      <Building2 className="w-6 h-6 text-gray-400 group-hover/item:text-black mt-1" />
-                      <div className="space-y-1">
-                        <span className="text-lg font-bold group-hover/item:text-primary block transition-colors">Mid-market</span>
-                        <p className="text-sm text-gray-500 opacity-0 group-hover/section:opacity-100 transition-opacity duration-300">Scaling operations for established companies</p>
-                      </div>
-                    </a>
-                    <a href="#" className="flex items-start gap-4 p-4 rounded-lg hover:bg-[#F9FAFB] transition-colors group/item">
-                      <Layers className="w-6 h-6 text-gray-400 group-hover/item:text-black mt-1" />
-                      <div className="space-y-1">
-                        <span className="text-lg font-bold group-hover/item:text-primary block transition-colors">Enterprise</span>
-                        <p className="text-sm text-gray-500 opacity-0 group-hover/section:opacity-100 transition-opacity duration-300">Robust tools for global organizational scale</p>
-                      </div>
-                    </a>
-                  </div>
-                  <div className="h-px bg-gray-100 w-full mt-8"></div>
-                </div>
-
-                {/* Platform */}
-                <div className="group/section">
-                  <h4 className="text-[11px] font-bold text-gray-400 uppercase tracking-[0.2em] mb-4">Platform</h4>
-                  <div className="grid grid-cols-3 gap-x-4 gap-y-2">
                     <a href="#" className="flex items-start gap-4 p-4 rounded-lg hover:bg-[#F9FAFB] transition-colors group/item">
                       <Terminal className="w-6 h-6 text-gray-400 group-hover/item:text-black mt-1" />
                       <div className="space-y-1">
-                        <span className="text-lg font-bold group-hover/item:text-primary block transition-colors">Remote Embedded • API</span>
-                        <p className="text-sm text-gray-500 opacity-0 group-hover/section:opacity-100 transition-opacity duration-300">Integrate global HR directly into your app</p>
+                        <span className="text-lg font-bold group-hover/item:text-primary block transition-colors">AI Search Optimization</span>
+                        <p className="text-sm text-gray-500 opacity-0 group-hover/section:opacity-100 transition-opacity duration-300">Future-proof your presence for AI-driven search</p>
                       </div>
                     </a>
                     <a href="#" className="flex items-start gap-4 p-4 rounded-lg hover:bg-[#F9FAFB] transition-colors group/item">
-                      <LayoutGridIcon className="w-6 h-6 text-gray-400 group-hover/item:text-black mt-1" />
+                      <Globe className="w-6 h-6 text-gray-400 group-hover/item:text-black mt-1" />
                       <div className="space-y-1">
-                        <span className="text-lg font-bold group-hover/item:text-primary block transition-colors">Integrations</span>
-                        <p className="text-sm text-gray-500 opacity-0 group-hover/section:opacity-100 transition-opacity duration-300">Connect with your favorite business tools</p>
+                        <span className="text-lg font-bold group-hover/item:text-primary block transition-colors">Organic SEO</span>
+                        <p className="text-sm text-gray-500 opacity-0 group-hover/section:opacity-100 transition-opacity duration-300">Build long-term authority and organic traffic</p>
+                      </div>
+                    </a>
+                  </div>
+                  <div className="h-px bg-gray-100 w-full mt-8"></div>
+                </div>
+
+                {/* Paid Media & Lead Gen */}
+                <div className="group/section">
+                  <h4 className="text-[11px] font-bold text-gray-400 uppercase tracking-[0.2em] mb-4">Paid Media & Lead Gen</h4>
+                  <div className="grid grid-cols-3 gap-x-4 gap-y-2">
+                    <a href="#" className="flex items-start gap-4 p-4 rounded-lg hover:bg-[#F9FAFB] transition-colors group/item">
+                      <CircleDollarSign className="w-6 h-6 text-gray-400 group-hover/item:text-black mt-1" />
+                      <div className="space-y-1">
+                        <span className="text-lg font-bold group-hover/item:text-primary block transition-colors">Pay-Per-Click</span>
+                        <p className="text-sm text-gray-500 opacity-0 group-hover/section:opacity-100 transition-opacity duration-300">Instant leads through Google Ads and Bing</p>
                       </div>
                     </a>
                     <a href="#" className="flex items-start gap-4 p-4 rounded-lg hover:bg-[#F9FAFB] transition-colors group/item">
                       <Users className="w-6 h-6 text-gray-400 group-hover/item:text-black mt-1" />
                       <div className="space-y-1">
-                        <span className="text-lg font-bold group-hover/item:text-primary block transition-colors">HR Essentials</span>
-                        <p className="text-sm text-gray-500 opacity-0 group-hover/section:opacity-100 transition-opacity duration-300">Core tools to manage your global team</p>
+                        <span className="text-lg font-bold group-hover/item:text-primary block transition-colors">LSA Management</span>
+                        <p className="text-sm text-gray-500 opacity-0 group-hover/section:opacity-100 transition-opacity duration-300">Maximize your Google Local Services Ads ROI</p>
+                      </div>
+                    </a>
+                    <a href="#" className="flex items-start gap-4 p-4 rounded-lg hover:bg-[#F9FAFB] transition-colors group/item">
+                      <Layers className="w-6 h-6 text-gray-400 group-hover/item:text-black mt-1" />
+                      <div className="space-y-1">
+                        <span className="text-lg font-bold group-hover/item:text-primary block transition-colors">OTT Advertising</span>
+                        <p className="text-sm text-gray-500 opacity-0 group-hover/section:opacity-100 transition-opacity duration-300">Reach homeowners on streaming TV platforms</p>
                       </div>
                     </a>
                   </div>
                   <div className="h-px bg-gray-100 w-full mt-8"></div>
                 </div>
 
-                {/* Partner With Us */}
+                {/* Creative & Content */}
                 <div className="group/section">
-                  <h4 className="text-[11px] font-bold text-gray-400 uppercase tracking-[0.2em] mb-4">Partner With Us</h4>
+                  <h4 className="text-[11px] font-bold text-gray-400 uppercase tracking-[0.2em] mb-4">Creative & Content</h4>
                   <div className="grid grid-cols-3 gap-x-4 gap-y-2">
                     <a href="#" className="flex items-start gap-4 p-4 rounded-lg hover:bg-[#F9FAFB] transition-colors group/item">
-                      <Handshake className="w-6 h-6 text-gray-400 group-hover/item:text-black mt-1" />
+                      <PenTool className="w-6 h-6 text-gray-400 group-hover/item:text-black mt-1" />
                       <div className="space-y-1">
-                        <span className="text-lg font-bold group-hover/item:text-primary block transition-colors">Strategic technology partners</span>
-                        <p className="text-sm text-gray-500 opacity-0 group-hover/section:opacity-100 transition-opacity duration-300">Join our ecosystem of industry leaders</p>
+                        <span className="text-lg font-bold group-hover/item:text-primary block transition-colors">Website Design</span>
+                        <p className="text-sm text-gray-500 opacity-0 group-hover/section:opacity-100 transition-opacity duration-300">High-converting websites for home services</p>
                       </div>
                     </a>
                     <a href="#" className="flex items-start gap-4 p-4 rounded-lg hover:bg-[#F9FAFB] transition-colors group/item">
-                      <UserPlus className="w-6 h-6 text-gray-400 group-hover/item:text-black mt-1" />
+                      <Rocket className="w-6 h-6 text-gray-400 group-hover/item:text-black mt-1" />
                       <div className="space-y-1">
-                        <span className="text-lg font-bold group-hover/item:text-primary block transition-colors">Become a partner</span>
-                        <p className="text-sm text-gray-500 opacity-0 group-hover/section:opacity-100 transition-opacity duration-300">Grow your business by partnering with us</p>
+                        <span className="text-lg font-bold group-hover/item:text-primary block transition-colors">Digital PR</span>
+                        <p className="text-sm text-gray-500 opacity-0 group-hover/section:opacity-100 transition-opacity duration-300">Earn mentions and backlinks from top publications</p>
+                      </div>
+                    </a>
+                    <a href="#" className="flex items-start gap-4 p-4 rounded-lg hover:bg-[#F9FAFB] transition-colors group/item">
+                      <Handshake className="w-6 h-6 text-gray-400 group-hover/item:text-black mt-1" />
+                      <div className="space-y-1">
+                        <span className="text-lg font-bold group-hover/item:text-primary block transition-colors">Social Media</span>
+                        <p className="text-sm text-gray-500 opacity-0 group-hover/section:opacity-100 transition-opacity duration-300">Build a community and brand on social platforms</p>
+                      </div>
+                    </a>
+                    <a href="#" className="flex items-start gap-4 p-4 rounded-lg hover:bg-[#F9FAFB] transition-colors group/item">
+                      <Users className="w-6 h-6 text-gray-400 group-hover/item:text-black mt-1" />
+                      <div className="space-y-1">
+                        <span className="text-lg font-bold group-hover/item:text-primary block transition-colors">Email Marketing</span>
+                        <p className="text-sm text-gray-500 opacity-0 group-hover/section:opacity-100 transition-opacity duration-300">Nurture leads and increase customer lifetime value</p>
                       </div>
                     </a>
                   </div>
                 </div>
+              </div>
               </div>
 
               {/* Sidebar */}
