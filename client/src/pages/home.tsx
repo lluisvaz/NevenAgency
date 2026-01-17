@@ -82,39 +82,37 @@ export default function Home() {
               </Link>
               
               {/* Desktop Menu */}
-              <div className="hidden lg:flex items-center gap-8 text-[17px] font-medium">
-                <a href="#" className={`hover:text-primary transition-colors ${isHeaderWhite ? 'text-black' : 'text-white'}`}>Pricing</a>
-                <a href="#" className={`hover:text-primary transition-colors ${isHeaderWhite ? 'text-black' : 'text-white'}`}>About</a>
-                <div className="flex items-center gap-2">
-                  <button 
-                    onClick={() => {
-                      setIsServicesOpen(!isServicesOpen);
-                      setIsIndustriesOpen(false);
-                    }}
-                    className={`flex items-center gap-2 px-5 py-2.5 rounded-full transition-all duration-300 cursor-pointer ${
-                      isServicesOpen 
-                        ? 'bg-black text-white' 
-                        : 'hover:text-primary'
-                    }`}
-                  >
-                    Services
-                    {isServicesOpen ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
-                  </button>
-                  <button 
-                    onClick={() => {
-                      setIsIndustriesOpen(!isIndustriesOpen);
-                      setIsServicesOpen(false);
-                    }}
-                    className={`flex items-center gap-2 px-5 py-2.5 rounded-full transition-all duration-300 cursor-pointer ${
-                      isIndustriesOpen 
-                        ? 'bg-black text-white' 
-                        : 'hover:text-primary'
-                    }`}
-                  >
-                    Industries
-                    {isIndustriesOpen ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
-                  </button>
-                </div>
+              <div className="hidden lg:flex items-center gap-1 text-[17px] font-medium">
+                <a href="#" className={`px-4 py-2.5 rounded-full hover:text-primary transition-colors ${isHeaderWhite ? 'text-black' : 'text-white'}`}>Pricing</a>
+                <a href="#" className={`px-4 py-2.5 rounded-full hover:text-primary transition-colors ${isHeaderWhite ? 'text-black' : 'text-white'}`}>About</a>
+                <button 
+                  onClick={() => {
+                    setIsServicesOpen(!isServicesOpen);
+                    setIsIndustriesOpen(false);
+                  }}
+                  className={`flex items-center gap-2 px-4 py-2.5 rounded-full transition-all duration-300 cursor-pointer ${
+                    isServicesOpen 
+                      ? 'bg-black text-white' 
+                      : 'hover:text-primary'
+                  }`}
+                >
+                  Services
+                  {isServicesOpen ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
+                </button>
+                <button 
+                  onClick={() => {
+                    setIsIndustriesOpen(!isIndustriesOpen);
+                    setIsServicesOpen(false);
+                  }}
+                  className={`flex items-center gap-2 px-4 py-2.5 rounded-full transition-all duration-300 cursor-pointer ${
+                    isIndustriesOpen 
+                      ? 'bg-black text-white' 
+                      : 'hover:text-primary'
+                  }`}
+                >
+                  Industries
+                  {isIndustriesOpen ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
+                </button>
               </div>
             </div>
 
