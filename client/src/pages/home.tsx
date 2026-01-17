@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { 
   CheckCircle2, Phone, SlidersHorizontal, PenTool, CircleDollarSign, 
   Play, Star, Menu, ChevronDown, ChevronUp, Globe, MapPin, 
@@ -12,6 +12,17 @@ import heroVideo from "@assets/generated_videos/aerial_view_of_roofers_working_o
 
 export default function Home() {
   const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const isHeaderWhite = isServicesOpen || isScrolled;
 
   return (
     <div className="relative w-full overflow-x-hidden bg-black text-white font-sans">
@@ -33,7 +44,7 @@ export default function Home() {
         </div>
 
         {/* Navigation */}
-        <header className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-300 ${isServicesOpen ? 'bg-white text-black shadow-lg' : 'bg-transparent text-white'}`}>
+        <header className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-300 ${isHeaderWhite ? 'bg-white text-black shadow-lg' : 'bg-transparent text-white'}`}>
           <nav className="w-full max-w-[1920px] mx-auto px-6 md:px-12 lg:px-24 xl:px-48 py-6 flex items-center justify-between">
             <div className="flex items-center gap-4 lg:gap-12">
               {/* Logo */}
@@ -41,14 +52,14 @@ export default function Home() {
                 <img 
                   src="/images/logo.png" 
                   alt="Logo" 
-                  className={`h-8 md:h-10 w-auto object-contain transition-all duration-300 ${!isServicesOpen ? 'invert' : ''}`} 
+                  className={`h-8 md:h-10 w-auto object-contain transition-all duration-300 ${!isHeaderWhite ? 'invert' : ''}`} 
                 />
               </Link>
               
               {/* Desktop Menu */}
-              <div className="hidden lg:flex items-center gap-6 text-sm font-semibold uppercase tracking-wider">
-                <a href="#" className={`hover:text-primary transition-colors ${isServicesOpen ? 'text-black' : 'text-white'}`}>Pricing</a>
-                <a href="#" className={`hover:text-primary transition-colors ${isServicesOpen ? 'text-black' : 'text-white'}`}>About</a>
+              <div className="hidden lg:flex items-center gap-6 text-[15px] font-medium">
+                <a href="#" className={`hover:text-primary transition-colors ${isHeaderWhite ? 'text-black' : 'text-white'}`}>Pricing</a>
+                <a href="#" className={`hover:text-primary transition-colors ${isHeaderWhite ? 'text-black' : 'text-white'}`}>About</a>
                 <button 
                   onClick={() => setIsServicesOpen(!isServicesOpen)}
                   className={`flex items-center gap-1.5 px-4 py-2 rounded-full transition-all duration-300 ${
@@ -60,19 +71,19 @@ export default function Home() {
                   Services
                   {isServicesOpen ? <ChevronUp size={14} /> : <ChevronDown size={14} />}
                 </button>
-                <a href="#" className={`hover:text-primary transition-colors ${isServicesOpen ? 'text-black' : 'text-white'}`}>Resources</a>
+                <a href="#" className={`hover:text-primary transition-colors ${isHeaderWhite ? 'text-black' : 'text-white'}`}>Resources</a>
               </div>
             </div>
 
             <div className="flex items-center gap-4 md:gap-6">
-              <button className={`hidden md:flex items-center gap-2 transition-colors cursor-pointer group ${isServicesOpen ? 'text-black' : 'text-white'}`}>
-                <GlobeIcon size={26} className={isServicesOpen ? 'text-black' : 'text-white'} />
+              <button className={`hidden md:flex items-center gap-2 transition-colors cursor-pointer group ${isHeaderWhite ? 'text-black' : 'text-white'}`}>
+                <GlobeIcon size={26} className={isHeaderWhite ? 'text-black' : 'text-white'} />
                 <ChevronDown size={18} className="text-gray-400 group-hover:text-primary" />
               </button>
               <button className="hidden md:block bg-primary text-white px-4 md:px-6 py-2.5 md:py-3 font-bold uppercase tracking-wide text-xs md:text-sm hover:bg-black transition-colors cursor-pointer shrink-0 rounded-sm">
                 Schedule Intro Call
               </button>
-              <button className={`md:hidden p-2 ${isServicesOpen ? 'text-black' : 'text-white'}`}>
+              <button className={`md:hidden p-2 ${isHeaderWhite ? 'text-black' : 'text-white'}`}>
                 <LayoutGridIcon size={32} />
               </button>
             </div>
