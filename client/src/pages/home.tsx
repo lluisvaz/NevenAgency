@@ -159,7 +159,46 @@ export default function Home() {
                 <a href="#" className="block text-xl font-bold hover:text-primary transition-colors p-3 rounded-lg">Pricing</a>
                 <a href="#" className="block text-xl font-bold hover:text-primary transition-colors p-3 rounded-lg">About</a>
                 
-                <div className="space-y-2">
+                <div className="pt-4 border-t border-gray-100">
+                  <div className="space-y-2">
+                    <button 
+                      onClick={() => setIsMobileLanguageOpen(!isMobileLanguageOpen)}
+                      className={`w-full flex items-center justify-between text-xl font-bold transition-all duration-300 p-3 rounded-lg ${isMobileLanguageOpen ? 'bg-black text-white' : 'hover:text-primary'}`}
+                    >
+                      <div className="flex items-center gap-3">
+                        <Globe size={24} className={isMobileLanguageOpen ? 'text-white' : 'text-gray-400'} />
+                        {language}
+                      </div>
+                      <ChevronDown className={`transition-transform duration-300 ${isMobileLanguageOpen ? 'rotate-180' : ''}`} size={20} />
+                    </button>
+                    <div className={`overflow-hidden transition-all duration-300 ${isMobileLanguageOpen ? 'max-h-48 opacity-100' : 'max-h-0 opacity-0'}`}>
+                      <div className="bg-gray-50 rounded-lg p-2 space-y-1">
+                        {[
+                          { name: "English", code: "en" },
+                          { name: "Portuguese (Brazil)", code: "pt-BR" }
+                        ].map((lang) => (
+                          <button
+                            key={lang.code}
+                            onClick={() => {
+                              setLanguage(lang.name);
+                              setIsMobileLanguageOpen(false);
+                            }}
+                            className={`w-full text-left px-4 py-3 text-lg rounded-md transition-colors ${language === lang.name ? 'bg-white text-primary font-bold shadow-sm' : 'text-gray-600'}`}
+                          >
+                            {lang.name}
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="p-6 border-t border-gray-100">
+                <button className="w-full bg-primary text-white py-4 px-6 font-bold uppercase tracking-wide text-sm hover:bg-black transition-colors cursor-pointer rounded-sm shadow-lg">
+                  Schedule Intro Call
+                </button>
+              </div>
                   <button 
                     onClick={() => {
                       setIsMobileServicesOpen(!isMobileServicesOpen);
