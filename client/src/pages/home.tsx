@@ -12,6 +12,7 @@ import heroVideo from "@assets/generated_videos/aerial_view_of_roofers_working_o
 
 export default function Home() {
   const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [isIndustriesOpen, setIsIndustriesOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -22,7 +23,7 @@ export default function Home() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const isHeaderWhite = isServicesOpen || isScrolled;
+  const isHeaderWhite = isServicesOpen || isIndustriesOpen || isScrolled;
 
   return (
     <div className="relative w-full overflow-x-hidden bg-black text-white font-sans">
@@ -61,7 +62,10 @@ export default function Home() {
                 <a href="#" className={`hover:text-primary transition-colors ${isHeaderWhite ? 'text-black' : 'text-white'}`}>Pricing</a>
                 <a href="#" className={`hover:text-primary transition-colors ${isHeaderWhite ? 'text-black' : 'text-white'}`}>About</a>
                 <button 
-                  onClick={() => setIsServicesOpen(!isServicesOpen)}
+                  onClick={() => {
+                    setIsServicesOpen(!isServicesOpen);
+                    setIsIndustriesOpen(false);
+                  }}
                   className={`flex items-center gap-2 px-5 py-2.5 rounded-full transition-all duration-300 cursor-pointer ${
                     isServicesOpen 
                       ? 'bg-black text-white' 
@@ -71,7 +75,20 @@ export default function Home() {
                   Services
                   {isServicesOpen ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
                 </button>
-                <a href="#" className={`hover:text-primary transition-colors ${isHeaderWhite ? 'text-black' : 'text-white'}`}>Resources</a>
+                <button 
+                  onClick={() => {
+                    setIsIndustriesOpen(!isIndustriesOpen);
+                    setIsServicesOpen(false);
+                  }}
+                  className={`flex items-center gap-2 px-5 py-2.5 rounded-full transition-all duration-300 cursor-pointer ${
+                    isIndustriesOpen 
+                      ? 'bg-black text-white' 
+                      : 'hover:text-primary'
+                  }`}
+                >
+                  Industries
+                  {isIndustriesOpen ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
+                </button>
               </div>
             </div>
 
@@ -244,13 +261,41 @@ export default function Home() {
               </div>
             </div>
           </div>
+          {/* Industries Mega Menu Dropdown */}
+          <div 
+            className={`absolute top-full left-0 right-0 bg-white border-t border-gray-100 overflow-hidden transition-all duration-500 ease-in-out ${
+              isIndustriesOpen ? 'max-h-[1200px] opacity-100 visible' : 'max-h-0 opacity-0 invisible'
+            }`}
+          >
+            <div className="max-w-[1920px] mx-auto px-6 md:px-12 lg:px-24 xl:px-48 py-12">
+              <div className="flex-1">
+                <h4 className="text-[11px] font-bold text-gray-400 uppercase tracking-[0.2em] mb-6">Industries We Serve</h4>
+                <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-x-8 gap-y-4">
+                  {[
+                    "Contractors", "Electrical", "Flooring", "Franchises", "Garage Door",
+                    "Home Builders", "HVAC", "Landscaping", "Moving", "Painting",
+                    "Pest Control", "Plumbing", "Remodeling", "Roofing", "Solar",
+                    "Storage", "Windows & Doors"
+                  ].map((industry) => (
+                    <a key={industry} href="#" className="text-base font-bold text-black hover:text-primary transition-colors py-1 block">
+                      {industry}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+
         </header>
 
         {/* Backdrop Blur Overlay */}
         <div 
-          onClick={() => setIsServicesOpen(false)}
+          onClick={() => {
+            setIsServicesOpen(false);
+            setIsIndustriesOpen(false);
+          }}
           className={`fixed inset-0 z-[90] bg-black/20 backdrop-blur-sm transition-opacity duration-500 ease-in-out cursor-pointer ${
-            isServicesOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
+            isServicesOpen || isIndustriesOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
           }`}
         />
 
