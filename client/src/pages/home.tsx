@@ -16,6 +16,9 @@ export default function Home() {
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isIndustriesOpen, setIsIndustriesOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
+  const [isMobileIndustriesOpen, setIsMobileIndustriesOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -104,11 +107,77 @@ export default function Home() {
               <button className="hidden md:block bg-primary text-white px-4 md:px-6 py-2.5 md:py-3 font-bold uppercase tracking-wide text-xs md:text-sm hover:bg-black transition-colors cursor-pointer shrink-0 rounded-sm">
                 Schedule Intro Call
               </button>
-              <button className={`md:hidden p-2 ${isHeaderWhite ? 'text-black' : 'text-white'}`}>
+              <button 
+                onClick={() => setIsMobileMenuOpen(true)}
+                className={`lg:hidden p-2 ${isHeaderWhite ? 'text-black' : 'text-white'}`}
+              >
                 <LayoutGridIcon size={32} />
               </button>
             </div>
           </nav>
+
+          {/* Mobile Sidebar */}
+          <div className={`fixed inset-0 z-[200] lg:hidden transition-transform duration-300 ease-in-out ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+            <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={() => setIsMobileMenuOpen(false)} />
+            <div className="absolute top-0 right-0 bottom-0 w-[300px] bg-white text-black p-6 flex flex-col shadow-2xl">
+              <div className="flex items-center justify-between mb-10">
+                <img src="/images/logo.png" alt="Logo" className="h-8 w-auto" />
+                <button onClick={() => setIsMobileMenuOpen(false)} className="p-2 hover:bg-gray-100 rounded-full transition-colors">
+                  <ChevronDown className="rotate-90" size={24} />
+                </button>
+              </div>
+
+              <div className="flex-1 overflow-y-auto space-y-6">
+                <a href="/" className="block text-xl font-bold hover:text-primary transition-colors">Home</a>
+                
+                <div className="space-y-4">
+                  <button 
+                    onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)}
+                    className="w-full flex items-center justify-between text-xl font-bold hover:text-primary transition-colors"
+                  >
+                    Services
+                    <ChevronDown className={`transition-transform duration-300 ${isMobileServicesOpen ? 'rotate-180' : ''}`} size={20} />
+                  </button>
+                  <div className={`space-y-2 pl-4 overflow-hidden transition-all duration-300 ${isMobileServicesOpen ? 'max-h-[500px] opacity-100 mt-2' : 'max-h-0 opacity-0'}`}>
+                    {["Local SEO", "AI Search", "Organic SEO", "PPC", "LSA Management", "Website Design"].map((service) => (
+                      <a key={service} href="#" className="block py-2 text-gray-600 hover:text-black font-medium">{service}</a>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="space-y-4">
+                  <button 
+                    onClick={() => setIsMobileIndustriesOpen(!isMobileIndustriesOpen)}
+                    className="w-full flex items-center justify-between text-xl font-bold hover:text-primary transition-colors"
+                  >
+                    Industries
+                    <ChevronDown className={`transition-transform duration-300 ${isMobileIndustriesOpen ? 'rotate-180' : ''}`} size={20} />
+                  </button>
+                  <div className={`space-y-2 pl-4 overflow-hidden transition-all duration-300 ${isMobileIndustriesOpen ? 'max-h-[500px] opacity-100 mt-2' : 'max-h-0 opacity-0'}`}>
+                    {["Roofing", "HVAC", "Plumbing", "Electrical", "Solar"].map((industry) => (
+                      <a key={industry} href="#" className="block py-2 text-gray-600 hover:text-black font-medium">{industry}</a>
+                    ))}
+                  </div>
+                </div>
+
+                <a href="#" className="block text-xl font-bold hover:text-primary transition-colors">Pricing</a>
+                <a href="#" className="block text-xl font-bold hover:text-primary transition-colors">About</a>
+              </div>
+
+              <div className="mt-auto pt-8 border-t border-gray-100 space-y-6">
+                <div className="flex items-center justify-between py-2 cursor-pointer group">
+                  <div className="flex items-center gap-3">
+                    <Globe size={24} className="text-gray-400 group-hover:text-black transition-colors" />
+                    <span className="text-lg font-bold">English</span>
+                  </div>
+                  <ChevronDown size={20} className="text-gray-400" />
+                </div>
+                <button className="w-full py-4 px-6 border-2 border-gray-900 rounded-full text-lg font-bold hover:bg-gray-900 hover:text-white transition-all duration-300">
+                  Login
+                </button>
+              </div>
+            </div>
+          </div>
 
           {/* Mega Menu Dropdown */}
           <div 
