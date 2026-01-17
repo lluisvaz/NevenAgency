@@ -132,7 +132,10 @@ export default function Home() {
                 
                 <div className="space-y-4">
                   <button 
-                    onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)}
+                    onClick={() => {
+                      setIsMobileServicesOpen(!isMobileServicesOpen);
+                      setIsMobileIndustriesOpen(false);
+                    }}
                     className={`w-full flex items-center justify-between text-xl font-bold transition-all duration-300 p-3 rounded-lg ${isMobileServicesOpen ? 'bg-black text-white' : 'hover:text-primary'}`}
                   >
                     Services
@@ -179,28 +182,16 @@ export default function Home() {
                           ))}
                         </div>
                       </div>
-                    </div>
-                  </div>
-                </div>
 
-                <div className="space-y-4">
-                  <button 
-                    onClick={() => setIsMobileIndustriesOpen(!isMobileIndustriesOpen)}
-                    className={`w-full flex items-center justify-between text-xl font-bold transition-all duration-300 p-3 rounded-lg ${isMobileIndustriesOpen ? 'bg-black text-white' : 'hover:text-primary'}`}
-                  >
-                    Industries
-                    <ChevronDown className={`transition-transform duration-300 ${isMobileIndustriesOpen ? 'rotate-180' : ''}`} size={20} />
-                  </button>
-                  <div className={`overflow-hidden transition-all duration-500 ease-in-out ${isMobileIndustriesOpen ? 'max-h-[2000px] opacity-100 mt-2' : 'max-h-0 opacity-0'}`}>
-                    <div className="bg-[#F9FAFB] rounded-xl border border-gray-100 p-4 space-y-8">
-                      <div className="space-y-4">
-                        <h4 className="text-[11px] font-bold text-gray-400 uppercase tracking-[0.2em] px-3">Industries We Serve</h4>
+                      {/* Creative & Content */}
+                      <div className="space-y-4 pt-4 border-t border-gray-100">
+                        <h4 className="text-[11px] font-bold text-gray-400 uppercase tracking-[0.2em] px-3">Creative & Content</h4>
                         <div className="space-y-1">
                           {[
-                            { name: "Roofing", desc: "Dominate local search and lead generation for roofing specialists", icon: HomeIcon },
-                            { name: "HVAC", desc: "Maximize call volume and emergency service leads for HVAC", icon: Wind },
-                            { name: "Plumbing", desc: "High-intent lead generation and local SEO for plumbing companies", icon: Droplets },
-                            { name: "Electrical", desc: "Scale your electrical service business with targeted digital growth", icon: Lightbulb }
+                            { name: "Website Design", desc: "High-converting websites for home services", icon: PenTool },
+                            { name: "Digital PR", desc: "Earn mentions and backlinks from top publications", icon: Rocket },
+                            { name: "Social Media", desc: "Build a community and brand on social platforms", icon: Handshake },
+                            { name: "Email Marketing", desc: "Nurture leads and increase lifetime value", icon: Users }
                           ].map((item) => (
                             <a key={item.name} href="#" className="flex items-start gap-4 p-3 rounded-lg hover:bg-white transition-all duration-300 group">
                               <item.icon className="w-6 h-6 text-gray-400 group-hover:text-black mt-1 shrink-0" />
@@ -210,6 +201,85 @@ export default function Home() {
                               </div>
                             </a>
                           ))}
+                        </div>
+                      </div>
+
+                      {/* Our Blog (Mobile) */}
+                      <div className="space-y-4 pt-4 border-t border-gray-100 px-3">
+                        <h4 className="text-[10px] font-bold text-gray-500 uppercase tracking-[0.2em]">Our Blog</h4>
+                        <div className="space-y-4">
+                          <div className="group cursor-pointer">
+                            <h5 className="text-sm font-bold mb-1 leading-tight group-hover:text-primary transition-colors">
+                              The Future of Home Services Marketing in 2026
+                            </h5>
+                            <a href="#" className="text-[11px] font-bold text-primary flex items-center gap-1">
+                              Read More <ArrowRight size={10} />
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="space-y-4">
+                  <button 
+                    onClick={() => {
+                      setIsMobileIndustriesOpen(!isMobileIndustriesOpen);
+                      setIsMobileServicesOpen(false);
+                    }}
+                    className={`w-full flex items-center justify-between text-xl font-bold transition-all duration-300 p-3 rounded-lg ${isMobileIndustriesOpen ? 'bg-black text-white' : 'hover:text-primary'}`}
+                  >
+                    Industries
+                    <ChevronDown className={`transition-transform duration-300 ${isMobileIndustriesOpen ? 'rotate-180' : ''}`} size={20} />
+                  </button>
+                  <div className={`overflow-hidden transition-all duration-500 ease-in-out ${isMobileIndustriesOpen ? 'max-h-[2000px] opacity-100 mt-2' : 'max-h-0 opacity-0'}`}>
+                    <div className="bg-[#F9FAFB] rounded-xl border border-gray-100 p-4 space-y-8">
+                      <div className="space-y-4">
+                        <h4 className="text-[11px] font-bold text-gray-400 uppercase tracking-[0.2em] px-3">Industries We Serve</h4>
+                        <div className="grid grid-cols-1 gap-1">
+                          {[
+                            { name: "Roofing", desc: "Dominate local search and lead generation for roofing specialists", icon: HomeIcon },
+                            { name: "HVAC", desc: "Maximize call volume and emergency service leads for HVAC", icon: Wind },
+                            { name: "Plumbing", desc: "High-intent lead generation and local SEO for plumbing companies", icon: Droplets },
+                            { name: "Electrical", desc: "Scale your electrical service business with targeted digital growth", icon: Lightbulb },
+                            { name: "Solar", desc: "Capture high-quality solar leads and residential installation projects", icon: Sun },
+                            { name: "Landscaping", desc: "Build a premium brand and organic presence for landscaping services", icon: Shovel },
+                            { name: "Home Builders", desc: "Strategic marketing and high-converting websites for custom builders", icon: Hammer },
+                            { name: "Pest Control", desc: "Consistent lead flow and local visibility for pest management", icon: Bug },
+                            { name: "Remodeling", desc: "Showcase high-end renovation work to qualified local homeowners", icon: PenTool },
+                            { name: "Contractors", desc: "Full-funnel digital marketing for multi-service general contractors", icon: HardHat },
+                            { name: "Flooring", desc: "Drive residential and commercial flooring installation projects", icon: Layers },
+                            { name: "Franchises", desc: "Scalable marketing systems for home service franchise networks", icon: LayoutGridIcon },
+                            { name: "Garage Door", desc: "Instant visibility and call tracking for garage door services", icon: SlidersHorizontal },
+                            { name: "Moving", desc: "Targeted customer acquisition for local and long-distance movers", icon: Truck },
+                            { name: "Painting", desc: "Branding and lead gen that highlights quality painting results", icon: Paintbrush },
+                            { name: "Storage", desc: "Boost occupancy rates with strategic local search optimization", icon: Archive },
+                            { name: "Windows & Doors", desc: "Capture high-value leads for window and door replacements", icon: LayoutPanelTop }
+                          ].map((item) => (
+                            <a key={item.name} href="#" className="flex items-start gap-4 p-3 rounded-lg hover:bg-white transition-all duration-300 group">
+                              <item.icon className="w-6 h-6 text-gray-400 group-hover:text-black mt-1 shrink-0" />
+                              <div className="space-y-1">
+                                <span className="text-base font-bold text-black block leading-tight">{item.name}</span>
+                                <p className="text-[13px] text-gray-500 leading-tight">{item.desc}</p>
+                              </div>
+                            </a>
+                          ))}
+                        </div>
+                      </div>
+
+                      {/* Case Studies (Mobile) */}
+                      <div className="space-y-4 pt-4 border-t border-gray-100 px-3">
+                        <h4 className="text-[10px] font-bold text-gray-500 uppercase tracking-[0.2em]">Case Studies</h4>
+                        <div className="space-y-4">
+                          <div className="group cursor-pointer">
+                            <h5 className="text-sm font-bold mb-1 leading-tight group-hover:text-primary transition-colors">
+                              How a Roofing Client Scaled to $10M ARR
+                            </h5>
+                            <a href="#" className="text-[11px] font-bold text-primary flex items-center gap-1">
+                              View Case Study <ArrowRight size={10} />
+                            </a>
+                          </div>
                         </div>
                       </div>
                     </div>
