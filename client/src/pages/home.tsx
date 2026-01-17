@@ -127,10 +127,10 @@ export default function Home() {
                 </button>
               </div>
 
-              <div className="flex-1 overflow-y-auto p-6 space-y-6">
-                <a href="/" className="block text-xl font-bold hover:text-primary transition-colors">Home</a>
+              <div className="flex-1 overflow-y-auto p-6 space-y-4">
+                <a href="/" className="block text-xl font-bold hover:text-primary transition-colors p-3 rounded-lg">Home</a>
                 
-                <div className="space-y-4">
+                <div className="space-y-2">
                   <button 
                     onClick={() => {
                       setIsMobileServicesOpen(!isMobileServicesOpen);
@@ -222,7 +222,7 @@ export default function Home() {
                   </div>
                 </div>
 
-                <div className="space-y-4">
+                <div className="space-y-2">
                   <button 
                     onClick={() => {
                       setIsMobileIndustriesOpen(!isMobileIndustriesOpen);
@@ -286,8 +286,8 @@ export default function Home() {
                   </div>
                 </div>
 
-                <a href="#" className="block text-xl font-bold hover:text-primary transition-colors px-3">Pricing</a>
-                <a href="#" className="block text-xl font-bold hover:text-primary transition-colors px-3">About</a>
+                <a href="#" className="block text-xl font-bold hover:text-primary transition-colors p-3 rounded-lg">Pricing</a>
+                <a href="#" className="block text-xl font-bold hover:text-primary transition-colors p-3 rounded-lg">About</a>
               </div>
 
               <div className="p-6 border-t border-gray-100 space-y-6">
@@ -298,8 +298,8 @@ export default function Home() {
                   </div>
                   <ChevronDown size={20} className="text-gray-400" />
                 </div>
-                <button className="w-full py-4 px-6 border-2 border-gray-900 rounded-full text-lg font-bold hover:bg-gray-900 hover:text-white transition-all duration-300">
-                  Login
+                <button className="w-full bg-primary text-white py-4 px-6 font-bold uppercase tracking-wide text-sm hover:bg-black transition-colors cursor-pointer rounded-sm shadow-lg">
+                  Schedule Intro Call
                 </button>
               </div>
             </div>
