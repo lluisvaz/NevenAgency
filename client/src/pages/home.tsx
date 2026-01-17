@@ -160,6 +160,16 @@ export default function Home() {
       {/* New Section */}
       <section className="bg-black py-24 w-full relative z-20">
         <div className="max-w-[1920px] mx-auto px-6 md:px-12 lg:px-24 xl:px-48">
+          <div className="text-center max-w-4xl mx-auto mb-16">
+            <h3 className="text-[#A1A1AA] font-bold tracking-widest text-xs mb-6 uppercase">
+              Elevating Home Service Businesses
+            </h3>
+            
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold uppercase leading-tight text-white">
+              We Love Serving Our Industry
+            </h2>
+          </div>
+
           <div 
             className="relative overflow-hidden rounded-2xl bg-[#18181B] p-8 md:p-12 border border-[#323232]"
             style={{
@@ -170,15 +180,7 @@ export default function Home() {
               borderBottomWidth: '1px'
             }}
           >
-            <div className="max-w-4xl">
-              <h3 className="text-[#A1A1AA] font-bold tracking-widest text-xs mb-6 uppercase">
-                Elevating Home Service Businesses
-              </h3>
-              
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold uppercase leading-tight mb-12 text-white">
-                We Love Serving Our Industry
-              </h2>
-
+            <div className="max-w-4xl mx-auto">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-16">
                 <div className="bg-[#27272A]/50 border border-[#3F3F46] p-6 rounded-xl flex items-center gap-4 hover:bg-[#27272A] transition-colors cursor-pointer group">
                    <div className="w-12 h-12 flex items-center justify-center text-white">
