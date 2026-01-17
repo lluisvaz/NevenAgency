@@ -191,7 +191,6 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              </div>
 
               {/* Sidebar */}
               <div className="w-[350px] pl-12 space-y-8">
