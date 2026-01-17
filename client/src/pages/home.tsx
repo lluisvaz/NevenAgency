@@ -278,23 +278,23 @@ export default function Home() {
                   <h4 className="text-[11px] font-bold text-gray-400 uppercase tracking-[0.2em] mb-6">Industries We Serve</h4>
                   <div className="grid grid-cols-3 gap-1">
                     {[
-                      { name: "Roofing", desc: "Specialized marketing for roofing contractors", icon: HomeIcon },
-                      { name: "HVAC", desc: "Lead generation for heating & cooling", icon: Wind },
-                      { name: "Plumbing", desc: "Local SEO for residential plumbers", icon: Droplets },
-                      { name: "Electrical", desc: "Growth strategies for electrical services", icon: Lightbulb },
-                      { name: "Solar", desc: "Customer acquisition for solar installers", icon: Sun },
-                      { name: "Landscaping", desc: "Branding for outdoor service businesses", icon: Shovel },
-                      { name: "Home Builders", desc: "Digital presence for custom builders", icon: Hammer },
-                      { name: "Pest Control", desc: "Targeted ads for pest management", icon: Bug },
-                      { name: "Remodeling", desc: "Showcasing high-end renovation work", icon: PenTool },
-                      { name: "Contractors", desc: "Full-service digital growth for general contractors", icon: HardHat },
-                      { name: "Flooring", desc: "Dominate the flooring market with local SEO", icon: Layers },
-                      { name: "Franchises", desc: "Scalable marketing solutions for franchise networks", icon: LayoutGridIcon },
-                      { name: "Garage Door", desc: "High-intent lead generation for garage services", icon: SlidersHorizontal },
-                      { name: "Moving", desc: "Strategic visibility for local and long-distance movers", icon: Truck },
-                      { name: "Painting", desc: "Vibrant digital presence for painting professionals", icon: Paintbrush },
-                      { name: "Storage", desc: "Maximize occupancy for storage facilities", icon: Archive },
-                      { name: "Windows & Doors", desc: "Premium lead gen for window & door installers", icon: LayoutPanelTop }
+                      { name: "Roofing", desc: "Dominate local search and lead generation for roofing specialists", icon: HomeIcon },
+                      { name: "HVAC", desc: "Maximize call volume and emergency service leads for HVAC", icon: Wind },
+                      { name: "Plumbing", desc: "High-intent lead generation and local SEO for plumbing companies", icon: Droplets },
+                      { name: "Electrical", desc: "Scale your electrical service business with targeted digital growth", icon: Lightbulb },
+                      { name: "Solar", desc: "Capture high-quality solar leads and residential installation projects", icon: Sun },
+                      { name: "Landscaping", desc: "Build a premium brand and organic presence for landscaping services", icon: Shovel },
+                      { name: "Home Builders", desc: "Strategic marketing and high-converting websites for custom builders", icon: Hammer },
+                      { name: "Pest Control", desc: "Consistent lead flow and local visibility for pest management", icon: Bug },
+                      { name: "Remodeling", desc: "Showcase high-end renovation work to qualified local homeowners", icon: PenTool },
+                      { name: "Contractors", desc: "Full-funnel digital marketing for multi-service general contractors", icon: HardHat },
+                      { name: "Flooring", desc: "Drive residential and commercial flooring installation projects", icon: Layers },
+                      { name: "Franchises", desc: "Scalable marketing systems for home service franchise networks", icon: LayoutGridIcon },
+                      { name: "Garage Door", desc: "Instant visibility and call tracking for garage door services", icon: SlidersHorizontal },
+                      { name: "Moving", desc: "Targeted customer acquisition for local and long-distance movers", icon: Truck },
+                      { name: "Painting", desc: "Branding and lead gen that highlights quality painting results", icon: Paintbrush },
+                      { name: "Storage", desc: "Boost occupancy rates with strategic local search optimization", icon: Archive },
+                      { name: "Windows & Doors", desc: "Capture high-value leads for window and door replacements", icon: LayoutPanelTop }
                     ].map((industry) => (
                       <a key={industry.name} href="#" className="flex items-start gap-3 p-3 rounded-lg hover:bg-[#F9FAFB] transition-all duration-300 group/item overflow-hidden">
                         <industry.icon className="w-5 h-5 text-gray-400 group-hover/item:text-black mt-1 shrink-0" />
