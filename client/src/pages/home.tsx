@@ -119,53 +119,109 @@ export default function Home() {
           {/* Mobile Sidebar */}
           <div className={`fixed inset-0 z-[200] lg:hidden transition-transform duration-300 ease-in-out ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
             <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={() => setIsMobileMenuOpen(false)} />
-            <div className="absolute top-0 right-0 bottom-0 w-[300px] bg-white text-black p-6 flex flex-col shadow-2xl">
-              <div className="flex items-center justify-between mb-10">
+            <div className="absolute top-0 right-0 bottom-0 w-full bg-white text-black flex flex-col shadow-2xl overflow-hidden">
+              <div className="flex items-center justify-between p-6 border-b border-gray-100">
                 <img src="/images/logo.png" alt="Logo" className="h-8 w-auto" />
                 <button onClick={() => setIsMobileMenuOpen(false)} className="p-2 hover:bg-gray-100 rounded-full transition-colors">
                   <ChevronDown className="rotate-90" size={24} />
                 </button>
               </div>
 
-              <div className="flex-1 overflow-y-auto space-y-6">
+              <div className="flex-1 overflow-y-auto p-6 space-y-6">
                 <a href="/" className="block text-xl font-bold hover:text-primary transition-colors">Home</a>
                 
                 <div className="space-y-4">
                   <button 
                     onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)}
-                    className="w-full flex items-center justify-between text-xl font-bold hover:text-primary transition-colors"
+                    className={`w-full flex items-center justify-between text-xl font-bold transition-all duration-300 p-3 rounded-lg ${isMobileServicesOpen ? 'bg-black text-white' : 'hover:text-primary'}`}
                   >
                     Services
                     <ChevronDown className={`transition-transform duration-300 ${isMobileServicesOpen ? 'rotate-180' : ''}`} size={20} />
                   </button>
-                  <div className={`space-y-2 pl-4 overflow-hidden transition-all duration-300 ${isMobileServicesOpen ? 'max-h-[500px] opacity-100 mt-2' : 'max-h-0 opacity-0'}`}>
-                    {["Local SEO", "AI Search", "Organic SEO", "PPC", "LSA Management", "Website Design"].map((service) => (
-                      <a key={service} href="#" className="block py-2 text-gray-600 hover:text-black font-medium">{service}</a>
-                    ))}
+                  <div className={`overflow-hidden transition-all duration-500 ease-in-out ${isMobileServicesOpen ? 'max-h-[2000px] opacity-100 mt-2' : 'max-h-0 opacity-0'}`}>
+                    <div className="bg-[#F9FAFB] rounded-xl border border-gray-100 p-4 space-y-8">
+                      {/* Search & Strategy */}
+                      <div className="space-y-4">
+                        <h4 className="text-[11px] font-bold text-gray-400 uppercase tracking-[0.2em] px-3">Search & Strategy</h4>
+                        <div className="space-y-1">
+                          {[
+                            { name: "Local SEO", desc: "Dominate local search results in your service area", icon: BarChart3 },
+                            { name: "AI Search Optimization", desc: "Future-proof your presence for AI-driven search", icon: Terminal },
+                            { name: "Organic SEO", desc: "Build long-term authority and organic traffic", icon: Globe }
+                          ].map((item) => (
+                            <a key={item.name} href="#" className="flex items-start gap-4 p-3 rounded-lg hover:bg-white transition-all duration-300 group">
+                              <item.icon className="w-6 h-6 text-gray-400 group-hover:text-black mt-1 shrink-0" />
+                              <div className="space-y-1">
+                                <span className="text-base font-bold text-black block leading-tight">{item.name}</span>
+                                <p className="text-[13px] text-gray-500 leading-tight">{item.desc}</p>
+                              </div>
+                            </a>
+                          ))}
+                        </div>
+                      </div>
+
+                      {/* Paid Media & Lead Gen */}
+                      <div className="space-y-4 pt-4 border-t border-gray-100">
+                        <h4 className="text-[11px] font-bold text-gray-400 uppercase tracking-[0.2em] px-3">Paid Media & Lead Gen</h4>
+                        <div className="space-y-1">
+                          {[
+                            { name: "Pay-Per-Click", desc: "Instant leads through Google Ads and Bing", icon: CircleDollarSign },
+                            { name: "LSA Management", desc: "Maximize your Google Local Services Ads ROI", icon: Users },
+                            { name: "OTT Advertising", desc: "Reach homeowners on streaming TV platforms", icon: Layers }
+                          ].map((item) => (
+                            <a key={item.name} href="#" className="flex items-start gap-4 p-3 rounded-lg hover:bg-white transition-all duration-300 group">
+                              <item.icon className="w-6 h-6 text-gray-400 group-hover:text-black mt-1 shrink-0" />
+                              <div className="space-y-1">
+                                <span className="text-base font-bold text-black block leading-tight">{item.name}</span>
+                                <p className="text-[13px] text-gray-500 leading-tight">{item.desc}</p>
+                              </div>
+                            </a>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
 
                 <div className="space-y-4">
                   <button 
                     onClick={() => setIsMobileIndustriesOpen(!isMobileIndustriesOpen)}
-                    className="w-full flex items-center justify-between text-xl font-bold hover:text-primary transition-colors"
+                    className={`w-full flex items-center justify-between text-xl font-bold transition-all duration-300 p-3 rounded-lg ${isMobileIndustriesOpen ? 'bg-black text-white' : 'hover:text-primary'}`}
                   >
                     Industries
                     <ChevronDown className={`transition-transform duration-300 ${isMobileIndustriesOpen ? 'rotate-180' : ''}`} size={20} />
                   </button>
-                  <div className={`space-y-2 pl-4 overflow-hidden transition-all duration-300 ${isMobileIndustriesOpen ? 'max-h-[500px] opacity-100 mt-2' : 'max-h-0 opacity-0'}`}>
-                    {["Roofing", "HVAC", "Plumbing", "Electrical", "Solar"].map((industry) => (
-                      <a key={industry} href="#" className="block py-2 text-gray-600 hover:text-black font-medium">{industry}</a>
-                    ))}
+                  <div className={`overflow-hidden transition-all duration-500 ease-in-out ${isMobileIndustriesOpen ? 'max-h-[2000px] opacity-100 mt-2' : 'max-h-0 opacity-0'}`}>
+                    <div className="bg-[#F9FAFB] rounded-xl border border-gray-100 p-4 space-y-8">
+                      <div className="space-y-4">
+                        <h4 className="text-[11px] font-bold text-gray-400 uppercase tracking-[0.2em] px-3">Industries We Serve</h4>
+                        <div className="space-y-1">
+                          {[
+                            { name: "Roofing", desc: "Dominate local search and lead generation for roofing specialists", icon: HomeIcon },
+                            { name: "HVAC", desc: "Maximize call volume and emergency service leads for HVAC", icon: Wind },
+                            { name: "Plumbing", desc: "High-intent lead generation and local SEO for plumbing companies", icon: Droplets },
+                            { name: "Electrical", desc: "Scale your electrical service business with targeted digital growth", icon: Lightbulb }
+                          ].map((item) => (
+                            <a key={item.name} href="#" className="flex items-start gap-4 p-3 rounded-lg hover:bg-white transition-all duration-300 group">
+                              <item.icon className="w-6 h-6 text-gray-400 group-hover:text-black mt-1 shrink-0" />
+                              <div className="space-y-1">
+                                <span className="text-base font-bold text-black block leading-tight">{item.name}</span>
+                                <p className="text-[13px] text-gray-500 leading-tight">{item.desc}</p>
+                              </div>
+                            </a>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
 
-                <a href="#" className="block text-xl font-bold hover:text-primary transition-colors">Pricing</a>
-                <a href="#" className="block text-xl font-bold hover:text-primary transition-colors">About</a>
+                <a href="#" className="block text-xl font-bold hover:text-primary transition-colors px-3">Pricing</a>
+                <a href="#" className="block text-xl font-bold hover:text-primary transition-colors px-3">About</a>
               </div>
 
-              <div className="mt-auto pt-8 border-t border-gray-100 space-y-6">
-                <div className="flex items-center justify-between py-2 cursor-pointer group">
+              <div className="p-6 border-t border-gray-100 space-y-6">
+                <div className="flex items-center justify-between py-2 cursor-pointer group px-3">
                   <div className="flex items-center gap-3">
                     <Globe size={24} className="text-gray-400 group-hover:text-black transition-colors" />
                     <span className="text-lg font-bold">English</span>
