@@ -57,19 +57,19 @@ export default function Home() {
               </Link>
               
               {/* Desktop Menu */}
-              <div className="hidden lg:flex items-center gap-6 text-[15px] font-medium">
+              <div className="hidden lg:flex items-center gap-8 text-[17px] font-medium">
                 <a href="#" className={`hover:text-primary transition-colors ${isHeaderWhite ? 'text-black' : 'text-white'}`}>Pricing</a>
                 <a href="#" className={`hover:text-primary transition-colors ${isHeaderWhite ? 'text-black' : 'text-white'}`}>About</a>
                 <button 
                   onClick={() => setIsServicesOpen(!isServicesOpen)}
-                  className={`flex items-center gap-1.5 px-4 py-2 rounded-full transition-all duration-300 ${
+                  className={`flex items-center gap-2 px-5 py-2.5 rounded-full transition-all duration-300 ${
                     isServicesOpen 
                       ? 'bg-black text-white' 
                       : 'hover:text-primary'
                   }`}
                 >
                   Services
-                  {isServicesOpen ? <ChevronUp size={14} /> : <ChevronDown size={14} />}
+                  {isServicesOpen ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
                 </button>
                 <a href="#" className={`hover:text-primary transition-colors ${isHeaderWhite ? 'text-black' : 'text-white'}`}>Resources</a>
               </div>
