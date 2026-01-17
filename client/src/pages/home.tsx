@@ -101,91 +101,111 @@ export default function Home() {
                 {/* Search & Strategy */}
                 <div className="group/section">
                   <h4 className="text-[11px] font-bold text-gray-400 uppercase tracking-[0.2em] mb-4">Search & Strategy</h4>
-                  <div className="grid grid-cols-3 gap-x-4 gap-y-2">
-                    <a href="#" className="flex items-start gap-4 p-4 rounded-lg hover:bg-[#F9FAFB] transition-colors group/item">
-                      <BarChart3 className="w-6 h-6 text-gray-400 group-hover/item:text-black mt-1" />
-                      <div className="space-y-1">
-                        <span className="text-lg font-bold group-hover/item:text-primary block transition-colors">Local SEO</span>
-                        <p className="text-sm text-gray-500 opacity-0 group-hover/section:opacity-100 transition-opacity duration-300">Dominate local search results in your service area</p>
+                  <div className="grid grid-cols-3 gap-2">
+                    <a href="#" className="flex items-start gap-3 p-3 rounded-lg hover:bg-[#F9FAFB] transition-all duration-300 group/item overflow-hidden">
+                      <BarChart3 className="w-5 h-5 text-gray-400 group-hover/item:text-black mt-1 shrink-0" />
+                      <div className="grid transition-all duration-300 grid-rows-[auto_0fr] group-hover/section:grid-rows-[auto_1fr]">
+                        <span className="text-base font-bold group-hover/item:text-primary block transition-colors leading-tight">Local SEO</span>
+                        <div className="overflow-hidden">
+                          <p className="text-[13px] text-gray-500 pt-1 transition-all duration-300">Dominate local search results in your service area</p>
+                        </div>
                       </div>
                     </a>
-                    <a href="#" className="flex items-start gap-4 p-4 rounded-lg hover:bg-[#F9FAFB] transition-colors group/item">
-                      <Terminal className="w-6 h-6 text-gray-400 group-hover/item:text-black mt-1" />
-                      <div className="space-y-1">
-                        <span className="text-lg font-bold group-hover/item:text-primary block transition-colors">AI Search Optimization</span>
-                        <p className="text-sm text-gray-500 opacity-0 group-hover/section:opacity-100 transition-opacity duration-300">Future-proof your presence for AI-driven search</p>
+                    <a href="#" className="flex items-start gap-3 p-3 rounded-lg hover:bg-[#F9FAFB] transition-all duration-300 group/item overflow-hidden">
+                      <Terminal className="w-5 h-5 text-gray-400 group-hover/item:text-black mt-1 shrink-0" />
+                      <div className="grid transition-all duration-300 grid-rows-[auto_0fr] group-hover/section:grid-rows-[auto_1fr]">
+                        <span className="text-base font-bold group-hover/item:text-primary block transition-colors leading-tight">AI Search Optimization</span>
+                        <div className="overflow-hidden">
+                          <p className="text-[13px] text-gray-500 pt-1 transition-all duration-300">Future-proof your presence for AI-driven search</p>
+                        </div>
                       </div>
                     </a>
-                    <a href="#" className="flex items-start gap-4 p-4 rounded-lg hover:bg-[#F9FAFB] transition-colors group/item">
-                      <Globe className="w-6 h-6 text-gray-400 group-hover/item:text-black mt-1" />
-                      <div className="space-y-1">
-                        <span className="text-lg font-bold group-hover/item:text-primary block transition-colors">Organic SEO</span>
-                        <p className="text-sm text-gray-500 opacity-0 group-hover/section:opacity-100 transition-opacity duration-300">Build long-term authority and organic traffic</p>
+                    <a href="#" className="flex items-start gap-3 p-3 rounded-lg hover:bg-[#F9FAFB] transition-all duration-300 group/item overflow-hidden">
+                      <Globe className="w-5 h-5 text-gray-400 group-hover/item:text-black mt-1 shrink-0" />
+                      <div className="grid transition-all duration-300 grid-rows-[auto_0fr] group-hover/section:grid-rows-[auto_1fr]">
+                        <span className="text-base font-bold group-hover/item:text-primary block transition-colors leading-tight">Organic SEO</span>
+                        <div className="overflow-hidden">
+                          <p className="text-[13px] text-gray-500 pt-1 transition-all duration-300">Build long-term authority and organic traffic</p>
+                        </div>
                       </div>
                     </a>
                   </div>
-                  <div className="h-px bg-gray-100 w-full mt-8"></div>
+                  <div className="h-px bg-gray-100 w-full mt-6"></div>
                 </div>
 
                 {/* Paid Media & Lead Gen */}
                 <div className="group/section">
                   <h4 className="text-[11px] font-bold text-gray-400 uppercase tracking-[0.2em] mb-4">Paid Media & Lead Gen</h4>
-                  <div className="grid grid-cols-3 gap-x-4 gap-y-2">
-                    <a href="#" className="flex items-start gap-4 p-4 rounded-lg hover:bg-[#F9FAFB] transition-colors group/item">
-                      <CircleDollarSign className="w-6 h-6 text-gray-400 group-hover/item:text-black mt-1" />
-                      <div className="space-y-1">
-                        <span className="text-lg font-bold group-hover/item:text-primary block transition-colors">Pay-Per-Click</span>
-                        <p className="text-sm text-gray-500 opacity-0 group-hover/section:opacity-100 transition-opacity duration-300">Instant leads through Google Ads and Bing</p>
+                  <div className="grid grid-cols-3 gap-2">
+                    <a href="#" className="flex items-start gap-3 p-3 rounded-lg hover:bg-[#F9FAFB] transition-all duration-300 group/item overflow-hidden">
+                      <CircleDollarSign className="w-5 h-5 text-gray-400 group-hover/item:text-black mt-1 shrink-0" />
+                      <div className="grid transition-all duration-300 grid-rows-[auto_0fr] group-hover/section:grid-rows-[auto_1fr]">
+                        <span className="text-base font-bold group-hover/item:text-primary block transition-colors leading-tight">Pay-Per-Click</span>
+                        <div className="overflow-hidden">
+                          <p className="text-[13px] text-gray-500 pt-1 transition-all duration-300">Instant leads through Google Ads and Bing</p>
+                        </div>
                       </div>
                     </a>
-                    <a href="#" className="flex items-start gap-4 p-4 rounded-lg hover:bg-[#F9FAFB] transition-colors group/item">
-                      <Users className="w-6 h-6 text-gray-400 group-hover/item:text-black mt-1" />
-                      <div className="space-y-1">
-                        <span className="text-lg font-bold group-hover/item:text-primary block transition-colors">LSA Management</span>
-                        <p className="text-sm text-gray-500 opacity-0 group-hover/section:opacity-100 transition-opacity duration-300">Maximize your Google Local Services Ads ROI</p>
+                    <a href="#" className="flex items-start gap-3 p-3 rounded-lg hover:bg-[#F9FAFB] transition-all duration-300 group/item overflow-hidden">
+                      <Users className="w-5 h-5 text-gray-400 group-hover/item:text-black mt-1 shrink-0" />
+                      <div className="grid transition-all duration-300 grid-rows-[auto_0fr] group-hover/section:grid-rows-[auto_1fr]">
+                        <span className="text-base font-bold group-hover/item:text-primary block transition-colors leading-tight">LSA Management</span>
+                        <div className="overflow-hidden">
+                          <p className="text-[13px] text-gray-500 pt-1 transition-all duration-300">Maximize your Google Local Services Ads ROI</p>
+                        </div>
                       </div>
                     </a>
-                    <a href="#" className="flex items-start gap-4 p-4 rounded-lg hover:bg-[#F9FAFB] transition-colors group/item">
-                      <Layers className="w-6 h-6 text-gray-400 group-hover/item:text-black mt-1" />
-                      <div className="space-y-1">
-                        <span className="text-lg font-bold group-hover/item:text-primary block transition-colors">OTT Advertising</span>
-                        <p className="text-sm text-gray-500 opacity-0 group-hover/section:opacity-100 transition-opacity duration-300">Reach homeowners on streaming TV platforms</p>
+                    <a href="#" className="flex items-start gap-3 p-3 rounded-lg hover:bg-[#F9FAFB] transition-all duration-300 group/item overflow-hidden">
+                      <Layers className="w-5 h-5 text-gray-400 group-hover/item:text-black mt-1 shrink-0" />
+                      <div className="grid transition-all duration-300 grid-rows-[auto_0fr] group-hover/section:grid-rows-[auto_1fr]">
+                        <span className="text-base font-bold group-hover/item:text-primary block transition-colors leading-tight">OTT Advertising</span>
+                        <div className="overflow-hidden">
+                          <p className="text-[13px] text-gray-500 pt-1 transition-all duration-300">Reach homeowners on streaming TV platforms</p>
+                        </div>
                       </div>
                     </a>
                   </div>
-                  <div className="h-px bg-gray-100 w-full mt-8"></div>
+                  <div className="h-px bg-gray-100 w-full mt-6"></div>
                 </div>
 
                 {/* Creative & Content */}
                 <div className="group/section">
                   <h4 className="text-[11px] font-bold text-gray-400 uppercase tracking-[0.2em] mb-4">Creative & Content</h4>
-                  <div className="grid grid-cols-3 gap-x-4 gap-y-2">
-                    <a href="#" className="flex items-start gap-4 p-4 rounded-lg hover:bg-[#F9FAFB] transition-colors group/item">
-                      <PenTool className="w-6 h-6 text-gray-400 group-hover/item:text-black mt-1" />
-                      <div className="space-y-1">
-                        <span className="text-lg font-bold group-hover/item:text-primary block transition-colors">Website Design</span>
-                        <p className="text-sm text-gray-500 opacity-0 group-hover/section:opacity-100 transition-opacity duration-300">High-converting websites for home services</p>
+                  <div className="grid grid-cols-3 gap-2">
+                    <a href="#" className="flex items-start gap-3 p-3 rounded-lg hover:bg-[#F9FAFB] transition-all duration-300 group/item overflow-hidden">
+                      <PenTool className="w-5 h-5 text-gray-400 group-hover/item:text-black mt-1 shrink-0" />
+                      <div className="grid transition-all duration-300 grid-rows-[auto_0fr] group-hover/section:grid-rows-[auto_1fr]">
+                        <span className="text-base font-bold group-hover/item:text-primary block transition-colors leading-tight">Website Design</span>
+                        <div className="overflow-hidden">
+                          <p className="text-[13px] text-gray-500 pt-1 transition-all duration-300">High-converting websites for home services</p>
+                        </div>
                       </div>
                     </a>
-                    <a href="#" className="flex items-start gap-4 p-4 rounded-lg hover:bg-[#F9FAFB] transition-colors group/item">
-                      <Rocket className="w-6 h-6 text-gray-400 group-hover/item:text-black mt-1" />
-                      <div className="space-y-1">
-                        <span className="text-lg font-bold group-hover/item:text-primary block transition-colors">Digital PR</span>
-                        <p className="text-sm text-gray-500 opacity-0 group-hover/section:opacity-100 transition-opacity duration-300">Earn mentions and backlinks from top publications</p>
+                    <a href="#" className="flex items-start gap-3 p-3 rounded-lg hover:bg-[#F9FAFB] transition-all duration-300 group/item overflow-hidden">
+                      <Rocket className="w-5 h-5 text-gray-400 group-hover/item:text-black mt-1 shrink-0" />
+                      <div className="grid transition-all duration-300 grid-rows-[auto_0fr] group-hover/section:grid-rows-[auto_1fr]">
+                        <span className="text-base font-bold group-hover/item:text-primary block transition-colors leading-tight">Digital PR</span>
+                        <div className="overflow-hidden">
+                          <p className="text-[13px] text-gray-500 pt-1 transition-all duration-300">Earn mentions and backlinks from top publications</p>
+                        </div>
                       </div>
                     </a>
-                    <a href="#" className="flex items-start gap-4 p-4 rounded-lg hover:bg-[#F9FAFB] transition-colors group/item">
-                      <Handshake className="w-6 h-6 text-gray-400 group-hover/item:text-black mt-1" />
-                      <div className="space-y-1">
-                        <span className="text-lg font-bold group-hover/item:text-primary block transition-colors">Social Media</span>
-                        <p className="text-sm text-gray-500 opacity-0 group-hover/section:opacity-100 transition-opacity duration-300">Build a community and brand on social platforms</p>
+                    <a href="#" className="flex items-start gap-3 p-3 rounded-lg hover:bg-[#F9FAFB] transition-all duration-300 group/item overflow-hidden">
+                      <Handshake className="w-5 h-5 text-gray-400 group-hover/item:text-black mt-1 shrink-0" />
+                      <div className="grid transition-all duration-300 grid-rows-[auto_0fr] group-hover/section:grid-rows-[auto_1fr]">
+                        <span className="text-base font-bold group-hover/item:text-primary block transition-colors leading-tight">Social Media</span>
+                        <div className="overflow-hidden">
+                          <p className="text-[13px] text-gray-500 pt-1 transition-all duration-300">Build a community and brand on social platforms</p>
+                        </div>
                       </div>
                     </a>
-                    <a href="#" className="flex items-start gap-4 p-4 rounded-lg hover:bg-[#F9FAFB] transition-colors group/item">
-                      <Users className="w-6 h-6 text-gray-400 group-hover/item:text-black mt-1" />
-                      <div className="space-y-1">
-                        <span className="text-lg font-bold group-hover/item:text-primary block transition-colors">Email Marketing</span>
-                        <p className="text-sm text-gray-500 opacity-0 group-hover/section:opacity-100 transition-opacity duration-300">Nurture leads and increase customer lifetime value</p>
+                    <a href="#" className="flex items-start gap-3 p-3 rounded-lg hover:bg-[#F9FAFB] transition-all duration-300 group/item overflow-hidden">
+                      <Users className="w-5 h-5 text-gray-400 group-hover/item:text-black mt-1 shrink-0" />
+                      <div className="grid transition-all duration-300 grid-rows-[auto_0fr] group-hover/section:grid-rows-[auto_1fr]">
+                        <span className="text-base font-bold group-hover/item:text-primary block transition-colors leading-tight">Email Marketing</span>
+                        <div className="overflow-hidden">
+                          <p className="text-[13px] text-gray-500 pt-1 transition-all duration-300">Nurture leads and increase customer lifetime value</p>
+                        </div>
                       </div>
                     </a>
                   </div>
