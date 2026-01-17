@@ -161,7 +161,7 @@ export default function Home() {
       <section className="bg-black py-24 w-full relative z-20">
         <div className="max-w-[1920px] mx-auto px-6 md:px-12 lg:px-24 xl:px-48">
           <div className="text-center max-w-4xl mx-auto mb-16">
-            <h3 className="text-[#A1A1AA] font-bold tracking-widest text-xs mb-6 uppercase">
+            <h3 className="text-[#A1A1AA] font-bold tracking-widest text-xs mb-4 uppercase">
               Elevating Home Service Businesses
             </h3>
             
