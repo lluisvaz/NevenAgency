@@ -158,8 +158,8 @@ export default function Home() {
               </div>
 
               <div className="flex-1 overflow-y-auto p-6 space-y-4">
-                <a href="#" className="block text-xl font-bold hover:text-primary transition-colors p-3 rounded-lg">Pricing</a>
-                <a href="#" className="block text-xl font-bold hover:text-primary transition-colors p-3 rounded-lg">About</a>
+                <a href="#" className="block text-xl hover:text-primary transition-colors p-3 rounded-lg">Pricing</a>
+                <a href="#" className="block text-xl hover:text-primary transition-colors p-3 rounded-lg">About</a>
                 
                 <div className="space-y-2">
                   <button 
@@ -167,7 +167,7 @@ export default function Home() {
                       setIsMobileServicesOpen(!isMobileServicesOpen);
                       setIsMobileIndustriesOpen(false);
                     }}
-                    className={`w-full flex items-center justify-between text-xl font-bold transition-all duration-300 p-3 rounded-lg ${isMobileServicesOpen ? 'bg-black text-white' : 'hover:text-primary'}`}
+                    className={`w-full flex items-center justify-between text-xl transition-all duration-300 p-3 rounded-lg ${isMobileServicesOpen ? 'bg-black text-white font-bold' : 'hover:text-primary'}`}
                   >
                     Services
                     <ChevronDown className={`transition-transform duration-300 ${isMobileServicesOpen ? 'rotate-180' : ''}`} size={20} />
@@ -239,7 +239,7 @@ export default function Home() {
                       setIsMobileIndustriesOpen(!isMobileIndustriesOpen);
                       setIsMobileServicesOpen(false);
                     }}
-                    className={`w-full flex items-center justify-between text-xl font-bold transition-all duration-300 p-3 rounded-lg ${isMobileIndustriesOpen ? 'bg-black text-white' : 'hover:text-primary'}`}
+                    className={`w-full flex items-center justify-between text-xl transition-all duration-300 p-3 rounded-lg ${isMobileIndustriesOpen ? 'bg-black text-white font-bold' : 'hover:text-primary'}`}
                   >
                     Industries
                     <ChevronDown className={`transition-transform duration-300 ${isMobileIndustriesOpen ? 'rotate-180' : ''}`} size={20} />
@@ -286,7 +286,7 @@ export default function Home() {
                   <div className="space-y-2">
                     <button 
                       onClick={() => setIsMobileLanguageOpen(!isMobileLanguageOpen)}
-                      className={`w-full flex items-center justify-between text-xl font-bold transition-all duration-300 p-3 rounded-lg ${isMobileLanguageOpen ? 'bg-black text-white' : 'hover:text-primary'}`}
+                      className={`w-full flex items-center justify-between text-xl transition-all duration-300 p-3 rounded-lg ${isMobileLanguageOpen ? 'bg-black text-white font-bold' : 'hover:text-primary'}`}
                     >
                       <div className="flex items-center gap-3">
                         <Globe size={24} className={isMobileLanguageOpen ? 'text-white' : 'text-gray-400'} />
