@@ -39,6 +39,20 @@ export default function Home() {
   ];
 
   useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (isLanguageOpen) {
+        setIsLanguageOpen(false);
+      }
+    };
+    if (isLanguageOpen) {
+      window.addEventListener('mousedown', handleClickOutside);
+    }
+    return () => {
+      window.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [isLanguageOpen]);
+
+  useEffect(() => {
     if (isMobileMenuOpen) {
       document.body.style.overflow = 'hidden';
     } else {
@@ -127,7 +141,10 @@ export default function Home() {
                 </button>
                 
                 {isLanguageOpen && (
-                  <div className="absolute top-full right-0 mt-2 w-48 bg-white rounded-sm shadow-xl border border-gray-100 py-2 z-[200]">
+                  <div 
+                    className="absolute top-full right-0 mt-2 w-48 bg-white rounded-sm shadow-xl border border-gray-100 py-2 z-[200]"
+                    onClick={(e) => e.stopPropagation()}
+                  >
                     {languages.map((lang) => (
                       <button
                         key={lang.code}
@@ -135,7 +152,7 @@ export default function Home() {
                           setLanguage(lang.name);
                           setIsLanguageOpen(false);
                         }}
-                        className={`w-full text-left px-4 py-2 text-sm hover:bg-gray-50 transition-colors ${language === lang.name ? 'text-primary font-bold' : 'text-gray-700'}`}
+                        className={`w-full text-left px-4 py-2 text-sm hover:bg-gray-50 transition-colors cursor-pointer ${language === lang.name ? 'text-black font-bold' : 'text-gray-300'}`}
                       >
                         {lang.name}
                       </button>
@@ -309,7 +326,7 @@ export default function Home() {
                               setLanguage(lang.name);
                               setIsMobileLanguageOpen(false);
                             }}
-                            className={`w-full text-left px-4 py-3 text-lg rounded-md transition-colors ${language === lang.name ? 'text-primary font-bold' : 'text-gray-600'}`}
+                            className={`w-full text-left px-4 py-3 text-lg rounded-md transition-colors cursor-pointer ${language === lang.name ? 'text-black font-bold' : 'text-gray-300'}`}
                           >
                             {lang.name}
                           </button>
