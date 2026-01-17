@@ -269,14 +269,11 @@ export default function Home() {
                             { name: "Landscaping", desc: "Build a premium brand and organic presence for landscaping services", icon: Shovel },
                             { name: "Home Builders", desc: "Strategic marketing and high-converting websites for custom builders", icon: Hammer },
                             { name: "Pest Control", desc: "Consistent lead flow and local visibility for pest management", icon: Bug },
-                            { name: "Remodeling", desc: "Showcase high-end renovation work to qualified local homeowners", icon: PenTool },
                             { name: "Contractors", desc: "Full-funnel digital marketing for multi-service general contractors", icon: HardHat },
                             { name: "Flooring", desc: "Drive residential and commercial flooring installation projects", icon: Layers },
-                            { name: "Franchises", desc: "Scalable marketing systems for home service franchise networks", icon: LayoutGridIcon },
                             { name: "Garage Door", desc: "Instant visibility and call tracking for garage door services", icon: SlidersHorizontal },
                             { name: "Moving", desc: "Targeted customer acquisition for local and long-distance movers", icon: Truck },
                             { name: "Painting", desc: "Branding and lead gen that highlights quality painting results", icon: Paintbrush },
-                            { name: "Storage", desc: "Boost occupancy rates with strategic local search optimization", icon: Archive },
                             { name: "Windows & Doors", desc: "Capture high-value leads for window and door replacements", icon: LayoutPanelTop }
                           ].map((item) => (
                             <a key={item.name} href="#" className="flex items-start gap-4 p-3 rounded-lg hover:bg-white transition-all duration-300 group">
@@ -480,14 +477,11 @@ export default function Home() {
                       { name: "Landscaping", desc: "Build a premium brand and organic presence for landscaping services", icon: Shovel },
                       { name: "Home Builders", desc: "Strategic marketing and high-converting websites for custom builders", icon: Hammer },
                       { name: "Pest Control", desc: "Consistent lead flow and local visibility for pest management", icon: Bug },
-                      { name: "Remodeling", desc: "Showcase high-end renovation work to qualified local homeowners", icon: PenTool },
                       { name: "Contractors", desc: "Full-funnel digital marketing for multi-service general contractors", icon: HardHat },
                       { name: "Flooring", desc: "Drive residential and commercial flooring installation projects", icon: Layers },
-                      { name: "Franchises", desc: "Scalable marketing systems for home service franchise networks", icon: LayoutGridIcon },
                       { name: "Garage Door", desc: "Instant visibility and call tracking for garage door services", icon: SlidersHorizontal },
                       { name: "Moving", desc: "Targeted customer acquisition for local and long-distance movers", icon: Truck },
                       { name: "Painting", desc: "Branding and lead gen that highlights quality painting results", icon: Paintbrush },
-                      { name: "Storage", desc: "Boost occupancy rates with strategic local search optimization", icon: Archive },
                       { name: "Windows & Doors", desc: "Capture high-value leads for window and door replacements", icon: LayoutPanelTop }
                     ].map((industry) => (
                       <a key={industry.name} href="#" className="flex items-start gap-3 p-3 rounded-lg hover:bg-[#F9FAFB] transition-all duration-300 group/item overflow-hidden">
