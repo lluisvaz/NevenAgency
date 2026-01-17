@@ -128,7 +128,8 @@ export default function Home() {
               </div>
 
               <div className="flex-1 overflow-y-auto p-6 space-y-4">
-                <a href="/" className="block text-xl font-bold hover:text-primary transition-colors p-3 rounded-lg">Home</a>
+                <a href="#" className="block text-xl font-bold hover:text-primary transition-colors p-3 rounded-lg">Pricing</a>
+                <a href="#" className="block text-xl font-bold hover:text-primary transition-colors p-3 rounded-lg">About</a>
                 
                 <div className="space-y-2">
                   <button 
@@ -285,9 +286,6 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-
-                <a href="#" className="block text-xl font-bold hover:text-primary transition-colors p-3 rounded-lg">Pricing</a>
-                <a href="#" className="block text-xl font-bold hover:text-primary transition-colors p-3 rounded-lg">About</a>
               </div>
 
               <div className="p-6 border-t border-gray-100 space-y-6">
