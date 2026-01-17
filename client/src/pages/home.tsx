@@ -62,7 +62,7 @@ export default function Home() {
                 <a href="#" className={`hover:text-primary transition-colors ${isHeaderWhite ? 'text-black' : 'text-white'}`}>About</a>
                 <button 
                   onClick={() => setIsServicesOpen(!isServicesOpen)}
-                  className={`flex items-center gap-2 px-5 py-2.5 rounded-full transition-all duration-300 ${
+                  className={`flex items-center gap-2 px-5 py-2.5 rounded-full transition-all duration-300 cursor-pointer ${
                     isServicesOpen 
                       ? 'bg-black text-white' 
                       : 'hover:text-primary'
@@ -248,8 +248,9 @@ export default function Home() {
 
         {/* Backdrop Blur Overlay */}
         <div 
-          className={`fixed inset-0 z-[90] bg-black/20 backdrop-blur-sm transition-opacity duration-500 ease-in-out pointer-events-none ${
-            isServicesOpen ? 'opacity-100' : 'opacity-0'
+          onClick={() => setIsServicesOpen(false)}
+          className={`fixed inset-0 z-[90] bg-black/20 backdrop-blur-sm transition-opacity duration-500 ease-in-out cursor-pointer ${
+            isServicesOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
           }`}
         />
 
