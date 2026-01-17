@@ -19,6 +19,9 @@ export default function Home() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
   const [isMobileIndustriesOpen, setIsMobileIndustriesOpen] = useState(false);
+  const [isLanguageOpen, setIsLanguageOpen] = useState(false);
+  const [isMobileLanguageOpen, setIsMobileLanguageOpen] = useState(false);
+  const [language, setLanguage] = useState("English");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -100,10 +103,35 @@ export default function Home() {
             </div>
 
             <div className="flex items-center gap-4 md:gap-6">
-              <button className={`hidden md:flex items-center gap-2 transition-colors cursor-pointer group ${isHeaderWhite ? 'text-black' : 'text-white'}`}>
-                <GlobeIcon size={26} className={isHeaderWhite ? 'text-black' : 'text-white'} />
-                <ChevronDown size={18} className="text-gray-400 group-hover:text-primary" />
-              </button>
+              <div className="relative">
+                <button 
+                  onClick={() => setIsLanguageOpen(!isLanguageOpen)}
+                  className={`hidden md:flex items-center gap-2 transition-colors cursor-pointer group ${isHeaderWhite ? 'text-black' : 'text-white'}`}
+                >
+                  <GlobeIcon size={26} className={isHeaderWhite ? 'text-black' : 'text-white'} />
+                  <ChevronDown size={18} className={`text-gray-400 group-hover:text-primary transition-transform duration-300 ${isLanguageOpen ? 'rotate-180' : ''}`} />
+                </button>
+                
+                {isLanguageOpen && (
+                  <div className="absolute top-full right-0 mt-2 w-48 bg-white rounded-sm shadow-xl border border-gray-100 py-2 z-[200]">
+                    {[
+                      { name: "English", code: "en" },
+                      { name: "Portuguese (Brazil)", code: "pt-BR" }
+                    ].map((lang) => (
+                      <button
+                        key={lang.code}
+                        onClick={() => {
+                          setLanguage(lang.name);
+                          setIsLanguageOpen(false);
+                        }}
+                        className={`w-full text-left px-4 py-2 text-sm hover:bg-gray-50 transition-colors ${language === lang.name ? 'text-primary font-bold' : 'text-gray-700'}`}
+                      >
+                        {lang.name}
+                      </button>
+                    ))}
+                  </div>
+                )}
+              </div>
               <button className="hidden md:block bg-primary text-white px-4 md:px-6 py-2.5 md:py-3 font-bold uppercase tracking-wide text-xs md:text-sm hover:bg-black transition-colors cursor-pointer shrink-0 rounded-sm">
                 Schedule Intro Call
               </button>
