@@ -61,34 +61,36 @@ export default function Home() {
               <div className="hidden lg:flex items-center gap-8 text-[17px] font-medium">
                 <a href="#" className={`hover:text-primary transition-colors ${isHeaderWhite ? 'text-black' : 'text-white'}`}>Pricing</a>
                 <a href="#" className={`hover:text-primary transition-colors ${isHeaderWhite ? 'text-black' : 'text-white'}`}>About</a>
-                <button 
-                  onClick={() => {
-                    setIsServicesOpen(!isServicesOpen);
-                    setIsIndustriesOpen(false);
-                  }}
-                  className={`flex items-center gap-2 px-5 py-2.5 rounded-full transition-all duration-300 cursor-pointer ${
-                    isServicesOpen 
-                      ? 'bg-black text-white' 
-                      : 'hover:text-primary'
-                  }`}
-                >
-                  Services
-                  {isServicesOpen ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
-                </button>
-                <button 
-                  onClick={() => {
-                    setIsIndustriesOpen(!isIndustriesOpen);
-                    setIsServicesOpen(false);
-                  }}
-                  className={`flex items-center gap-2 px-5 py-2.5 rounded-full transition-all duration-300 cursor-pointer ${
-                    isIndustriesOpen 
-                      ? 'bg-black text-white' 
-                      : 'hover:text-primary'
-                  }`}
-                >
-                  Industries
-                  {isIndustriesOpen ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
-                </button>
+                <div className="flex items-center gap-2">
+                  <button 
+                    onClick={() => {
+                      setIsServicesOpen(!isServicesOpen);
+                      setIsIndustriesOpen(false);
+                    }}
+                    className={`flex items-center gap-2 px-5 py-2.5 rounded-full transition-all duration-300 cursor-pointer ${
+                      isServicesOpen 
+                        ? 'bg-black text-white' 
+                        : 'hover:text-primary'
+                    }`}
+                  >
+                    Services
+                    {isServicesOpen ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
+                  </button>
+                  <button 
+                    onClick={() => {
+                      setIsIndustriesOpen(!isIndustriesOpen);
+                      setIsServicesOpen(false);
+                    }}
+                    className={`flex items-center gap-2 px-5 py-2.5 rounded-full transition-all duration-300 cursor-pointer ${
+                      isIndustriesOpen 
+                        ? 'bg-black text-white' 
+                        : 'hover:text-primary'
+                    }`}
+                  >
+                    Industries
+                    {isIndustriesOpen ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
+                  </button>
+                </div>
               </div>
             </div>
 
@@ -231,30 +233,30 @@ export default function Home() {
 
               {/* Sidebar */}
               <div className="w-[350px] pl-12 space-y-8">
-                <h4 className="text-[10px] font-bold text-gray-500 uppercase tracking-[0.2em]">Case Studies</h4>
+                <h4 className="text-[10px] font-bold text-gray-500 uppercase tracking-[0.2em]">Our Blog</h4>
                 
                 <div className="space-y-8">
                   <div className="group cursor-pointer">
-                    <div className="aspect-[16/9] bg-[#0F0F23] rounded-lg mb-4 flex items-center justify-center overflow-hidden">
-                       <div className="text-white font-bold text-2xl italic tracking-tighter">theydo</div>
+                    <div className="aspect-[16/9] bg-primary/10 rounded-lg mb-4 flex items-center justify-center overflow-hidden">
+                       <div className="text-primary font-bold text-2xl italic tracking-tighter">Insights</div>
                     </div>
                     <h5 className="text-base font-bold mb-2 leading-tight group-hover:text-primary">
-                      Cultivating a Thriving Remote-First Culture in Partnership with Remote
+                      The Future of Home Services Marketing in 2026
                     </h5>
                     <p className="text-xs text-gray-500 mb-4 line-clamp-2">
-                      At a glance Discover the evolution of TheyDo, a pioneering journey management platform that has...
+                      Stay ahead of the curve with our latest insights on industry trends, AI technology, and growth strategies...
                     </p>
                     <a href="#" className="text-xs font-bold text-primary flex items-center gap-1">
-                      Learn More <ArrowRight size={12} />
+                      Read More <ArrowRight size={12} />
                     </a>
                   </div>
 
                   <div className="group cursor-pointer border-t border-gray-100 pt-6">
                     <h5 className="text-base font-bold mb-2 leading-tight group-hover:text-primary">
-                      Reverse Tech's strategic partnership with Remote for contractor management and payroll
+                      How to Maximize Your ROI with Google Local Services Ads
                     </h5>
                     <a href="#" className="text-xs font-bold text-primary flex items-center gap-1">
-                      Learn More <ArrowRight size={12} />
+                      Read More <ArrowRight size={12} />
                     </a>
                   </div>
                 </div>
@@ -267,20 +269,72 @@ export default function Home() {
               isIndustriesOpen ? 'max-h-[1200px] opacity-100 visible' : 'max-h-0 opacity-0 invisible'
             }`}
           >
-            <div className="max-w-[1920px] mx-auto px-6 md:px-12 lg:px-24 xl:px-48 py-12">
-              <div className="flex-1">
-                <h4 className="text-[11px] font-bold text-gray-400 uppercase tracking-[0.2em] mb-6">Industries We Serve</h4>
-                <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-x-8 gap-y-4">
-                  {[
-                    "Contractors", "Electrical", "Flooring", "Franchises", "Garage Door",
-                    "Home Builders", "HVAC", "Landscaping", "Moving", "Painting",
-                    "Pest Control", "Plumbing", "Remodeling", "Roofing", "Solar",
-                    "Storage", "Windows & Doors"
-                  ].map((industry) => (
-                    <a key={industry} href="#" className="text-base font-bold text-black hover:text-primary transition-colors py-1 block">
-                      {industry}
+            <div className="max-w-[1920px] mx-auto px-6 md:px-12 lg:px-24 xl:px-48 py-12 flex">
+              {/* Main Content */}
+              <div className="flex-1 space-y-12 pr-12 border-r border-gray-100">
+                <div className="group/section">
+                  <h4 className="text-[11px] font-bold text-gray-400 uppercase tracking-[0.2em] mb-6">Industries We Serve</h4>
+                  <div className="grid grid-cols-3 gap-1">
+                    {[
+                      { name: "Roofing", desc: "Specialized marketing for roofing contractors" },
+                      { name: "HVAC", desc: "Lead generation for heating & cooling" },
+                      { name: "Plumbing", desc: "Local SEO for residential plumbers" },
+                      { name: "Electrical", desc: "Growth strategies for electrical services" },
+                      { name: "Solar", desc: "Customer acquisition for solar installers" },
+                      { name: "Landscaping", desc: "Branding for outdoor service businesses" },
+                      { name: "Home Builders", desc: "Digital presence for custom builders" },
+                      { name: "Pest Control", desc: "Targeted ads for pest management" },
+                      { name: "Remodeling", desc: "Showcasing high-end renovation work" }
+                    ].map((industry) => (
+                      <a key={industry.name} href="#" className="flex items-start gap-3 p-3 rounded-lg hover:bg-[#F9FAFB] transition-all duration-300 group/item overflow-hidden">
+                        <Building2 className="w-5 h-5 text-gray-400 group-hover/item:text-black mt-1 shrink-0" />
+                        <div className="grid transition-all duration-300 grid-rows-[auto_0fr] group-hover/section:grid-rows-[auto_1fr]">
+                          <span className="text-base font-bold text-black block transition-colors leading-tight">{industry.name}</span>
+                          <div className="overflow-hidden">
+                            <p className="text-[13px] text-gray-500 pt-1 transition-all duration-300">{industry.desc}</p>
+                          </div>
+                        </div>
+                      </a>
+                    ))}
+                  </div>
+                  <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4 pt-8 border-t border-gray-50">
+                    {["Contractors", "Flooring", "Franchises", "Garage Door", "Moving", "Painting", "Storage", "Windows & Doors"].map(other => (
+                      <a key={other} href="#" className="text-[13px] font-bold text-gray-600 hover:text-primary transition-colors py-1 block">
+                        {other}
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              {/* Sidebar */}
+              <div className="w-[350px] pl-12 space-y-8">
+                <h4 className="text-[10px] font-bold text-gray-500 uppercase tracking-[0.2em]">Case Studies</h4>
+                
+                <div className="space-y-8">
+                  <div className="group cursor-pointer">
+                    <div className="aspect-[16/9] bg-[#0F0F23] rounded-lg mb-4 flex items-center justify-center overflow-hidden">
+                       <div className="text-white font-bold text-2xl italic tracking-tighter">Success</div>
+                    </div>
+                    <h5 className="text-base font-bold mb-2 leading-tight group-hover:text-primary">
+                      How a Roofing Client Scaled to $10M ARR
+                    </h5>
+                    <p className="text-xs text-gray-500 mb-4 line-clamp-2">
+                      Read how our strategic SEO and paid media approach transformed a local business into a regional leader...
+                    </p>
+                    <a href="#" className="text-xs font-bold text-primary flex items-center gap-1">
+                      View Case Study <ArrowRight size={12} />
                     </a>
-                  ))}
+                  </div>
+
+                  <div className="group cursor-pointer border-t border-gray-100 pt-6">
+                    <h5 className="text-base font-bold mb-2 leading-tight group-hover:text-primary">
+                      150% Increase in Qualified Leads for HVAC Partner
+                    </h5>
+                    <a href="#" className="text-xs font-bold text-primary flex items-center gap-1">
+                      View Case Study <ArrowRight size={12} />
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
