@@ -152,7 +152,7 @@ export default function Home() {
                           setLanguage(lang.name);
                           setIsLanguageOpen(false);
                         }}
-                        className={`w-full text-left px-4 py-2 text-sm hover:bg-gray-50 transition-colors cursor-pointer ${language === lang.name ? 'text-black font-bold' : 'text-gray-300'}`}
+                        className={`w-full text-left px-4 py-2 text-sm hover:bg-gray-50 transition-colors cursor-pointer ${language === lang.name ? 'text-black font-bold' : 'text-gray-500'}`}
                       >
                         {lang.name}
                       </button>
@@ -326,7 +326,7 @@ export default function Home() {
                               setLanguage(lang.name);
                               setIsMobileLanguageOpen(false);
                             }}
-                            className={`w-full text-left px-4 py-3 text-lg rounded-md transition-colors cursor-pointer ${language === lang.name ? 'text-black font-bold' : 'text-gray-300'}`}
+                            className={`w-full text-left px-4 py-3 text-lg rounded-md transition-colors cursor-pointer ${language === lang.name ? 'text-black font-bold' : 'text-gray-500'}`}
                           >
                             {lang.name}
                           </button>
