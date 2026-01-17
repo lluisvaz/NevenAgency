@@ -4,7 +4,7 @@ import {
   CheckCircle2, Phone, SlidersHorizontal, PenTool, CircleDollarSign, 
   Play, Star, Menu, ChevronDown, ChevronUp, Globe, MapPin, 
   BarChart3, Rocket, Building2, Terminal, Layers, Users,
-  Handshake, UserPlus, ArrowRight
+  Handshake, UserPlus, ArrowRight, Inbox
 } from "lucide-react";
 import { LayoutGridIcon } from "@/components/ui/layout-grid-icon";
 import { GlobeIcon } from "@/components/ui/globe-icon";
@@ -276,31 +276,32 @@ export default function Home() {
                   <h4 className="text-[11px] font-bold text-gray-400 uppercase tracking-[0.2em] mb-6">Industries We Serve</h4>
                   <div className="grid grid-cols-3 gap-1">
                     {[
-                      { name: "Roofing", desc: "Specialized marketing for roofing contractors" },
-                      { name: "HVAC", desc: "Lead generation for heating & cooling" },
-                      { name: "Plumbing", desc: "Local SEO for residential plumbers" },
-                      { name: "Electrical", desc: "Growth strategies for electrical services" },
-                      { name: "Solar", desc: "Customer acquisition for solar installers" },
-                      { name: "Landscaping", desc: "Branding for outdoor service businesses" },
-                      { name: "Home Builders", desc: "Digital presence for custom builders" },
-                      { name: "Pest Control", desc: "Targeted ads for pest management" },
-                      { name: "Remodeling", desc: "Showcasing high-end renovation work" }
+                      { name: "Roofing", desc: "Specialized marketing for roofing contractors", icon: Layers },
+                      { name: "HVAC", desc: "Lead generation for heating & cooling", icon: Rocket },
+                      { name: "Plumbing", desc: "Local SEO for residential plumbers", icon: MapPin },
+                      { name: "Electrical", desc: "Growth strategies for electrical services", icon: Terminal },
+                      { name: "Solar", desc: "Customer acquisition for solar installers", icon: Globe },
+                      { name: "Landscaping", desc: "Branding for outdoor service businesses", icon: CheckCircle2 },
+                      { name: "Home Builders", desc: "Digital presence for custom builders", icon: Building2 },
+                      { name: "Pest Control", desc: "Targeted ads for pest management", icon: Users },
+                      { name: "Remodeling", desc: "Showcasing high-end renovation work", icon: PenTool },
+                      { name: "Contractors", desc: "Full-service digital growth for general contractors", icon: Handshake },
+                      { name: "Flooring", desc: "Dominate the flooring market with local SEO", icon: BarChart3 },
+                      { name: "Franchises", desc: "Scalable marketing solutions for franchise networks", icon: LayoutGridIcon },
+                      { name: "Garage Door", desc: "High-intent lead generation for garage services", icon: SlidersHorizontal },
+                      { name: "Moving", desc: "Strategic visibility for local and long-distance movers", icon: GlobeIcon },
+                      { name: "Painting", desc: "Vibrant digital presence for painting professionals", icon: Star },
+                      { name: "Storage", desc: "Maximize occupancy for storage facilities", icon: Inbox },
+                      { name: "Windows & Doors", desc: "Premium lead gen for window & door installers", icon: UserPlus }
                     ].map((industry) => (
                       <a key={industry.name} href="#" className="flex items-start gap-3 p-3 rounded-lg hover:bg-[#F9FAFB] transition-all duration-300 group/item overflow-hidden">
-                        <Building2 className="w-5 h-5 text-gray-400 group-hover/item:text-black mt-1 shrink-0" />
+                        <industry.icon className="w-5 h-5 text-gray-400 group-hover/item:text-black mt-1 shrink-0" />
                         <div className="grid transition-all duration-300 grid-rows-[auto_0fr] group-hover/section:grid-rows-[auto_1fr]">
                           <span className="text-base font-bold text-black block transition-colors leading-tight">{industry.name}</span>
                           <div className="overflow-hidden">
                             <p className="text-[13px] text-gray-500 pt-1 transition-all duration-300">{industry.desc}</p>
                           </div>
                         </div>
-                      </a>
-                    ))}
-                  </div>
-                  <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4 pt-8 border-t border-gray-50">
-                    {["Contractors", "Flooring", "Franchises", "Garage Door", "Moving", "Painting", "Storage", "Windows & Doors"].map(other => (
-                      <a key={other} href="#" className="text-[13px] font-bold text-gray-600 hover:text-primary transition-colors py-1 block">
-                        {other}
                       </a>
                     ))}
                   </div>
