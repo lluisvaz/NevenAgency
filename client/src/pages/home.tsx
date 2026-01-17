@@ -38,6 +38,17 @@ export default function Home() {
     { name: "Portuguese (Brazil)", code: "pt-BR" }
   ];
 
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isMobileMenuOpen]);
+
   return (
     <div className="relative w-full overflow-x-hidden bg-black text-white font-sans">
       {/* Hero Section with Video */}
