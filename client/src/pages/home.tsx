@@ -303,7 +303,7 @@ export default function Home() {
                               setLanguage(lang.name);
                               setIsMobileLanguageOpen(false);
                             }}
-                            className={`w-full text-left px-4 py-3 text-lg rounded-md transition-colors ${language === lang.name ? 'bg-white text-primary font-bold shadow-sm' : 'text-gray-600'}`}
+                            className={`w-full text-left px-4 py-3 text-lg rounded-md transition-colors ${language === lang.name ? 'text-primary font-bold' : 'text-gray-600'}`}
                           >
                             {lang.name}
                           </button>
