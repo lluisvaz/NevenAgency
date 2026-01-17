@@ -6,7 +6,7 @@ import {
   BarChart3, Rocket, Building2, Terminal, Layers, Users,
   Handshake, UserPlus, ArrowRight, Inbox, Hammer, Droplets, 
   Lightbulb, Sun, Shovel, Home as HomeIcon, Bug, Paintbrush, Archive, LayoutPanelTop,
-  Wind, HardHat, Truck
+  Wind, HardHat, Truck, X
 } from "lucide-react";
 import { LayoutGridIcon } from "@/components/ui/layout-grid-icon";
 import { GlobeIcon } from "@/components/ui/globe-icon";
@@ -153,7 +153,7 @@ export default function Home() {
               <div className="flex items-center justify-between p-6 border-b border-gray-100">
                 <img src="/images/logo.png" alt="Logo" className="h-8 w-auto" />
                 <button onClick={() => setIsMobileMenuOpen(false)} className="p-2 hover:bg-gray-100 rounded-full transition-colors">
-                  <ChevronDown className="rotate-90" size={24} />
+                  <X size={24} />
                 </button>
               </div>
 
