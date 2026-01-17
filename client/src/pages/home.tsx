@@ -33,6 +33,11 @@ export default function Home() {
 
   const isHeaderWhite = isServicesOpen || isIndustriesOpen || isScrolled;
 
+  const languages = [
+    { name: "English", code: "en" },
+    { name: "Portuguese (Brazil)", code: "pt-BR" }
+  ];
+
   return (
     <div className="relative w-full overflow-x-hidden bg-black text-white font-sans">
       {/* Hero Section with Video */}
@@ -114,10 +119,7 @@ export default function Home() {
                 
                 {isLanguageOpen && (
                   <div className="absolute top-full right-0 mt-2 w-48 bg-white rounded-sm shadow-xl border border-gray-100 py-2 z-[200]">
-                    {[
-                      { name: "English", code: "en" },
-                      { name: "Portuguese (Brazil)", code: "pt-BR" }
-                    ].map((lang) => (
+                    {languages.map((lang) => (
                       <button
                         key={lang.code}
                         onClick={() => {
@@ -159,46 +161,7 @@ export default function Home() {
                 <a href="#" className="block text-xl font-bold hover:text-primary transition-colors p-3 rounded-lg">Pricing</a>
                 <a href="#" className="block text-xl font-bold hover:text-primary transition-colors p-3 rounded-lg">About</a>
                 
-                <div className="pt-4 border-t border-gray-100">
-                  <div className="space-y-2">
-                    <button 
-                      onClick={() => setIsMobileLanguageOpen(!isMobileLanguageOpen)}
-                      className={`w-full flex items-center justify-between text-xl font-bold transition-all duration-300 p-3 rounded-lg ${isMobileLanguageOpen ? 'bg-black text-white' : 'hover:text-primary'}`}
-                    >
-                      <div className="flex items-center gap-3">
-                        <Globe size={24} className={isMobileLanguageOpen ? 'text-white' : 'text-gray-400'} />
-                        {language}
-                      </div>
-                      <ChevronDown className={`transition-transform duration-300 ${isMobileLanguageOpen ? 'rotate-180' : ''}`} size={20} />
-                    </button>
-                    <div className={`overflow-hidden transition-all duration-300 ${isMobileLanguageOpen ? 'max-h-48 opacity-100' : 'max-h-0 opacity-0'}`}>
-                      <div className="bg-gray-50 rounded-lg p-2 space-y-1">
-                        {[
-                          { name: "English", code: "en" },
-                          { name: "Portuguese (Brazil)", code: "pt-BR" }
-                        ].map((lang) => (
-                          <button
-                            key={lang.code}
-                            onClick={() => {
-                              setLanguage(lang.name);
-                              setIsMobileLanguageOpen(false);
-                            }}
-                            className={`w-full text-left px-4 py-3 text-lg rounded-md transition-colors ${language === lang.name ? 'bg-white text-primary font-bold shadow-sm' : 'text-gray-600'}`}
-                          >
-                            {lang.name}
-                          </button>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="p-6 border-t border-gray-100">
-                <button className="w-full bg-primary text-white py-4 px-6 font-bold uppercase tracking-wide text-sm hover:bg-black transition-colors cursor-pointer rounded-sm shadow-lg">
-                  Schedule Intro Call
-                </button>
-              </div>
+                <div className="space-y-2">
                   <button 
                     onClick={() => {
                       setIsMobileServicesOpen(!isMobileServicesOpen);
@@ -211,7 +174,6 @@ export default function Home() {
                   </button>
                   <div className={`overflow-hidden transition-all duration-500 ease-in-out ${isMobileServicesOpen ? 'max-h-[2000px] opacity-100 mt-2' : 'max-h-0 opacity-0'}`}>
                     <div className="bg-[#F9FAFB] rounded-xl border border-gray-100 p-4 space-y-8">
-                      {/* Search & Strategy */}
                       <div className="space-y-4">
                         <h4 className="text-[11px] font-bold text-gray-400 uppercase tracking-[0.2em] px-3">Search & Strategy</h4>
                         <div className="space-y-1">
@@ -230,8 +192,6 @@ export default function Home() {
                           ))}
                         </div>
                       </div>
-
-                      {/* Paid Media & Lead Gen */}
                       <div className="space-y-4 pt-4 border-t border-gray-100">
                         <h4 className="text-[11px] font-bold text-gray-400 uppercase tracking-[0.2em] px-3">Paid Media & Lead Gen</h4>
                         <div className="space-y-1">
@@ -250,8 +210,6 @@ export default function Home() {
                           ))}
                         </div>
                       </div>
-
-                      {/* Creative & Content */}
                       <div className="space-y-4 pt-4 border-t border-gray-100">
                         <h4 className="text-[11px] font-bold text-gray-400 uppercase tracking-[0.2em] px-3">Creative & Content</h4>
                         <div className="space-y-1">
@@ -259,7 +217,7 @@ export default function Home() {
                             { name: "Website Design", desc: "High-converting websites for home services", icon: PenTool },
                             { name: "Digital PR", desc: "Earn mentions and backlinks from top publications", icon: Rocket },
                             { name: "Social Media", desc: "Build a community and brand on social platforms", icon: Handshake },
-                            { name: "Email Marketing", desc: "Nurture leads and increase lifetime value", icon: Users }
+                            { name: "Email Marketing", desc: "Nurture leads and increase customer lifetime value", icon: Users }
                           ].map((item) => (
                             <a key={item.name} href="#" className="flex items-start gap-4 p-3 rounded-lg hover:bg-white transition-all duration-300 group">
                               <item.icon className="w-6 h-6 text-gray-400 group-hover:text-black mt-1 shrink-0" />
@@ -269,21 +227,6 @@ export default function Home() {
                               </div>
                             </a>
                           ))}
-                        </div>
-                      </div>
-
-                      {/* Our Blog (Mobile) */}
-                      <div className="space-y-4 pt-4 border-t border-gray-100 px-3">
-                        <h4 className="text-[10px] font-bold text-gray-500 uppercase tracking-[0.2em]">Our Blog</h4>
-                        <div className="space-y-4">
-                          <div className="group cursor-pointer">
-                            <h5 className="text-sm font-bold mb-1 leading-tight group-hover:text-primary transition-colors">
-                              The Future of Home Services Marketing in 2026
-                            </h5>
-                            <a href="#" className="text-[11px] font-bold text-primary flex items-center gap-1">
-                              Read More <ArrowRight size={10} />
-                            </a>
-                          </div>
                         </div>
                       </div>
                     </div>
@@ -335,34 +278,43 @@ export default function Home() {
                           ))}
                         </div>
                       </div>
+                    </div>
+                  </div>
+                </div>
 
-                      {/* Case Studies (Mobile) */}
-                      <div className="space-y-4 pt-4 border-t border-gray-100 px-3">
-                        <h4 className="text-[10px] font-bold text-gray-500 uppercase tracking-[0.2em]">Case Studies</h4>
-                        <div className="space-y-4">
-                          <div className="group cursor-pointer">
-                            <h5 className="text-sm font-bold mb-1 leading-tight group-hover:text-primary transition-colors">
-                              How a Roofing Client Scaled to $10M ARR
-                            </h5>
-                            <a href="#" className="text-[11px] font-bold text-primary flex items-center gap-1">
-                              View Case Study <ArrowRight size={10} />
-                            </a>
-                          </div>
-                        </div>
+                <div className="pt-4 border-t border-gray-100">
+                  <div className="space-y-2">
+                    <button 
+                      onClick={() => setIsMobileLanguageOpen(!isMobileLanguageOpen)}
+                      className={`w-full flex items-center justify-between text-xl font-bold transition-all duration-300 p-3 rounded-lg ${isMobileLanguageOpen ? 'bg-black text-white' : 'hover:text-primary'}`}
+                    >
+                      <div className="flex items-center gap-3">
+                        <Globe size={24} className={isMobileLanguageOpen ? 'text-white' : 'text-gray-400'} />
+                        {language}
+                      </div>
+                      <ChevronDown className={`transition-transform duration-300 ${isMobileLanguageOpen ? 'rotate-180' : ''}`} size={20} />
+                    </button>
+                    <div className={`overflow-hidden transition-all duration-300 ${isMobileLanguageOpen ? 'max-h-48 opacity-100' : 'max-h-0 opacity-0'}`}>
+                      <div className="bg-gray-50 rounded-lg p-2 space-y-1">
+                        {languages.map((lang) => (
+                          <button
+                            key={lang.code}
+                            onClick={() => {
+                              setLanguage(lang.name);
+                              setIsMobileLanguageOpen(false);
+                            }}
+                            className={`w-full text-left px-4 py-3 text-lg rounded-md transition-colors ${language === lang.name ? 'bg-white text-primary font-bold shadow-sm' : 'text-gray-600'}`}
+                          >
+                            {lang.name}
+                          </button>
+                        ))}
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
 
-              <div className="p-6 border-t border-gray-100 space-y-6">
-                <div className="flex items-center justify-between py-2 cursor-pointer group px-3">
-                  <div className="flex items-center gap-3">
-                    <Globe size={24} className="text-gray-400 group-hover:text-black transition-colors" />
-                    <span className="text-lg font-bold">English</span>
-                  </div>
-                  <ChevronDown size={20} className="text-gray-400" />
-                </div>
+              <div className="p-6 border-t border-gray-100">
                 <button className="w-full bg-primary text-white py-4 px-6 font-bold uppercase tracking-wide text-sm hover:bg-black transition-colors cursor-pointer rounded-sm shadow-lg">
                   Schedule Intro Call
                 </button>
@@ -370,16 +322,14 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Mega Menu Dropdown */}
+          {/* Mega Menu Dropdowns */}
           <div 
             className={`absolute top-full left-0 right-0 bg-white border-t border-gray-100 overflow-hidden transition-all duration-500 ease-in-out ${
               isServicesOpen ? 'max-h-[1200px] opacity-100 visible' : 'max-h-0 opacity-0 invisible'
             }`}
           >
             <div className="max-w-[1920px] mx-auto px-6 md:px-12 lg:px-24 xl:px-48 py-12 flex">
-              {/* Main Content */}
               <div className="flex-1 space-y-12 pr-12 border-r border-gray-100">
-                {/* Search & Strategy */}
                 <div className="group/section">
                   <h4 className="text-[11px] font-bold text-gray-400 uppercase tracking-[0.2em] mb-3">Search & Strategy</h4>
                   <div className="grid grid-cols-3 gap-1">
@@ -413,8 +363,6 @@ export default function Home() {
                   </div>
                   <div className="h-px bg-gray-100 w-full mt-4"></div>
                 </div>
-
-                {/* Paid Media & Lead Gen */}
                 <div className="group/section">
                   <h4 className="text-[11px] font-bold text-gray-400 uppercase tracking-[0.2em] mb-3">Paid Media & Lead Gen</h4>
                   <div className="grid grid-cols-3 gap-1">
@@ -448,8 +396,6 @@ export default function Home() {
                   </div>
                   <div className="h-px bg-gray-100 w-full mt-4"></div>
                 </div>
-
-                {/* Creative & Content */}
                 <div className="group/section">
                   <h4 className="text-[11px] font-bold text-gray-400 uppercase tracking-[0.2em] mb-3">Creative & Content</h4>
                   <div className="grid grid-cols-3 gap-1">
@@ -480,29 +426,17 @@ export default function Home() {
                         </div>
                       </div>
                     </a>
-                    <a href="#" className="flex items-start gap-3 p-3 rounded-lg hover:bg-[#F9FAFB] transition-all duration-300 group/item overflow-hidden">
-                      <Users className="w-5 h-5 text-gray-400 group-hover/item:text-black mt-1 shrink-0" />
-                      <div className="grid transition-all duration-300 grid-rows-[auto_0fr] group-hover/section:grid-rows-[auto_1fr]">
-                        <span className="text-base font-bold text-black block transition-colors leading-tight">Email Marketing</span>
-                        <div className="overflow-hidden">
-                          <p className="text-[13px] text-gray-500 pt-1 transition-all duration-300">Nurture leads and increase customer lifetime value</p>
-                        </div>
-                      </div>
-                    </a>
                   </div>
                 </div>
               </div>
-
-              {/* Sidebar */}
               <div className="w-[350px] pl-12 space-y-8">
                 <h4 className="text-[10px] font-bold text-gray-500 uppercase tracking-[0.2em]">Our Blog</h4>
-                
                 <div className="space-y-8">
                   <div className="group cursor-pointer">
                     <div className="aspect-[16/9] bg-primary/10 rounded-lg mb-4 flex items-center justify-center overflow-hidden">
                        <div className="text-primary font-bold text-2xl italic tracking-tighter">Insights</div>
                     </div>
-                    <h5 className="text-base font-bold mb-2 leading-tight group-hover:text-primary">
+                    <h5 className="text-base font-bold mb-2 leading-tight group-hover:text-primary transition-colors">
                       The Future of Home Services Marketing in 2026
                     </h5>
                     <p className="text-xs text-gray-500 mb-4 line-clamp-2">
@@ -512,27 +446,16 @@ export default function Home() {
                       Read More <ArrowRight size={12} />
                     </a>
                   </div>
-
-                  <div className="group cursor-pointer border-t border-gray-100 pt-6">
-                    <h5 className="text-base font-bold mb-2 leading-tight group-hover:text-primary">
-                      How to Maximize Your ROI with Google Local Services Ads
-                    </h5>
-                    <a href="#" className="text-xs font-bold text-primary flex items-center gap-1">
-                      Read More <ArrowRight size={12} />
-                    </a>
-                  </div>
                 </div>
               </div>
             </div>
           </div>
-          {/* Industries Mega Menu Dropdown */}
           <div 
             className={`absolute top-full left-0 right-0 bg-white border-t border-gray-100 overflow-hidden transition-all duration-500 ease-in-out ${
               isIndustriesOpen ? 'max-h-[1200px] opacity-100 visible' : 'max-h-0 opacity-0 invisible'
             }`}
           >
             <div className="max-w-[1920px] mx-auto px-6 md:px-12 lg:px-24 xl:px-48 py-12 flex">
-              {/* Main Content */}
               <div className="flex-1 space-y-12 pr-12 border-r border-gray-100">
                 <div className="group/section">
                   <h4 className="text-[11px] font-bold text-gray-400 uppercase tracking-[0.2em] mb-6">Industries We Serve</h4>
@@ -569,30 +492,15 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-
-              {/* Sidebar */}
               <div className="w-[350px] pl-12 space-y-8">
                 <h4 className="text-[10px] font-bold text-gray-500 uppercase tracking-[0.2em]">Case Studies</h4>
-                
                 <div className="space-y-8">
                   <div className="group cursor-pointer">
                     <div className="aspect-[16/9] bg-[#0F0F23] rounded-lg mb-4 flex items-center justify-center overflow-hidden">
                        <div className="text-white font-bold text-2xl italic tracking-tighter">Success</div>
                     </div>
-                    <h5 className="text-base font-bold mb-2 leading-tight group-hover:text-primary">
+                    <h5 className="text-base font-bold mb-2 leading-tight group-hover:text-primary transition-colors">
                       How a Roofing Client Scaled to $10M ARR
-                    </h5>
-                    <p className="text-xs text-gray-500 mb-4 line-clamp-2">
-                      Read how our strategic SEO and paid media approach transformed a local business into a regional leader...
-                    </p>
-                    <a href="#" className="text-xs font-bold text-primary flex items-center gap-1">
-                      View Case Study <ArrowRight size={12} />
-                    </a>
-                  </div>
-
-                  <div className="group cursor-pointer border-t border-gray-100 pt-6">
-                    <h5 className="text-base font-bold mb-2 leading-tight group-hover:text-primary">
-                      150% Increase in Qualified Leads for HVAC Partner
                     </h5>
                     <a href="#" className="text-xs font-bold text-primary flex items-center gap-1">
                       View Case Study <ArrowRight size={12} />
@@ -602,7 +510,6 @@ export default function Home() {
               </div>
             </div>
           </div>
-
         </header>
 
         {/* Backdrop Blur Overlay */}
@@ -622,12 +529,10 @@ export default function Home() {
             <h2 className="text-gray-400 font-bold tracking-widest text-sm mb-4 uppercase">
               Home Services Marketing Agency
             </h2>
-            
             <h1 className="text-[clamp(1.8rem,11vw,3.8rem)] md:text-6xl lg:text-7xl font-heading font-bold uppercase leading-[0.9] mb-6 md:mb-10 text-white tracking-tight break-words">
               Championing<br />
               Hometown Heroes
             </h1>
-
             <div className="space-y-4 mb-8 md:mb-12">
               <div className="flex items-start gap-3 md:gap-4">
                 <SlidersHorizontal className="w-5 h-5 md:w-6 md:h-6 text-gray-400 mt-1 shrink-0" />
@@ -635,14 +540,12 @@ export default function Home() {
                   <span className="font-bold">Proactive:</span> We make suggestions that actually move the needle each month.
                 </p>
               </div>
-              
               <div className="flex items-start gap-3 md:gap-4">
                 <PenTool className="w-5 h-5 md:w-6 md:h-6 text-gray-400 mt-1 shrink-0" />
                 <p className="text-base md:text-lg font-medium text-white">
                   <span className="font-bold">Cutting Edge:</span> We're always utilizing the latest technology and sharing that with you.
                 </p>
               </div>
-              
               <div className="flex items-start gap-3 md:gap-4">
                 <CircleDollarSign className="w-5 h-5 md:w-6 md:h-6 text-gray-400 mt-1 shrink-0" />
                 <p className="text-base md:text-lg font-medium text-white">
@@ -650,21 +553,16 @@ export default function Home() {
                 </p>
               </div>
             </div>
-
             <div className="flex flex-col sm:flex-row items-center gap-6 md:gap-8 mb-12 md:mb-20">
               <button className="w-full sm:w-auto bg-primary text-white px-6 md:px-8 py-3.5 md:py-4 font-bold uppercase tracking-wide text-sm md:text-base hover:bg-white hover:text-black transition-colors cursor-pointer rounded-sm">
                 Get Started Now
               </button>
-              
               <a href="#" className="flex items-center gap-2 font-bold underline decoration-1 underline-offset-4 text-white hover:text-primary transition-colors text-sm md:text-base">
                 <Play className="w-4 h-4 fill-white" />
                 Real Customer Experiences
               </a>
             </div>
-
-            {/* Badges / Social Proof */}
             <div className="flex flex-wrap items-center gap-8 border-t border-gray-800 pt-8">
-              {/* Google Reviews */}
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-full bg-white shadow-sm flex items-center justify-center">
                   <svg viewBox="0 0 24 24" className="w-6 h-6" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -685,10 +583,7 @@ export default function Home() {
                   170+ Five-Star<br/>Google Reviews
                 </div>
               </div>
-
               <div className="h-8 w-px bg-gray-800 mx-2 hidden sm:block"></div>
-
-              {/* Best Places to Work */}
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 border border-white flex flex-col items-center justify-center text-[8px] font-bold leading-none bg-white text-black">
                     <span>BP</span>
@@ -699,126 +594,13 @@ export default function Home() {
                   #6 Best Small<br/>Biz to Work For
                 </div>
               </div>
-
               <div className="h-8 w-px bg-gray-800 mx-2 hidden sm:block"></div>
-
-                {/* Inc 5000 */}
-                <div className="flex items-center gap-3">
-                  <div className="font-serif font-black italic text-2xl tracking-tighter text-white">
-                    Inc.<br/><span className="text-xs not-italic font-sans block -mt-1 tracking-normal text-gray-400">5000</span>
-                  </div>
-                  <div className="text-sm font-bold leading-tight text-white">
+              <div className="flex items-center gap-3">
+                <div className="font-serif font-black italic text-2xl tracking-tighter text-white">
+                  Inc.<br/><span className="text-xs not-italic font-sans block -mt-1 tracking-normal text-gray-400">5000</span>
+                </div>
+                <div className="text-sm font-bold leading-tight text-white">
                   Ranked #2031 on<br/>the INC. 5000
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* New Section */}
-      <section className="bg-black py-24 w-full relative z-20">
-        <div className="max-w-[1920px] mx-auto px-6 md:px-12 lg:px-24 xl:px-48">
-          <div className="text-center max-w-4xl mx-auto mb-16">
-            <h3 className="text-[#A1A1AA] font-bold tracking-widest text-xs mb-4 uppercase">
-              Elevating Home Service Businesses
-            </h3>
-            
-            <h2 className="text-[clamp(1.8rem,9vw,3.2rem)] md:text-5xl lg:text-6xl font-heading font-bold uppercase leading-[0.9] text-white tracking-tight">
-              We Love Serving Our Industry
-            </h2>
-          </div>
-
-          <div 
-            className="relative overflow-hidden rounded-2xl bg-[#18181B] p-8 md:p-12 border border-[#323232]"
-            style={{
-              boxShadow: '0 -4px 0 0 #323232',
-              borderTopWidth: '4px',
-              borderLeftWidth: '1px',
-              borderRightWidth: '1px',
-              borderBottomWidth: '1px'
-            }}
-          >
-            <div className="max-w-4xl mx-auto">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-16">
-                <div className="bg-[#27272A]/50 border border-[#3F3F46] p-6 rounded-xl flex items-center gap-4 hover:bg-[#27272A] transition-colors cursor-pointer group">
-                   <div className="w-12 h-12 flex items-center justify-center text-white">
-                      <svg viewBox="0 0 24 24" className="w-8 h-8" fill="none" stroke="currentColor" strokeWidth="1.5">
-                        <path d="M3 12l9-9 9 9M5 10v10a1 1 0 001 1h3a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1h3a1 1 0 001-1V10" />
-                      </svg>
-                   </div>
-                   <span className="text-xl font-bold text-white uppercase tracking-tight">Roofing</span>
-                </div>
-
-                <div className="bg-[#27272A]/50 border border-[#3F3F46] p-6 rounded-xl flex items-center gap-4 hover:bg-[#27272A] transition-colors cursor-pointer group">
-                   <div className="w-12 h-12 flex items-center justify-center text-white">
-                      <svg viewBox="0 0 24 24" className="w-8 h-8" fill="none" stroke="currentColor" strokeWidth="1.5">
-                        <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0M12 12v-4M12 12l3 3M12 12l-3 3" />
-                        <path d="M12 7v1M12 16v1M7 12h1M16 12h1" />
-                      </svg>
-                   </div>
-                   <span className="text-xl font-bold text-white uppercase tracking-tight">HVAC</span>
-                </div>
-
-                <div className="bg-[#27272A]/50 border border-[#3F3F46] p-6 rounded-xl flex items-center gap-4 hover:bg-[#27272A] transition-colors cursor-pointer group">
-                   <div className="w-12 h-12 flex items-center justify-center text-white">
-                      <svg viewBox="0 0 24 24" className="w-8 h-8" fill="none" stroke="currentColor" strokeWidth="1.5">
-                        <path d="M12 3v18M3 12h18" strokeDasharray="2 2"/>
-                        <circle cx="12" cy="12" r="4" />
-                      </svg>
-                   </div>
-                   <span className="text-xl font-bold text-white uppercase tracking-tight">Plumbing</span>
-                </div>
-              </div>
-
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div className="space-y-6">
-                  <h4 className="text-2xl font-bold text-white leading-tight">
-                    Industry leaders recognize our work & endorse us
-                  </h4>
-                  <ul className="space-y-3">
-                    <li className="flex items-center gap-3 text-[#A1A1AA]">
-                      <CheckCircle2 className="w-5 h-5 text-white shrink-0" />
-                      <span>We're constantly learning about the trades</span>
-                    </li>
-                    <li className="flex items-center gap-3 text-[#A1A1AA]">
-                      <CheckCircle2 className="w-5 h-5 text-white shrink-0" />
-                      <span>Dedicated to driving more leads to your business</span>
-                    </li>
-                    <li className="flex items-center gap-3 text-[#A1A1AA]">
-                      <CheckCircle2 className="w-5 h-5 text-white shrink-0" />
-                      <span>We partner with the best in roofing, HVAC, plumbing and home services</span>
-                    </li>
-                  </ul>
-                  
-                  <div className="bg-[#09090B] p-6 rounded-xl border border-[#27272A] relative overflow-hidden group">
-                    <p className="text-sm italic text-[#D1D1D6] mb-4 relative z-10">
-                      "This last year we spent far less than before, and we generated well over a million dollars in sales from paid ads."
-                    </p>
-                    <div className="flex items-center gap-3 relative z-10">
-                      <img src="https://avatar.vercel.sh/marcus" alt="Marcus" className="w-10 h-10 rounded-full border border-[#3F3F46]" />
-                      <div>
-                        <div className="text-xs font-bold text-white uppercase tracking-wider">Marcus Sheridan</div>
-                        <div className="text-[10px] text-[#71717A] uppercase">Home Services Client</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="relative aspect-video rounded-xl overflow-hidden group cursor-pointer">
-                   <img 
-                    src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&q=80" 
-                    alt="Clients and Coaches" 
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                   />
-                   <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
-                      <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center text-black transition-transform group-hover:scale-110">
-                        <Play className="w-6 h-6 fill-current ml-1" />
-                      </div>
-                   </div>
-                   <div className="absolute bottom-4 left-4 bg-white/10 backdrop-blur-md px-3 py-1 rounded text-[10px] font-bold text-white uppercase tracking-widest border border-white/20">
-                      Clients & Coaches
-                   </div>
                 </div>
               </div>
             </div>
