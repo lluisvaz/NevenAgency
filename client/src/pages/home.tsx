@@ -4,7 +4,9 @@ import {
   CheckCircle2, Phone, SlidersHorizontal, PenTool, CircleDollarSign, 
   Play, Star, Menu, ChevronDown, ChevronUp, Globe, MapPin, 
   BarChart3, Rocket, Building2, Terminal, Layers, Users,
-  Handshake, UserPlus, ArrowRight, Inbox
+  Handshake, UserPlus, ArrowRight, Inbox, Hammer, Droplets, 
+  Lightbulb, Sun, Shovel, Home as HomeIcon, Bug, Paintbrush, Archive, LayoutPanelTop,
+  Wind, HardHat, Truck
 } from "lucide-react";
 import { LayoutGridIcon } from "@/components/ui/layout-grid-icon";
 import { GlobeIcon } from "@/components/ui/globe-icon";
@@ -276,23 +278,23 @@ export default function Home() {
                   <h4 className="text-[11px] font-bold text-gray-400 uppercase tracking-[0.2em] mb-6">Industries We Serve</h4>
                   <div className="grid grid-cols-3 gap-1">
                     {[
-                      { name: "Roofing", desc: "Specialized marketing for roofing contractors", icon: Layers },
-                      { name: "HVAC", desc: "Lead generation for heating & cooling", icon: Rocket },
-                      { name: "Plumbing", desc: "Local SEO for residential plumbers", icon: MapPin },
-                      { name: "Electrical", desc: "Growth strategies for electrical services", icon: Terminal },
-                      { name: "Solar", desc: "Customer acquisition for solar installers", icon: Globe },
-                      { name: "Landscaping", desc: "Branding for outdoor service businesses", icon: CheckCircle2 },
-                      { name: "Home Builders", desc: "Digital presence for custom builders", icon: Building2 },
-                      { name: "Pest Control", desc: "Targeted ads for pest management", icon: Users },
+                      { name: "Roofing", desc: "Specialized marketing for roofing contractors", icon: HomeIcon },
+                      { name: "HVAC", desc: "Lead generation for heating & cooling", icon: Wind },
+                      { name: "Plumbing", desc: "Local SEO for residential plumbers", icon: Droplets },
+                      { name: "Electrical", desc: "Growth strategies for electrical services", icon: Lightbulb },
+                      { name: "Solar", desc: "Customer acquisition for solar installers", icon: Sun },
+                      { name: "Landscaping", desc: "Branding for outdoor service businesses", icon: Shovel },
+                      { name: "Home Builders", desc: "Digital presence for custom builders", icon: Hammer },
+                      { name: "Pest Control", desc: "Targeted ads for pest management", icon: Bug },
                       { name: "Remodeling", desc: "Showcasing high-end renovation work", icon: PenTool },
-                      { name: "Contractors", desc: "Full-service digital growth for general contractors", icon: Handshake },
-                      { name: "Flooring", desc: "Dominate the flooring market with local SEO", icon: BarChart3 },
+                      { name: "Contractors", desc: "Full-service digital growth for general contractors", icon: HardHat },
+                      { name: "Flooring", desc: "Dominate the flooring market with local SEO", icon: Layers },
                       { name: "Franchises", desc: "Scalable marketing solutions for franchise networks", icon: LayoutGridIcon },
                       { name: "Garage Door", desc: "High-intent lead generation for garage services", icon: SlidersHorizontal },
-                      { name: "Moving", desc: "Strategic visibility for local and long-distance movers", icon: GlobeIcon },
-                      { name: "Painting", desc: "Vibrant digital presence for painting professionals", icon: Star },
-                      { name: "Storage", desc: "Maximize occupancy for storage facilities", icon: Inbox },
-                      { name: "Windows & Doors", desc: "Premium lead gen for window & door installers", icon: UserPlus }
+                      { name: "Moving", desc: "Strategic visibility for local and long-distance movers", icon: Truck },
+                      { name: "Painting", desc: "Vibrant digital presence for painting professionals", icon: Paintbrush },
+                      { name: "Storage", desc: "Maximize occupancy for storage facilities", icon: Archive },
+                      { name: "Windows & Doors", desc: "Premium lead gen for window & door installers", icon: LayoutPanelTop }
                     ].map((industry) => (
                       <a key={industry.name} href="#" className="flex items-start gap-3 p-3 rounded-lg hover:bg-[#F9FAFB] transition-all duration-300 group/item overflow-hidden">
                         <industry.icon className="w-5 h-5 text-gray-400 group-hover/item:text-black mt-1 shrink-0" />
