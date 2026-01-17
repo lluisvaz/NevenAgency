@@ -100,23 +100,23 @@ export default function Home() {
               <div className="flex-1 space-y-12 pr-12 border-r border-gray-100">
                 {/* Global Coverage */}
                 <div className="group/section">
-                  <h4 className="text-[11px] font-bold text-gray-400 uppercase tracking-[0.2em] mb-8">Global Coverage</h4>
-                  <div className="grid grid-cols-3 gap-8">
-                    <a href="#" className="flex items-start gap-4 group/item">
+                  <h4 className="text-[11px] font-bold text-gray-400 uppercase tracking-[0.2em] mb-4">Global Coverage</h4>
+                  <div className="grid grid-cols-3 gap-x-4 gap-y-2">
+                    <a href="#" className="flex items-start gap-4 p-4 rounded-lg hover:bg-[#F9FAFB] transition-colors group/item">
                       <Globe className="w-6 h-6 text-gray-400 group-hover/item:text-black mt-1" />
                       <div className="space-y-1">
                         <span className="text-lg font-bold group-hover/item:text-primary block transition-colors">Country Explorer</span>
                         <p className="text-sm text-gray-500 opacity-0 group-hover/section:opacity-100 transition-opacity duration-300">Find global employment support by country</p>
                       </div>
                     </a>
-                    <a href="#" className="flex items-start gap-4 group/item">
+                    <a href="#" className="flex items-start gap-4 p-4 rounded-lg hover:bg-[#F9FAFB] transition-colors group/item">
                       <MapPin className="w-6 h-6 text-gray-400 group-hover/item:text-black mt-1" />
                       <div className="space-y-1">
                         <span className="text-lg font-bold group-hover/item:text-primary block transition-colors">US State Explorer</span>
                         <p className="text-sm text-gray-500 opacity-0 group-hover/section:opacity-100 transition-opacity duration-300">Simplify hiring across all US states</p>
                       </div>
                     </a>
-                    <a href="#" className="flex items-start gap-4 group/item">
+                    <a href="#" className="flex items-start gap-4 p-4 rounded-lg hover:bg-[#F9FAFB] transition-colors group/item">
                       <BarChart3 className="w-6 h-6 text-gray-400 group-hover/item:text-black mt-1" />
                       <div className="space-y-1">
                         <span className="text-lg font-bold group-hover/item:text-primary block transition-colors">Compare Remote</span>
@@ -124,28 +124,28 @@ export default function Home() {
                       </div>
                     </a>
                   </div>
-                  <div className="h-px bg-gray-100 w-full mt-12"></div>
+                  <div className="h-px bg-gray-100 w-full mt-8"></div>
                 </div>
 
                 {/* Growth Stage */}
                 <div className="group/section">
-                  <h4 className="text-[11px] font-bold text-gray-400 uppercase tracking-[0.2em] mb-8">Growth Stage</h4>
-                  <div className="grid grid-cols-3 gap-8">
-                    <a href="#" className="flex items-start gap-4 group/item">
+                  <h4 className="text-[11px] font-bold text-gray-400 uppercase tracking-[0.2em] mb-4">Growth Stage</h4>
+                  <div className="grid grid-cols-3 gap-x-4 gap-y-2">
+                    <a href="#" className="flex items-start gap-4 p-4 rounded-lg hover:bg-[#F9FAFB] transition-colors group/item">
                       <Rocket className="w-6 h-6 text-gray-400 group-hover/item:text-black mt-1" />
                       <div className="space-y-1">
                         <span className="text-lg font-bold group-hover/item:text-primary block transition-colors">Startups</span>
                         <p className="text-sm text-gray-500 opacity-0 group-hover/section:opacity-100 transition-opacity duration-300">Tailored solutions for early-stage growth</p>
                       </div>
                     </a>
-                    <a href="#" className="flex items-start gap-4 group/item">
+                    <a href="#" className="flex items-start gap-4 p-4 rounded-lg hover:bg-[#F9FAFB] transition-colors group/item">
                       <Building2 className="w-6 h-6 text-gray-400 group-hover/item:text-black mt-1" />
                       <div className="space-y-1">
                         <span className="text-lg font-bold group-hover/item:text-primary block transition-colors">Mid-market</span>
                         <p className="text-sm text-gray-500 opacity-0 group-hover/section:opacity-100 transition-opacity duration-300">Scaling operations for established companies</p>
                       </div>
                     </a>
-                    <a href="#" className="flex items-start gap-4 group/item">
+                    <a href="#" className="flex items-start gap-4 p-4 rounded-lg hover:bg-[#F9FAFB] transition-colors group/item">
                       <Layers className="w-6 h-6 text-gray-400 group-hover/item:text-black mt-1" />
                       <div className="space-y-1">
                         <span className="text-lg font-bold group-hover/item:text-primary block transition-colors">Enterprise</span>
@@ -153,28 +153,28 @@ export default function Home() {
                       </div>
                     </a>
                   </div>
-                  <div className="h-px bg-gray-100 w-full mt-12"></div>
+                  <div className="h-px bg-gray-100 w-full mt-8"></div>
                 </div>
 
                 {/* Platform */}
                 <div className="group/section">
-                  <h4 className="text-[11px] font-bold text-gray-400 uppercase tracking-[0.2em] mb-8">Platform</h4>
-                  <div className="grid grid-cols-3 gap-8">
-                    <a href="#" className="flex items-start gap-4 group/item">
+                  <h4 className="text-[11px] font-bold text-gray-400 uppercase tracking-[0.2em] mb-4">Platform</h4>
+                  <div className="grid grid-cols-3 gap-x-4 gap-y-2">
+                    <a href="#" className="flex items-start gap-4 p-4 rounded-lg hover:bg-[#F9FAFB] transition-colors group/item">
                       <Terminal className="w-6 h-6 text-gray-400 group-hover/item:text-black mt-1" />
                       <div className="space-y-1">
                         <span className="text-lg font-bold group-hover/item:text-primary block transition-colors">Remote Embedded • API</span>
                         <p className="text-sm text-gray-500 opacity-0 group-hover/section:opacity-100 transition-opacity duration-300">Integrate global HR directly into your app</p>
                       </div>
                     </a>
-                    <a href="#" className="flex items-start gap-4 group/item">
+                    <a href="#" className="flex items-start gap-4 p-4 rounded-lg hover:bg-[#F9FAFB] transition-colors group/item">
                       <LayoutGridIcon className="w-6 h-6 text-gray-400 group-hover/item:text-black mt-1" />
                       <div className="space-y-1">
                         <span className="text-lg font-bold group-hover/item:text-primary block transition-colors">Integrations</span>
                         <p className="text-sm text-gray-500 opacity-0 group-hover/section:opacity-100 transition-opacity duration-300">Connect with your favorite business tools</p>
                       </div>
                     </a>
-                    <a href="#" className="flex items-start gap-4 group/item">
+                    <a href="#" className="flex items-start gap-4 p-4 rounded-lg hover:bg-[#F9FAFB] transition-colors group/item">
                       <Users className="w-6 h-6 text-gray-400 group-hover/item:text-black mt-1" />
                       <div className="space-y-1">
                         <span className="text-lg font-bold group-hover/item:text-primary block transition-colors">HR Essentials</span>
@@ -182,21 +182,21 @@ export default function Home() {
                       </div>
                     </a>
                   </div>
-                  <div className="h-px bg-gray-100 w-full mt-12"></div>
+                  <div className="h-px bg-gray-100 w-full mt-8"></div>
                 </div>
 
                 {/* Partner With Us */}
                 <div className="group/section">
-                  <h4 className="text-[11px] font-bold text-gray-400 uppercase tracking-[0.2em] mb-8">Partner With Us</h4>
-                  <div className="grid grid-cols-3 gap-8">
-                    <a href="#" className="flex items-start gap-4 group/item">
+                  <h4 className="text-[11px] font-bold text-gray-400 uppercase tracking-[0.2em] mb-4">Partner With Us</h4>
+                  <div className="grid grid-cols-3 gap-x-4 gap-y-2">
+                    <a href="#" className="flex items-start gap-4 p-4 rounded-lg hover:bg-[#F9FAFB] transition-colors group/item">
                       <Handshake className="w-6 h-6 text-gray-400 group-hover/item:text-black mt-1" />
                       <div className="space-y-1">
                         <span className="text-lg font-bold group-hover/item:text-primary block transition-colors">Strategic technology partners</span>
                         <p className="text-sm text-gray-500 opacity-0 group-hover/section:opacity-100 transition-opacity duration-300">Join our ecosystem of industry leaders</p>
                       </div>
                     </a>
-                    <a href="#" className="flex items-start gap-4 group/item">
+                    <a href="#" className="flex items-start gap-4 p-4 rounded-lg hover:bg-[#F9FAFB] transition-colors group/item">
                       <UserPlus className="w-6 h-6 text-gray-400 group-hover/item:text-black mt-1" />
                       <div className="space-y-1">
                         <span className="text-lg font-bold group-hover/item:text-primary block transition-colors">Become a partner</span>
