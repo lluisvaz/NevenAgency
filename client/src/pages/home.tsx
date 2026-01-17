@@ -50,11 +50,11 @@ export default function Home() {
   }, [isMobileMenuOpen]);
 
   return (
-    <div className="relative w-full overflow-x-hidden bg-black text-white font-sans">
+    <div className="relative w-full bg-black text-white font-sans min-h-screen">
       {/* Hero Section with Video */}
-      <section className="relative min-h-screen w-full overflow-hidden -mb-[1px]">
+      <section className="relative h-screen w-full overflow-hidden">
         {/* Background Video */}
-        <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 z-0 pointer-events-none">
           <video 
             src={heroVideo} 
             autoPlay 
