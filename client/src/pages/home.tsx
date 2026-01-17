@@ -165,7 +165,7 @@ export default function Home() {
               Elevating Home Service Businesses
             </h3>
             
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold uppercase leading-tight text-white">
+            <h2 className="text-[clamp(1.8rem,9vw,3.2rem)] md:text-5xl lg:text-6xl font-heading font-bold uppercase leading-[0.9] text-white tracking-tight">
               We Love Serving Our Industry
             </h2>
           </div>
