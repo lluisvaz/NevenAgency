@@ -54,14 +54,14 @@ export default function Home() {
       {/* Hero Section with Video */}
       <section className="relative min-h-screen w-full overflow-hidden">
         {/* Background Video */}
-        <div className="absolute inset-0 z-0 overflow-hidden">
+        <div className="absolute inset-0 z-0">
           <video 
             src={heroVideo} 
             autoPlay 
             muted 
             loop 
             playsInline
-            className="w-[200%] h-full object-cover md:w-full animate-pan-mobile md:animate-none" 
+            className="w-full h-full object-cover" 
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black via-black/60 to-transparent z-10 hidden md:block" />
           <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent z-10 md:hidden" />
