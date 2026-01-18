@@ -502,7 +502,7 @@ export default function Home() {
                       <a key={industry.name} href="#" className="flex items-start gap-3 p-3 rounded-lg hover:bg-[#F9FAFB] transition-all duration-300 group/item overflow-hidden">
                         <industry.icon className="w-5 h-5 text-gray-400 group-hover/item:text-black mt-1 shrink-0" />
                         <div className="grid transition-all duration-300 grid-rows-[auto_0fr] group-hover/section:grid-rows-[auto_1fr]">
-                          <span className="text-base font-bold text-black block transition-colors leading-tight">{industry.name}</span>
+                          <span className="text-base text-black block transition-colors leading-tight">{industry.name}</span>
                           <div className="overflow-hidden">
                             <p className="text-[13px] text-gray-500 pt-1 transition-all duration-300">{industry.desc}</p>
                           </div>
