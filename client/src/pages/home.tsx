@@ -673,7 +673,7 @@ export default function Home() {
           </button>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {[
             {
               date: "01/22/25",
@@ -731,7 +731,10 @@ export default function Home() {
             </div>
           ))}
         </div>
+      </section>
 
+      {/* Brand Logos Section */}
+      <section className="bg-white py-12 px-6 md:px-12 lg:px-24 xl:px-48 border-b border-gray-100">
         <div className="flex flex-wrap items-center justify-center gap-12 grayscale opacity-30">
           <div className="h-8 flex items-center justify-center"><img src="https://logodix.com/logo/2034983.png" className="h-full w-auto object-contain" /></div>
           <div className="h-8 flex items-center justify-center"><span className="text-2xl font-black italic tracking-tighter">DOPE</span></div>
