@@ -214,7 +214,7 @@ export default function Home() {
 
                 {isLanguageOpen && (
                   <div
-                    className="absolute top-full right-0 mt-2 w-48 bg-white rounded-sm shadow-xl border border-gray-100 py-2 z-[200]"
+                    className="absolute top-full right-0 mt-2 w-48 bg-white rounded-none shadow-xl border border-gray-100 py-2 z-[200]"
                     onClick={(e) => e.stopPropagation()}
                   >
                     {languages.map((lang) => (
@@ -224,7 +224,7 @@ export default function Home() {
                           setLanguage(lang.name);
                           setIsLanguageOpen(false);
                         }}
-                        className={`w-full text-left px-4 py-2 text-sm hover:bg-gray-50 transition-colors cursor-pointer ${language === lang.name ? "text-black font-bold" : "text-gray-500"}`}
+                        className={`w-full text-left px-4 py-2 text-sm hover:bg-gray-50 transition-colors cursor-pointer rounded-none ${language === lang.name ? "text-black font-bold" : "text-gray-500"}`}
                       >
                         {lang.name}
                       </button>
@@ -267,7 +267,7 @@ export default function Home() {
                 <img src="/images/logo.png" alt="Logo" className="h-8 w-auto" />
                 <button
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="p-2 hover:bg-gray-100 rounded-full transition-colors"
+                  className="p-2 hover:bg-gray-100 rounded-none transition-colors"
                 >
                   <X size={24} />
                 </button>
@@ -651,6 +651,350 @@ export default function Home() {
               </div>
             </div>
           </div>
+
+          {/* Mega Menu Dropdowns */}
+          <div
+            className={`absolute top-full left-0 right-0 bg-white border-t border-gray-100 overflow-hidden transition-all duration-500 ease-in-out ${
+              isServicesOpen
+                ? "max-h-[1200px] opacity-100 visible"
+                : "max-h-0 opacity-0 invisible"
+            }`}
+          >
+            <div className="max-w-[1920px] mx-auto px-6 md:px-12 lg:px-24 xl:px-48 py-12 flex">
+              <div className="flex-1 space-y-12 pr-12 border-r border-gray-100">
+                <div className="group/section">
+                  <h4 className="text-[11px] font-bold text-gray-400 uppercase tracking-[0.2em] mb-3">
+                    Search & Strategy
+                  </h4>
+                  <div className="grid grid-cols-3 gap-1">
+                    <a
+                      href="#"
+                      className="flex items-start gap-3 p-3 rounded-none hover:bg-[#F9FAFB] transition-all duration-300 group/item overflow-hidden"
+                    >
+                      <BarChart3 className="w-5 h-5 text-gray-400 group-hover/item:text-black mt-1 shrink-0" />
+                      <div className="grid transition-all duration-300 grid-rows-[auto_0fr] group-hover/section:grid-rows-[auto_1fr]">
+                        <span className="text-base text-black block transition-colors leading-tight">
+                          Local SEO
+                        </span>
+                        <div className="overflow-hidden">
+                          <p className="text-[13px] text-gray-500 pt-1 transition-all duration-300">
+                            Dominate local search results in your service area
+                          </p>
+                        </div>
+                      </div>
+                    </a>
+                    <a
+                      href="#"
+                      className="flex items-start gap-3 p-3 rounded-none hover:bg-[#F9FAFB] transition-all duration-300 group/item overflow-hidden"
+                    >
+                      <Terminal className="w-5 h-5 text-gray-400 group-hover/item:text-black mt-1 shrink-0" />
+                      <div className="grid transition-all duration-300 grid-rows-[auto_0fr] group-hover/section:grid-rows-[auto_1fr]">
+                        <span className="text-base text-black block transition-colors leading-tight">
+                          AI Search Optimization
+                        </span>
+                        <div className="overflow-hidden">
+                          <p className="text-[13px] text-gray-500 pt-1 transition-all duration-300">
+                            Future-proof your presence for AI-driven search
+                          </p>
+                        </div>
+                      </div>
+                    </a>
+                    <a
+                      href="#"
+                      className="flex items-start gap-3 p-3 rounded-none hover:bg-[#F9FAFB] transition-all duration-300 group/item overflow-hidden"
+                    >
+                      <Globe className="w-5 h-5 text-gray-400 group-hover/item:text-black mt-1 shrink-0" />
+                      <div className="grid transition-all duration-300 grid-rows-[auto_0fr] group-hover/section:grid-rows-[auto_1fr]">
+                        <span className="text-base text-black block transition-colors leading-tight">
+                          Organic SEO
+                        </span>
+                        <div className="overflow-hidden">
+                          <p className="text-[13px] text-gray-500 pt-1 transition-all duration-300">
+                            Build long-term authority and organic traffic
+                          </p>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div className="h-px bg-gray-100 w-full mt-4"></div>
+                </div>
+                <div className="group/section">
+                  <h4 className="text-[11px] font-bold text-gray-400 uppercase tracking-[0.2em] mb-3">
+                    Paid Media & Lead Gen
+                  </h4>
+                  <div className="grid grid-cols-3 gap-1">
+                    <a
+                      href="#"
+                      className="flex items-start gap-3 p-3 rounded-none hover:bg-[#F9FAFB] transition-all duration-300 group/item overflow-hidden"
+                    >
+                      <CircleDollarSign className="w-5 h-5 text-gray-400 group-hover/item:text-black mt-1 shrink-0" />
+                      <div className="grid transition-all duration-300 grid-rows-[auto_0fr] group-hover/section:grid-rows-[auto_1fr]">
+                        <span className="text-base text-black block transition-colors leading-tight">
+                          Pay-Per-Click
+                        </span>
+                        <div className="overflow-hidden">
+                          <p className="text-[13px] text-gray-500 pt-1 transition-all duration-300">
+                            Instant leads through Google Ads and Bing
+                          </p>
+                        </div>
+                      </div>
+                    </a>
+                    <a
+                      href="#"
+                      className="flex items-start gap-3 p-3 rounded-none hover:bg-[#F9FAFB] transition-all duration-300 group/item overflow-hidden"
+                    >
+                      <Users className="w-5 h-5 text-gray-400 group-hover/item:text-black mt-1 shrink-0" />
+                      <div className="grid transition-all duration-300 grid-rows-[auto_0fr] group-hover/section:grid-rows-[auto_1fr]">
+                        <span className="text-base text-black block transition-colors leading-tight">
+                          LSA Management
+                        </span>
+                        <div className="overflow-hidden">
+                          <p className="text-[13px] text-gray-500 pt-1 transition-all duration-300">
+                            Maximize your Google Local Services Ads ROI
+                          </p>
+                        </div>
+                      </div>
+                    </a>
+                    <a
+                      href="#"
+                      className="flex items-start gap-3 p-3 rounded-none hover:bg-[#F9FAFB] transition-all duration-300 group/item overflow-hidden"
+                    >
+                      <Layers className="w-5 h-5 text-gray-400 group-hover/item:text-black mt-1 shrink-0" />
+                      <div className="grid transition-all duration-300 grid-rows-[auto_0fr] group-hover/section:grid-rows-[auto_1fr]">
+                        <span className="text-base text-black block transition-colors leading-tight">
+                          OTT Advertising
+                        </span>
+                        <div className="overflow-hidden">
+                          <p className="text-[13px] text-gray-500 pt-1 transition-all duration-300">
+                            Reach homeowners on streaming TV platforms
+                          </p>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div className="h-px bg-gray-100 w-full mt-4"></div>
+                </div>
+                <div className="group/section">
+                  <h4 className="text-[11px] font-bold text-gray-400 uppercase tracking-[0.2em] mb-3">
+                    Creative & Content
+                  </h4>
+                  <div className="grid grid-cols-3 gap-1">
+                    <a
+                      href="#"
+                      className="flex items-start gap-3 p-3 rounded-none hover:bg-[#F9FAFB] transition-all duration-300 group/item overflow-hidden"
+                    >
+                      <PenTool className="w-5 h-5 text-gray-400 group-hover/item:text-black mt-1 shrink-0" />
+                      <div className="grid transition-all duration-300 grid-rows-[auto_0fr] group-hover/section:grid-rows-[auto_1fr]">
+                        <span className="text-base text-black block transition-colors leading-tight">
+                          Website Design
+                        </span>
+                        <div className="overflow-hidden">
+                          <p className="text-[13px] text-gray-500 pt-1 transition-all duration-300">
+                            High-converting websites for home services
+                          </p>
+                        </div>
+                      </div>
+                    </a>
+                    <a
+                      href="#"
+                      className="flex items-start gap-3 p-3 rounded-none hover:bg-[#F9FAFB] transition-all duration-300 group/item overflow-hidden"
+                    >
+                      <Rocket className="w-5 h-5 text-gray-400 group-hover/item:text-black mt-1 shrink-0" />
+                      <div className="grid transition-all duration-300 grid-rows-[auto_0fr] group-hover/section:grid-rows-[auto_1fr]">
+                        <span className="text-base text-black block transition-colors leading-tight">
+                          Digital PR
+                        </span>
+                        <div className="overflow-hidden">
+                          <p className="text-[13px] text-gray-500 pt-1 transition-all duration-300">
+                            Earn mentions and backlinks from top publications
+                          </p>
+                        </div>
+                      </div>
+                    </a>
+                    <a
+                      href="#"
+                      className="flex items-start gap-3 p-3 rounded-none hover:bg-[#F9FAFB] transition-all duration-300 group/item overflow-hidden"
+                    >
+                      <Handshake className="w-5 h-5 text-gray-400 group-hover/item:text-black mt-1 shrink-0" />
+                      <div className="grid transition-all duration-300 grid-rows-[auto_0fr] group-hover/section:grid-rows-[auto_1fr]">
+                        <span className="text-base text-black block transition-colors leading-tight">
+                          Social Media
+                        </span>
+                        <div className="overflow-hidden">
+                          <p className="text-[13px] text-gray-500 pt-1 transition-all duration-300">
+                            Build a community and brand on social platforms
+                          </p>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div className="w-[350px] pl-12 space-y-8">
+                <h4 className="text-[10px] font-bold text-gray-500 uppercase tracking-[0.2em]">
+                  Our Blog
+                </h4>
+                <div className="space-y-8">
+                  <div className="group cursor-pointer">
+                    <div className="aspect-[16/9] bg-primary/10 rounded-none mb-4 flex items-center justify-center overflow-hidden">
+                      <div className="text-primary font-bold text-2xl italic tracking-tighter">
+                        Insights
+                      </div>
+                    </div>
+                    <h5 className="text-base font-bold mb-2 leading-tight group-hover:text-primary transition-colors">
+                      The Future of Home Services Marketing in 2026
+                    </h5>
+                    <p className="text-xs text-gray-500 mb-4 line-clamp-2">
+                      Stay ahead of the curve with our latest insights on
+                      industry trends, AI technology, and growth strategies...
+                    </p>
+                    <a
+                      href="#"
+                      className="text-xs font-bold text-primary flex items-center gap-1"
+                    >
+                      Read More <ArrowRight size={12} />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className={`absolute top-full left-0 right-0 bg-white border-t border-gray-100 overflow-hidden transition-all duration-500 ease-in-out ${
+              isIndustriesOpen
+                ? "max-h-[1200px] opacity-100 visible"
+                : "max-h-0 opacity-0 invisible"
+            }`}
+          >
+            <div className="max-w-[1920px] mx-auto px-6 md:px-12 lg:px-24 xl:px-48 py-12 flex">
+              <div className="flex-1 space-y-12 pr-12 border-r border-gray-100">
+                <div className="group/section">
+                  <h4 className="text-[11px] font-bold text-gray-400 uppercase tracking-[0.2em] mb-6">
+                    Industries We Serve
+                  </h4>
+                  <div className="grid grid-cols-3 gap-1">
+                    {[
+                      {
+                        name: "Roofing",
+                        desc: "Dominate local search and lead generation for roofing specialists",
+                        icon: HomeIcon,
+                      },
+                      {
+                        name: "HVAC",
+                        desc: "Maximize call volume and emergency service leads for HVAC",
+                        icon: Wind,
+                      },
+                      {
+                        name: "Plumbing",
+                        desc: "High-intent lead generation and local SEO for plumbing companies",
+                        icon: Droplets,
+                      },
+                      {
+                        name: "Electrical",
+                        desc: "Scale your electrical service business with targeted digital growth",
+                        icon: Lightbulb,
+                      },
+                      {
+                        name: "Solar",
+                        desc: "Capture high-quality solar leads and residential installation projects",
+                        icon: Sun,
+                      },
+                      {
+                        name: "Landscaping",
+                        desc: "Build a premium brand and organic presence for landscaping services",
+                        icon: Shovel,
+                      },
+                      {
+                        name: "Home Builders",
+                        desc: "Strategic marketing and high-converting websites for custom builders",
+                        icon: Hammer,
+                      },
+                      {
+                        name: "Pest Control",
+                        desc: "Consistent lead flow and local visibility for pest management",
+                        icon: Bug,
+                      },
+                      {
+                        name: "Contractors",
+                        desc: "Full-funnel digital marketing for multi-service general contractors",
+                        icon: HardHat,
+                      },
+                      {
+                        name: "Flooring",
+                        desc: "Drive residential and commercial flooring installation projects",
+                        icon: Layers,
+                      },
+                      {
+                        name: "Garage Door",
+                        desc: "Instant visibility and call tracking for garage door services",
+                        icon: SlidersHorizontal,
+                      },
+                      {
+                        name: "Moving",
+                        desc: "Targeted customer acquisition for local and long-distance movers",
+                        icon: Truck,
+                      },
+                      {
+                        name: "Painting",
+                        desc: "Branding and lead gen that highlights quality painting results",
+                        icon: Paintbrush,
+                      },
+                      {
+                        name: "Windows & Doors",
+                        desc: "Capture high-value leads for window and door replacements",
+                        icon: LayoutPanelTop,
+                      },
+                    ].map((item) => (
+                      <a
+                        key={item.name}
+                        href="#"
+                        className="flex items-start gap-3 p-3 rounded-none hover:bg-[#F9FAFB] transition-all duration-300 group/item overflow-hidden"
+                      >
+                        <item.icon className="w-5 h-5 text-gray-400 group-hover/item:text-black mt-1 shrink-0" />
+                        <div className="grid transition-all duration-300 grid-rows-[auto_0fr] group-hover/section:grid-rows-[auto_1fr]">
+                          <span className="text-base text-black block transition-colors leading-tight">
+                            {item.name}
+                          </span>
+                          <div className="overflow-hidden">
+                            <p className="text-[13px] text-gray-500 pt-1 transition-all duration-300">
+                              {item.desc}
+                            </p>
+                          </div>
+                        </div>
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              </div>
+              <div className="w-[350px] pl-12 space-y-8">
+                <h4 className="text-[10px] font-bold text-gray-500 uppercase tracking-[0.2em]">
+                  Success Stories
+                </h4>
+                <div className="space-y-8">
+                  <div className="group cursor-pointer">
+                    <div className="aspect-[16/9] bg-[#0F0F23] rounded-none mb-4 flex items-center justify-center overflow-hidden">
+                      <div className="text-white font-bold text-2xl italic tracking-tighter">
+                        Success
+                      </div>
+                    </div>
+                    <h5 className="text-base font-bold mb-2 leading-tight group-hover:text-primary transition-colors">
+                      How a Roofing Client Scaled to $10M ARR
+                    </h5>
+                    <p className="text-xs text-gray-500 mb-4 line-clamp-2">
+                      Read how we implemented a full-funnel digital strategy that
+                      transformed a local roofing company into a market leader...
+                    </p>
+                    <a
+                      href="#"
+                      className="text-xs font-bold text-primary flex items-center gap-1"
+                    >
+                      Read Case Study <ArrowRight size={12} />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </header>
 
         {/* Backdrop Blur Overlay */}
@@ -768,350 +1112,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* Mega Menu Dropdowns */}
-      <div
-        className={`absolute top-full left-0 right-0 bg-white border-t border-gray-100 overflow-hidden transition-all duration-500 ease-in-out ${
-          isServicesOpen
-            ? "max-h-[1200px] opacity-100 visible"
-            : "max-h-0 opacity-0 invisible"
-        }`}
-      >
-        <div className="max-w-[1920px] mx-auto px-6 md:px-12 lg:px-24 xl:px-48 py-12 flex">
-          <div className="flex-1 space-y-12 pr-12 border-r border-gray-100">
-            <div className="group/section">
-              <h4 className="text-[11px] font-bold text-gray-400 uppercase tracking-[0.2em] mb-3">
-                Search & Strategy
-              </h4>
-              <div className="grid grid-cols-3 gap-1">
-                <a
-                  href="#"
-                  className="flex items-start gap-3 p-3 rounded-none hover:bg-[#F9FAFB] transition-all duration-300 group/item overflow-hidden"
-                >
-                  <BarChart3 className="w-5 h-5 text-gray-400 group-hover/item:text-black mt-1 shrink-0" />
-                  <div className="grid transition-all duration-300 grid-rows-[auto_0fr] group-hover/section:grid-rows-[auto_1fr]">
-                    <span className="text-base text-black block transition-colors leading-tight">
-                      Local SEO
-                    </span>
-                    <div className="overflow-hidden">
-                      <p className="text-[13px] text-gray-500 pt-1 transition-all duration-300">
-                        Dominate local search results in your service area
-                      </p>
-                    </div>
-                  </div>
-                </a>
-                <a
-                  href="#"
-                  className="flex items-start gap-3 p-3 rounded-none hover:bg-[#F9FAFB] transition-all duration-300 group/item overflow-hidden"
-                >
-                  <Terminal className="w-5 h-5 text-gray-400 group-hover/item:text-black mt-1 shrink-0" />
-                  <div className="grid transition-all duration-300 grid-rows-[auto_0fr] group-hover/section:grid-rows-[auto_1fr]">
-                    <span className="text-base text-black block transition-colors leading-tight">
-                      AI Search Optimization
-                    </span>
-                    <div className="overflow-hidden">
-                      <p className="text-[13px] text-gray-500 pt-1 transition-all duration-300">
-                        Future-proof your presence for AI-driven search
-                      </p>
-                    </div>
-                  </div>
-                </a>
-                <a
-                  href="#"
-                  className="flex items-start gap-3 p-3 rounded-none hover:bg-[#F9FAFB] transition-all duration-300 group/item overflow-hidden"
-                >
-                  <Globe className="w-5 h-5 text-gray-400 group-hover/item:text-black mt-1 shrink-0" />
-                  <div className="grid transition-all duration-300 grid-rows-[auto_0fr] group-hover/section:grid-rows-[auto_1fr]">
-                    <span className="text-base text-black block transition-colors leading-tight">
-                      Organic SEO
-                    </span>
-                    <div className="overflow-hidden">
-                      <p className="text-[13px] text-gray-500 pt-1 transition-all duration-300">
-                        Build long-term authority and organic traffic
-                      </p>
-                    </div>
-                  </div>
-                </a>
-              </div>
-              <div className="h-px bg-gray-100 w-full mt-4"></div>
-            </div>
-            <div className="group/section">
-              <h4 className="text-[11px] font-bold text-gray-400 uppercase tracking-[0.2em] mb-3">
-                Paid Media & Lead Gen
-              </h4>
-              <div className="grid grid-cols-3 gap-1">
-                <a
-                  href="#"
-                  className="flex items-start gap-3 p-3 rounded-none hover:bg-[#F9FAFB] transition-all duration-300 group/item overflow-hidden"
-                >
-                  <CircleDollarSign className="w-5 h-5 text-gray-400 group-hover/item:text-black mt-1 shrink-0" />
-                  <div className="grid transition-all duration-300 grid-rows-[auto_0fr] group-hover/section:grid-rows-[auto_1fr]">
-                    <span className="text-base text-black block transition-colors leading-tight">
-                      Pay-Per-Click
-                    </span>
-                    <div className="overflow-hidden">
-                      <p className="text-[13px] text-gray-500 pt-1 transition-all duration-300">
-                        Instant leads through Google Ads and Bing
-                      </p>
-                    </div>
-                  </div>
-                </a>
-                <a
-                  href="#"
-                  className="flex items-start gap-3 p-3 rounded-none hover:bg-[#F9FAFB] transition-all duration-300 group/item overflow-hidden"
-                >
-                  <Users className="w-5 h-5 text-gray-400 group-hover/item:text-black mt-1 shrink-0" />
-                  <div className="grid transition-all duration-300 grid-rows-[auto_0fr] group-hover/section:grid-rows-[auto_1fr]">
-                    <span className="text-base text-black block transition-colors leading-tight">
-                      LSA Management
-                    </span>
-                    <div className="overflow-hidden">
-                      <p className="text-[13px] text-gray-500 pt-1 transition-all duration-300">
-                        Maximize your Google Local Services Ads ROI
-                      </p>
-                    </div>
-                  </div>
-                </a>
-                <a
-                  href="#"
-                  className="flex items-start gap-3 p-3 rounded-none hover:bg-[#F9FAFB] transition-all duration-300 group/item overflow-hidden"
-                >
-                  <Layers className="w-5 h-5 text-gray-400 group-hover/item:text-black mt-1 shrink-0" />
-                  <div className="grid transition-all duration-300 grid-rows-[auto_0fr] group-hover/section:grid-rows-[auto_1fr]">
-                    <span className="text-base text-black block transition-colors leading-tight">
-                      OTT Advertising
-                    </span>
-                    <div className="overflow-hidden">
-                      <p className="text-[13px] text-gray-500 pt-1 transition-all duration-300">
-                        Reach homeowners on streaming TV platforms
-                      </p>
-                    </div>
-                  </div>
-                </a>
-              </div>
-              <div className="h-px bg-gray-100 w-full mt-4"></div>
-            </div>
-            <div className="group/section">
-              <h4 className="text-[11px] font-bold text-gray-400 uppercase tracking-[0.2em] mb-3">
-                Creative & Content
-              </h4>
-              <div className="grid grid-cols-3 gap-1">
-                <a
-                  href="#"
-                  className="flex items-start gap-3 p-3 rounded-none hover:bg-[#F9FAFB] transition-all duration-300 group/item overflow-hidden"
-                >
-                  <PenTool className="w-5 h-5 text-gray-400 group-hover/item:text-black mt-1 shrink-0" />
-                  <div className="grid transition-all duration-300 grid-rows-[auto_0fr] group-hover/section:grid-rows-[auto_1fr]">
-                    <span className="text-base text-black block transition-colors leading-tight">
-                      Website Design
-                    </span>
-                    <div className="overflow-hidden">
-                      <p className="text-[13px] text-gray-500 pt-1 transition-all duration-300">
-                        High-converting websites for home services
-                      </p>
-                    </div>
-                  </div>
-                </a>
-                <a
-                  href="#"
-                  className="flex items-start gap-3 p-3 rounded-none hover:bg-[#F9FAFB] transition-all duration-300 group/item overflow-hidden"
-                >
-                  <Rocket className="w-5 h-5 text-gray-400 group-hover/item:text-black mt-1 shrink-0" />
-                  <div className="grid transition-all duration-300 grid-rows-[auto_0fr] group-hover/section:grid-rows-[auto_1fr]">
-                    <span className="text-base text-black block transition-colors leading-tight">
-                      Digital PR
-                    </span>
-                    <div className="overflow-hidden">
-                      <p className="text-[13px] text-gray-500 pt-1 transition-all duration-300">
-                        Earn mentions and backlinks from top publications
-                      </p>
-                    </div>
-                  </div>
-                </a>
-                <a
-                  href="#"
-                  className="flex items-start gap-3 p-3 rounded-none hover:bg-[#F9FAFB] transition-all duration-300 group/item overflow-hidden"
-                >
-                  <Handshake className="w-5 h-5 text-gray-400 group-hover/item:text-black mt-1 shrink-0" />
-                  <div className="grid transition-all duration-300 grid-rows-[auto_0fr] group-hover/section:grid-rows-[auto_1fr]">
-                    <span className="text-base text-black block transition-colors leading-tight">
-                      Social Media
-                    </span>
-                    <div className="overflow-hidden">
-                      <p className="text-[13px] text-gray-500 pt-1 transition-all duration-300">
-                        Build a community and brand on social platforms
-                      </p>
-                    </div>
-                  </div>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div className="w-[350px] pl-12 space-y-8">
-            <h4 className="text-[10px] font-bold text-gray-500 uppercase tracking-[0.2em]">
-              Our Blog
-            </h4>
-            <div className="space-y-8">
-              <div className="group cursor-pointer">
-                <div className="aspect-[16/9] bg-primary/10 rounded-none mb-4 flex items-center justify-center overflow-hidden">
-                  <div className="text-primary font-bold text-2xl italic tracking-tighter">
-                    Insights
-                  </div>
-                </div>
-                <h5 className="text-base font-bold mb-2 leading-tight group-hover:text-primary transition-colors">
-                  The Future of Home Services Marketing in 2026
-                </h5>
-                <p className="text-xs text-gray-500 mb-4 line-clamp-2">
-                  Stay ahead of the curve with our latest insights on
-                  industry trends, AI technology, and growth strategies...
-                </p>
-                <a
-                  href="#"
-                  className="text-xs font-bold text-primary flex items-center gap-1"
-                >
-                  Read More <ArrowRight size={12} />
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        className={`absolute top-full left-0 right-0 bg-white border-t border-gray-100 overflow-hidden transition-all duration-500 ease-in-out ${
-          isIndustriesOpen
-            ? "max-h-[1200px] opacity-100 visible"
-            : "max-h-0 opacity-0 invisible"
-        }`}
-      >
-        <div className="max-w-[1920px] mx-auto px-6 md:px-12 lg:px-24 xl:px-48 py-12 flex">
-          <div className="flex-1 space-y-12 pr-12 border-r border-gray-100">
-            <div className="group/section">
-              <h4 className="text-[11px] font-bold text-gray-400 uppercase tracking-[0.2em] mb-6">
-                Industries We Serve
-              </h4>
-              <div className="grid grid-cols-3 gap-1">
-                {[
-                  {
-                    name: "Roofing",
-                    desc: "Dominate local search and lead generation for roofing specialists",
-                    icon: HomeIcon,
-                  },
-                  {
-                    name: "HVAC",
-                    desc: "Maximize call volume and emergency service leads for HVAC",
-                    icon: Wind,
-                  },
-                  {
-                    name: "Plumbing",
-                    desc: "High-intent lead generation and local SEO for plumbing companies",
-                    icon: Droplets,
-                  },
-                  {
-                    name: "Electrical",
-                    desc: "Scale your electrical service business with targeted digital growth",
-                    icon: Lightbulb,
-                  },
-                  {
-                    name: "Solar",
-                    desc: "Capture high-quality solar leads and residential installation projects",
-                    icon: Sun,
-                  },
-                  {
-                    name: "Landscaping",
-                    desc: "Build a premium brand and organic presence for landscaping services",
-                    icon: Shovel,
-                  },
-                  {
-                    name: "Home Builders",
-                    desc: "Strategic marketing and high-converting websites for custom builders",
-                    icon: Hammer,
-                  },
-                  {
-                    name: "Pest Control",
-                    desc: "Consistent lead flow and local visibility for pest management",
-                    icon: Bug,
-                  },
-                  {
-                    name: "Contractors",
-                    desc: "Full-funnel digital marketing for multi-service general contractors",
-                    icon: HardHat,
-                  },
-                  {
-                    name: "Flooring",
-                    desc: "Drive residential and commercial flooring installation projects",
-                    icon: Layers,
-                  },
-                  {
-                    name: "Garage Door",
-                    desc: "Instant visibility and call tracking for garage door services",
-                    icon: SlidersHorizontal,
-                  },
-                  {
-                    name: "Moving",
-                    desc: "Targeted customer acquisition for local and long-distance movers",
-                    icon: Truck,
-                  },
-                  {
-                    name: "Painting",
-                    desc: "Branding and lead gen that highlights quality painting results",
-                    icon: Paintbrush,
-                  },
-                  {
-                    name: "Windows & Doors",
-                    desc: "Capture high-value leads for window and door replacements",
-                    icon: LayoutPanelTop,
-                  },
-                ].map((item) => (
-                  <a
-                    key={item.name}
-                    href="#"
-                    className="flex items-start gap-3 p-3 rounded-none hover:bg-[#F9FAFB] transition-all duration-300 group/item overflow-hidden"
-                  >
-                    <item.icon className="w-5 h-5 text-gray-400 group-hover/item:text-black mt-1 shrink-0" />
-                    <div className="grid transition-all duration-300 grid-rows-[auto_0fr] group-hover/section:grid-rows-[auto_1fr]">
-                      <span className="text-base text-black block transition-colors leading-tight">
-                        {item.name}
-                      </span>
-                      <div className="overflow-hidden">
-                        <p className="text-[13px] text-gray-500 pt-1 transition-all duration-300">
-                          {item.desc}
-                        </p>
-                      </div>
-                    </div>
-                  </a>
-                ))}
-              </div>
-            </div>
-          </div>
-          <div className="w-[350px] pl-12 space-y-8">
-            <h4 className="text-[10px] font-bold text-gray-500 uppercase tracking-[0.2em]">
-              Success Stories
-            </h4>
-            <div className="space-y-8">
-              <div className="group cursor-pointer">
-                <div className="aspect-[16/9] bg-[#0F0F23] rounded-none mb-4 flex items-center justify-center overflow-hidden">
-                  <div className="text-white font-bold text-2xl italic tracking-tighter">
-                    Success
-                  </div>
-                </div>
-                <h5 className="text-base font-bold mb-2 leading-tight group-hover:text-primary transition-colors">
-                  How a Roofing Client Scaled to $10M ARR
-                </h5>
-                <p className="text-xs text-gray-500 mb-4 line-clamp-2">
-                  Read how we implemented a full-funnel digital strategy that
-                  transformed a local roofing company into a market leader...
-                </p>
-                <a
-                  href="#"
-                  className="text-xs font-bold text-primary flex items-center gap-1"
-                >
-                  Read Case Study <ArrowRight size={12} />
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
 
       {/* Blog Section */}
       <section className="bg-[#F9FAFB] py-24 px-6 md:px-12 lg:px-24 xl:px-48">
