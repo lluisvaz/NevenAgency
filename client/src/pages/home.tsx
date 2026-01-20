@@ -47,7 +47,8 @@ import {
 } from "lucide-react";
 import { LayoutGridIcon } from "@/components/ui/layout-grid-icon";
 import { GlobeIcon } from "@/components/ui/globe-icon";
-import heroVideo from "@assets/generated_videos/aerial_view_of_roofers_working_on_a_house_roof.mp4";
+import usaFlag from "@assets/stock_images/usa_flag_icon,_circu_69c8a13e.jpg";
+import brazilFlag from "@assets/stock_images/brazil_flag_icon,_ci_148a4f3c.jpg";
 
 export default function Home() {
   const [isServicesOpen, setIsServicesOpen] = useState(false);
@@ -72,8 +73,8 @@ export default function Home() {
   const isHeaderWhite = isServicesOpen || isIndustriesOpen || isScrolled;
 
   const languages = [
-    { name: "English", code: "en", flag: "🇺🇸" },
-    { name: "Portuguese (Brazil)", code: "pt-BR", flag: "🇧🇷" },
+    { name: "English", code: "en", flag: usaFlag },
+    { name: "Portuguese (Brazil)", code: "pt-BR", flag: brazilFlag },
   ];
 
   useEffect(() => {
@@ -226,8 +227,8 @@ export default function Home() {
                         }}
                         className={`w-full text-left px-4 py-2 text-sm hover:bg-gray-50 transition-colors cursor-pointer rounded-none flex items-center gap-3 ${language === lang.name ? "text-black font-bold" : "text-gray-500"}`}
                       >
-                        <div className="w-6 h-6 rounded-full border border-black flex items-center justify-center text-[10px] shrink-0 overflow-hidden bg-white">
-                          {lang.flag}
+                        <div className="w-6 h-6 rounded-full border border-gray-300 flex items-center justify-center shrink-0 overflow-hidden bg-white">
+                          <img src={lang.flag} alt={lang.name} className="w-full h-full object-cover" />
                         </div>
                         {lang.name}
                       </button>
@@ -610,8 +611,12 @@ export default function Home() {
                       className={`w-full flex items-center justify-between text-xl transition-all duration-300 p-3 rounded-none ${isMobileLanguageOpen ? "bg-black text-white" : "hover:text-primary"}`}
                     >
                       <div className="flex items-center gap-3">
-                        <div className="w-8 h-8 rounded-full border border-black flex items-center justify-center text-[14px] shrink-0 overflow-hidden bg-white">
-                          {languages.find(l => l.name === language)?.flag}
+                        <div className="w-6 h-6 rounded-full border border-gray-300 flex items-center justify-center shrink-0 overflow-hidden bg-white">
+                          <img 
+                            src={languages.find(l => l.name === language)?.flag} 
+                            alt={language} 
+                            className="w-full h-full object-cover" 
+                          />
                         </div>
                         {language}
                       </div>
@@ -631,10 +636,10 @@ export default function Home() {
                               setLanguage(lang.name);
                               setIsMobileLanguageOpen(false);
                             }}
-                            className={`w-full text-left px-4 py-3 text-lg rounded-none transition-colors cursor-pointer flex items-center gap-3 ${language === lang.name ? "text-black" : "text-gray-500"}`}
+                            className={`w-full text-left px-4 py-3 text-lg rounded-none transition-colors cursor-pointer flex items-center gap-3 ${language === lang.name ? "text-black font-bold" : "text-gray-500"}`}
                           >
-                            <div className="w-8 h-8 rounded-full border border-black flex items-center justify-center text-[14px] shrink-0 overflow-hidden bg-white">
-                              {lang.flag}
+                            <div className="w-6 h-6 rounded-full border border-gray-300 flex items-center justify-center shrink-0 overflow-hidden bg-white">
+                              <img src={lang.flag} alt={lang.name} className="w-full h-full object-cover" />
                             </div>
                             {lang.name}
                           </button>
