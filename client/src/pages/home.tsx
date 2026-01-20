@@ -72,8 +72,8 @@ export default function Home() {
   const isHeaderWhite = isServicesOpen || isIndustriesOpen || isScrolled;
 
   const languages = [
-    { name: "English", code: "en" },
-    { name: "Portuguese (Brazil)", code: "pt-BR" },
+    { name: "English", code: "en", flag: "🇺🇸" },
+    { name: "Portuguese (Brazil)", code: "pt-BR", flag: "🇧🇷" },
   ];
 
   useEffect(() => {
@@ -224,8 +224,11 @@ export default function Home() {
                           setLanguage(lang.name);
                           setIsLanguageOpen(false);
                         }}
-                        className={`w-full text-left px-4 py-2 text-sm hover:bg-gray-50 transition-colors cursor-pointer rounded-none ${language === lang.name ? "text-black font-bold" : "text-gray-500"}`}
+                        className={`w-full text-left px-4 py-2 text-sm hover:bg-gray-50 transition-colors cursor-pointer rounded-none flex items-center gap-3 ${language === lang.name ? "text-black font-bold" : "text-gray-500"}`}
                       >
+                        <div className="w-6 h-6 rounded-full border border-black flex items-center justify-center text-[10px] shrink-0 overflow-hidden bg-white">
+                          {lang.flag}
+                        </div>
                         {lang.name}
                       </button>
                     ))}
@@ -607,14 +610,9 @@ export default function Home() {
                       className={`w-full flex items-center justify-between text-xl transition-all duration-300 p-3 rounded-none ${isMobileLanguageOpen ? "bg-black text-white" : "hover:text-primary"}`}
                     >
                       <div className="flex items-center gap-3">
-                        <Globe
-                          size={24}
-                          className={
-                            isMobileLanguageOpen
-                              ? "text-white"
-                              : "text-gray-400"
-                          }
-                        />
+                        <div className="w-8 h-8 rounded-full border border-black flex items-center justify-center text-[14px] shrink-0 overflow-hidden bg-white">
+                          {languages.find(l => l.name === language)?.flag}
+                        </div>
                         {language}
                       </div>
                       <ChevronDown
@@ -633,8 +631,11 @@ export default function Home() {
                               setLanguage(lang.name);
                               setIsMobileLanguageOpen(false);
                             }}
-                            className={`w-full text-left px-4 py-3 text-lg rounded-none transition-colors cursor-pointer ${language === lang.name ? "text-black" : "text-gray-500"}`}
+                            className={`w-full text-left px-4 py-3 text-lg rounded-none transition-colors cursor-pointer flex items-center gap-3 ${language === lang.name ? "text-black" : "text-gray-500"}`}
                           >
+                            <div className="w-8 h-8 rounded-full border border-black flex items-center justify-center text-[14px] shrink-0 overflow-hidden bg-white">
+                              {lang.flag}
+                            </div>
                             {lang.name}
                           </button>
                         ))}
