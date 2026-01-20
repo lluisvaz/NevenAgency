@@ -1195,13 +1195,6 @@ export default function Home() {
         <div className="max-w-[1920px] mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-24">
             <div className="space-y-12">
-              <Link href="/">
-                <img
-                  src="/images/logo.png"
-                  alt="Hook Agency"
-                  className="h-10 w-auto invert"
-                />
-              </Link>
               <div className="space-y-10">
                 <div className="flex items-start gap-4 group">
                   <div className="p-2.5 rounded-sm bg-white/5 border border-white/5 text-primary group-hover:bg-primary group-hover:text-white transition-all">
