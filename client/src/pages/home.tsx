@@ -139,13 +139,13 @@ export default function Home() {
               <div className="hidden lg:flex items-center gap-1 text-[17px] font-medium">
                 <a
                   href="#"
-                  className={`px-4 py-2.5 rounded-full hover:text-primary transition-colors ${isHeaderWhite ? "text-black" : "text-white"}`}
+                  className={`px-4 py-2.5 rounded-none hover:text-primary transition-colors ${isHeaderWhite ? "text-black" : "text-white"}`}
                 >
                   Pricing
                 </a>
                 <a
                   href="#"
-                  className={`px-4 py-2.5 rounded-full hover:text-primary transition-colors ${isHeaderWhite ? "text-black" : "text-white"}`}
+                  className={`px-4 py-2.5 rounded-none hover:text-primary transition-colors ${isHeaderWhite ? "text-black" : "text-white"}`}
                 >
                   About
                 </a>
@@ -154,7 +154,7 @@ export default function Home() {
                     setIsServicesOpen(!isServicesOpen);
                     setIsIndustriesOpen(false);
                   }}
-                  className={`flex items-center gap-2 px-4 py-2.5 rounded-full transition-all duration-300 cursor-pointer ${
+                  className={`flex items-center gap-2 px-4 py-2.5 rounded-none transition-all duration-300 cursor-pointer ${
                     isServicesOpen
                       ? "bg-black text-white"
                       : "hover:text-primary"
@@ -172,7 +172,7 @@ export default function Home() {
                     setIsIndustriesOpen(!isIndustriesOpen);
                     setIsServicesOpen(false);
                   }}
-                  className={`flex items-center gap-2 px-4 py-2.5 rounded-full transition-all duration-300 cursor-pointer ${
+                  className={`flex items-center gap-2 px-4 py-2.5 rounded-none transition-all duration-300 cursor-pointer ${
                     isIndustriesOpen
                       ? "bg-black text-white"
                       : "hover:text-primary"
@@ -235,9 +235,13 @@ export default function Home() {
               </button>
               <button
                 onClick={() => setIsMobileMenuOpen(true)}
-                className={`lg:hidden p-2 ${isHeaderWhite ? "text-black" : "text-white"}`}
+                className={`lg:hidden p-2 transition-colors ${isHeaderWhite ? "text-black" : "text-white"}`}
               >
-                <LayoutGridIcon size={32} />
+                <div className="w-6 h-5 flex flex-col justify-between items-end">
+                  <div className="w-full h-0.5 bg-current" />
+                  <div className="w-4/5 h-0.5 bg-current" />
+                  <div className="w-full h-0.5 bg-current" />
+                </div>
               </button>
             </div>
           </nav>
@@ -262,15 +266,18 @@ export default function Home() {
               </div>
 
               <div className="flex-1 overflow-y-auto p-6 space-y-4">
+                <button className="w-full bg-black/5 border border-black/10 text-black px-6 py-4 font-bold uppercase tracking-wide text-sm hover:bg-black/10 transition-colors cursor-pointer rounded-none mb-4">
+                  Schedule Intro Call
+                </button>
                 <a
                   href="#"
-                  className="block text-xl hover:text-primary transition-colors p-3 rounded-lg"
+                  className="block text-xl hover:text-primary transition-colors p-3 rounded-none"
                 >
                   Pricing
                 </a>
                 <a
                   href="#"
-                  className="block text-xl hover:text-primary transition-colors p-3 rounded-lg"
+                  className="block text-xl hover:text-primary transition-colors p-3 rounded-none"
                 >
                   About
                 </a>
@@ -281,7 +288,7 @@ export default function Home() {
                       setIsMobileServicesOpen(!isMobileServicesOpen);
                       setIsMobileIndustriesOpen(false);
                     }}
-                    className={`w-full flex items-center justify-between text-xl transition-all duration-300 p-3 rounded-lg ${isMobileServicesOpen ? "bg-black text-white font-bold" : "hover:text-primary"}`}
+                    className={`w-full flex items-center justify-between text-xl transition-all duration-300 p-3 rounded-none ${isMobileServicesOpen ? "bg-black text-white font-bold" : "hover:text-primary"}`}
                   >
                     Services
                     <ChevronDown
@@ -318,7 +325,7 @@ export default function Home() {
                             <a
                               key={item.name}
                               href="#"
-                              className="flex items-start gap-4 p-3 rounded-lg hover:bg-white transition-all duration-300 group"
+                              className="flex items-start gap-4 p-3 rounded-none hover:bg-white transition-all duration-300 group"
                             >
                               <item.icon className="w-6 h-6 text-gray-400 group-hover:text-black mt-1 shrink-0" />
                               <div className="space-y-1">
@@ -358,7 +365,7 @@ export default function Home() {
                             <a
                               key={item.name}
                               href="#"
-                              className="flex items-start gap-4 p-3 rounded-lg hover:bg-white transition-all duration-300 group"
+                              className="flex items-start gap-4 p-3 rounded-none hover:bg-white transition-all duration-300 group"
                             >
                               <item.icon className="w-6 h-6 text-gray-400 group-hover:text-black mt-1 shrink-0" />
                               <div className="space-y-1">
@@ -403,7 +410,7 @@ export default function Home() {
                             <a
                               key={item.name}
                               href="#"
-                              className="flex items-start gap-4 p-3 rounded-lg hover:bg-white transition-all duration-300 group"
+                              className="flex items-start gap-4 p-3 rounded-none hover:bg-white transition-all duration-300 group"
                             >
                               <item.icon className="w-6 h-6 text-gray-400 group-hover:text-black mt-1 shrink-0" />
                               <div className="space-y-1">
@@ -454,7 +461,7 @@ export default function Home() {
                       setIsMobileIndustriesOpen(!isMobileIndustriesOpen);
                       setIsMobileServicesOpen(false);
                     }}
-                    className={`w-full flex items-center justify-between text-xl transition-all duration-300 p-3 rounded-lg ${isMobileIndustriesOpen ? "bg-black text-white font-bold" : "hover:text-primary"}`}
+                    className={`w-full flex items-center justify-between text-xl transition-all duration-300 p-3 rounded-none ${isMobileIndustriesOpen ? "bg-black text-white font-bold" : "hover:text-primary"}`}
                   >
                     Industries
                     <ChevronDown
@@ -546,7 +553,7 @@ export default function Home() {
                             <a
                               key={item.name}
                               href="#"
-                              className="flex items-start gap-4 p-3 rounded-lg hover:bg-white transition-all duration-300 group"
+                              className="flex items-start gap-4 p-3 rounded-none hover:bg-white transition-all duration-300 group"
                             >
                               <item.icon className="w-6 h-6 text-gray-400 group-hover:text-black mt-1 shrink-0" />
                               <div className="space-y-1">
@@ -1006,7 +1013,7 @@ export default function Home() {
               Hometown Heroes
             </h1>
             <div className="mb-8 md:mb-12">
-              <p className="text-lg md:text-xl font-medium text-white leading-relaxed max-w-2xl mx-auto md:mx-0">
+              <p className="text-base md:text-xl font-medium text-white leading-relaxed max-w-2xl mx-auto md:mx-0">
                 We are a proactive, cutting-edge marketing agency and transparent ROI partner. 
                 We make suggestions that actually move the needle, utilize the latest technology, 
                 and show you all the work we complete each month.
