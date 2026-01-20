@@ -47,8 +47,6 @@ import {
 } from "lucide-react";
 import { LayoutGridIcon } from "@/components/ui/layout-grid-icon";
 import { GlobeIcon } from "@/components/ui/globe-icon";
-import usaFlag from "@assets/stock_images/usa_flag_icon,_circu_69c8a13e.jpg";
-import brazilFlag from "@assets/stock_images/brazil_flag_icon,_ci_148a4f3c.jpg";
 import heroVideo from "@assets/generated_videos/aerial_view_of_roofers_working_on_a_house_roof.mp4";
 
 export default function Home() {
@@ -74,8 +72,8 @@ export default function Home() {
   const isHeaderWhite = isServicesOpen || isIndustriesOpen || isScrolled;
 
   const languages = [
-    { name: "English", code: "en", flag: usaFlag },
-    { name: "Portuguese (Brazil)", code: "pt-BR", flag: brazilFlag },
+    { name: "English", code: "en", flag: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfw3OxwdDqJWOsCWw7UU67mi8NszDRtWthYV8GU8YT0rjqs23m8LXrYZlovXIiCiPzhaGuFbY7Ddm3JV6-rxL-NgQ-I7McLtflR5D0uw&s=10" },
+    { name: "Portuguese (Brazil)", code: "pt-BR", flag: "https://static.todamateria.com.br/upload/ba/nd/bandeiradobrasil-2-cke.jpg" },
   ];
 
   useEffect(() => {
