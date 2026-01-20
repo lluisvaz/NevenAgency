@@ -738,7 +738,7 @@ export default function Home() {
       <footer className="bg-black pt-32 pb-12 px-6 md:px-12 lg:px-24 xl:px-48 border-t border-white/5">
         <div className="max-w-[1920px] mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-24">
-            <div className="space-y-12">
+            <div className="space-y-16">
               <Link href="/">
                 <img 
                   src="/images/logo.png" 
@@ -746,14 +746,14 @@ export default function Home() {
                   className="h-10 w-auto invert" 
                 />
               </Link>
-              <div className="space-y-8">
+              <div className="space-y-10">
                 <div className="flex items-start gap-4 group">
                   <div className="p-2.5 rounded-sm bg-white/5 border border-white/5 text-primary group-hover:bg-primary group-hover:text-white transition-all">
                     <Phone size={18} />
                   </div>
                   <div>
                     <span className="text-[10px] font-bold text-gray-500 uppercase tracking-[0.2em] block mb-1">Give Us A Call:</span>
-                    <a href="tel:612-688-9108" className="text-lg font-bold hover:text-primary transition-colors">612-688-9108</a>
+                    <a href="tel:612-688-9108" className="text-xl font-bold hover:text-primary transition-colors">612-688-9108</a>
                   </div>
                 </div>
                 <div className="flex items-start gap-4 group">
@@ -796,7 +796,7 @@ export default function Home() {
 
             <div className="lg:col-span-1">
               <h4 className="text-[11px] font-bold text-white uppercase tracking-[0.2em] mb-8">Industries</h4>
-              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-4">
+              <ul className="space-y-4">
                 {[
                   "Roofing",
                   "HVAC",
