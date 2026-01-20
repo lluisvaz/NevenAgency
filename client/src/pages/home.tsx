@@ -14,6 +14,7 @@ import heroVideo from "@assets/generated_videos/aerial_view_of_roofers_working_o
 
 export default function Home() {
   const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const currentYear = new Date().getFullYear();
   const [isIndustriesOpen, setIsIndustriesOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -734,10 +735,10 @@ export default function Home() {
       </section>
 
       {/* Footer Section */}
-      <footer className="bg-black pt-24 pb-12 px-6 md:px-12 lg:px-24 xl:px-48 border-t border-white/5">
+      <footer className="bg-black pt-32 pb-12 px-6 md:px-12 lg:px-24 xl:px-48 border-t border-white/5">
         <div className="max-w-[1920px] mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
-            <div className="space-y-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-24">
+            <div className="space-y-12">
               <Link href="/">
                 <img 
                   src="/images/logo.png" 
@@ -745,23 +746,23 @@ export default function Home() {
                   className="h-10 w-auto invert" 
                 />
               </Link>
-              <div className="space-y-6">
-                <div className="flex items-start gap-4">
-                  <div className="p-2.5 rounded-sm bg-white/5 border border-white/5 text-primary">
+              <div className="space-y-8">
+                <div className="flex items-start gap-4 group">
+                  <div className="p-2.5 rounded-sm bg-white/5 border border-white/5 text-primary group-hover:bg-primary group-hover:text-white transition-all">
                     <Phone size={18} />
                   </div>
                   <div>
-                    <span className="text-[10px] font-bold text-gray-500 uppercase tracking-widest block mb-1">Give Us A Call:</span>
+                    <span className="text-[10px] font-bold text-gray-500 uppercase tracking-[0.2em] block mb-1">Give Us A Call:</span>
                     <a href="tel:612-688-9108" className="text-lg font-bold hover:text-primary transition-colors">612-688-9108</a>
                   </div>
                 </div>
-                <div className="flex items-start gap-4">
-                  <div className="p-2.5 rounded-sm bg-white/5 border border-white/5 text-primary">
+                <div className="flex items-start gap-4 group">
+                  <div className="p-2.5 rounded-sm bg-white/5 border border-white/5 text-primary group-hover:bg-primary group-hover:text-white transition-all">
                     <MapPin size={18} />
                   </div>
                   <div>
-                    <span className="text-[10px] font-bold text-gray-500 uppercase tracking-widest block mb-1">Visit Our Office:</span>
-                    <p className="text-gray-400 text-sm leading-relaxed">
+                    <span className="text-[10px] font-bold text-gray-500 uppercase tracking-[0.2em] block mb-1">Visit Our Office:</span>
+                    <p className="text-gray-400 text-sm font-medium leading-relaxed">
                       600 N Washington Ave Suite C203,<br />
                       Minneapolis, MN 55401
                     </p>
@@ -854,16 +855,17 @@ export default function Home() {
           </div>
 
           <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-6">
-            <div className="flex items-center gap-6 text-[10px] font-bold text-gray-500 uppercase tracking-widest">
-              <span>© Copyright 2026 Hook Agency.</span>
+            <div className="flex items-center gap-2 text-[10px] font-bold text-gray-500 uppercase tracking-[0.2em]">
+              <span>© Copyright {currentYear} Hook Agency. All Rights Reserved.</span>
+              <span className="opacity-20">•</span>
               <a href="#" className="hover:text-white transition-colors underline underline-offset-4">Privacy Policy</a>
             </div>
             <div className="flex items-center gap-6">
-              <span className="text-[10px] font-bold text-gray-500 uppercase tracking-widest">Follow us:</span>
+              <span className="text-[10px] font-bold text-gray-500 uppercase tracking-[0.2em]">Follow us:</span>
               <div className="flex items-center gap-4 text-gray-400">
-                {[Twitter, Facebook, Linkedin, Instagram, Youtube].map((Icon, i) => (
-                  <a key={i} href="#" className="hover:text-white transition-colors">
-                    <Icon size={18} />
+                {[Linkedin, Instagram].map((Icon, i) => (
+                  <a key={i} href="#" className="hover:text-primary transition-all hover:scale-110">
+                    <Icon size={20} />
                   </a>
                 ))}
               </div>
