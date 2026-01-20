@@ -774,11 +774,16 @@ export default function Home() {
               <h4 className="text-[11px] font-bold text-white uppercase tracking-[0.2em] mb-8">Services</h4>
               <ul className="space-y-4">
                 {[
+                  "Local SEO",
+                  "AI Search Optimization",
+                  "Organic SEO",
+                  "Pay-Per-Click",
+                  "LSA Management",
+                  "OTT Advertising",
                   "Website Design",
-                  "Search Engine Optimization",
-                  "Paid Ad Management",
-                  "Hook Content",
-                  "Consulting",
+                  "Digital PR",
+                  "Social Media",
+                  "Email Marketing",
                   "Our Blog"
                 ].map((link) => (
                   <li key={link}>
@@ -788,19 +793,28 @@ export default function Home() {
               </ul>
             </div>
 
-            <div>
+            <div className="lg:col-span-1">
               <h4 className="text-[11px] font-bold text-white uppercase tracking-[0.2em] mb-8">Industries</h4>
-              <ul className="space-y-4">
+              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-4">
                 {[
                   "Roofing",
                   "HVAC",
                   "Plumbing",
                   "Electrical",
                   "Solar",
+                  "Landscaping",
+                  "Home Builders",
+                  "Pest Control",
+                  "Contractors",
+                  "Flooring",
+                  "Garage Door",
+                  "Moving",
+                  "Painting",
+                  "Windows & Doors",
                   "Case Studies"
                 ].map((link) => (
                   <li key={link}>
-                    <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">{link}</a>
+                    <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm whitespace-nowrap">{link}</a>
                   </li>
                 ))}
               </ul>
@@ -811,6 +825,8 @@ export default function Home() {
                 <h4 className="text-[11px] font-bold text-white uppercase tracking-[0.2em] mb-8">Resources</h4>
                 <ul className="space-y-4">
                   {[
+                    "Pricing",
+                    "About",
                     "Portfolio",
                     "Podcast",
                     "Careers",
