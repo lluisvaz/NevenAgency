@@ -771,9 +771,16 @@ export default function Home() {
             </div>
 
             <div>
-              <h4 className="text-[11px] font-bold text-white uppercase tracking-[0.2em] mb-8">Company</h4>
+              <h4 className="text-[11px] font-bold text-white uppercase tracking-[0.2em] mb-8">Services</h4>
               <ul className="space-y-4">
-                {["Process", "Founder", "About Hook"].map((link) => (
+                {[
+                  "Website Design",
+                  "Search Engine Optimization",
+                  "Paid Ad Management",
+                  "Hook Content",
+                  "Consulting",
+                  "Our Blog"
+                ].map((link) => (
                   <li key={link}>
                     <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">{link}</a>
                   </li>
@@ -782,9 +789,16 @@ export default function Home() {
             </div>
 
             <div>
-              <h4 className="text-[11px] font-bold text-white uppercase tracking-[0.2em] mb-8">Services</h4>
+              <h4 className="text-[11px] font-bold text-white uppercase tracking-[0.2em] mb-8">Industries</h4>
               <ul className="space-y-4">
-                {["Website Design", "Search Engine Optimization", "Paid Ad Management"].map((link) => (
+                {[
+                  "Roofing",
+                  "HVAC",
+                  "Plumbing",
+                  "Electrical",
+                  "Solar",
+                  "Case Studies"
+                ].map((link) => (
                   <li key={link}>
                     <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">{link}</a>
                   </li>
@@ -796,7 +810,15 @@ export default function Home() {
               <div>
                 <h4 className="text-[11px] font-bold text-white uppercase tracking-[0.2em] mb-8">Resources</h4>
                 <ul className="space-y-4">
-                  {["Local Service Ads Course", "Roofing Lead Gen Course", "Lead Gen Audiobook", "AI Privacy Policy"].map((link) => (
+                  {[
+                    "Portfolio",
+                    "Podcast",
+                    "Careers",
+                    "Free Courses",
+                    "Local Service Ads Course",
+                    "Roofing Lead Gen Course",
+                    "Lead Gen Audiobook"
+                  ].map((link) => (
                     <li key={link}>
                       <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">{link}</a>
                     </li>
