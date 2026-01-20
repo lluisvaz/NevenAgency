@@ -828,12 +828,7 @@ export default function Home() {
                     "Pricing",
                     "About",
                     "Portfolio",
-                    "Podcast",
-                    "Careers",
-                    "Free Courses",
-                    "Local Service Ads Course",
-                    "Roofing Lead Gen Course",
-                    "Lead Gen Audiobook"
+                    "Careers"
                   ].map((link) => (
                     <li key={link}>
                       <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">{link}</a>
