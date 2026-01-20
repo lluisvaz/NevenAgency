@@ -202,10 +202,13 @@ export default function Home() {
                   onClick={() => setIsLanguageOpen(!isLanguageOpen)}
                   className={`hidden md:flex items-center gap-2 transition-colors cursor-pointer group ${isHeaderWhite ? "text-black hover:text-black" : "text-white hover:text-white/70"}`}
                 >
-                  <GlobeIcon
-                    size={26}
-                    className="transition-colors"
-                  />
+                  <div className="w-6 h-6 rounded-full border border-gray-300 flex items-center justify-center shrink-0 overflow-hidden bg-white">
+                    <img 
+                      src={languages.find(l => l.name === language)?.flag} 
+                      alt={language} 
+                      className="w-full h-full object-cover" 
+                    />
+                  </div>
                   <ChevronDown
                     size={18}
                     className={`text-gray-400 transition-transform duration-300 ${isLanguageOpen ? "rotate-180" : ""}`}
