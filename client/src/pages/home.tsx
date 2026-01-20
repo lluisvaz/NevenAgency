@@ -139,20 +139,20 @@ export default function Home() {
               <div className="hidden lg:flex items-center gap-1 text-[17px] font-medium">
                 <a
                   href="#"
-                  className={`px-4 py-2.5 rounded-none transition-colors ${isHeaderWhite ? "text-black" : "text-white"} ${
+                  className={`px-4 py-2.5 rounded-none transition-colors ${isHeaderWhite ? "text-black hover:text-black" : "text-white hover:text-white/70"} ${
                     isServicesOpen || isIndustriesOpen
-                      ? "text-gray-400 hover:text-black"
-                      : "hover:text-black"
+                      ? "text-gray-400"
+                      : ""
                   }`}
                 >
                   Pricing
                 </a>
                 <a
                   href="#"
-                  className={`px-4 py-2.5 rounded-none transition-colors ${isHeaderWhite ? "text-black" : "text-white"} ${
+                  className={`px-4 py-2.5 rounded-none transition-colors ${isHeaderWhite ? "text-black hover:text-black" : "text-white hover:text-white/70"} ${
                     isServicesOpen || isIndustriesOpen
-                      ? "text-gray-400 hover:text-black"
-                      : "hover:text-black"
+                      ? "text-gray-400"
+                      : ""
                   }`}
                 >
                   About
@@ -163,9 +163,9 @@ export default function Home() {
                     setIsIndustriesOpen(false);
                   }}
                   className={`flex items-center gap-2 px-4 py-2.5 rounded-none transition-all duration-300 cursor-pointer ${
-                    isServicesOpen
-                      ? "text-black"
-                      : "hover:text-black"
+                    isHeaderWhite 
+                      ? (isServicesOpen ? "text-black" : "text-black hover:text-black") 
+                      : (isServicesOpen ? "text-white" : "text-white hover:text-white/70")
                   } ${ (isServicesOpen || isIndustriesOpen) && !isServicesOpen ? "text-gray-400" : "" } group/btn`}
                 >
                   Services
@@ -181,9 +181,9 @@ export default function Home() {
                     setIsServicesOpen(false);
                   }}
                   className={`flex items-center gap-2 px-4 py-2.5 rounded-none transition-all duration-300 cursor-pointer ${
-                    isIndustriesOpen
-                      ? "text-black"
-                      : "hover:text-black"
+                    isHeaderWhite 
+                      ? (isIndustriesOpen ? "text-black" : "text-black hover:text-black") 
+                      : (isIndustriesOpen ? "text-white" : "text-white hover:text-white/70")
                   } ${ (isServicesOpen || isIndustriesOpen) && !isIndustriesOpen ? "text-gray-400" : "" } group/btn`}
                 >
                   Industries
