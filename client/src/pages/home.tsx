@@ -1193,7 +1193,7 @@ export default function Home() {
       {/* Footer Section */}
       <footer className="bg-black pt-32 pb-12 px-6 md:px-12 lg:px-24 xl:px-48 border-t border-white/5">
         <div className="max-w-[1920px] mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-24">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-12">
             <div className="space-y-12">
               <div className="space-y-10">
                 <div className="flex items-start gap-4 group">
@@ -1347,7 +1347,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-6">
+          <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="hidden md:flex flex-col md:flex-row items-center gap-6 order-1 md:order-2">
               <span className="text-[10px] font-bold text-gray-500 uppercase tracking-[0.2em]">
                 Follow us:
