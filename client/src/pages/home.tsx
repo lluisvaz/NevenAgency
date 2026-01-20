@@ -745,62 +745,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CTA Divider Section */}
-      <section className="bg-black relative pt-32 pb-16 px-6 md:px-12 lg:px-24 xl:px-48 -mb-24 z-10">
-        <div className="max-w-[1200px] mx-auto bg-[#0A0A0A] rounded-2xl overflow-hidden border border-white/5 shadow-2xl flex flex-col md:flex-row relative">
-          <div className="md:w-[45%] h-[300px] md:h-auto relative">
-            <img 
-              src="https://images.unsplash.com/photo-1473625247510-8ceb1760943f?auto=format&fit=crop&q=80&w=800" 
-              alt="Skydiver" 
-              className="absolute inset-0 w-full h-full object-cover" 
-            />
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[#0A0A0A]" />
-          </div>
-          <div className="md:w-[55%] p-10 md:p-16 flex flex-col justify-center">
-            <h2 className="text-3xl md:text-4xl font-black uppercase tracking-tighter leading-tight mb-4 text-white">
-              READY TO TAKE THE LEAP?
-            </h2>
-            <p className="text-gray-400 text-sm mb-8 max-w-md">
-              "We know what it takes to help get home service businesses more leads with Google. Even if we're not the right fit, we'll get you where you need to go."
-            </p>
-            
-            <div className="flex items-center gap-4 mb-10">
-              <div className="w-10 h-10 rounded-full bg-gray-800 border border-white/10 flex items-center justify-center overflow-hidden">
-                <img src="https://i.pravatar.cc/100?u=sydnee" alt="Sydnee" />
-              </div>
-              <div className="text-sm">
-                <span className="text-white font-bold block">— Sydnee Olsen,</span>
-                <span className="text-gray-500">Sales Lead</span>
-              </div>
-            </div>
-
-            <div className="relative inline-block w-fit">
-              <button className="bg-[#B5FF3D] text-black px-8 py-3.5 font-bold uppercase tracking-wide text-sm hover:bg-white transition-all cursor-pointer rounded-sm shadow-[0_0_20px_rgba(181,255,61,0.2)]">
-                Schedule Intro Call
-              </button>
-              <div className="absolute -top-12 -right-24 hidden lg:block">
-                <div className="text-white text-sm font-handwriting transform -rotate-12 italic opacity-60">
-                  <div className="text-center">
-                    No Obligation<br />
-                    Twenty Minute Call
-                  </div>
-                  <svg className="w-12 h-12 ml-4 -mt-2" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M10 10C15 25 30 35 45 40" stroke="white" strokeWidth="2" strokeLinecap="round" />
-                    <path d="M38 32L45 40L35 45" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                </div>
-              </div>
-            </div>
-          </div>
-          {/* Splatter effect bottom right */}
-          <div className="absolute bottom-0 right-0 w-32 h-32 opacity-20 grayscale invert pointer-events-none">
-             <div className="w-full h-full bg-[radial-gradient(circle_at_center,_white_0.1rem,_transparent_0.1rem)] bg-[length:0.5rem_0.5rem]" />
-          </div>
-        </div>
-      </section>
-
       {/* Footer Section */}
-      <footer className="bg-black pt-48 pb-12 px-6 md:px-12 lg:px-24 xl:px-48 border-t border-white/5">
+      <footer className="bg-black pt-24 pb-12 px-6 md:px-12 lg:px-24 xl:px-48 border-t border-white/5">
         <div className="max-w-[1920px] mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
             <div className="space-y-8">
