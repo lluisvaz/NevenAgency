@@ -49,6 +49,7 @@ import { LayoutGridIcon } from "@/components/ui/layout-grid-icon";
 import { GlobeIcon } from "@/components/ui/globe-icon";
 import usaFlag from "@assets/stock_images/usa_flag_icon,_circu_69c8a13e.jpg";
 import brazilFlag from "@assets/stock_images/brazil_flag_icon,_ci_148a4f3c.jpg";
+import heroVideo from "@assets/generated_videos/aerial_view_of_roofers_working_on_a_house_roof.mp4";
 
 export default function Home() {
   const [isServicesOpen, setIsServicesOpen] = useState(false);
