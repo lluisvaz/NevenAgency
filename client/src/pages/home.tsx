@@ -6,7 +6,7 @@ import {
   BarChart3, Rocket, Building2, Terminal, Layers, Users,
   Handshake, UserPlus, ArrowRight, Inbox, Hammer, Droplets, 
   Lightbulb, Sun, Shovel, Home as HomeIcon, Bug, Paintbrush, Archive, LayoutPanelTop,
-  Wind, HardHat, Truck, X
+  Wind, HardHat, Truck, X, Calendar, Clock, Facebook, Instagram, Linkedin, Twitter, Youtube
 } from "lucide-react";
 import { LayoutGridIcon } from "@/components/ui/layout-grid-icon";
 import { GlobeIcon } from "@/components/ui/globe-icon";
@@ -658,6 +658,249 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Blog Section */}
+      <section className="bg-[#F9FAFB] py-24 px-6 md:px-12 lg:px-24 xl:px-48">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
+          <div>
+            <span className="text-gray-400 font-bold uppercase tracking-[0.2em] text-[11px] block mb-2">Helpful Resources</span>
+            <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tighter leading-[0.9] text-black">
+              CHECK OUT OUR TOP <span className="text-primary">RESOURCES</span>
+            </h2>
+          </div>
+          <button className="bg-white text-black border border-black px-8 py-3 font-bold uppercase tracking-wide text-sm hover:bg-black hover:text-white transition-all cursor-pointer rounded-sm shrink-0">
+            View All Articles
+          </button>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+          {[
+            {
+              date: "01/22/25",
+              time: "15 Mins",
+              title: "Google Maps SEO Services That Actually Work: Hook's RankMap.Ai Is Here",
+              desc: "Imagine seeing your business light up Google Maps like a Christmas tree—greens everywhere, ranking 1-3 in your service areas, and...",
+              image: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&q=80&w=800"
+            },
+            {
+              date: "12/01/25",
+              time: "25 Mins",
+              title: "HVAC Marketing | 32 Strategies To Hook Better Leads",
+              desc: "The possibilities for how to market your HVAC business are endless. From leveraging social media to harnessing the power of...",
+              image: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&q=80&w=800"
+            },
+            {
+              date: "05/23/25",
+              time: "17 Mins",
+              title: "20 Home Services Marketing Tips (That Actually Work)",
+              desc: "We want to be your partner for your home services marketing efforts, but more than that, we want to help...",
+              image: "https://images.unsplash.com/photo-1581578731522-a2047864190c?auto=format&fit=crop&q=80&w=800"
+            }
+          ].map((post, idx) => (
+            <div key={idx} className="bg-white rounded-xl overflow-hidden border border-gray-100 flex flex-col h-full group">
+              <div className="aspect-[16/10] overflow-hidden">
+                <img 
+                  src={post.image} 
+                  alt={post.title} 
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" 
+                />
+              </div>
+              <div className="p-8 flex flex-col flex-1">
+                <div className="flex items-center gap-6 text-gray-400 text-[11px] font-bold uppercase tracking-widest mb-4">
+                  <div className="flex items-center gap-2">
+                    <Calendar size={14} className="text-gray-300" />
+                    {post.date}
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Clock size={14} className="text-gray-300" />
+                    {post.time}
+                  </div>
+                </div>
+                <h3 className="text-xl font-bold text-black mb-4 leading-tight group-hover:text-primary transition-colors">
+                  {post.title}
+                </h3>
+                <p className="text-gray-500 text-sm leading-relaxed mb-6 line-clamp-3">
+                  {post.desc}
+                </p>
+                <div className="mt-auto">
+                  <button className="text-black font-black uppercase tracking-widest text-[11px] border-b-2 border-black pb-1 hover:text-primary hover:border-primary transition-all">
+                    Read More
+                  </button>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="flex flex-wrap items-center justify-center gap-12 grayscale opacity-30">
+          <div className="h-8 flex items-center justify-center"><img src="https://logodix.com/logo/2034983.png" className="h-full w-auto object-contain" /></div>
+          <div className="h-8 flex items-center justify-center"><span className="text-2xl font-black italic tracking-tighter">DOPE</span></div>
+          <div className="h-8 flex items-center justify-center"><span className="text-xl font-black uppercase">RoofCon^</span></div>
+          <div className="h-8 flex items-center justify-center"><span className="text-xl font-bold">PROLINE</span></div>
+          <div className="h-8 flex items-center justify-center"><span className="text-xl font-bold italic tracking-tighter">RILLA</span></div>
+          <div className="h-8 flex items-center justify-center"><span className="text-xl font-light">aeroseal</span></div>
+        </div>
+      </section>
+
+      {/* CTA Divider Section */}
+      <section className="bg-black relative pt-32 pb-16 px-6 md:px-12 lg:px-24 xl:px-48 -mb-24 z-10">
+        <div className="max-w-[1200px] mx-auto bg-[#0A0A0A] rounded-2xl overflow-hidden border border-white/5 shadow-2xl flex flex-col md:flex-row relative">
+          <div className="md:w-[45%] h-[300px] md:h-auto relative">
+            <img 
+              src="https://images.unsplash.com/photo-1473625247510-8ceb1760943f?auto=format&fit=crop&q=80&w=800" 
+              alt="Skydiver" 
+              className="absolute inset-0 w-full h-full object-cover" 
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[#0A0A0A]" />
+          </div>
+          <div className="md:w-[55%] p-10 md:p-16 flex flex-col justify-center">
+            <h2 className="text-3xl md:text-4xl font-black uppercase tracking-tighter leading-tight mb-4 text-white">
+              READY TO TAKE THE LEAP?
+            </h2>
+            <p className="text-gray-400 text-sm mb-8 max-w-md">
+              "We know what it takes to help get home service businesses more leads with Google. Even if we're not the right fit, we'll get you where you need to go."
+            </p>
+            
+            <div className="flex items-center gap-4 mb-10">
+              <div className="w-10 h-10 rounded-full bg-gray-800 border border-white/10 flex items-center justify-center overflow-hidden">
+                <img src="https://i.pravatar.cc/100?u=sydnee" alt="Sydnee" />
+              </div>
+              <div className="text-sm">
+                <span className="text-white font-bold block">— Sydnee Olsen,</span>
+                <span className="text-gray-500">Sales Lead</span>
+              </div>
+            </div>
+
+            <div className="relative inline-block w-fit">
+              <button className="bg-[#B5FF3D] text-black px-8 py-3.5 font-bold uppercase tracking-wide text-sm hover:bg-white transition-all cursor-pointer rounded-sm shadow-[0_0_20px_rgba(181,255,61,0.2)]">
+                Schedule Intro Call
+              </button>
+              <div className="absolute -top-12 -right-24 hidden lg:block">
+                <div className="text-white text-sm font-handwriting transform -rotate-12 italic opacity-60">
+                  <div className="text-center">
+                    No Obligation<br />
+                    Twenty Minute Call
+                  </div>
+                  <svg className="w-12 h-12 ml-4 -mt-2" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 10C15 25 30 35 45 40" stroke="white" strokeWidth="2" strokeLinecap="round" />
+                    <path d="M38 32L45 40L35 45" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          {/* Splatter effect bottom right */}
+          <div className="absolute bottom-0 right-0 w-32 h-32 opacity-20 grayscale invert pointer-events-none">
+             <div className="w-full h-full bg-[radial-gradient(circle_at_center,_white_0.1rem,_transparent_0.1rem)] bg-[length:0.5rem_0.5rem]" />
+          </div>
+        </div>
+      </section>
+
+      {/* Footer Section */}
+      <footer className="bg-black pt-48 pb-12 px-6 md:px-12 lg:px-24 xl:px-48 border-t border-white/5">
+        <div className="max-w-[1920px] mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
+            <div className="space-y-8">
+              <Link href="/">
+                <img 
+                  src="/images/logo.png" 
+                  alt="Hook Agency" 
+                  className="h-10 w-auto invert" 
+                />
+              </Link>
+              <div className="space-y-6">
+                <div className="flex items-start gap-4">
+                  <div className="p-2.5 rounded-sm bg-white/5 border border-white/5 text-primary">
+                    <Phone size={18} />
+                  </div>
+                  <div>
+                    <span className="text-[10px] font-bold text-gray-500 uppercase tracking-widest block mb-1">Give Us A Call:</span>
+                    <a href="tel:612-688-9108" className="text-lg font-bold hover:text-primary transition-colors">612-688-9108</a>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="p-2.5 rounded-sm bg-white/5 border border-white/5 text-primary">
+                    <MapPin size={18} />
+                  </div>
+                  <div>
+                    <span className="text-[10px] font-bold text-gray-500 uppercase tracking-widest block mb-1">Visit Our Office:</span>
+                    <p className="text-gray-400 text-sm leading-relaxed">
+                      600 N Washington Ave Suite C203,<br />
+                      Minneapolis, MN 55401
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <h4 className="text-[11px] font-bold text-white uppercase tracking-[0.2em] mb-8">Company</h4>
+              <ul className="space-y-4">
+                {["Process", "Founder", "About Hook"].map((link) => (
+                  <li key={link}>
+                    <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">{link}</a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="text-[11px] font-bold text-white uppercase tracking-[0.2em] mb-8">Services</h4>
+              <ul className="space-y-4">
+                {["Website Design", "Search Engine Optimization", "Paid Ad Management"].map((link) => (
+                  <li key={link}>
+                    <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">{link}</a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="space-y-12">
+              <div>
+                <h4 className="text-[11px] font-bold text-white uppercase tracking-[0.2em] mb-8">Resources</h4>
+                <ul className="space-y-4">
+                  {["Local Service Ads Course", "Roofing Lead Gen Course", "Lead Gen Audiobook", "AI Privacy Policy"].map((link) => (
+                    <li key={link}>
+                      <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">{link}</a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="space-y-6">
+                <p className="text-[11px] font-bold text-gray-400 uppercase tracking-widest">Sign up for free resources from our team.</p>
+                <div className="flex gap-2">
+                  <input 
+                    type="email" 
+                    placeholder="Your email address" 
+                    className="flex-1 bg-white/5 border border-white/10 px-4 py-3 text-sm focus:outline-none focus:border-primary transition-colors"
+                  />
+                  <button className="bg-white/10 hover:bg-white/20 px-6 py-3 font-bold uppercase tracking-wide text-xs transition-colors shrink-0">
+                    Sign Up Now!
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div className="flex items-center gap-6 text-[10px] font-bold text-gray-500 uppercase tracking-widest">
+              <span>© Copyright 2026 Hook Agency.</span>
+              <a href="#" className="hover:text-white transition-colors underline underline-offset-4">Privacy Policy</a>
+            </div>
+            <div className="flex items-center gap-6">
+              <span className="text-[10px] font-bold text-gray-500 uppercase tracking-widest">Follow us:</span>
+              <div className="flex items-center gap-4 text-gray-400">
+                {[Twitter, Facebook, Linkedin, Instagram, Youtube].map((Icon, i) => (
+                  <a key={i} href="#" className="hover:text-white transition-colors">
+                    <Icon size={18} />
+                  </a>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
