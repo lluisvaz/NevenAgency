@@ -224,7 +224,7 @@ export default function Home() {
                   </div>
                 )}
               </div>
-              <button className="hidden md:block bg-white text-black px-4 md:px-6 py-2.5 md:py-3 font-bold uppercase tracking-wide text-xs md:text-sm hover:bg-gray-100 transition-colors cursor-pointer shrink-0 rounded-none">
+              <button className="hidden md:block bg-white/5 backdrop-blur-sm border border-white/20 text-white px-4 md:px-6 py-2.5 md:py-3 font-bold uppercase tracking-wide text-xs md:text-sm hover:bg-white/10 transition-colors cursor-pointer shrink-0 rounded-none">
                 Schedule Intro Call
               </button>
               <button
