@@ -224,7 +224,7 @@ export default function Home() {
                   </div>
                 )}
               </div>
-              <button className="hidden md:block bg-primary text-white px-4 md:px-6 py-2.5 md:py-3 font-bold uppercase tracking-wide text-xs md:text-sm hover:bg-black transition-colors cursor-pointer shrink-0 rounded-sm">
+              <button className="hidden md:block bg-white text-black px-4 md:px-6 py-2.5 md:py-3 font-bold uppercase tracking-wide text-xs md:text-sm hover:bg-gray-100 transition-colors cursor-pointer shrink-0 rounded-none">
                 Schedule Intro Call
               </button>
               <button
@@ -1007,12 +1007,12 @@ export default function Home() {
               </p>
             </div>
             <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4 mb-12 md:mb-20 w-full">
-              <button className="w-full sm:w-auto bg-white text-black px-6 md:px-8 py-3.5 md:py-4 font-bold uppercase tracking-wide text-sm md:text-base hover:bg-black hover:text-white transition-colors cursor-pointer rounded-none">
+              <button className="w-full sm:w-auto bg-white text-black px-6 md:px-8 py-3.5 md:py-4 font-bold uppercase tracking-wide text-sm md:text-base hover:bg-gray-200 transition-colors cursor-pointer rounded-none">
                 Get Started Now
               </button>
               <a
                 href="#"
-                className="w-full sm:w-auto flex items-center justify-center gap-2 font-bold text-white hover:text-primary transition-colors text-sm md:text-base px-6 py-3.5 md:py-4 bg-white/5 backdrop-blur-sm border border-white/20 rounded-none"
+                className="w-full sm:w-auto flex items-center justify-center gap-2 font-bold text-white hover:bg-white/10 transition-colors text-sm md:text-base px-6 py-3.5 md:py-4 bg-white/5 backdrop-blur-sm border border-white/20 rounded-none"
               >
                 <Play className="w-4 h-4 fill-white" />
                 Real Customer Experiences
