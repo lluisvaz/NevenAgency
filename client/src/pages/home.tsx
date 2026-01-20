@@ -1332,17 +1332,7 @@ export default function Home() {
           </div>
 
           <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-6">
-            <div className="flex items-center gap-2 text-[10px] font-bold text-gray-500 uppercase tracking-[0.2em]">
-              <span>© Copyright {currentYear} Neven Agency.</span>
-              <span className="opacity-20">•</span>
-              <a
-                href="#"
-                className="hover:text-white transition-colors underline underline-offset-4"
-              >
-                Privacy Policy
-              </a>
-            </div>
-            <div className="flex items-center gap-6">
+            <div className="flex flex-col md:flex-row items-center gap-6 order-1 md:order-2">
               <span className="text-[10px] font-bold text-gray-500 uppercase tracking-[0.2em]">
                 Follow us:
               </span>
@@ -1357,6 +1347,16 @@ export default function Home() {
                   </a>
                 ))}
               </div>
+            </div>
+            <div className="flex items-center gap-2 text-[10px] font-bold text-gray-500 uppercase tracking-[0.2em] order-2 md:order-1">
+              <span>© Copyright {currentYear} Neven Agency.</span>
+              <span className="opacity-20">•</span>
+              <a
+                href="#"
+                className="hover:text-white transition-colors underline underline-offset-4"
+              >
+                Privacy Policy
+              </a>
             </div>
           </div>
         </div>
