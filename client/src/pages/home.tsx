@@ -1231,7 +1231,7 @@ export default function Home() {
             </div>
 
             <div>
-              <h4 className="text-[11px] font-bold text-white uppercase tracking-[0.2em] mb-8">
+              <h4 className="text-sm font-bold text-white uppercase tracking-[0.2em] mb-8">
                 Services
               </h4>
               <ul className="space-y-4">
@@ -1261,7 +1261,7 @@ export default function Home() {
             </div>
 
             <div className="lg:col-span-1">
-              <h4 className="text-[11px] font-bold text-white uppercase tracking-[0.2em] mb-8">
+              <h4 className="text-sm font-bold text-white uppercase tracking-[0.2em] mb-8">
                 Industries
               </h4>
               <ul className="space-y-4">
@@ -1296,7 +1296,7 @@ export default function Home() {
 
             <div className="space-y-12">
               <div>
-                <h4 className="text-[11px] font-bold text-white uppercase tracking-[0.2em] mb-8">
+                <h4 className="text-sm font-bold text-white uppercase tracking-[0.2em] mb-8">
                   Resources
                 </h4>
                 <ul className="space-y-4">
