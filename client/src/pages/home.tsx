@@ -1327,12 +1327,28 @@ export default function Home() {
                     Sign Up Now!
                   </button>
                 </div>
+                <div className="flex md:hidden items-center gap-4 pt-4">
+                  <span className="text-[10px] font-bold text-gray-500 uppercase tracking-[0.2em]">
+                    Follow us:
+                  </span>
+                  <div className="flex items-center gap-4 text-gray-400">
+                    {[Linkedin, Instagram].map((Icon, i) => (
+                      <a
+                        key={i}
+                        href="#"
+                        className="hover:text-primary transition-all hover:scale-110"
+                      >
+                        <Icon size={20} />
+                      </a>
+                    ))}
+                  </div>
+                </div>
               </div>
             </div>
           </div>
 
           <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-6">
-            <div className="flex flex-col md:flex-row items-center gap-6 order-1 md:order-2">
+            <div className="hidden md:flex flex-col md:flex-row items-center gap-6 order-1 md:order-2">
               <span className="text-[10px] font-bold text-gray-500 uppercase tracking-[0.2em]">
                 Follow us:
               </span>
