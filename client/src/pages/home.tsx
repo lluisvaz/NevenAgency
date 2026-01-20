@@ -1194,7 +1194,7 @@ export default function Home() {
       <footer className="bg-black pt-32 pb-12 px-6 md:px-12 lg:px-24 xl:px-48 border-t border-white/5">
         <div className="max-w-[1920px] mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-24">
-            <div className="space-y-16">
+            <div className="space-y-12">
               <Link href="/">
                 <img
                   src="/images/logo.png"
