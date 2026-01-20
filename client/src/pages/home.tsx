@@ -139,13 +139,13 @@ export default function Home() {
               <div className="hidden lg:flex items-center gap-1 text-[17px] font-medium">
                 <a
                   href="#"
-                  className={`px-4 py-2.5 rounded-none hover:text-primary transition-colors ${isHeaderWhite ? "text-black" : "text-white"}`}
+                  className={`px-4 py-2.5 rounded-none transition-colors ${isHeaderWhite ? "text-black" : "text-white"} ${ (isServicesOpen || isIndustriesOpen) ? "text-gray-400 hover:text-black" : "hover:text-black" }`}
                 >
                   Pricing
                 </a>
                 <a
                   href="#"
-                  className={`px-4 py-2.5 rounded-none hover:text-primary transition-colors ${isHeaderWhite ? "text-black" : "text-white"}`}
+                  className={`px-4 py-2.5 rounded-none transition-colors ${isHeaderWhite ? "text-black" : "text-white"} ${ (isServicesOpen || isIndustriesOpen) ? "text-gray-400 hover:text-black" : "hover:text-black" }`}
                 >
                   About
                 </a>
@@ -156,9 +156,9 @@ export default function Home() {
                   }}
                   className={`flex items-center gap-2 px-4 py-2.5 rounded-none transition-all duration-300 cursor-pointer ${
                     isServicesOpen
-                      ? "bg-black text-white"
-                      : "hover:text-primary"
-                  }`}
+                      ? "text-black"
+                      : "hover:text-black"
+                  } ${ (isServicesOpen || isIndustriesOpen) && !isServicesOpen ? "text-gray-400" : "" } group/btn`}
                 >
                   Services
                   {isServicesOpen ? (
@@ -174,9 +174,9 @@ export default function Home() {
                   }}
                   className={`flex items-center gap-2 px-4 py-2.5 rounded-none transition-all duration-300 cursor-pointer ${
                     isIndustriesOpen
-                      ? "bg-black text-white"
-                      : "hover:text-primary"
-                  }`}
+                      ? "text-black"
+                      : "hover:text-black"
+                  } ${ (isServicesOpen || isIndustriesOpen) && !isIndustriesOpen ? "text-gray-400" : "" } group/btn`}
                 >
                   Industries
                   {isIndustriesOpen ? (
@@ -266,7 +266,7 @@ export default function Home() {
               </div>
 
               <div className="flex-1 overflow-y-auto p-6 space-y-4">
-                <button className="w-full bg-black/5 border border-black/10 text-black px-6 py-4 font-bold uppercase tracking-wide text-sm hover:bg-black/10 transition-colors cursor-pointer rounded-none mb-4">
+                <button className="w-full bg-black/5 border border-black/10 text-black px-6 py-4 font-bold uppercase tracking-wide text-sm hover:bg-black/10 transition-colors cursor-pointer rounded-none">
                   Schedule Intro Call
                 </button>
                 <a
@@ -288,7 +288,7 @@ export default function Home() {
                       setIsMobileServicesOpen(!isMobileServicesOpen);
                       setIsMobileIndustriesOpen(false);
                     }}
-                    className={`w-full flex items-center justify-between text-xl transition-all duration-300 p-3 rounded-none ${isMobileServicesOpen ? "bg-black text-white font-bold" : "hover:text-primary"}`}
+                    className={`w-full flex items-center justify-between text-xl transition-all duration-300 p-3 rounded-none ${isMobileServicesOpen ? "bg-black text-white" : "hover:text-primary"}`}
                   >
                     Services
                     <ChevronDown
@@ -299,7 +299,7 @@ export default function Home() {
                   <div
                     className={`overflow-hidden transition-all duration-500 ease-in-out ${isMobileServicesOpen ? "max-h-[2000px] opacity-100 mt-2" : "max-h-0 opacity-0"}`}
                   >
-                    <div className="bg-[#F9FAFB] rounded-xl border border-gray-100 p-4 space-y-8">
+                    <div className="bg-[#F9FAFB] rounded-none border border-gray-100 p-4 space-y-8">
                       <div className="space-y-4">
                         <h4 className="text-[11px] font-bold text-gray-400 uppercase tracking-[0.2em] px-3">
                           Search & Strategy
@@ -429,8 +429,8 @@ export default function Home() {
                         <h4 className="text-[11px] font-bold text-gray-400 uppercase tracking-[0.2em] px-3">
                           Our Blog
                         </h4>
-                        <div className="group cursor-pointer p-3 rounded-lg hover:bg-white transition-all duration-300">
-                          <div className="aspect-[16/9] bg-primary/10 rounded-lg mb-4 flex items-center justify-center overflow-hidden">
+                        <div className="group cursor-pointer p-3 rounded-none hover:bg-white transition-all duration-300">
+                          <div className="aspect-[16/9] bg-primary/10 rounded-none mb-4 flex items-center justify-center overflow-hidden">
                             <div className="text-primary font-bold text-2xl italic tracking-tighter">
                               Insights
                             </div>
@@ -461,7 +461,7 @@ export default function Home() {
                       setIsMobileIndustriesOpen(!isMobileIndustriesOpen);
                       setIsMobileServicesOpen(false);
                     }}
-                    className={`w-full flex items-center justify-between text-xl transition-all duration-300 p-3 rounded-none ${isMobileIndustriesOpen ? "bg-black text-white font-bold" : "hover:text-primary"}`}
+                    className={`w-full flex items-center justify-between text-xl transition-all duration-300 p-3 rounded-none ${isMobileIndustriesOpen ? "bg-black text-white" : "hover:text-primary"}`}
                   >
                     Industries
                     <ChevronDown
@@ -472,7 +472,7 @@ export default function Home() {
                   <div
                     className={`overflow-hidden transition-all duration-500 ease-in-out ${isMobileIndustriesOpen ? "max-h-[2000px] opacity-100 mt-2" : "max-h-0 opacity-0"}`}
                   >
-                    <div className="bg-[#F9FAFB] rounded-xl border border-gray-100 p-4 space-y-8">
+                    <div className="bg-[#F9FAFB] rounded-none border border-gray-100 p-4 space-y-8">
                       <div className="space-y-4">
                         <h4 className="text-[11px] font-bold text-gray-400 uppercase tracking-[0.2em] px-3">
                           Industries We Serve
@@ -572,7 +572,7 @@ export default function Home() {
                         <h4 className="text-[11px] font-bold text-gray-400 uppercase tracking-[0.2em] px-3">
                           Case Studies
                         </h4>
-                        <div className="group cursor-pointer p-3 rounded-lg hover:bg-white transition-all duration-300">
+                        <div className="group cursor-pointer p-3 rounded-none hover:bg-white transition-all duration-300">
                           <div className="aspect-[16/9] bg-[#0F0F23] rounded-lg mb-4 flex items-center justify-center overflow-hidden">
                             <div className="text-white font-bold text-2xl italic tracking-tighter">
                               Success
