@@ -989,8 +989,8 @@ export default function Home() {
         />
 
         {/* Hero Content */}
-        <div className="relative z-20 w-full max-w-[1920px] mx-auto px-6 md:px-12 lg:px-24 xl:px-48 pt-48 md:pt-48 lg:pt-56 pb-20">
-          <div className="max-w-3xl">
+        <div className="relative z-20 w-full max-w-[1920px] mx-auto px-6 md:px-12 lg:px-24 xl:px-48 pt-48 md:pt-48 lg:pt-56 pb-20 flex flex-col items-center md:items-start text-center md:text-left">
+          <div className="max-w-3xl flex flex-col items-center md:items-start">
             <h2 className="text-gray-400 font-bold tracking-widest text-sm mb-4 uppercase">
               Home Services Marketing Agency
             </h2>
@@ -999,22 +999,22 @@ export default function Home() {
               <br />
               Hometown Heroes
             </h1>
-            <div className="space-y-4 mb-8 md:mb-12">
-              <div className="flex items-start gap-3 md:gap-4">
+            <div className="space-y-4 mb-8 md:mb-12 w-full">
+              <div className="flex items-start md:items-start justify-center md:justify-start gap-3 md:gap-4 text-left">
                 <SlidersHorizontal className="w-5 h-5 md:w-6 md:h-6 text-gray-400 mt-1 shrink-0" />
                 <p className="text-base md:text-lg font-medium text-white">
                   <span className="font-bold">Proactive:</span> We make
                   suggestions that actually move the needle each month.
                 </p>
               </div>
-              <div className="flex items-start gap-3 md:gap-4">
+              <div className="flex items-start md:items-start justify-center md:justify-start gap-3 md:gap-4 text-left">
                 <PenTool className="w-5 h-5 md:w-6 md:h-6 text-gray-400 mt-1 shrink-0" />
                 <p className="text-base md:text-lg font-medium text-white">
                   <span className="font-bold">Cutting Edge:</span> We're always
                   utilizing the latest technology and sharing that with you.
                 </p>
               </div>
-              <div className="flex items-start gap-3 md:gap-4">
+              <div className="flex items-start md:items-start justify-center md:justify-start gap-3 md:gap-4 text-left">
                 <CircleDollarSign className="w-5 h-5 md:w-6 md:h-6 text-gray-400 mt-1 shrink-0" />
                 <p className="text-base md:text-lg font-medium text-white">
                   <span className="font-bold">Transparent ROI Partner:</span> We
@@ -1022,19 +1022,19 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <div className="flex flex-col sm:flex-row items-center gap-6 md:gap-8 mb-12 md:mb-20">
-              <button className="w-full sm:w-auto bg-primary text-white px-6 md:px-8 py-3.5 md:py-4 font-bold uppercase tracking-wide text-sm md:text-base hover:bg-white hover:text-black transition-colors cursor-pointer rounded-sm">
+            <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-6 md:gap-8 mb-12 md:mb-20 w-full">
+              <button className="w-full sm:w-auto bg-white text-black px-6 md:px-8 py-3.5 md:py-4 font-bold uppercase tracking-wide text-sm md:text-base hover:bg-black hover:text-white transition-colors cursor-pointer rounded-none">
                 Get Started Now
               </button>
               <a
                 href="#"
-                className="flex items-center gap-2 font-bold underline decoration-1 underline-offset-4 text-white hover:text-primary transition-colors text-sm md:text-base"
+                className="w-full sm:w-auto flex items-center justify-center gap-2 font-bold text-white hover:text-primary transition-colors text-sm md:text-base px-6 py-3.5 md:py-4 bg-white/5 backdrop-blur-sm border border-white/20 rounded-none"
               >
                 <Play className="w-4 h-4 fill-white" />
                 Real Customer Experiences
               </a>
             </div>
-            <div className="flex flex-wrap items-center gap-8 border-t border-gray-800 pt-8">
+            <div className="flex flex-wrap items-center justify-center md:justify-start gap-8 border-t border-gray-800 pt-8 w-full">
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-full bg-white shadow-sm flex items-center justify-center">
                   <svg
