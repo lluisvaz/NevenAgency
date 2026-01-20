@@ -733,18 +733,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Brand Logos Section */}
-      <section className="bg-white py-12 px-6 md:px-12 lg:px-24 xl:px-48 border-b border-gray-100">
-        <div className="flex flex-wrap items-center justify-center gap-12 grayscale opacity-30">
-          <div className="h-8 flex items-center justify-center"><img src="https://logodix.com/logo/2034983.png" className="h-full w-auto object-contain" /></div>
-          <div className="h-8 flex items-center justify-center"><span className="text-2xl font-black italic tracking-tighter">DOPE</span></div>
-          <div className="h-8 flex items-center justify-center"><span className="text-xl font-black uppercase">RoofCon^</span></div>
-          <div className="h-8 flex items-center justify-center"><span className="text-xl font-bold">PROLINE</span></div>
-          <div className="h-8 flex items-center justify-center"><span className="text-xl font-bold italic tracking-tighter">RILLA</span></div>
-          <div className="h-8 flex items-center justify-center"><span className="text-xl font-light">aeroseal</span></div>
-        </div>
-      </section>
-
       {/* Footer Section */}
       <footer className="bg-black pt-24 pb-12 px-6 md:px-12 lg:px-24 xl:px-48 border-t border-white/5">
         <div className="max-w-[1920px] mx-auto">
