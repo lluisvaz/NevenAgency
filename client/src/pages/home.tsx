@@ -122,7 +122,7 @@ export default function Home() {
 
         {/* Navigation */}
         <header
-          className={`fixed top-0 left-0 right-0 z-[100] transition-colors duration-75 ${isHeaderWhite ? "bg-white text-black shadow-lg" : "bg-transparent text-white"}`}
+          className={`fixed top-0 left-0 right-0 z-[100] ${isHeaderWhite ? "bg-white text-black shadow-lg" : "bg-transparent text-white"}`}
         >
           <nav className="w-full max-w-[1920px] mx-auto px-6 md:px-12 lg:px-24 xl:px-48 py-6 flex items-center justify-between">
             <div className="flex items-center gap-4 lg:gap-12">
