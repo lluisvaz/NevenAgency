@@ -38,6 +38,13 @@
   --font-heading: 'Gabarito', sans-serif;
   
   --radius: 0.25rem; /* 4px */
+  
+  --animate-scroll: scroll 40s linear infinite;
+}
+
+@keyframes scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
 }
 
 @layer base {
