@@ -200,15 +200,15 @@ export default function Home() {
               <div className="relative">
                 <button
                   onClick={() => setIsLanguageOpen(!isLanguageOpen)}
-                  className={`hidden md:flex items-center gap-2 transition-colors cursor-pointer group ${isHeaderWhite ? "text-black" : "text-white"}`}
+                  className={`hidden md:flex items-center gap-2 transition-colors cursor-pointer group ${isHeaderWhite ? "text-black hover:text-black" : "text-white hover:text-white/70"}`}
                 >
                   <GlobeIcon
                     size={26}
-                    className={isHeaderWhite ? "text-black" : "text-white"}
+                    className="transition-colors"
                   />
                   <ChevronDown
                     size={18}
-                    className={`text-gray-400 group-hover:text-primary transition-transform duration-300 ${isLanguageOpen ? "rotate-180" : ""}`}
+                    className={`text-gray-400 transition-transform duration-300 ${isLanguageOpen ? "rotate-180" : ""}`}
                   />
                 </button>
 
