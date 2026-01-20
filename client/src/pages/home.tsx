@@ -235,13 +235,9 @@ export default function Home() {
               </button>
               <button
                 onClick={() => setIsMobileMenuOpen(true)}
-                className={`lg:hidden p-2 transition-colors ${isHeaderWhite ? "text-black" : "text-white"}`}
+                className={`lg:hidden p-2 ${isHeaderWhite ? "text-black" : "text-white"}`}
               >
-                <div className="flex flex-col gap-1.5 w-6">
-                  <div className="h-0.5 w-full bg-current transition-all"></div>
-                  <div className="h-0.5 w-2/3 bg-current transition-all"></div>
-                  <div className="h-0.5 w-full bg-current transition-all"></div>
-                </div>
+                <LayoutGridIcon size={32} />
               </button>
             </div>
           </nav>
@@ -1010,7 +1006,7 @@ export default function Home() {
               Hometown Heroes
             </h1>
             <div className="mb-8 md:mb-12">
-              <p className="text-base md:text-xl font-medium text-white leading-relaxed max-w-2xl mx-auto md:mx-0">
+              <p className="text-lg md:text-xl font-medium text-white leading-relaxed max-w-2xl mx-auto md:mx-0">
                 We are a proactive, cutting-edge marketing agency and transparent ROI partner. 
                 We make suggestions that actually move the needle, utilize the latest technology, 
                 and show you all the work we complete each month.
@@ -1028,33 +1024,73 @@ export default function Home() {
                 Real Customer Experiences
               </a>
             </div>
-            <div className="relative w-full overflow-hidden border-t border-white/5 pt-12 md:pt-16 mt-8 md:mt-12 group">
-              {/* Fade Gradients */}
-              <div className="absolute inset-y-0 left-0 w-24 md:w-48 bg-gradient-to-r from-black to-transparent z-10 pointer-events-none" />
-              <div className="absolute inset-y-0 right-0 w-24 md:w-48 bg-gradient-to-l from-black to-transparent z-10 pointer-events-none" />
-
-              <div className="flex whitespace-nowrap animate-scroll">
-                {[...Array(2)].map((_, i) => (
-                  <div key={i} className="flex items-center gap-12 md:gap-24 px-6 md:px-12">
-                    {[
-                      { name: "Google", icon: "SiGoogle" },
-                      { name: "Facebook", icon: "SiFacebook" },
-                      { name: "Instagram", icon: "SiInstagram" },
-                      { name: "LinkedIn", icon: "SiLinkedin" },
-                      { name: "YouTube", icon: "SiYoutube" },
-                      { name: "Twitter", icon: "SiTwitter" },
-                      { name: "Forbes", icon: "SiForbes" },
-                      { name: "Inc", icon: "SiInc" },
-                    ].map((logo, idx) => (
-                      <div
-                        key={idx}
-                        className="text-white/20 hover:text-white/40 transition-colors text-2xl md:text-3xl font-black italic tracking-tighter"
-                      >
-                        {logo.name}
-                      </div>
-                    ))}
+            <div className="flex flex-wrap items-center justify-center md:justify-start gap-8 border-t border-gray-800 pt-8 w-full">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-full bg-white shadow-sm flex items-center justify-center">
+                  <svg
+                    viewBox="0 0 24 24"
+                    className="w-6 h-6"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
+                      fill="#4285F4"
+                    />
+                    <path
+                      d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
+                      fill="#34A853"
+                    />
+                    <path
+                      d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"
+                      fill="#FBBC05"
+                    />
+                    <path
+                      d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
+                      fill="#EA4335"
+                    />
+                  </svg>
+                </div>
+                <div className="text-sm font-bold leading-tight text-white">
+                  <div className="flex text-yellow-500 mb-0.5">
+                    <Star className="w-3 h-3 fill-current" />
+                    <Star className="w-3 h-3 fill-current" />
+                    <Star className="w-3 h-3 fill-current" />
+                    <Star className="w-3 h-3 fill-current" />
+                    <Star className="w-3 h-3 fill-current" />
                   </div>
-                ))}
+                  170+ Five-Star
+                  <br />
+                  Google Reviews
+                </div>
+              </div>
+              <div className="h-8 w-px bg-gray-800 mx-2 hidden sm:block"></div>
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 border border-white flex flex-col items-center justify-center text-[8px] font-bold leading-none bg-white text-black">
+                  <span>BP</span>
+                  <div className="w-full h-px bg-black my-0.5"></div>
+                  <span>/W</span>
+                </div>
+                <div className="text-sm font-bold leading-tight text-white">
+                  #6 Best Small
+                  <br />
+                  Biz to Work For
+                </div>
+              </div>
+              <div className="h-8 w-px bg-gray-800 mx-2 hidden sm:block"></div>
+              <div className="flex items-center gap-3">
+                <div className="font-serif font-black italic text-2xl tracking-tighter text-white">
+                  Inc.
+                  <br />
+                  <span className="text-xs not-italic font-sans block -mt-1 tracking-normal text-gray-400">
+                    5000
+                  </span>
+                </div>
+                <div className="text-sm font-bold leading-tight text-white">
+                  Ranked #2031 on
+                  <br />
+                  the INC. 5000
+                </div>
               </div>
             </div>
           </div>
