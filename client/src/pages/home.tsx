@@ -224,7 +224,13 @@ export default function Home() {
                   </div>
                 )}
               </div>
-              <button className="hidden md:block bg-white/5 backdrop-blur-sm border border-white/20 text-white px-4 md:px-6 py-2.5 md:py-3 font-bold uppercase tracking-wide text-xs md:text-sm hover:bg-white/10 transition-colors cursor-pointer shrink-0 rounded-none">
+              <button
+                className={`hidden md:block transition-all duration-300 cursor-pointer shrink-0 rounded-none px-4 md:px-6 py-2.5 md:py-3 font-bold uppercase tracking-wide text-xs md:text-sm ${
+                  isHeaderWhite
+                    ? "bg-black/5 border border-black/10 text-black hover:bg-black/10"
+                    : "bg-white/5 backdrop-blur-sm border border-white/20 text-white hover:bg-white/10"
+                }`}
+              >
                 Schedule Intro Call
               </button>
               <button
