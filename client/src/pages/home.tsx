@@ -573,7 +573,7 @@ export default function Home() {
                           Case Studies
                         </h4>
                         <div className="group cursor-pointer p-3 rounded-none hover:bg-white transition-all duration-300">
-                          <div className="aspect-[16/9] bg-[#0F0F23] rounded-lg mb-4 flex items-center justify-center overflow-hidden">
+                          <div className="aspect-[16/9] bg-[#0F0F23] rounded-none mb-4 flex items-center justify-center overflow-hidden">
                             <div className="text-white font-bold text-2xl italic tracking-tighter">
                               Success
                             </div>
@@ -599,7 +599,7 @@ export default function Home() {
                       onClick={() =>
                         setIsMobileLanguageOpen(!isMobileLanguageOpen)
                       }
-                      className={`w-full flex items-center justify-between text-xl transition-all duration-300 p-3 rounded-lg ${isMobileLanguageOpen ? "bg-black text-white font-bold" : "hover:text-primary"}`}
+                      className={`w-full flex items-center justify-between text-xl transition-all duration-300 p-3 rounded-none ${isMobileLanguageOpen ? "bg-black text-white" : "hover:text-primary"}`}
                     >
                       <div className="flex items-center gap-3">
                         <Globe
@@ -620,7 +620,7 @@ export default function Home() {
                     <div
                       className={`overflow-hidden transition-all duration-300 ${isMobileLanguageOpen ? "max-h-48 opacity-100" : "max-h-0 opacity-0"}`}
                     >
-                      <div className="bg-gray-50 rounded-lg p-2 space-y-1">
+                      <div className="bg-gray-50 rounded-none p-2 space-y-1">
                         {languages.map((lang) => (
                           <button
                             key={lang.code}
@@ -628,7 +628,7 @@ export default function Home() {
                               setLanguage(lang.name);
                               setIsMobileLanguageOpen(false);
                             }}
-                            className={`w-full text-left px-4 py-3 text-lg rounded-md transition-colors cursor-pointer ${language === lang.name ? "text-black font-bold" : "text-gray-500"}`}
+                            className={`w-full text-left px-4 py-3 text-lg rounded-none transition-colors cursor-pointer ${language === lang.name ? "text-black" : "text-gray-500"}`}
                           >
                             {lang.name}
                           </button>
@@ -639,10 +639,9 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="p-6 border-t border-gray-100">
-                <button className="w-full bg-primary text-white py-4 px-6 font-bold uppercase tracking-wide text-sm hover:bg-black transition-colors cursor-pointer rounded-sm shadow-lg">
-                  Schedule Intro Call
-                </button>
+                <div className="pt-6 border-t border-gray-100">
+                  {/* Final button removed as requested */}
+                </div>
               </div>
             </div>
           </div>
