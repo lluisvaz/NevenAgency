@@ -72,14 +72,46 @@ export default function Home() {
   const isHeaderWhite = isServicesOpen || isIndustriesOpen || isScrolled;
 
   const languages = [
-    { name: "English", code: "en", flag: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfw3OxwdDqJWOsCWw7UU67mi8NszDRtWthYV8GU8YT0rjqs23m8LXrYZlovXIiCiPzhaGuFbY7Ddm3JV6-rxL-NgQ-I7McLtflR5D0uw&s=10" },
-    { name: "Portuguese (Brazil)", code: "pt-BR", flag: "https://static.todamateria.com.br/upload/ba/nd/bandeiradobrasil-2-cke.jpg" },
-    { name: "German", code: "de", flag: "https://upload.wikimedia.org/wikipedia/commons/b/ba/Flag_of_Germany.svg" },
-    { name: "French", code: "fr", flag: "https://upload.wikimedia.org/wikipedia/commons/c/c3/Flag_of_France.svg" },
-    { name: "Spanish", code: "es", flag: "https://upload.wikimedia.org/wikipedia/commons/9/9a/Flag_of_Spain.svg" },
-    { name: "Italian", code: "it", flag: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSs3Hq-wWQMehJlqHn3fjjgKg0Q6Z3k34i7Xg&s" },
-    { name: "Dutch", code: "nl", flag: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Flag_of_the_Netherlands.svg/330px-Flag_of_the_Netherlands.svg.png" },
-    { name: "Polish", code: "pl", flag: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6DJpAFh3ZNlxDGO9oGYrg9W7scc66JDzUbg&s" },
+    {
+      name: "English",
+      code: "en",
+      flag: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfw3OxwdDqJWOsCWw7UU67mi8NszDRtWthYV8GU8YT0rjqs23m8LXrYZlovXIiCiPzhaGuFbY7Ddm3JV6-rxL-NgQ-I7McLtflR5D0uw&s=10",
+    },
+    {
+      name: "Portuguese",
+      code: "pt-BR",
+      flag: "https://static.todamateria.com.br/upload/ba/nd/bandeiradobrasil-2-cke.jpg",
+    },
+    {
+      name: "German",
+      code: "de",
+      flag: "https://upload.wikimedia.org/wikipedia/commons/b/ba/Flag_of_Germany.svg",
+    },
+    {
+      name: "French",
+      code: "fr",
+      flag: "https://upload.wikimedia.org/wikipedia/commons/c/c3/Flag_of_France.svg",
+    },
+    {
+      name: "Spanish",
+      code: "es",
+      flag: "https://upload.wikimedia.org/wikipedia/commons/9/9a/Flag_of_Spain.svg",
+    },
+    {
+      name: "Italian",
+      code: "it",
+      flag: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSs3Hq-wWQMehJlqHn3fjjgKg0Q6Z3k34i7Xg&s",
+    },
+    {
+      name: "Dutch",
+      code: "nl",
+      flag: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Flag_of_the_Netherlands.svg/330px-Flag_of_the_Netherlands.svg.png",
+    },
+    {
+      name: "Polish",
+      code: "pl",
+      flag: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6DJpAFh3ZNlxDGO9oGYrg9W7scc66JDzUbg&s",
+    },
   ];
 
   useEffect(() => {
@@ -146,9 +178,7 @@ export default function Home() {
                 <a
                   href="#"
                   className={`px-4 py-2.5 rounded-none transition-colors ${isHeaderWhite ? "text-black hover:text-black" : "text-white hover:text-white/70"} ${
-                    isServicesOpen || isIndustriesOpen
-                      ? "text-gray-400"
-                      : ""
+                    isServicesOpen || isIndustriesOpen ? "text-gray-400" : ""
                   }`}
                 >
                   Pricing
@@ -156,9 +186,7 @@ export default function Home() {
                 <a
                   href="#"
                   className={`px-4 py-2.5 rounded-none transition-colors ${isHeaderWhite ? "text-black hover:text-black" : "text-white hover:text-white/70"} ${
-                    isServicesOpen || isIndustriesOpen
-                      ? "text-gray-400"
-                      : ""
+                    isServicesOpen || isIndustriesOpen ? "text-gray-400" : ""
                   }`}
                 >
                   About
@@ -169,10 +197,14 @@ export default function Home() {
                     setIsIndustriesOpen(false);
                   }}
                   className={`flex items-center gap-2 px-4 py-2.5 rounded-none transition-all duration-300 cursor-pointer ${
-                    isHeaderWhite 
-                      ? (isServicesOpen ? "text-black" : "text-black hover:text-black") 
-                      : (isServicesOpen ? "text-white" : "text-white hover:text-white/70")
-                  } ${ (isServicesOpen || isIndustriesOpen) && !isServicesOpen ? "text-gray-400" : "" } group/btn`}
+                    isHeaderWhite
+                      ? isServicesOpen
+                        ? "text-black"
+                        : "text-black hover:text-black"
+                      : isServicesOpen
+                        ? "text-white"
+                        : "text-white hover:text-white/70"
+                  } ${(isServicesOpen || isIndustriesOpen) && !isServicesOpen ? "text-gray-400" : ""} group/btn`}
                 >
                   Services
                   {isServicesOpen ? (
@@ -187,10 +219,14 @@ export default function Home() {
                     setIsServicesOpen(false);
                   }}
                   className={`flex items-center gap-2 px-4 py-2.5 rounded-none transition-all duration-300 cursor-pointer ${
-                    isHeaderWhite 
-                      ? (isIndustriesOpen ? "text-black" : "text-black hover:text-black") 
-                      : (isIndustriesOpen ? "text-white" : "text-white hover:text-white/70")
-                  } ${ (isServicesOpen || isIndustriesOpen) && !isIndustriesOpen ? "text-gray-400" : "" } group/btn`}
+                    isHeaderWhite
+                      ? isIndustriesOpen
+                        ? "text-black"
+                        : "text-black hover:text-black"
+                      : isIndustriesOpen
+                        ? "text-white"
+                        : "text-white hover:text-white/70"
+                  } ${(isServicesOpen || isIndustriesOpen) && !isIndustriesOpen ? "text-gray-400" : ""} group/btn`}
                 >
                   Industries
                   {isIndustriesOpen ? (
@@ -209,10 +245,10 @@ export default function Home() {
                   className={`hidden md:flex items-center gap-2 transition-colors cursor-pointer group ${isHeaderWhite ? "text-black hover:text-black" : "text-white hover:text-white/70"}`}
                 >
                   <div className="w-6 h-6 rounded-full border border-gray-300 flex items-center justify-center shrink-0 overflow-hidden bg-white">
-                    <img 
-                      src={languages.find(l => l.name === language)?.flag} 
-                      alt={language} 
-                      className="w-full h-full object-cover" 
+                    <img
+                      src={languages.find((l) => l.name === language)?.flag}
+                      alt={language}
+                      className="w-full h-full object-cover"
                     />
                   </div>
                   <ChevronDown
@@ -236,7 +272,11 @@ export default function Home() {
                         className={`w-full text-left px-4 py-2 text-sm hover:bg-gray-50 transition-colors cursor-pointer rounded-none flex items-center gap-3 ${language === lang.name ? "text-black font-bold" : "text-gray-500"}`}
                       >
                         <div className="w-6 h-6 rounded-full border border-gray-300 flex items-center justify-center shrink-0 overflow-hidden bg-white">
-                          <img src={lang.flag} alt={lang.name} className="w-full h-full object-cover" />
+                          <img
+                            src={lang.flag}
+                            alt={lang.name}
+                            className="w-full h-full object-cover"
+                          />
                         </div>
                         {lang.name}
                       </button>
@@ -620,10 +660,12 @@ export default function Home() {
                     >
                       <div className="flex items-center gap-3">
                         <div className="w-6 h-6 rounded-full border border-gray-300 flex items-center justify-center shrink-0 overflow-hidden bg-white">
-                          <img 
-                            src={languages.find(l => l.name === language)?.flag} 
-                            alt={language} 
-                            className="w-full h-full object-cover" 
+                          <img
+                            src={
+                              languages.find((l) => l.name === language)?.flag
+                            }
+                            alt={language}
+                            className="w-full h-full object-cover"
                           />
                         </div>
                         {language}
@@ -647,7 +689,11 @@ export default function Home() {
                             className={`w-full text-left px-4 py-3 text-lg rounded-none transition-colors cursor-pointer flex items-center gap-3 ${language === lang.name ? "text-black font-bold" : "text-gray-500"}`}
                           >
                             <div className="w-6 h-6 rounded-full border border-gray-300 flex items-center justify-center shrink-0 overflow-hidden bg-white">
-                              <img src={lang.flag} alt={lang.name} className="w-full h-full object-cover" />
+                              <img
+                                src={lang.flag}
+                                alt={lang.name}
+                                className="w-full h-full object-cover"
+                              />
                             </div>
                             {lang.name}
                           </button>
@@ -995,8 +1041,9 @@ export default function Home() {
                       How a Roofing Client Scaled to $10M ARR
                     </h5>
                     <p className="text-xs text-gray-500 mb-4 line-clamp-2">
-                      Read how we implemented a full-funnel digital strategy that
-                      transformed a local roofing company into a market leader...
+                      Read how we implemented a full-funnel digital strategy
+                      that transformed a local roofing company into a market
+                      leader...
                     </p>
                     <a
                       href="#"
@@ -1037,9 +1084,10 @@ export default function Home() {
             </h1>
             <div className="mb-8 md:mb-12">
               <p className="text-base md:text-xl font-medium text-white leading-relaxed max-w-2xl mx-auto md:mx-0">
-                We are a proactive, cutting-edge marketing agency and transparent ROI partner. 
-                We make suggestions that actually move the needle, utilize the latest technology, 
-                and show you all the work we complete each month.
+                We are a proactive, cutting-edge marketing agency and
+                transparent ROI partner. We make suggestions that actually move
+                the needle, utilize the latest technology, and show you all the
+                work we complete each month.
               </p>
             </div>
             <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4 mb-12 md:mb-20 w-full">
