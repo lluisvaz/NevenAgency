@@ -634,7 +634,7 @@ export default function Home() {
                       />
                     </button>
                     <div
-                      className={`overflow-hidden transition-all duration-300 ${isMobileLanguageOpen ? "max-h-48 opacity-100" : "max-h-0 opacity-0"}`}
+                      className={`overflow-y-auto transition-all duration-300 ${isMobileLanguageOpen ? "max-h-[300px] opacity-100" : "max-h-0 opacity-0"}`}
                     >
                       <div className="bg-gray-50 rounded-none p-2 space-y-1">
                         {languages.map((lang) => (
