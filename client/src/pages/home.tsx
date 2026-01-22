@@ -83,11 +83,6 @@ export default function Home() {
       flag: "https://static.todamateria.com.br/upload/ba/nd/bandeiradobrasil-2-cke.jpg",
     },
     {
-      name: "German",
-      code: "de",
-      flag: "https://upload.wikimedia.org/wikipedia/commons/b/ba/Flag_of_Germany.svg",
-    },
-    {
       name: "French",
       code: "fr",
       flag: "https://upload.wikimedia.org/wikipedia/commons/c/c3/Flag_of_France.svg",
@@ -96,21 +91,6 @@ export default function Home() {
       name: "Spanish",
       code: "es",
       flag: "https://upload.wikimedia.org/wikipedia/commons/9/9a/Flag_of_Spain.svg",
-    },
-    {
-      name: "Italian",
-      code: "it",
-      flag: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSs3Hq-wWQMehJlqHn3fjjgKg0Q6Z3k34i7Xg&s",
-    },
-    {
-      name: "Dutch",
-      code: "nl",
-      flag: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Flag_of_the_Netherlands.svg/330px-Flag_of_the_Netherlands.svg.png",
-    },
-    {
-      name: "Polish",
-      code: "pl",
-      flag: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6DJpAFh3ZNlxDGO9oGYrg9W7scc66JDzUbg&s",
     },
   ];
 
