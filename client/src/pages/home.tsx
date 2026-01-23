@@ -1339,7 +1339,7 @@ export default function Home() {
             Hurry, only 3 spots left.
           </div>
           <h2 className="text-[clamp(2rem,12vw,4.5rem)] md:text-7xl lg:text-8xl font-normal text-white mb-8 tracking-tight leading-[0.9] normal-case">
-            Are <span className="font-['Instrument_Serif'] italic">ready?</span>
+            Are you <span className="font-['Instrument_Serif'] italic">ready?</span>
           </h2>
           <p className="text-gray-400 text-xl md:text-2xl font-medium mb-12 max-w-2xl mx-auto">
             This could be the start of something big.
