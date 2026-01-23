@@ -49,6 +49,9 @@ import { LayoutGridIcon } from "@/components/ui/layout-grid-icon";
 import { GlobeIcon } from "@/components/ui/globe-icon";
 import heroVideo from "@assets/generated_videos/aerial_view_of_roofers_working_on_a_house_roof.mp4";
 
+import ColorBends from "@/components/ColorBends";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+
 export default function Home() {
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const currentYear = new Date().getFullYear();
@@ -1317,188 +1320,57 @@ export default function Home() {
       </section>
 
       {/* Footer Section */}
-      <footer className="bg-black pt-20 pb-12 px-6 md:px-12 lg:px-24 xl:px-48 border-t border-white/5">
-        <div className="max-w-[1920px] mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
-            <div className="space-y-8">
-              <div className="space-y-6">
-                <div className="flex items-start gap-4 group">
-                  <div className="p-2.5 rounded-none bg-white/5 border border-white/5 text-primary group-hover:bg-primary group-hover:text-white transition-all">
-                    <Phone size={18} />
-                  </div>
-                  <div>
-                    <span className="text-[10px] font-bold text-gray-500 uppercase tracking-[0.2em] block mb-1">
-                      Give Us A Call:
-                    </span>
-                    <a
-                      href="tel:612-688-9108"
-                      className="text-xl font-bold hover:text-primary transition-colors"
-                    >
-                      612-688-9108
-                    </a>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4 group">
-                  <div className="p-2.5 rounded-none bg-white/5 border border-white/5 text-primary group-hover:bg-primary group-hover:text-white transition-all">
-                    <MapPin size={18} />
-                  </div>
-                  <div>
-                    <span className="text-[10px] font-bold text-gray-500 uppercase tracking-[0.2em] block mb-1">
-                      Visit Our Office:
-                    </span>
-                    <p className="text-gray-400 text-sm font-medium leading-relaxed">
-                      600 N Washington Ave Suite C203,
-                      <br />
-                      Minneapolis, MN 55401
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
+      <footer className="relative bg-black pt-32 pb-12 overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <ColorBends
+            colors={["#ff5c7a", "#8a5cff", "#00ffd1"]}
+            rotation={36}
+            speed={0.38}
+            scale={0.7}
+            frequency={1.1}
+            warpStrength={1}
+            mouseInfluence={1}
+            parallax={0.5}
+            noise={0.06}
+            transparent
+            autoRotate={1}
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent" />
+          <div className="absolute inset-0 bg-black/40 backdrop-blur-[2px]" />
+        </div>
 
-            <div>
-              <h4 className="text-sm font-bold text-white uppercase tracking-[0.2em] mb-6">
-                Services
-              </h4>
-              <ul className="space-y-3">
-                {[
-                  "Local SEO",
-                  "AI Search Optimization",
-                  "Organic SEO",
-                  "Pay-Per-Click",
-                  "LSA Management",
-                  "OTT Advertising",
-                  "Website Design",
-                  "Digital PR",
-                  "Social Media",
-                  "Email Marketing",
-                  "Our Blog",
-                ].map((link) => (
-                  <li key={link}>
-                    <a
-                      href="#"
-                      className="text-gray-400 hover:text-white transition-colors text-sm"
-                    >
-                      {link}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div className="lg:col-span-1">
-              <h4 className="text-sm font-bold text-white uppercase tracking-[0.2em] mb-6">
-                Industries
-              </h4>
-              <ul className="space-y-3">
-                {[
-                  "Roofing",
-                  "HVAC",
-                  "Plumbing",
-                  "Electrical",
-                  "Solar",
-                  "Landscaping",
-                  "Home Builders",
-                  "Pest Control",
-                  "Contractors",
-                  "Flooring",
-                  "Garage Door",
-                  "Moving",
-                  "Painting",
-                  "Windows & Doors",
-                  "Case Studies",
-                ].map((link) => (
-                  <li key={link}>
-                    <a
-                      href="#"
-                      className="text-gray-400 hover:text-white transition-colors text-sm whitespace-nowrap"
-                    >
-                      {link}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div className="space-y-8">
-              <div>
-                <h4 className="text-sm font-bold text-white uppercase tracking-[0.2em] mb-6">
-                  Resources
-                </h4>
-                <ul className="space-y-3">
-                  {["Pricing", "About", "Portfolio", "Careers"].map((link) => (
-                    <li key={link}>
-                      <a
-                        href="#"
-                        className="text-gray-400 hover:text-white transition-colors text-sm"
-                      >
-                        {link}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <div className="space-y-4">
-                <p className="text-[11px] font-bold text-gray-400 uppercase tracking-widest">
-                  Sign up for free resources from our team.
-                </p>
-                <div className="flex gap-2">
-                  <input
-                    type="email"
-                    placeholder="Your email address"
-                    className="flex-1 bg-white/5 border border-white/10 px-4 py-3 text-sm focus:outline-none focus:border-primary transition-colors rounded-none"
-                  />
-                  <button className="bg-white/10 hover:bg-white/20 px-6 py-3 font-bold uppercase tracking-wide text-xs transition-colors shrink-0 rounded-none">
-                    Sign Up Now!
-                  </button>
-                </div>
-                <div className="flex md:hidden items-center gap-4 pt-4">
-                  <span className="text-[10px] font-bold text-gray-500 uppercase tracking-[0.2em]">
-                    Follow us:
-                  </span>
-                  <div className="flex items-center gap-4 text-gray-400">
-                    {[Linkedin, Instagram].map((Icon, i) => (
-                      <a
-                        key={i}
-                        href="#"
-                        className="hover:text-primary transition-all hover:scale-110"
-                      >
-                        <Icon size={20} />
-                      </a>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
+        <div className="relative z-10 w-full max-w-[1920px] mx-auto px-6 md:px-12 lg:px-24 xl:px-48 text-center mb-32">
+          <div className="inline-flex items-center gap-2 px-3 py-1 bg-black/50 backdrop-blur-md border border-white/10 rounded-full text-[10px] font-bold text-green-400 uppercase tracking-widest mb-12">
+            <div className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
+            Hurry, only 3 spots left.
           </div>
+          <h2 className="text-[clamp(2.5rem,10vw,6rem)] font-heading font-normal text-white mb-8 tracking-tighter leading-[0.9]">
+            Are you <span className="font-['Instrument_Serif'] italic">ready?</span>
+          </h2>
+          <p className="text-gray-400 text-lg md:text-xl font-medium mb-12 max-w-2xl mx-auto">
+            This could be the start of something big.
+          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <button className="w-full sm:w-auto bg-[#6D28D9] hover:bg-[#5B21B6] text-white px-8 py-4 font-bold text-lg transition-all rounded-full">
+              Book a call
+            </button>
+            <button className="w-full sm:w-auto bg-black/50 backdrop-blur-md border border-white/10 hover:bg-white/10 text-white px-8 py-4 font-bold text-lg transition-all rounded-full">
+              See plans
+            </button>
+          </div>
+        </div>
 
-          <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-6">
-            <div className="hidden md:flex flex-col md:flex-row items-center gap-6 order-1 md:order-2">
-              <span className="text-[10px] font-bold text-gray-500 uppercase tracking-[0.2em]">
-                Follow us:
-              </span>
-              <div className="flex items-center gap-4 text-gray-400">
-                {[Linkedin, Instagram].map((Icon, i) => (
-                  <a
-                    key={i}
-                    href="#"
-                    className="hover:text-primary transition-all hover:scale-110"
-                  >
-                    <Icon size={20} />
-                  </a>
-                ))}
-              </div>
-            </div>
-            <div className="flex items-center gap-2 text-[10px] font-bold text-gray-500 uppercase tracking-[0.2em] order-2 md:order-1">
+        <div className="relative z-10 w-full max-w-[1920px] mx-auto px-6 md:px-12 lg:px-24 xl:px-48">
+          <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-8">
+            <nav className="flex flex-wrap items-center justify-center gap-6 text-[11px] font-bold text-gray-500 uppercase tracking-[0.2em]">
+              {["Pricing", "About", "Portfolio", "Careers", "Privacy Policy"].map((link) => (
+                <a key={link} href="#" className="hover:text-white transition-colors">
+                  {link}
+                </a>
+              ))}
+            </nav>
+            <div className="flex items-center gap-3 text-[11px] font-bold text-gray-500 uppercase tracking-[0.2em]">
               <span>© Copyright {currentYear} Neven Agency.</span>
-              <span className="opacity-20">•</span>
-              <a
-                href="#"
-                className="hover:text-white transition-colors underline underline-offset-4"
-              >
-                Privacy Policy
-              </a>
             </div>
           </div>
         </div>
