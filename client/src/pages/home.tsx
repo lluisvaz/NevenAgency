@@ -1057,7 +1057,7 @@ export default function Home() {
             <h2 className="text-gray-400 font-bold tracking-widest text-sm mb-4 uppercase">
               Home Services Marketing Agency
             </h2>
-            <h1 className="text-[clamp(1.8rem,11vw,3.8rem)] md:text-6xl lg:text-7xl font-heading font-bold uppercase leading-[0.9] mb-6 md:mb-10 text-white tracking-tight break-words">
+            <h1 className="text-[clamp(1.8rem,11vw,3.8rem)] md:text-6xl lg:text-7xl font-heading font-bold leading-[0.9] mb-6 md:mb-10 text-white tracking-tight break-words">
               Championing
               <br />
               Hometown Heroes
