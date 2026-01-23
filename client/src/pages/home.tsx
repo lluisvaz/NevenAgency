@@ -328,180 +328,6 @@ export default function Home() {
                 >
                   About
                 </a>
-
-                <div className="space-y-2">
-                  <button
-                    onClick={() => {
-                      setIsMobileServicesOpen(!isMobileServicesOpen);
-                      setIsMobileIndustriesOpen(false);
-                    }}
-                    className={`w-full flex items-center justify-between text-xl transition-all duration-300 p-3 rounded-none ${isMobileServicesOpen ? "bg-black text-white" : "hover:text-primary"}`}
-                  >
-                    Services
-                    <ChevronDown
-                      className={`transition-transform duration-300 ${isMobileServicesOpen ? "rotate-180" : ""}`}
-                      size={20}
-                    />
-                  </button>
-                  <div
-                    className={`overflow-hidden transition-all duration-500 ease-in-out ${isMobileServicesOpen ? "max-h-[2000px] opacity-100 mt-2" : "max-h-0 opacity-0"}`}
-                  >
-                    <div className="bg-[#F9FAFB] rounded-none border border-gray-100 p-4 space-y-8">
-                      <div className="space-y-4">
-                        <h4 className="text-[11px] font-bold text-gray-400 uppercase tracking-[0.2em] px-3">
-                          Search & Strategy
-                        </h4>
-                        <div className="space-y-1">
-                          {[
-                            {
-                              name: "Local SEO",
-                              desc: "Dominate local search results in your service area",
-                              icon: BarChart3,
-                            },
-                            {
-                              name: "AI Search Optimization",
-                              desc: "Future-proof your presence for AI-driven search",
-                              icon: Terminal,
-                            },
-                            {
-                              name: "Organic SEO",
-                              desc: "Build long-term authority and organic traffic",
-                              icon: Globe,
-                            },
-                          ].map((item) => (
-                            <a
-                              key={item.name}
-                              href="#"
-                              className="flex items-start gap-4 p-3 rounded-none hover:bg-white transition-all duration-300 group"
-                            >
-                              <item.icon className="w-6 h-6 text-gray-400 group-hover:text-black mt-1 shrink-0" />
-                              <div className="space-y-1">
-                                <span className="text-base text-black block leading-tight">
-                                  {item.name}
-                                </span>
-                                <p className="text-[13px] text-gray-500 leading-tight">
-                                  {item.desc}
-                                </p>
-                              </div>
-                            </a>
-                          ))}
-                        </div>
-                      </div>
-                      <div className="space-y-4 pt-4 border-t border-gray-100">
-                        <h4 className="text-[11px] font-bold text-gray-400 uppercase tracking-[0.2em] px-3">
-                          Paid Media & Lead Gen
-                        </h4>
-                        <div className="space-y-1">
-                          {[
-                            {
-                              name: "Pay-Per-Click",
-                              desc: "Instant leads through Google Ads and Bing",
-                              icon: CircleDollarSign,
-                            },
-                            {
-                              name: "LSA Management",
-                              desc: "Maximize your Google Local Services Ads ROI",
-                              icon: Users,
-                            },
-                            {
-                              name: "OTT Advertising",
-                              desc: "Reach homeowners on streaming TV platforms",
-                              icon: Layers,
-                            },
-                          ].map((item) => (
-                            <a
-                              key={item.name}
-                              href="#"
-                              className="flex items-start gap-4 p-3 rounded-none hover:bg-white transition-all duration-300 group"
-                            >
-                              <item.icon className="w-6 h-6 text-gray-400 group-hover:text-black mt-1 shrink-0" />
-                              <div className="space-y-1">
-                                <span className="text-base text-black block leading-tight">
-                                  {item.name}
-                                </span>
-                                <p className="text-[13px] text-gray-500 leading-tight">
-                                  {item.desc}
-                                </p>
-                              </div>
-                            </a>
-                          ))}
-                        </div>
-                      </div>
-                      <div className="space-y-4 pt-4 border-t border-gray-100">
-                        <h4 className="text-[11px] font-bold text-gray-400 uppercase tracking-[0.2em] px-3">
-                          Creative & Content
-                        </h4>
-                        <div className="space-y-1">
-                          {[
-                            {
-                              name: "Website Design",
-                              desc: "High-converting websites for home services",
-                              icon: PenTool,
-                            },
-                            {
-                              name: "Digital PR",
-                              desc: "Earn mentions and backlinks from top publications",
-                              icon: Rocket,
-                            },
-                            {
-                              name: "Social Media",
-                              desc: "Build a community and brand on social platforms",
-                              icon: Handshake,
-                            },
-                            {
-                              name: "Email Marketing",
-                              desc: "Nurture leads and increase customer lifetime value",
-                              icon: Users,
-                            },
-                          ].map((item) => (
-                            <a
-                              key={item.name}
-                              href="#"
-                              className="flex items-start gap-4 p-3 rounded-none hover:bg-white transition-all duration-300 group"
-                            >
-                              <item.icon className="w-6 h-6 text-gray-400 group-hover:text-black mt-1 shrink-0" />
-                              <div className="space-y-1">
-                                <span className="text-base text-black block leading-tight">
-                                  {item.name}
-                                </span>
-                                <p className="text-[13px] text-gray-500 leading-tight">
-                                  {item.desc}
-                                </p>
-                              </div>
-                            </a>
-                          ))}
-                        </div>
-                      </div>
-                      <div className="space-y-4 pt-4 border-t border-gray-100">
-                        <h4 className="text-[11px] font-bold text-gray-400 uppercase tracking-[0.2em] px-3">
-                          Our Blog
-                        </h4>
-                        <div className="group cursor-pointer p-3 rounded-none hover:bg-white transition-all duration-300">
-                          <div className="aspect-[16/9] bg-primary/10 rounded-none mb-4 flex items-center justify-center overflow-hidden">
-                            <div className="text-primary font-bold text-2xl italic tracking-tighter">
-                              Insights
-                            </div>
-                          </div>
-                          <h5 className="text-base font-bold mb-2 leading-tight group-hover:text-primary transition-colors text-black">
-                            The Future of Home Services Marketing in 2026
-                          </h5>
-                          <p className="text-xs text-gray-500 mb-4 line-clamp-2">
-                            Stay ahead of the curve with our latest insights on
-                            industry trends, AI technology, and growth
-                            strategies...
-                          </p>
-                          <a
-                            href="#"
-                            className="text-xs font-bold text-primary flex items-center gap-1"
-                          >
-                            Read More <ArrowRight size={12} />
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
                 <div className="space-y-2">
                   <button
                     onClick={() => {
@@ -639,6 +465,13 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
+
+                <a
+                  href="#"
+                  className="block text-xl hover:text-primary transition-colors p-3 rounded-none"
+                >
+                  Careers
+                </a>
 
                 <div className="pt-4 border-t border-gray-100">
                   <div className="space-y-2">
