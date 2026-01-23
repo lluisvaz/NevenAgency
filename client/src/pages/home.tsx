@@ -1322,7 +1322,7 @@ export default function Home() {
       <footer className="relative bg-black pt-32 pb-12 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <video
-            src="/images/background-footer.mp4"
+            src="/images/background-footer.webm"
             autoPlay
             muted
             loop
@@ -1334,12 +1334,12 @@ export default function Home() {
         </div>
 
         <div className="relative z-10 w-full max-w-[1920px] mx-auto px-6 md:px-12 lg:px-24 xl:px-48 text-center mb-32">
-          <div className="inline-flex items-center gap-4 px-6 py-3 bg-black/5 backdrop-blur-sm border border-[#272534] rounded-full text-sm font-medium text-white tracking-normal font-['Satoshi'] mb-12">
-            <div className="relative flex items-center justify-center">
+          <div className="inline-flex items-center justify-center gap-4 px-6 py-3 bg-black/5 backdrop-blur-sm border border-[#272534] rounded-full text-sm font-medium text-white tracking-normal font-['Satoshi'] mb-12">
+            <div className="relative flex items-center justify-center shrink-0">
               <div className="absolute w-4 h-4 rounded-full bg-green-400/30 animate-pulse blur-[2px]" />
               <div className="relative w-2 h-2 rounded-full bg-green-400 shadow-[0_0_8px_rgba(74,222,128,0.6)]" />
             </div>
-            Hurry, only 3 spots left.
+            <span>Hurry, only 3 spots left.</span>
           </div>
           <h2 className="text-[clamp(2rem,12vw,4.5rem)] md:text-7xl lg:text-8xl font-normal text-white mb-8 tracking-tighter leading-[0.9] normal-case">
             Are you <span className="font-['Instrument_Serif'] italic">ready?</span>
