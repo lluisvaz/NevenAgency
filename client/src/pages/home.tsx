@@ -1336,8 +1336,8 @@ export default function Home() {
         <div className="relative z-10 w-full max-w-[1920px] mx-auto px-6 md:px-12 lg:px-24 xl:px-48 text-center mb-32">
           <div className="inline-flex items-center gap-4 px-6 py-3 bg-black/5 backdrop-blur-sm border border-[#272534] rounded-full text-sm font-medium text-white tracking-normal font-['Satoshi'] mb-12">
             <div className="relative flex items-center justify-center">
-              <div className="absolute w-4 h-4 rounded-full bg-green-400/40 animate-ping" />
-              <div className="relative w-2.5 h-2.5 rounded-full bg-green-400 shadow-[0_0_10px_rgba(74,222,128,0.5)]" />
+              <div className="absolute w-4 h-4 rounded-full bg-green-400/30 animate-pulse blur-[2px]" />
+              <div className="relative w-2 h-2 rounded-full bg-green-400 shadow-[0_0_8px_rgba(74,222,128,0.6)]" />
             </div>
             Hurry, only 3 spots left.
           </div>
