@@ -1170,17 +1170,17 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="relative w-full">
+        <div className="relative w-full max-w-[1200px] mx-auto">
           {/* Infinite Gradients Overlay */}
-          <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-black to-transparent z-10 pointer-events-none" />
-          <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-black to-transparent z-10 pointer-events-none" />
+          <div className="absolute inset-y-0 left-0 w-48 bg-gradient-to-r from-black via-black/80 to-transparent z-20 pointer-events-none" />
+          <div className="absolute inset-y-0 right-0 w-48 bg-gradient-to-l from-black via-black/80 to-transparent z-20 pointer-events-none" />
 
-          <div className="flex flex-col gap-8 w-full max-w-[1400px] mx-auto">
+          <div className="flex flex-col gap-10 w-full relative z-10">
             {/* Ticker Row 1 - Right to Left */}
             <div className="flex whitespace-nowrap overflow-hidden">
-              <div className="flex gap-6 animate-scroll-left">
+              <div className="flex gap-8 animate-scroll-left">
                 {[...Array(2)].map((_, i) => (
-                  <div key={i} className="flex gap-6">
+                  <div key={i} className="flex gap-8">
                     {[
                       { name: "Roofing", icon: HomeIcon },
                       { name: "HVAC", icon: Wind },
@@ -1192,9 +1192,9 @@ export default function Home() {
                     ].map((industry) => (
                       <div 
                         key={industry.name}
-                        className="flex items-center gap-4 px-8 py-5 bg-white/5 border border-white/5 rounded-2xl text-white font-normal text-lg"
+                        className="flex items-center gap-5 px-10 py-7 bg-white/5 border border-white/5 rounded-2xl text-white font-normal text-xl min-w-fit"
                       >
-                        <industry.icon size={24} className="text-white" />
+                        <industry.icon size={28} className="text-white" />
                         <span>{industry.name}</span>
                       </div>
                     ))}
@@ -1205,9 +1205,9 @@ export default function Home() {
 
             {/* Ticker Row 2 - Left to Right */}
             <div className="flex whitespace-nowrap overflow-hidden">
-              <div className="flex gap-6 animate-scroll-right">
+              <div className="flex gap-8 animate-scroll-right">
                 {[...Array(2)].map((_, i) => (
-                  <div key={i} className="flex gap-6">
+                  <div key={i} className="flex gap-8">
                     {[
                       { name: "Pest Control", icon: Bug },
                       { name: "Contractors", icon: HardHat },
@@ -1219,9 +1219,9 @@ export default function Home() {
                     ].map((industry) => (
                       <div 
                         key={industry.name}
-                        className="flex items-center gap-4 px-8 py-5 bg-white/5 border border-white/5 rounded-2xl text-white font-normal text-lg"
+                        className="flex items-center gap-5 px-10 py-7 bg-white/5 border border-white/5 rounded-2xl text-white font-normal text-xl min-w-fit"
                       >
-                        <industry.icon size={24} className="text-white" />
+                        <industry.icon size={28} className="text-white" />
                         <span>{industry.name}</span>
                       </div>
                     ))}
