@@ -1329,16 +1329,16 @@ export default function Home() {
             playsInline
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-black/20 z-[1]" />
+          <div className="absolute inset-0 bg-black/60 z-[1]" />
           <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black" />
         </div>
 
         <div className="relative z-10 w-full max-w-[1920px] mx-auto px-6 md:px-12 lg:px-24 xl:px-48 text-center mb-32">
-          <div className="inline-flex items-center gap-2 px-3 py-1 bg-black/50 backdrop-blur-md border border-white/10 rounded-full text-[10px] font-bold text-green-400 uppercase tracking-widest mb-12">
+          <div className="inline-flex items-center gap-2 px-6 py-3 bg-black/5 backdrop-blur-sm border border-white/20 rounded-full text-sm font-medium text-white tracking-normal font-['Satoshi'] mb-12">
             <div className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
             Hurry, only 3 spots left.
           </div>
-          <h2 className="text-[clamp(2rem,12vw,4.5rem)] md:text-7xl lg:text-8xl font-normal text-white mb-8 tracking-tight leading-[0.9] normal-case">
+          <h2 className="text-[clamp(2rem,12vw,4.5rem)] md:text-7xl lg:text-8xl font-normal text-white mb-8 tracking-tighter leading-[0.9] normal-case">
             Are you <span className="font-['Instrument_Serif'] italic">ready?</span>
           </h2>
           <p className="text-gray-400 text-xl md:text-2xl font-medium mb-12 max-w-2xl mx-auto">
