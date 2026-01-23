@@ -1338,10 +1338,10 @@ export default function Home() {
             <div className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
             Hurry, only 3 spots left.
           </div>
-          <h2 className="text-[clamp(1.8rem,11vw,3.8rem)] md:text-6xl lg:text-7xl font-normal text-white mb-8 tracking-tight leading-[0.9] normal-case">
-            Are You <span className="font-['Instrument_Serif'] italic">Ready?</span>
+          <h2 className="text-[clamp(2rem,12vw,4.5rem)] md:text-7xl lg:text-8xl font-normal text-white mb-8 tracking-tight leading-[0.9] normal-case">
+            Are <span className="font-['Instrument_Serif'] italic">ready?</span>
           </h2>
-          <p className="text-gray-400 text-lg md:text-xl font-medium mb-12 max-w-2xl mx-auto">
+          <p className="text-gray-400 text-xl md:text-2xl font-medium mb-12 max-w-2xl mx-auto">
             This could be the start of something big.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -1356,14 +1356,14 @@ export default function Home() {
 
         <div className="relative z-10 w-full max-w-[1920px] mx-auto px-6 md:px-12 lg:px-24 xl:px-48">
           <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-8">
-            <nav className="flex flex-wrap items-center justify-center gap-6 text-[13px] font-medium text-gray-500 tracking-normal font-['Satoshi']">
+            <nav className="flex flex-wrap items-center justify-center gap-6 text-[15px] font-medium text-gray-500 tracking-normal font-['Satoshi']">
               {["Pricing", "About", "Portfolio", "Careers", "Privacy Policy"].map((link) => (
                 <a key={link} href="#" className="hover:text-white transition-colors">
                   {link}
                 </a>
               ))}
             </nav>
-            <div className="flex items-center gap-3 text-[13px] font-medium text-gray-500 tracking-normal font-['Satoshi']">
+            <div className="flex items-center gap-3 text-[15px] font-medium text-gray-500 tracking-normal font-['Satoshi']">
               <span>© Copyright {currentYear} Neven Agency.</span>
             </div>
           </div>
