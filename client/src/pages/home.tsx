@@ -1078,7 +1078,7 @@ export default function Home() {
               </button>
               <a
                 href="#"
-                className="w-full sm:w-auto flex items-center justify-center gap-2 font-bold text-white hover:bg-white/10 transition-colors text-sm md:text-base px-6 py-3.5 md:py-4 bg-white/5 backdrop-blur-sm border border-white/20 rounded-none"
+                className="w-full sm:w-auto flex items-center justify-center gap-2 font-normal text-white hover:bg-white/10 transition-colors text-sm md:text-base px-6 py-3.5 md:py-4 bg-white/5 backdrop-blur-sm border border-white/20 rounded-none"
               >
                 <Play className="w-4 h-4 fill-white" />
                 Real Customer Experiences
@@ -1160,7 +1160,7 @@ export default function Home() {
       {/* Solutions / Industries Ticker Section */}
       <section className="bg-black pt-32 pb-32 w-full overflow-hidden block -mt-1 relative z-30">
         <div className="max-w-[1920px] mx-auto px-6 md:px-12 lg:px-24 xl:px-48 mb-16 text-center">
-          <div className="inline-block px-4 py-1.5 bg-white/5 border border-white/10 rounded-full text-xs font-bold text-gray-400 uppercase tracking-widest mb-6">
+          <div className="inline-flex items-center justify-center px-6 py-3 bg-black/5 backdrop-blur-sm border border-[#272534] rounded-full text-sm font-medium text-white tracking-normal font-['Satoshi'] mb-6">
             Our Expertise
           </div>
           <h2 className="text-[clamp(1.8rem,11vw,3.8rem)] md:text-6xl lg:text-7xl font-normal mb-6 text-white tracking-tight leading-[0.9] normal-case">
@@ -1351,7 +1351,7 @@ export default function Home() {
             <button className="w-full sm:w-auto bg-white text-black px-6 md:px-8 py-3.5 md:py-4 font-bold uppercase tracking-wide text-sm md:text-base hover:bg-gray-200 transition-colors cursor-pointer rounded-none">
               Book a call
             </button>
-            <button className="w-full sm:w-auto flex items-center justify-center gap-2 font-bold text-white hover:bg-white/10 transition-colors text-sm md:text-base px-6 py-3.5 md:py-4 bg-white/5 backdrop-blur-sm border border-white/20 rounded-none">
+            <button className="w-full sm:w-auto flex items-center justify-center gap-2 font-normal text-white hover:bg-white/10 transition-colors text-sm md:text-base px-6 py-3.5 md:py-4 bg-white/5 backdrop-blur-sm border border-white/20 rounded-none">
               See plans
             </button>
           </div>
