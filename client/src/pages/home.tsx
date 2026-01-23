@@ -1335,8 +1335,6 @@ export default function Home() {
             transparent
             autoRotate={1}
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent" />
-          <div className="absolute inset-0 bg-black/40 backdrop-blur-[2px]" />
         </div>
 
         <div className="relative z-10 w-full max-w-[1920px] mx-auto px-6 md:px-12 lg:px-24 xl:px-48 text-center mb-32">
@@ -1361,7 +1359,7 @@ export default function Home() {
         </div>
 
         <div className="relative z-10 w-full max-w-[1920px] mx-auto px-6 md:px-12 lg:px-24 xl:px-48">
-          <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-8">
+          <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-8">
             <nav className="flex flex-wrap items-center justify-center gap-6 text-[11px] font-bold text-gray-500 uppercase tracking-[0.2em]">
               {["Pricing", "About", "Portfolio", "Careers", "Privacy Policy"].map((link) => (
                 <a key={link} href="#" className="hover:text-white transition-colors">
