@@ -1161,8 +1161,8 @@ export default function Home() {
           <div className="inline-block px-4 py-1.5 bg-white/5 border border-white/10 rounded-full text-xs font-bold text-gray-400 uppercase tracking-widest mb-6">
             Our Expertise
           </div>
-          <h2 className="text-[clamp(1.5rem,6vw,2.5rem)] font-bold mb-6 text-white uppercase tracking-tight">
-            Specialized in Home Services
+          <h2 className="text-[clamp(1.8rem,11vw,3.8rem)] md:text-6xl lg:text-7xl font-bold mb-6 text-white tracking-tight leading-[0.9]">
+            Specialized in <span className="font-['Instrument_Serif'] italic font-normal lowercase">Home Services</span>
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto font-medium">
             We provide tailored marketing solutions for the industries that build and maintain our homes. 
@@ -1175,12 +1175,12 @@ export default function Home() {
           <div className="absolute inset-y-0 left-0 w-48 bg-gradient-to-r from-black via-black/80 to-transparent z-20 pointer-events-none" />
           <div className="absolute inset-y-0 right-0 w-48 bg-gradient-to-l from-black via-black/80 to-transparent z-20 pointer-events-none" />
 
-          <div className="flex flex-col gap-10 w-full relative z-10">
+          <div className="flex flex-col gap-4 w-full relative z-10">
             {/* Ticker Row 1 - Right to Left */}
             <div className="flex whitespace-nowrap overflow-hidden">
-              <div className="flex gap-8 animate-scroll-left">
+              <div className="flex gap-4 animate-scroll-left">
                 {[...Array(2)].map((_, i) => (
-                  <div key={i} className="flex gap-8">
+                  <div key={i} className="flex gap-4">
                     {[
                       { name: "Roofing", icon: HomeIcon },
                       { name: "HVAC", icon: Wind },
@@ -1205,9 +1205,9 @@ export default function Home() {
 
             {/* Ticker Row 2 - Left to Right */}
             <div className="flex whitespace-nowrap overflow-hidden">
-              <div className="flex gap-8 animate-scroll-right">
+              <div className="flex gap-4 animate-scroll-right">
                 {[...Array(2)].map((_, i) => (
-                  <div key={i} className="flex gap-8">
+                  <div key={i} className="flex gap-4">
                     {[
                       { name: "Pest Control", icon: Bug },
                       { name: "Contractors", icon: HardHat },
