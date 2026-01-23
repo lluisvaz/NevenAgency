@@ -1161,8 +1161,8 @@ export default function Home() {
           <div className="inline-block px-4 py-1.5 bg-white/5 border border-white/10 rounded-full text-xs font-bold text-gray-400 uppercase tracking-widest mb-6">
             Our Expertise
           </div>
-          <h2 className="text-[clamp(1.8rem,11vw,3.8rem)] md:text-6xl lg:text-7xl font-bold mb-6 text-white tracking-tight leading-[0.9] normal-case">
-            Specialized in <span className="font-['Instrument_Serif'] italic font-normal lowercase">Home Services</span>
+          <h2 className="text-[clamp(1.8rem,11vw,3.8rem)] md:text-6xl lg:text-7xl font-normal mb-6 text-white tracking-tight leading-[0.9] normal-case">
+            Specialized in <span className="font-['Instrument_Serif'] italic font-normal capitalize">Home Services</span>
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto font-medium">
             We provide tailored marketing solutions for the industries that build and maintain our homes. 
