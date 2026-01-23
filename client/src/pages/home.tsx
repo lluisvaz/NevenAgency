@@ -1155,6 +1155,78 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Solutions / Industries Ticker Section */}
+      <section className="bg-black py-24 w-full overflow-hidden">
+        <div className="max-w-[1920px] mx-auto px-6 md:px-12 lg:px-24 xl:px-48 mb-16 text-center">
+          <div className="inline-block px-4 py-1.5 bg-white/5 border border-white/10 rounded-full text-xs font-bold text-gray-400 uppercase tracking-widest mb-6">
+            Our Expertise
+          </div>
+          <h2 className="text-[clamp(1.5rem,6vw,2.5rem)] font-bold mb-6 text-white uppercase tracking-tight">
+            Specialized in Home Services
+          </h2>
+          <p className="text-gray-400 text-lg max-w-2xl mx-auto font-medium">
+            We provide tailored marketing solutions for the industries that build and maintain our homes. 
+            Scaling local heroes into market leaders.
+          </p>
+        </div>
+
+        <div className="flex flex-col gap-6 w-full">
+          {/* Ticker Row 1 - Right to Left */}
+          <div className="flex whitespace-nowrap overflow-hidden">
+            <div className="flex gap-4 animate-scroll-left">
+              {[...Array(2)].map((_, i) => (
+                <div key={i} className="flex gap-4">
+                  {[
+                    { name: "Roofing", icon: HomeIcon },
+                    { name: "HVAC", icon: Wind },
+                    { name: "Plumbing", icon: Droplets },
+                    { name: "Electrical", icon: Lightbulb },
+                    { name: "Solar", icon: Sun },
+                    { name: "Landscaping", icon: Shovel },
+                    { name: "Home Builders", icon: Hammer },
+                  ].map((industry) => (
+                    <div 
+                      key={industry.name}
+                      className="flex items-center gap-3 px-6 py-4 bg-white/5 border border-white/5 rounded-2xl text-white font-bold"
+                    >
+                      <industry.icon size={20} className="text-primary" />
+                      <span>{industry.name}</span>
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Ticker Row 2 - Left to Right */}
+          <div className="flex whitespace-nowrap overflow-hidden">
+            <div className="flex gap-4 animate-scroll-right">
+              {[...Array(2)].map((_, i) => (
+                <div key={i} className="flex gap-4">
+                  {[
+                    { name: "Pest Control", icon: Bug },
+                    { name: "Contractors", icon: HardHat },
+                    { name: "Flooring", icon: Layers },
+                    { name: "Garage Door", icon: SlidersHorizontal },
+                    { name: "Moving", icon: Truck },
+                    { name: "Painting", icon: Paintbrush },
+                    { name: "Windows & Doors", icon: LayoutPanelTop },
+                  ].map((industry) => (
+                    <div 
+                      key={industry.name}
+                      className="flex items-center gap-3 px-6 py-4 bg-white/5 border border-white/5 rounded-2xl text-white font-bold"
+                    >
+                      <industry.icon size={20} className="text-primary" />
+                      <span>{industry.name}</span>
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Blog Section */}
       <section className="bg-[#F9FAFB] py-24 px-6 md:px-12 lg:px-24 xl:px-48">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
