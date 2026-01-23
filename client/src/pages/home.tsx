@@ -1320,14 +1320,14 @@ export default function Home() {
 
       {/* Footer Section */}
       <footer className="relative bg-black pt-32 pb-12 overflow-hidden">
-        <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 z-0 overflow-hidden">
           <video
             src="/images/background-footer.webm"
             autoPlay
             muted
             loop
             playsInline
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover min-w-[150%] md:min-w-full animate-pan-video md:animate-none"
           />
           <div className="absolute inset-0 bg-black/60 z-[1]" />
           <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black" />

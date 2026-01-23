@@ -49,8 +49,15 @@
     to { transform: translateX(0); }
   }
 
+  @keyframes pan-video {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(-33%); }
+    100% { transform: translateX(0); }
+  }
+
   --animate-scroll-left: scroll-left 40s linear infinite;
   --animate-scroll-right: scroll-right 40s linear infinite;
+  --animate-pan-video: pan-video 20s ease-in-out infinite;
 }
 
 @layer base {
