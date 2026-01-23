@@ -1239,11 +1239,11 @@ export default function Home() {
       </section>
 
       {/* Footer Section */}
-      <footer className="bg-black pt-32 pb-12 px-6 md:px-12 lg:px-24 xl:px-48 border-t border-white/5">
+      <footer className="bg-black pt-20 pb-12 px-6 md:px-12 lg:px-24 xl:px-48 border-t border-white/5">
         <div className="max-w-[1920px] mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-12">
-            <div className="space-y-12">
-              <div className="space-y-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+            <div className="space-y-8">
+              <div className="space-y-6">
                 <div className="flex items-start gap-4 group">
                   <div className="p-2.5 rounded-none bg-white/5 border border-white/5 text-primary group-hover:bg-primary group-hover:text-white transition-all">
                     <Phone size={18} />
@@ -1279,10 +1279,10 @@ export default function Home() {
             </div>
 
             <div>
-              <h4 className="text-sm font-bold text-white uppercase tracking-[0.2em] mb-8">
+              <h4 className="text-sm font-bold text-white uppercase tracking-[0.2em] mb-6">
                 Services
               </h4>
-              <ul className="space-y-4">
+              <ul className="space-y-3">
                 {[
                   "Local SEO",
                   "AI Search Optimization",
@@ -1309,10 +1309,10 @@ export default function Home() {
             </div>
 
             <div className="lg:col-span-1">
-              <h4 className="text-sm font-bold text-white uppercase tracking-[0.2em] mb-8">
+              <h4 className="text-sm font-bold text-white uppercase tracking-[0.2em] mb-6">
                 Industries
               </h4>
-              <ul className="space-y-4">
+              <ul className="space-y-3">
                 {[
                   "Roofing",
                   "HVAC",
@@ -1342,12 +1342,12 @@ export default function Home() {
               </ul>
             </div>
 
-            <div className="space-y-12">
+            <div className="space-y-8">
               <div>
-                <h4 className="text-sm font-bold text-white uppercase tracking-[0.2em] mb-8">
+                <h4 className="text-sm font-bold text-white uppercase tracking-[0.2em] mb-6">
                   Resources
                 </h4>
-                <ul className="space-y-4">
+                <ul className="space-y-3">
                   {["Pricing", "About", "Portfolio", "Careers"].map((link) => (
                     <li key={link}>
                       <a
@@ -1361,7 +1361,7 @@ export default function Home() {
                 </ul>
               </div>
 
-              <div className="space-y-6">
+              <div className="space-y-4">
                 <p className="text-[11px] font-bold text-gray-400 uppercase tracking-widest">
                   Sign up for free resources from our team.
                 </p>
