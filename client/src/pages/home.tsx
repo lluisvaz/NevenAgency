@@ -122,7 +122,7 @@ export default function Home() {
   return (
     <div className="relative w-full bg-black text-white font-sans min-h-screen">
       {/* Hero Section with Video */}
-      <section className="relative min-h-screen w-full overflow-hidden">
+      <section className="relative min-h-screen w-full overflow-hidden block">
         {/* Background Video */}
         <div className="absolute inset-0 z-0">
           <video
@@ -1156,7 +1156,7 @@ export default function Home() {
       </section>
 
       {/* Solutions / Industries Ticker Section */}
-      <section className="bg-black py-24 w-full overflow-hidden">
+      <section className="bg-black py-24 w-full overflow-hidden block -mt-px">
         <div className="max-w-[1920px] mx-auto px-6 md:px-12 lg:px-24 xl:px-48 mb-16 text-center">
           <div className="inline-block px-4 py-1.5 bg-white/5 border border-white/10 rounded-full text-xs font-bold text-gray-400 uppercase tracking-widest mb-6">
             Our Expertise
