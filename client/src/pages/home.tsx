@@ -49,7 +49,6 @@ import { LayoutGridIcon } from "@/components/ui/layout-grid-icon";
 import { GlobeIcon } from "@/components/ui/globe-icon";
 import heroVideo from "@assets/generated_videos/aerial_view_of_roofers_working_on_a_house_roof.mp4";
 
-import ColorBends from "@/components/ColorBends";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 export default function Home() {
@@ -1322,18 +1321,13 @@ export default function Home() {
       {/* Footer Section */}
       <footer className="relative bg-black pt-32 pb-12 overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <ColorBends
-            colors={["#ff5c7a", "#8a5cff", "#00ffd1"]}
-            rotation={36}
-            speed={0.38}
-            scale={0.7}
-            frequency={1.1}
-            warpStrength={1}
-            mouseInfluence={1}
-            parallax={0.5}
-            noise={0.06}
-            transparent
-            autoRotate={1}
+          <video
+            src="/images/background-footer.mp4"
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-black/20 z-[1]" />
           <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black" />
@@ -1345,7 +1339,7 @@ export default function Home() {
             Hurry, only 3 spots left.
           </div>
           <h2 className="text-[clamp(1.8rem,11vw,3.8rem)] md:text-6xl lg:text-7xl font-normal text-white mb-8 tracking-tight leading-[0.9] normal-case">
-            Are you <span className="font-['Instrument_Serif'] italic">ready?</span>
+            Are You <span className="font-['Instrument_Serif'] italic">Ready?</span>
           </h2>
           <p className="text-gray-400 text-lg md:text-xl font-medium mb-12 max-w-2xl mx-auto">
             This could be the start of something big.
