@@ -1156,7 +1156,7 @@ export default function Home() {
       </section>
 
       {/* Solutions / Industries Ticker Section */}
-      <section className="bg-black py-24 w-full overflow-hidden block -mt-px">
+      <section className="bg-black py-24 w-full overflow-hidden block -mt-1 relative z-30">
         <div className="max-w-[1920px] mx-auto px-6 md:px-12 lg:px-24 xl:px-48 mb-16 text-center">
           <div className="inline-block px-4 py-1.5 bg-white/5 border border-white/10 rounded-full text-xs font-bold text-gray-400 uppercase tracking-widest mb-6">
             Our Expertise
