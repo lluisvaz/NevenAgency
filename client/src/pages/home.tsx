@@ -331,6 +331,83 @@ export default function Home() {
                 <div className="space-y-2">
                   <button
                     onClick={() => {
+                      setIsMobileServicesOpen(!isMobileServicesOpen);
+                      setIsMobileIndustriesOpen(false);
+                    }}
+                    className={`w-full flex items-center justify-between text-xl transition-all duration-300 p-3 rounded-none ${isMobileServicesOpen ? "bg-black text-white" : "hover:text-primary"}`}
+                  >
+                    Services
+                    <ChevronDown
+                      className={`transition-transform duration-300 ${isMobileServicesOpen ? "rotate-180" : ""}`}
+                      size={20}
+                    />
+                  </button>
+                  <div
+                    className={`overflow-hidden transition-all duration-500 ease-in-out ${isMobileServicesOpen ? "max-h-[2000px] opacity-100 mt-2" : "max-h-0 opacity-0"}`}
+                  >
+                    <div className="bg-[#F9FAFB] rounded-none border border-gray-100 p-4 space-y-8">
+                      <div className="space-y-4">
+                        <h4 className="text-[11px] font-bold text-gray-400 uppercase tracking-[0.2em] px-3">
+                          What We Do
+                        </h4>
+                        <div className="grid grid-cols-1 gap-1">
+                          {[
+                            {
+                              name: "SEO",
+                              desc: "Rank higher on Google and dominate local searches",
+                              icon: BarChart3,
+                            },
+                            {
+                              name: "Paid Ads",
+                              desc: "High-intent leads delivered straight to your inbox",
+                              icon: Rocket,
+                            },
+                            {
+                              name: "Web Design",
+                              desc: "Conversion-optimized sites built for contractors",
+                              icon: PenTool,
+                            },
+                            {
+                              name: "Reputation Management",
+                              desc: "Automate reviews and build massive social proof",
+                              icon: Star,
+                            },
+                            {
+                              name: "Sales Automation",
+                              desc: "Convert more leads with automated follow-ups",
+                              icon: Terminal,
+                            },
+                            {
+                              name: "Content Marketing",
+                              desc: "Establish authority with expert roofing content",
+                              icon: Layers,
+                            },
+                          ].map((item) => (
+                            <a
+                              key={item.name}
+                              href="#"
+                              className="flex items-start gap-4 p-3 rounded-none hover:bg-white transition-all duration-300 group"
+                            >
+                              <item.icon className="w-6 h-6 text-gray-400 group-hover:text-black mt-1 shrink-0" />
+                              <div className="space-y-1">
+                                <span className="text-base text-black block leading-tight">
+                                  {item.name}
+                                </span>
+                                <p className="text-[13px] text-gray-500 leading-tight">
+                                  {item.desc}
+                                </p>
+                              </div>
+                            </a>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="space-y-2">
+                  <button
+                    onClick={() => {
                       setIsMobileIndustriesOpen(!isMobileIndustriesOpen);
                       setIsMobileServicesOpen(false);
                     }}
