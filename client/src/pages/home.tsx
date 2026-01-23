@@ -1335,6 +1335,7 @@ export default function Home() {
             transparent
             autoRotate={1}
           />
+          <div className="absolute inset-0 bg-black/20 z-[1]" />
           <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black" />
         </div>
 
@@ -1361,14 +1362,14 @@ export default function Home() {
 
         <div className="relative z-10 w-full max-w-[1920px] mx-auto px-6 md:px-12 lg:px-24 xl:px-48">
           <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-8">
-            <nav className="flex flex-wrap items-center justify-center gap-6 text-[11px] font-bold text-gray-500 tracking-[0.2em] font-['Satoshi']">
+            <nav className="flex flex-wrap items-center justify-center gap-6 text-[13px] font-medium text-gray-500 tracking-normal font-['Satoshi']">
               {["Pricing", "About", "Portfolio", "Careers", "Privacy Policy"].map((link) => (
                 <a key={link} href="#" className="hover:text-white transition-colors">
                   {link}
                 </a>
               ))}
             </nav>
-            <div className="flex items-center gap-3 text-[11px] font-bold text-gray-500 tracking-[0.2em] font-['Satoshi']">
+            <div className="flex items-center gap-3 text-[13px] font-medium text-gray-500 tracking-normal font-['Satoshi']">
               <span>© Copyright {currentYear} Neven Agency.</span>
             </div>
           </div>
