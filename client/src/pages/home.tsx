@@ -1056,9 +1056,9 @@ export default function Home() {
         {/* Hero Content */}
         <div className="relative z-20 w-full max-w-[1920px] mx-auto px-6 md:px-12 lg:px-24 xl:px-48 pt-64 md:pt-48 lg:pt-56 pb-20 flex flex-col items-center md:items-start text-center md:text-left">
           <div className="max-w-3xl flex flex-col items-center md:items-start">
-            <h2 className="text-gray-400 font-bold tracking-widest text-sm mb-4 uppercase">
+            <div className="inline-flex items-center justify-center px-6 py-3 bg-black/5 backdrop-blur-sm border border-[#272534] rounded-full text-sm font-medium text-white tracking-normal font-['Satoshi'] mb-6">
               Home Services Marketing Agency
-            </h2>
+            </div>
             <h1 className="text-[clamp(1.8rem,11vw,3.8rem)] md:text-6xl lg:text-7xl font-heading font-bold uppercase leading-[0.9] mb-6 md:mb-10 text-white tracking-tight break-words">
               Championing
               <br />
