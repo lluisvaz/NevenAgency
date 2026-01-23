@@ -217,6 +217,14 @@ export default function Home() {
                     <ChevronDown size={16} />
                   )}
                 </button>
+                <a
+                  href="#"
+                  className={`px-4 py-2.5 rounded-none transition-colors ${isHeaderWhite ? "text-black hover:text-black" : "text-white hover:text-white/70"} ${
+                    isServicesOpen || isIndustriesOpen ? "text-gray-400" : ""
+                  }`}
+                >
+                  Careers
+                </a>
               </div>
             </div>
 
@@ -1360,7 +1368,7 @@ export default function Home() {
         <div className="relative z-10 w-full max-w-[1920px] mx-auto px-6 md:px-12 lg:px-24 xl:px-48">
           <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-8">
             <nav className="flex flex-wrap items-center justify-center gap-6 text-[15px] font-medium text-gray-500 tracking-normal font-['Satoshi']">
-              {["Pricing", "About", "Portfolio", "Careers", "Privacy Policy"].map((link) => (
+              {["Pricing", "About", "Portfolio", "Careers", "Privacy Policy", "Terms of Service"].map((link) => (
                 <a key={link} href="#" className="hover:text-white transition-colors">
                   {link}
                 </a>
