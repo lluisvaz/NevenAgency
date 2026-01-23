@@ -1327,7 +1327,7 @@ export default function Home() {
             muted
             loop
             playsInline
-            className="w-full h-full object-cover min-w-[200%] md:min-w-full animate-pan-video md:animate-none"
+            className="h-full object-cover min-w-[300%] md:min-w-full animate-pan-video md:animate-none"
           />
           <div className="absolute inset-0 bg-black/60 z-[1]" />
           <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black" />
