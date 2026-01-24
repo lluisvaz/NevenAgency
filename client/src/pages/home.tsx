@@ -36,6 +36,7 @@ import {
   Wind,
   HardHat,
   Truck,
+  Flame,
   X,
   Facebook,
   Instagram,
@@ -536,19 +537,14 @@ export default function Home() {
                               icon: Droplets,
                             },
                             {
-                              name: "Electrical",
-                              desc: "Scale your electrical service business with targeted digital growth",
-                              icon: Lightbulb,
+                              name: "Water/Fire Restoration",
+                              desc: "Emergency restoration leads for water and fire damage specialists",
+                              icon: Flame,
                             },
                             {
                               name: "Solar",
                               desc: "Capture high-quality solar leads and residential installation projects",
                               icon: Sun,
-                            },
-                            {
-                              name: "Flooring",
-                              desc: "Drive residential and commercial flooring installation projects",
-                              icon: Layers,
                             },
                             {
                               name: "Garage Door",
@@ -911,19 +907,14 @@ export default function Home() {
                         icon: Droplets,
                       },
                       {
-                        name: "Electrical",
-                        desc: "Scale your electrical service business with targeted digital growth",
-                        icon: Lightbulb,
+                        name: "Water/Fire Restoration",
+                        desc: "Emergency restoration leads for water and fire damage specialists",
+                        icon: Flame,
                       },
                       {
                         name: "Solar",
                         desc: "Capture high-quality solar leads and residential installation projects",
                         icon: Sun,
-                      },
-                      {
-                        name: "Flooring",
-                        desc: "Drive residential and commercial flooring installation projects",
-                        icon: Layers,
                       },
                       {
                         name: "Garage Door",
@@ -1136,9 +1127,8 @@ export default function Home() {
                       { name: "Roofing", icon: HomeIcon },
                       { name: "HVAC", icon: Wind },
                       { name: "Plumbing", icon: Droplets },
-                      { name: "Electrical", icon: Lightbulb },
+                      { name: "Water/Fire Restoration", icon: Flame },
                       { name: "Solar", icon: Sun },
-                      { name: "Flooring", icon: Layers },
                       { name: "Garage Door", icon: SlidersHorizontal },
                       { name: "Windows & Doors", icon: LayoutPanelTop },
                     ].map((industry) => (
@@ -1163,9 +1153,8 @@ export default function Home() {
                     {[
                       { name: "Windows & Doors", icon: LayoutPanelTop },
                       { name: "Garage Door", icon: SlidersHorizontal },
-                      { name: "Flooring", icon: Layers },
                       { name: "Solar", icon: Sun },
-                      { name: "Electrical", icon: Lightbulb },
+                      { name: "Water/Fire Restoration", icon: Flame },
                       { name: "Plumbing", icon: Droplets },
                       { name: "HVAC", icon: Wind },
                       { name: "Roofing", icon: HomeIcon },
