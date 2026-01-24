@@ -468,6 +468,32 @@ export default function Home() {
                           ))}
                         </div>
                       </div>
+
+                      <div className="space-y-4 pt-4 border-t border-gray-100">
+                        <h4 className="text-[11px] font-bold text-gray-400 uppercase tracking-[0.2em] px-3">
+                          Our Blog
+                        </h4>
+                        <div className="group cursor-pointer p-3 rounded-none hover:bg-white transition-all duration-300">
+                          <div className="aspect-[16/9] bg-primary/10 rounded-none mb-4 flex items-center justify-center overflow-hidden">
+                            <div className="text-primary font-bold text-2xl italic tracking-tighter">
+                              Insights
+                            </div>
+                          </div>
+                          <h5 className="text-base font-bold mb-2 leading-tight group-hover:text-primary transition-colors text-black">
+                            The Future of Home Services Marketing in 2026
+                          </h5>
+                          <p className="text-xs text-gray-500 mb-4 line-clamp-2">
+                            Stay ahead of the curve with our latest insights on
+                            industry trends, AI technology, and growth strategies...
+                          </p>
+                          <a
+                            href="#"
+                            className="text-xs font-bold text-primary flex items-center gap-1"
+                          >
+                            Read More <ArrowRight size={12} />
+                          </a>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
