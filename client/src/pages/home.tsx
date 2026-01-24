@@ -1163,9 +1163,14 @@ export default function Home() {
                 {[...Array(2)].map((_, i) => (
                   <div key={i} className="flex gap-4">
                     {[
-                      { name: "Flooring", icon: Layers },
-                      { name: "Garage Door", icon: SlidersHorizontal },
                       { name: "Windows & Doors", icon: LayoutPanelTop },
+                      { name: "Garage Door", icon: SlidersHorizontal },
+                      { name: "Flooring", icon: Layers },
+                      { name: "Solar", icon: Sun },
+                      { name: "Electrical", icon: Lightbulb },
+                      { name: "Plumbing", icon: Droplets },
+                      { name: "HVAC", icon: Wind },
+                      { name: "Roofing", icon: HomeIcon },
                     ].map((industry) => (
                       <div 
                         key={industry.name}
