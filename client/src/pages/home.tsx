@@ -37,8 +37,6 @@ import {
   HardHat,
   Truck,
   X,
-  Calendar,
-  Clock,
   Facebook,
   Instagram,
   Linkedin,
@@ -1185,89 +1183,6 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Blog Section */}
-      <section className="bg-[#F9FAFB] py-24 px-6 md:px-12 lg:px-24 xl:px-48">
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
-          <div>
-            <span className="text-gray-400 font-bold uppercase tracking-[0.2em] text-[11px] block mb-2">
-              Helpful Resources
-            </span>
-            <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tighter leading-[0.9] text-black">
-              CHECK OUT OUR TOP <span className="text-primary">RESOURCES</span>
-            </h2>
-          </div>
-          <button className="bg-white text-black border border-black px-8 py-3 font-bold uppercase tracking-wide text-sm hover:bg-black hover:text-white transition-all cursor-pointer rounded-none shrink-0">
-            View All Articles
-          </button>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {[
-            {
-              date: "01/22/25",
-              time: "15 Mins",
-              title:
-                "Google Maps SEO Services That Actually Work: Hook's RankMap.Ai Is Here",
-              desc: "Imagine seeing your business light up Google Maps like a Christmas tree—greens everywhere, ranking 1-3 in your service areas, and...",
-              image:
-                "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&q=80&w=800",
-            },
-            {
-              date: "12/01/25",
-              time: "25 Mins",
-              title: "HVAC Marketing | 32 Strategies To Hook Better Leads",
-              desc: "The possibilities for how to market your HVAC business are endless. From leveraging social media to harnessing the power of...",
-              image:
-                "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&q=80&w=800",
-            },
-            {
-              date: "05/23/25",
-              time: "17 Mins",
-              title: "20 Home Services Marketing Tips (That Actually Work)",
-              desc: "We want to be your partner for your home services marketing efforts, but more than that, we want to help...",
-              image:
-                "https://images.unsplash.com/photo-1581578731522-a2047864190c?auto=format&fit=crop&q=80&w=800",
-            },
-          ].map((post, idx) => (
-            <div
-              key={idx}
-              className="bg-white rounded-none overflow-hidden border border-gray-100 flex flex-col h-full group"
-            >
-              <div className="aspect-[16/10] overflow-hidden">
-                <img
-                  src={post.image}
-                  alt={post.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-              </div>
-              <div className="p-8 flex flex-col flex-1">
-                <div className="flex items-center gap-6 text-gray-400 text-[11px] font-bold uppercase tracking-widest mb-4">
-                  <div className="flex items-center gap-2">
-                    <Calendar size={14} className="text-gray-300" />
-                    {post.date}
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Clock size={14} className="text-gray-300" />
-                    {post.time}
-                  </div>
-                </div>
-                <h3 className="text-xl font-bold text-black mb-4 leading-tight group-hover:text-primary transition-colors">
-                  {post.title}
-                </h3>
-                <p className="text-gray-500 text-sm leading-relaxed mb-6 line-clamp-3">
-                  {post.desc}
-                </p>
-                <div className="mt-auto">
-                  <button className="text-black font-black uppercase tracking-widest text-[11px] border-b-2 border-black pb-1 hover:text-primary hover:border-primary transition-all">
-                    Read More
-                  </button>
-                </div>
-              </div>
-            </div>
-          ))}
         </div>
       </section>
 
