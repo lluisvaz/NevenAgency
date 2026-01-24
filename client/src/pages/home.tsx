@@ -548,26 +548,6 @@ export default function Home() {
                               icon: Sun,
                             },
                             {
-                              name: "Landscaping",
-                              desc: "Build a premium brand and organic presence for landscaping services",
-                              icon: Shovel,
-                            },
-                            {
-                              name: "Home Builders",
-                              desc: "Strategic marketing and high-converting websites for custom builders",
-                              icon: Hammer,
-                            },
-                            {
-                              name: "Pest Control",
-                              desc: "Consistent lead flow and local visibility for pest management",
-                              icon: Bug,
-                            },
-                            {
-                              name: "Contractors",
-                              desc: "Full-funnel digital marketing for multi-service general contractors",
-                              icon: HardHat,
-                            },
-                            {
                               name: "Flooring",
                               desc: "Drive residential and commercial flooring installation projects",
                               icon: Layers,
@@ -576,16 +556,6 @@ export default function Home() {
                               name: "Garage Door",
                               desc: "Instant visibility and call tracking for garage door services",
                               icon: SlidersHorizontal,
-                            },
-                            {
-                              name: "Moving",
-                              desc: "Targeted customer acquisition for local and long-distance movers",
-                              icon: Truck,
-                            },
-                            {
-                              name: "Painting",
-                              desc: "Branding and lead gen that highlights quality painting results",
-                              icon: Paintbrush,
                             },
                             {
                               name: "Windows & Doors",
@@ -953,26 +923,6 @@ export default function Home() {
                         icon: Sun,
                       },
                       {
-                        name: "Landscaping",
-                        desc: "Build a premium brand and organic presence for landscaping services",
-                        icon: Shovel,
-                      },
-                      {
-                        name: "Home Builders",
-                        desc: "Strategic marketing and high-converting websites for custom builders",
-                        icon: Hammer,
-                      },
-                      {
-                        name: "Pest Control",
-                        desc: "Consistent lead flow and local visibility for pest management",
-                        icon: Bug,
-                      },
-                      {
-                        name: "Contractors",
-                        desc: "Full-funnel digital marketing for multi-service general contractors",
-                        icon: HardHat,
-                      },
-                      {
                         name: "Flooring",
                         desc: "Drive residential and commercial flooring installation projects",
                         icon: Layers,
@@ -981,16 +931,6 @@ export default function Home() {
                         name: "Garage Door",
                         desc: "Instant visibility and call tracking for garage door services",
                         icon: SlidersHorizontal,
-                      },
-                      {
-                        name: "Moving",
-                        desc: "Targeted customer acquisition for local and long-distance movers",
-                        icon: Truck,
-                      },
-                      {
-                        name: "Painting",
-                        desc: "Branding and lead gen that highlights quality painting results",
-                        icon: Paintbrush,
                       },
                       {
                         name: "Windows & Doors",
@@ -1200,8 +1140,9 @@ export default function Home() {
                       { name: "Plumbing", icon: Droplets },
                       { name: "Electrical", icon: Lightbulb },
                       { name: "Solar", icon: Sun },
-                      { name: "Landscaping", icon: Shovel },
-                      { name: "Home Builders", icon: Hammer },
+                      { name: "Flooring", icon: Layers },
+                      { name: "Garage Door", icon: SlidersHorizontal },
+                      { name: "Windows & Doors", icon: LayoutPanelTop },
                     ].map((industry) => (
                       <div 
                         key={industry.name}
@@ -1222,12 +1163,8 @@ export default function Home() {
                 {[...Array(2)].map((_, i) => (
                   <div key={i} className="flex gap-4">
                     {[
-                      { name: "Pest Control", icon: Bug },
-                      { name: "Contractors", icon: HardHat },
                       { name: "Flooring", icon: Layers },
                       { name: "Garage Door", icon: SlidersHorizontal },
-                      { name: "Moving", icon: Truck },
-                      { name: "Painting", icon: Paintbrush },
                       { name: "Windows & Doors", icon: LayoutPanelTop },
                     ].map((industry) => (
                       <div 
