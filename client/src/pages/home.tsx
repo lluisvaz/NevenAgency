@@ -274,7 +274,7 @@ export default function Home() {
                 )}
               </div>
               <button
-                className={`hidden md:block transition-all duration-300 cursor-pointer shrink-0 rounded-none px-4 md:px-6 py-2.5 md:py-3 font-bold uppercase tracking-wide text-xs md:text-sm ${
+                className={`hidden md:block transition-all duration-300 cursor-pointer shrink-0 rounded-full px-4 md:px-6 py-2.5 md:py-3 font-bold tracking-wide text-[14px] md:text-[16px] ${
                   isHeaderWhite
                     ? "bg-black/5 border border-black/10 text-black hover:bg-black/10"
                     : "bg-white/5 backdrop-blur-sm border border-white/20 text-white hover:bg-white/10"
@@ -661,7 +661,7 @@ export default function Home() {
                 </div>
 
                 <div className="pt-6 border-t border-gray-100">
-                  <button className="w-full bg-black/5 border border-black/10 text-black px-6 py-4 font-bold uppercase tracking-wide text-sm hover:bg-black/10 transition-colors cursor-pointer rounded-none">
+                  <button className="w-full bg-black/5 border border-black/10 text-black px-6 py-4 font-bold tracking-wide text-[14px] md:text-[16px] hover:bg-black/10 transition-colors cursor-pointer rounded-full">
                     Schedule Intro Call
                   </button>
                 </div>
@@ -996,13 +996,13 @@ export default function Home() {
         {/* Hero Content */}
         <div className="relative z-20 w-full max-w-[1920px] mx-auto px-6 md:px-12 lg:px-24 xl:px-48 pt-64 md:pt-48 lg:pt-56 pb-20 flex flex-col items-center md:items-start text-center md:text-left">
           <div className="max-w-3xl flex flex-col items-center md:items-start">
-            <div className="inline-flex items-center justify-center px-6 py-3 bg-black/5 backdrop-blur-sm border border-[#272534] rounded-full text-sm font-medium text-white tracking-normal font-['InterDisplay'] mb-6">
+            <div className="inline-flex items-center justify-center px-4 py-2 bg-black/5 backdrop-blur-sm border border-[#272534] rounded-full text-[16px] font-medium text-white tracking-normal font-['InterDisplay'] mb-6">
               Home Services Marketing Agency
             </div>
-            <h1 className="text-[clamp(1.8rem,11vw,3.8rem)] md:text-6xl lg:text-7xl font-heading font-bold uppercase leading-[0.9] mb-6 md:mb-10 text-white tracking-tight break-words">
+            <h1 className="text-[50px] md:text-[78px] font-heading font-bold leading-[0.9] mb-6 md:mb-10 text-white tracking-tight break-words normal-case">
               Championing
               <br />
-              Hometown Heroes
+              <span className="font-['Instrument_Serif'] italic font-normal">Hometown</span> Heroes
             </h1>
             <div className="mb-8 md:mb-12">
               <p className="text-base md:text-xl font-medium text-white leading-relaxed max-w-2xl mx-auto md:mx-0">
@@ -1013,12 +1013,12 @@ export default function Home() {
               </p>
             </div>
             <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4 mb-12 md:mb-20 w-full">
-              <button className="w-full sm:w-auto bg-white text-black px-6 md:px-8 py-3.5 md:py-4 font-bold uppercase tracking-wide text-sm md:text-base hover:bg-gray-200 transition-colors cursor-pointer rounded-none">
+              <button className="w-full sm:w-auto bg-white text-black px-6 md:px-8 py-3.5 md:py-4 font-bold tracking-wide text-[14px] md:text-[16px] hover:bg-gray-200 transition-colors cursor-pointer rounded-full">
                 Get Started Now
               </button>
               <a
                 href="#"
-                className="w-full sm:w-auto flex items-center justify-center gap-2 font-normal text-white hover:bg-white/10 transition-colors text-sm md:text-base px-6 py-3.5 md:py-4 bg-white/5 backdrop-blur-sm border border-white/20 rounded-none"
+                className="w-full sm:w-auto flex items-center justify-center gap-2 font-normal text-white hover:bg-white/10 transition-colors text-[14px] md:text-[16px] px-6 py-3.5 md:py-4 bg-white/5 backdrop-blur-sm border border-white/20 rounded-full"
               >
                 <Play className="w-4 h-4 fill-white" />
                 Real Customer Experiences
@@ -1100,13 +1100,13 @@ export default function Home() {
       {/* Solutions / Industries Ticker Section */}
       <section className="bg-black pt-32 pb-32 w-full overflow-hidden block -mt-1 relative z-30">
         <div className="max-w-[1920px] mx-auto px-6 md:px-12 lg:px-24 xl:px-48 mb-16 text-center">
-          <div className="inline-flex items-center justify-center px-6 py-3 bg-black/5 backdrop-blur-sm border border-[#272534] rounded-full text-sm font-medium text-white tracking-normal font-['InterDisplay'] mb-6">
+          <div className="inline-flex items-center justify-center px-4 py-2 bg-black/5 backdrop-blur-sm border border-[#272534] rounded-full text-[16px] font-medium text-white tracking-normal font-['InterDisplay'] mb-6">
             Our Expertise
           </div>
-          <h2 className="text-[clamp(1.8rem,11vw,3.8rem)] md:text-6xl lg:text-7xl font-normal mb-6 text-white tracking-tight leading-[0.9] normal-case">
+          <h2 className="text-[50px] md:text-[78px] font-normal mb-6 text-white tracking-tight leading-[0.9] normal-case">
             Specialized in <span className="font-['Instrument_Serif'] italic font-normal capitalize">Home Services</span>
           </h2>
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto font-medium">
+          <p className="text-gray-400 text-[18px] max-w-2xl mx-auto font-medium">
             We provide tailored marketing solutions for the industries that build and maintain our homes. 
             Scaling local heroes into market leaders.
           </p>
@@ -1191,24 +1191,24 @@ export default function Home() {
         </div>
 
         <div className="relative z-10 w-full max-w-[1920px] mx-auto px-6 md:px-12 lg:px-24 xl:px-48 text-center mb-32">
-          <div className="inline-flex items-center justify-center gap-4 px-6 py-3 bg-black/5 backdrop-blur-sm border border-[#272534] rounded-full text-sm font-medium text-white tracking-normal font-['InterDisplay'] mb-12">
+          <div className="inline-flex items-center justify-center gap-4 px-4 py-2 bg-black/5 backdrop-blur-sm border border-[#272534] rounded-full text-[16px] font-medium text-white tracking-normal font-['InterDisplay'] mb-12">
             <div className="relative flex items-center justify-center shrink-0">
               <div className="absolute w-4 h-4 rounded-full bg-green-400/30 animate-pulse blur-[2px]" />
               <div className="relative w-2 h-2 rounded-full bg-green-400 shadow-[0_0_8px_rgba(74,222,128,0.6)]" />
             </div>
             <span>Hurry, only 3 spots left.</span>
           </div>
-          <h2 className="text-[clamp(2rem,12vw,4.5rem)] md:text-7xl lg:text-8xl font-normal text-white mb-8 tracking-tighter leading-[0.9] normal-case">
+          <h2 className="text-[50px] md:text-[78px] font-normal text-white mb-8 tracking-tighter leading-[0.9] normal-case">
             Are you <span className="font-['Instrument_Serif'] italic">ready?</span>
           </h2>
-          <p className="text-gray-400 text-xl md:text-2xl font-medium mb-12 max-w-2xl mx-auto">
+          <p className="text-gray-400 text-[18px] font-medium mb-12 max-w-2xl mx-auto">
             This could be the start of something big.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <button className="w-full sm:w-auto bg-white text-black px-6 md:px-8 py-3.5 md:py-4 font-bold uppercase tracking-wide text-sm md:text-base hover:bg-gray-200 transition-colors cursor-pointer rounded-none">
+            <button className="w-full sm:w-auto bg-white text-black px-6 md:px-8 py-3.5 md:py-4 font-bold tracking-wide text-[14px] md:text-[16px] hover:bg-gray-200 transition-colors cursor-pointer rounded-full">
               Book a call
             </button>
-            <button className="w-full sm:w-auto flex items-center justify-center gap-2 font-normal text-white hover:bg-white/10 transition-colors text-sm md:text-base px-6 py-3.5 md:py-4 bg-white/5 backdrop-blur-sm border border-white/20 rounded-none">
+            <button className="w-full sm:w-auto flex items-center justify-center gap-2 font-normal text-white hover:bg-white/10 transition-colors text-[14px] md:text-[16px] px-6 py-3.5 md:py-4 bg-white/5 backdrop-blur-sm border border-white/20 rounded-full">
               See plans
             </button>
           </div>
