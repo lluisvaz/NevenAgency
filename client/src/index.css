@@ -4,8 +4,8 @@
 @custom-variant dark (&:is(.dark *));
 
 @font-face {
-  font-family: 'Satoshi';
-  src: url('/fonts/Satoshi.woff2') format('woff2');
+  font-family: 'InterDisplay';
+  src: url('/fonts/InterDisplay.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
 }
@@ -34,8 +34,8 @@
   --color-input: hsl(0 0% 20%);
   --color-ring: #0464FE;
   
-  --font-sans: 'Satoshi', sans-serif;
-  --font-heading: 'Satoshi', sans-serif;
+  --font-sans: 'InterDisplay', sans-serif;
+  --font-heading: 'InterDisplay', sans-serif;
   
   --radius: 0.25rem; /* 4px */
 

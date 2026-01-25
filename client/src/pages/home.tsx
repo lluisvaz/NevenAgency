@@ -346,7 +346,7 @@ export default function Home() {
                   >
                     <div className="bg-[#F9FAFB] rounded-none border border-gray-100 p-4 space-y-8">
                       <div className="space-y-4">
-                        <h4 className="text-[11px] font-satoshi text-gray-400 px-3">
+                        <h4 className="text-[11px] font-sans text-gray-400 px-3">
                           Search & Strategy
                         </h4>
                         <div className="grid grid-cols-1 gap-1">
@@ -387,7 +387,7 @@ export default function Home() {
                       </div>
 
                       <div className="space-y-4 pt-4 border-t border-gray-100">
-                        <h4 className="text-[11px] font-satoshi text-gray-400 px-3">
+                        <h4 className="text-[11px] font-sans text-gray-400 px-3">
                           Paid Media & Lead Gen
                         </h4>
                         <div className="grid grid-cols-1 gap-1">
@@ -428,7 +428,7 @@ export default function Home() {
                       </div>
 
                       <div className="space-y-4 pt-4 border-t border-gray-100">
-                        <h4 className="text-[11px] font-satoshi text-gray-400 px-3">
+                        <h4 className="text-[11px] font-sans text-gray-400 px-3">
                           Creative & Content
                         </h4>
                         <div className="grid grid-cols-1 gap-1">
@@ -469,7 +469,7 @@ export default function Home() {
                       </div>
 
                       <div className="space-y-4 pt-4 border-t border-gray-100">
-                        <h4 className="text-[11px] font-satoshi text-gray-400 px-3">
+                        <h4 className="text-[11px] font-sans text-gray-400 px-3">
                           Our Blog
                         </h4>
                         <div className="group cursor-pointer p-3 rounded-none hover:bg-white transition-all duration-300">
@@ -516,7 +516,7 @@ export default function Home() {
                   >
                     <div className="bg-[#F9FAFB] rounded-none border border-gray-100 p-4 space-y-8">
                       <div className="space-y-4">
-                        <h4 className="text-[11px] font-satoshi text-gray-400 px-3">
+                        <h4 className="text-[11px] font-sans text-gray-400 px-3">
                           Industries We Serve
                         </h4>
                         <div className="grid grid-cols-1 gap-1">
@@ -576,7 +576,7 @@ export default function Home() {
                         </div>
                       </div>
                       <div className="space-y-4 pt-4 border-t border-gray-100">
-                        <h4 className="text-[11px] font-satoshi text-gray-400 px-3">
+                        <h4 className="text-[11px] font-sans text-gray-400 px-3">
                           Success Stories
                         </h4>
                         <div className="group cursor-pointer p-3 rounded-none hover:bg-white transition-all duration-300">
@@ -680,7 +680,7 @@ export default function Home() {
             <div className="max-w-[1920px] mx-auto px-6 md:px-12 lg:px-24 xl:px-48 py-12 flex">
               <div className="flex-1 space-y-12 pr-12 border-r border-gray-100">
                 <div className="group/section">
-                  <h4 className="text-[11px] font-satoshi text-gray-400 mb-3">
+                  <h4 className="text-[11px] font-sans text-gray-400 mb-3">
                     Search & Strategy
                   </h4>
                   <div className="grid grid-cols-3 gap-1">
@@ -736,7 +736,7 @@ export default function Home() {
                   <div className="h-px bg-gray-100 w-full mt-4"></div>
                 </div>
                 <div className="group/section">
-                  <h4 className="text-[11px] font-satoshi text-gray-400 mb-3">
+                  <h4 className="text-[11px] font-sans text-gray-400 mb-3">
                     Paid Media & Lead Gen
                   </h4>
                   <div className="grid grid-cols-3 gap-1">
@@ -792,7 +792,7 @@ export default function Home() {
                   <div className="h-px bg-gray-100 w-full mt-4"></div>
                 </div>
                 <div className="group/section">
-                  <h4 className="text-[11px] font-satoshi text-gray-400 mb-3">
+                  <h4 className="text-[11px] font-sans text-gray-400 mb-3">
                     Creative & Content
                   </h4>
                   <div className="grid grid-cols-3 gap-1">
@@ -848,7 +848,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="w-[350px] pl-12 space-y-8">
-                <h4 className="text-[10px] font-satoshi text-gray-500">
+                <h4 className="text-[10px] font-sans text-gray-500">
                   Our Blog
                 </h4>
                 <div className="space-y-8">
@@ -886,7 +886,7 @@ export default function Home() {
             <div className="max-w-[1920px] mx-auto px-6 md:px-12 lg:px-24 xl:px-48 py-12 flex">
               <div className="flex-1 space-y-12 pr-12 border-r border-gray-100">
                 <div className="group/section">
-                  <h4 className="text-[11px] font-satoshi text-gray-400 mb-6">
+                  <h4 className="text-[11px] font-sans text-gray-400 mb-6">
                     Industries We Serve
                   </h4>
                   <div className="grid grid-cols-3 gap-1">
@@ -949,7 +949,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="w-[350px] pl-12 space-y-8">
-                <h4 className="text-[10px] font-satoshi text-gray-500">
+                <h4 className="text-[10px] font-sans text-gray-500">
                   Success Stories
                 </h4>
                 <div className="space-y-8">
@@ -996,7 +996,7 @@ export default function Home() {
         {/* Hero Content */}
         <div className="relative z-20 w-full max-w-[1920px] mx-auto px-6 md:px-12 lg:px-24 xl:px-48 pt-64 md:pt-48 lg:pt-56 pb-20 flex flex-col items-center md:items-start text-center md:text-left">
           <div className="max-w-3xl flex flex-col items-center md:items-start">
-            <div className="inline-flex items-center justify-center px-6 py-3 bg-black/5 backdrop-blur-sm border border-[#272534] rounded-full text-sm font-medium text-white tracking-normal font-['Satoshi'] mb-6">
+            <div className="inline-flex items-center justify-center px-6 py-3 bg-black/5 backdrop-blur-sm border border-[#272534] rounded-full text-sm font-medium text-white tracking-normal font-['InterDisplay'] mb-6">
               Home Services Marketing Agency
             </div>
             <h1 className="text-[clamp(1.8rem,11vw,3.8rem)] md:text-6xl lg:text-7xl font-heading font-bold uppercase leading-[0.9] mb-6 md:mb-10 text-white tracking-tight break-words">
@@ -1100,7 +1100,7 @@ export default function Home() {
       {/* Solutions / Industries Ticker Section */}
       <section className="bg-black pt-32 pb-32 w-full overflow-hidden block -mt-1 relative z-30">
         <div className="max-w-[1920px] mx-auto px-6 md:px-12 lg:px-24 xl:px-48 mb-16 text-center">
-          <div className="inline-flex items-center justify-center px-6 py-3 bg-black/5 backdrop-blur-sm border border-[#272534] rounded-full text-sm font-medium text-white tracking-normal font-['Satoshi'] mb-6">
+          <div className="inline-flex items-center justify-center px-6 py-3 bg-black/5 backdrop-blur-sm border border-[#272534] rounded-full text-sm font-medium text-white tracking-normal font-['InterDisplay'] mb-6">
             Our Expertise
           </div>
           <h2 className="text-[clamp(1.8rem,11vw,3.8rem)] md:text-6xl lg:text-7xl font-normal mb-6 text-white tracking-tight leading-[0.9] normal-case">
@@ -1191,7 +1191,7 @@ export default function Home() {
         </div>
 
         <div className="relative z-10 w-full max-w-[1920px] mx-auto px-6 md:px-12 lg:px-24 xl:px-48 text-center mb-32">
-          <div className="inline-flex items-center justify-center gap-4 px-6 py-3 bg-black/5 backdrop-blur-sm border border-[#272534] rounded-full text-sm font-medium text-white tracking-normal font-['Satoshi'] mb-12">
+          <div className="inline-flex items-center justify-center gap-4 px-6 py-3 bg-black/5 backdrop-blur-sm border border-[#272534] rounded-full text-sm font-medium text-white tracking-normal font-['InterDisplay'] mb-12">
             <div className="relative flex items-center justify-center shrink-0">
               <div className="absolute w-4 h-4 rounded-full bg-green-400/30 animate-pulse blur-[2px]" />
               <div className="relative w-2 h-2 rounded-full bg-green-400 shadow-[0_0_8px_rgba(74,222,128,0.6)]" />
@@ -1216,14 +1216,14 @@ export default function Home() {
 
         <div className="relative z-10 w-full max-w-[1920px] mx-auto px-6 md:px-12 lg:px-24 xl:px-48">
           <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-8">
-            <nav className="flex flex-wrap items-center justify-center gap-6 text-[15px] font-medium text-gray-500 tracking-normal font-['Satoshi']">
+            <nav className="flex flex-wrap items-center justify-center gap-6 text-[15px] font-medium text-gray-500 tracking-normal font-['InterDisplay']">
               {["Pricing", "About", "Portfolio", "Careers", "Privacy Policy", "Terms of Service"].map((link) => (
                 <a key={link} href="#" className="hover:text-white transition-colors">
                   {link}
                 </a>
               ))}
             </nav>
-            <div className="flex items-center gap-3 text-[15px] font-medium text-gray-500 tracking-normal font-['Satoshi']">
+            <div className="flex items-center gap-3 text-[15px] font-medium text-gray-500 tracking-normal font-['InterDisplay']">
               <span>© Copyright {currentYear} Neven Agency.</span>
             </div>
           </div>
