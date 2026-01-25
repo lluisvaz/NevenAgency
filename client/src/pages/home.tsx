@@ -155,7 +155,7 @@ export default function Home() {
               </Link>
 
               {/* Desktop Menu */}
-              <div className="hidden lg:flex items-center gap-1 text-[17px] font-medium">
+              <div className="hidden lg:flex items-center gap-1 text-[16px] font-medium">
                 <a
                   href="#"
                   className={`px-4 py-2.5 rounded-none transition-colors ${isHeaderWhite ? "text-black hover:text-black" : "text-white hover:text-white/70"} ${
@@ -258,7 +258,7 @@ export default function Home() {
                           setLanguage(lang.name);
                           setIsLanguageOpen(false);
                         }}
-                        className={`w-full text-left px-4 py-2 text-sm hover:bg-gray-50 transition-colors cursor-pointer rounded-none flex items-center gap-3 ${language === lang.name ? "text-black font-bold" : "text-gray-500"}`}
+                        className={`w-full text-left px-4 py-2 text-[16px] hover:bg-gray-50 transition-colors cursor-pointer rounded-none flex items-center gap-3 ${language === lang.name ? "text-black font-bold" : "text-gray-500"}`}
                       >
                         <div className="w-6 h-6 rounded-full border border-gray-300 flex items-center justify-center shrink-0 overflow-hidden bg-white">
                           <img
@@ -274,7 +274,7 @@ export default function Home() {
                 )}
               </div>
               <button
-                className={`hidden md:block transition-all duration-300 cursor-pointer shrink-0 rounded-md px-4 md:px-6 py-2.5 md:py-3 font-medium tracking-wide text-[14px] md:text-[16px] ${
+                className={`hidden md:block transition-all duration-300 cursor-pointer shrink-0 rounded-lg px-4 md:px-6 py-2.5 md:py-3 font-medium tracking-wide text-[16px] ${
                   isHeaderWhite
                     ? "bg-black/5 border border-black/10 text-black hover:bg-black/10"
                     : "bg-white/5 backdrop-blur-sm border border-white/20 text-white hover:bg-white/10"
@@ -317,13 +317,13 @@ export default function Home() {
               <div className="flex-1 overflow-y-auto p-6 space-y-4">
                 <a
                   href="#"
-                  className="block text-xl hover:text-primary transition-colors p-3 rounded-none"
+                  className="block text-[16px] hover:text-primary transition-colors p-3 rounded-none"
                 >
                   Pricing
                 </a>
                 <a
                   href="#"
-                  className="block text-xl hover:text-primary transition-colors p-3 rounded-none"
+                  className="block text-[16px] hover:text-primary transition-colors p-3 rounded-none"
                 >
                   About
                 </a>
@@ -333,7 +333,7 @@ export default function Home() {
                       setIsMobileServicesOpen(!isMobileServicesOpen);
                       setIsMobileIndustriesOpen(false);
                     }}
-                    className={`w-full flex items-center justify-between text-xl transition-all duration-300 p-3 rounded-none ${isMobileServicesOpen ? "bg-black text-white" : "hover:text-primary"}`}
+                    className={`w-full flex items-center justify-between text-[16px] transition-all duration-300 p-3 rounded-none ${isMobileServicesOpen ? "bg-black text-white" : "hover:text-primary"}`}
                   >
                     Services
                     <ChevronDown
@@ -374,10 +374,10 @@ export default function Home() {
                             >
                               <item.icon className="w-6 h-6 text-gray-400 group-hover:text-black mt-1 shrink-0" />
                               <div className="space-y-1">
-                                <span className="text-base text-black block leading-tight">
+                                <span className="text-[16px] text-black block leading-tight">
                                   {item.name}
                                 </span>
-                                <p className="text-[13px] text-gray-500 leading-tight">
+                                <p className="text-[16px] text-gray-500 leading-tight">
                                   {item.desc}
                                 </p>
                               </div>
@@ -415,10 +415,10 @@ export default function Home() {
                             >
                               <item.icon className="w-6 h-6 text-gray-400 group-hover:text-black mt-1 shrink-0" />
                               <div className="space-y-1">
-                                <span className="text-base text-black block leading-tight">
+                                <span className="text-[16px] text-black block leading-tight">
                                   {item.name}
                                 </span>
-                                <p className="text-[13px] text-gray-500 leading-tight">
+                                <p className="text-[16px] text-gray-500 leading-tight">
                                   {item.desc}
                                 </p>
                               </div>
@@ -456,10 +456,10 @@ export default function Home() {
                             >
                               <item.icon className="w-6 h-6 text-gray-400 group-hover:text-black mt-1 shrink-0" />
                               <div className="space-y-1">
-                                <span className="text-base text-black block leading-tight">
+                                <span className="text-[16px] text-black block leading-tight">
                                   {item.name}
                                 </span>
-                                <p className="text-[13px] text-gray-500 leading-tight">
+                                <p className="text-[16px] text-gray-500 leading-tight">
                                   {item.desc}
                                 </p>
                               </div>
@@ -503,7 +503,7 @@ export default function Home() {
                       setIsMobileIndustriesOpen(!isMobileIndustriesOpen);
                       setIsMobileServicesOpen(false);
                     }}
-                    className={`w-full flex items-center justify-between text-xl transition-all duration-300 p-3 rounded-none ${isMobileIndustriesOpen ? "bg-black text-white" : "hover:text-primary"}`}
+                    className={`w-full flex items-center justify-between text-[16px] transition-all duration-300 p-3 rounded-none ${isMobileIndustriesOpen ? "bg-black text-white" : "hover:text-primary"}`}
                   >
                     Industries
                     <ChevronDown
@@ -564,10 +564,10 @@ export default function Home() {
                             >
                               <item.icon className="w-6 h-6 text-gray-400 group-hover:text-black mt-1 shrink-0" />
                               <div className="space-y-1">
-                                <span className="text-base text-black block leading-tight">
+                                <span className="text-[16px] text-black block leading-tight">
                                   {item.name}
                                 </span>
-                                <p className="text-[13px] text-gray-500 leading-tight">
+                                <p className="text-[16px] text-gray-500 leading-tight">
                                   {item.desc}
                                 </p>
                               </div>
@@ -1005,7 +1005,7 @@ export default function Home() {
               <span className="font-['Instrument_Serif'] italic font-normal">Hometown</span> Heroes
             </h1>
             <div className="mb-8 md:mb-12">
-              <p className="text-base md:text-xl font-medium text-white leading-relaxed max-w-2xl mx-auto md:mx-0">
+              <p className="text-[18px] md:text-xl font-medium text-white leading-[1.6] max-w-2xl mx-auto md:mx-0">
                 We are a proactive, cutting-edge marketing agency and
                 transparent ROI partner. We make suggestions that actually move
                 the needle, utilize the latest technology, and show you all the
@@ -1013,12 +1013,12 @@ export default function Home() {
               </p>
             </div>
             <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4 mb-12 md:mb-20 w-full">
-              <button className="w-full sm:w-auto bg-white text-black px-6 md:px-8 py-3.5 md:py-4 font-medium tracking-wide text-[14px] md:text-[16px] hover:bg-gray-200 transition-colors cursor-pointer rounded-md">
+              <button className="w-full sm:w-auto bg-white text-black px-6 md:px-8 py-3.5 md:py-4 font-medium tracking-wide text-[16px] hover:bg-gray-200 transition-colors cursor-pointer rounded-lg">
                 Get Started Now
               </button>
               <a
                 href="#"
-                className="w-full sm:w-auto flex items-center justify-center gap-2 font-medium text-white hover:bg-white/10 transition-colors text-[14px] md:text-[16px] px-6 py-3.5 md:py-4 bg-white/5 backdrop-blur-sm border border-white/20 rounded-md"
+                className="w-full sm:w-auto flex items-center justify-center gap-2 font-medium text-white hover:bg-white/10 transition-colors text-[16px] px-6 py-3.5 md:py-4 bg-white/5 backdrop-blur-sm border border-white/20 rounded-lg"
               >
                 <Play className="w-4 h-4 fill-white" />
                 Real Customer Experiences
@@ -1106,7 +1106,7 @@ export default function Home() {
           <h2 className="text-[50px] md:text-[78px] font-normal mb-6 text-white tracking-tight leading-[0.9] normal-case">
             Specialized in <span className="font-['Instrument_Serif'] italic font-normal capitalize">Home Services</span>
           </h2>
-          <p className="text-gray-400 text-[18px] max-w-2xl mx-auto font-medium">
+          <p className="text-gray-400 text-[18px] max-w-2xl mx-auto font-medium leading-[1.6]">
             We provide tailored marketing solutions for the industries that build and maintain our homes. 
             Scaling local heroes into market leaders.
           </p>
@@ -1205,10 +1205,10 @@ export default function Home() {
             This could be the start of something big.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <button className="w-full sm:w-auto bg-white text-black px-6 md:px-8 py-3.5 md:py-4 font-medium tracking-wide text-[14px] md:text-[16px] hover:bg-gray-200 transition-colors cursor-pointer rounded-md">
+            <button className="w-full sm:w-auto bg-white text-black px-6 md:px-8 py-3.5 md:py-4 font-medium tracking-wide text-[16px] hover:bg-gray-200 transition-colors cursor-pointer rounded-lg">
               Book a call
             </button>
-            <button className="w-full sm:w-auto flex items-center justify-center gap-2 font-medium text-white hover:bg-white/10 transition-colors text-[14px] md:text-[16px] px-6 py-3.5 md:py-4 bg-white/5 backdrop-blur-sm border border-white/20 rounded-md">
+            <button className="w-full sm:w-auto flex items-center justify-center gap-2 font-medium text-white hover:bg-white/10 transition-colors text-[16px] px-6 py-3.5 md:py-4 bg-white/5 backdrop-blur-sm border border-white/20 rounded-lg">
               See plans
             </button>
           </div>
