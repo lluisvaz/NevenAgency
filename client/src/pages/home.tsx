@@ -338,7 +338,7 @@ export default function Home() {
                   >
                     <div className="bg-[#F9FAFB] rounded-none border border-gray-100 p-4 space-y-8">
                       <div className="space-y-4">
-                        <h4 className="text-[11px] font-sans text-gray-400 px-3">
+                        <h4 className="text-[16px] font-sans text-gray-400 px-3">
                           Search & Strategy
                         </h4>
                         <div className="grid grid-cols-1 gap-1">
@@ -379,7 +379,7 @@ export default function Home() {
                       </div>
 
                       <div className="space-y-4 pt-4 border-t border-gray-100">
-                        <h4 className="text-[11px] font-sans text-gray-400 px-3">
+                        <h4 className="text-[16px] font-sans text-gray-400 px-3">
                           Paid Media & Lead Gen
                         </h4>
                         <div className="grid grid-cols-1 gap-1">
@@ -420,7 +420,7 @@ export default function Home() {
                       </div>
 
                       <div className="space-y-4 pt-4 border-t border-gray-100">
-                        <h4 className="text-[11px] font-sans text-gray-400 px-3">
+                        <h4 className="text-[16px] font-sans text-gray-400 px-3">
                           Creative & Content
                         </h4>
                         <div className="grid grid-cols-1 gap-1">
@@ -461,7 +461,7 @@ export default function Home() {
                       </div>
 
                       <div className="space-y-4 pt-4 border-t border-gray-100">
-                        <h4 className="text-[11px] font-sans text-gray-400 px-3">
+                        <h4 className="text-[16px] font-sans text-gray-400 px-3">
                           Our Blog
                         </h4>
                         <div className="group cursor-pointer p-3 rounded-none hover:bg-white transition-all duration-300">
@@ -508,7 +508,7 @@ export default function Home() {
                   >
                     <div className="bg-[#F9FAFB] rounded-none border border-gray-100 p-4 space-y-8">
                       <div className="space-y-4">
-                        <h4 className="text-[11px] font-sans text-gray-400 px-3">
+                        <h4 className="text-[16px] font-sans text-gray-400 px-3">
                           Industries We Serve
                         </h4>
                         <div className="grid grid-cols-1 gap-1">
@@ -568,7 +568,7 @@ export default function Home() {
                         </div>
                       </div>
                       <div className="space-y-4 pt-4 border-t border-gray-100">
-                        <h4 className="text-[11px] font-sans text-gray-400 px-3">
+                        <h4 className="text-[16px] font-sans text-gray-400 px-3">
                           Success Stories
                         </h4>
                         <div className="group cursor-pointer p-3 rounded-none hover:bg-white transition-all duration-300">
@@ -591,13 +591,6 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-
-                <a
-                  href="#"
-                  className="block text-[16px] hover:text-primary transition-colors p-3 rounded-none"
-                >
-                  Careers
-                </a>
 
                 <div className="pt-4 border-t border-gray-100">
                   <div className="space-y-2">
@@ -672,7 +665,7 @@ export default function Home() {
             <div className="max-w-[1920px] mx-auto px-6 md:px-12 lg:px-24 xl:px-48 py-12 flex">
               <div className="flex-1 space-y-12 pr-12 border-r border-gray-100">
                 <div className="group/section">
-                  <h4 className="text-[11px] font-sans text-gray-400 mb-3">
+                  <h4 className="text-[16px] font-sans text-gray-400 mb-3">
                     Search & Strategy
                   </h4>
                   <div className="grid grid-cols-3 gap-1">
@@ -728,7 +721,7 @@ export default function Home() {
                   <div className="h-px bg-gray-100 w-full mt-4"></div>
                 </div>
                 <div className="group/section">
-                  <h4 className="text-[11px] font-sans text-gray-400 mb-3">
+                  <h4 className="text-[16px] font-sans text-gray-400 mb-3">
                     Paid Media & Lead Gen
                   </h4>
                   <div className="grid grid-cols-3 gap-1">
@@ -784,7 +777,7 @@ export default function Home() {
                   <div className="h-px bg-gray-100 w-full mt-4"></div>
                 </div>
                 <div className="group/section">
-                  <h4 className="text-[11px] font-sans text-gray-400 mb-3">
+                  <h4 className="text-[16px] font-sans text-gray-400 mb-3">
                     Creative & Content
                   </h4>
                   <div className="grid grid-cols-3 gap-1">
@@ -840,7 +833,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="w-[350px] pl-12 space-y-8">
-                <h4 className="text-[10px] font-sans text-gray-500">
+                <h4 className="text-[16px] font-sans text-gray-500">
                   Our Blog
                 </h4>
                 <div className="space-y-8">
@@ -878,7 +871,7 @@ export default function Home() {
             <div className="max-w-[1920px] mx-auto px-6 md:px-12 lg:px-24 xl:px-48 py-12 flex">
               <div className="flex-1 space-y-12 pr-12 border-r border-gray-100">
                 <div className="group/section">
-                  <h4 className="text-[11px] font-sans text-gray-400 mb-6">
+                  <h4 className="text-[16px] font-sans text-gray-400 mb-6">
                     Industries We Serve
                   </h4>
                   <div className="grid grid-cols-3 gap-1">
@@ -941,7 +934,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="w-[350px] pl-12 space-y-8">
-                <h4 className="text-[10px] font-sans text-gray-500">
+                <h4 className="text-[16px] font-sans text-gray-500">
                   Success Stories
                 </h4>
                 <div className="space-y-8">
