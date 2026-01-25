@@ -46,7 +46,7 @@ import {
 } from "lucide-react";
 import { LayoutGridIcon } from "@/components/ui/layout-grid-icon";
 import { GlobeIcon } from "@/components/ui/globe-icon";
-import heroVideo from "@assets/generated_videos/aerial_view_of_roofers_working_on_a_house_roof.mp4";
+import heroVideo from "/images/hero-video.mp4";
 
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
