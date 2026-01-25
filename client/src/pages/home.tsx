@@ -602,7 +602,7 @@ export default function Home() {
 
                 <a
                   href="#"
-                  className="block text-xl hover:text-primary transition-colors p-3 rounded-none"
+                  className="block text-[16px] hover:text-primary transition-colors p-3 rounded-none"
                 >
                   Careers
                 </a>
@@ -613,7 +613,7 @@ export default function Home() {
                       onClick={() =>
                         setIsMobileLanguageOpen(!isMobileLanguageOpen)
                       }
-                      className={`w-full flex items-center justify-between text-xl transition-all duration-300 p-3 rounded-none ${isMobileLanguageOpen ? "bg-black text-white" : "hover:text-primary"}`}
+                      className={`w-full flex items-center justify-between text-[16px] transition-all duration-300 p-3 rounded-none ${isMobileLanguageOpen ? "bg-black text-white" : "hover:text-primary"}`}
                     >
                       <div className="flex items-center gap-3">
                         <div className="w-6 h-6 rounded-full border border-gray-300 flex items-center justify-center shrink-0 overflow-hidden bg-white">
@@ -643,7 +643,7 @@ export default function Home() {
                               setLanguage(lang.name);
                               setIsMobileLanguageOpen(false);
                             }}
-                            className={`w-full text-left px-4 py-3 text-lg rounded-none transition-colors cursor-pointer flex items-center gap-3 ${language === lang.name ? "text-black font-bold" : "text-gray-500"}`}
+                            className={`w-full text-left px-4 py-3 text-[16px] rounded-none transition-colors cursor-pointer flex items-center gap-3 ${language === lang.name ? "text-black font-bold" : "text-gray-500"}`}
                           >
                             <div className="w-6 h-6 rounded-full border border-gray-300 flex items-center justify-center shrink-0 overflow-hidden bg-white">
                               <img
@@ -661,7 +661,7 @@ export default function Home() {
                 </div>
 
                 <div className="pt-6 border-t border-gray-100">
-                  <button className="w-full bg-black/5 border border-black/10 text-black px-6 py-4 font-medium tracking-wide text-[14px] md:text-[16px] hover:bg-black/10 transition-colors cursor-pointer rounded-md">
+                  <button className="w-full bg-black/5 border border-black/10 text-black px-6 py-4 font-medium tracking-wide text-[16px] hover:bg-black/10 transition-colors cursor-pointer rounded-lg">
                     Schedule Intro Call
                   </button>
                 </div>
