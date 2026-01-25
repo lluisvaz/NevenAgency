@@ -216,14 +216,6 @@ export default function Home() {
                     <ChevronDown size={16} />
                   )}
                 </button>
-                <a
-                  href="#"
-                  className={`px-4 py-2.5 rounded-none transition-colors ${isHeaderWhite ? "text-black hover:text-black" : "text-white hover:text-white/70"} ${
-                    isServicesOpen || isIndustriesOpen ? "text-gray-400" : ""
-                  }`}
-                >
-                  Careers
-                </a>
               </div>
             </div>
 
@@ -1005,7 +997,7 @@ export default function Home() {
               <span className="font-['Instrument_Serif'] italic font-normal">Hometown</span> Heroes
             </h1>
             <div className="mb-8 md:mb-12">
-              <p className="text-[18px] md:text-xl font-medium text-white leading-[1.6] max-w-2xl mx-auto md:mx-0">
+              <p className="text-[18px] md:text-xl font-medium text-white leading-[1.2] max-w-2xl mx-auto md:mx-0">
                 We are a proactive, cutting-edge marketing agency and
                 transparent ROI partner. We make suggestions that actually move
                 the needle, utilize the latest technology, and show you all the
@@ -1106,7 +1098,7 @@ export default function Home() {
           <h2 className="text-[50px] md:text-[78px] font-normal mb-6 text-white tracking-tight leading-[0.9] normal-case">
             Specialized in <span className="font-['Instrument_Serif'] italic font-normal capitalize">Home Services</span>
           </h2>
-          <p className="text-gray-400 text-[18px] max-w-2xl mx-auto font-medium leading-[1.6]">
+          <p className="text-gray-400 text-[18px] max-w-2xl mx-auto font-medium leading-[1.2]">
             We provide tailored marketing solutions for the industries that build and maintain our homes. 
             Scaling local heroes into market leaders.
           </p>
@@ -1217,7 +1209,7 @@ export default function Home() {
         <div className="relative z-10 w-full max-w-[1920px] mx-auto px-6 md:px-12 lg:px-24 xl:px-48">
           <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-8">
             <nav className="flex flex-wrap items-center justify-center gap-6 text-[15px] font-medium text-gray-500 tracking-normal font-['InterDisplay']">
-              {["Pricing", "About", "Portfolio", "Careers", "Privacy Policy", "Terms of Service"].map((link) => (
+              {["Pricing", "About", "Portfolio", "Privacy Policy", "Terms of Service"].map((link) => (
                 <a key={link} href="#" className="hover:text-white transition-colors">
                   {link}
                 </a>
