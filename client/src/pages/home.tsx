@@ -158,7 +158,7 @@ export default function Home() {
               <div className="hidden lg:flex items-center gap-1 text-[16px] font-medium">
                 <a
                   href="#"
-                  className={`px-4 py-2.5 rounded-none transition-colors ${isHeaderWhite ? "text-black hover:text-black" : "text-white hover:text-white/70"} ${
+                  className={`px-4 py-2.5 rounded-xl transition-colors ${isHeaderWhite ? "text-black hover:text-black" : "text-white hover:text-white/70"} ${
                     isServicesOpen || isIndustriesOpen ? "text-gray-400" : ""
                   }`}
                 >
@@ -166,7 +166,7 @@ export default function Home() {
                 </a>
                 <a
                   href="#"
-                  className={`px-4 py-2.5 rounded-none transition-colors ${isHeaderWhite ? "text-black hover:text-black" : "text-white hover:text-white/70"} ${
+                  className={`px-4 py-2.5 rounded-xl transition-colors ${isHeaderWhite ? "text-black hover:text-black" : "text-white hover:text-white/70"} ${
                     isServicesOpen || isIndustriesOpen ? "text-gray-400" : ""
                   }`}
                 >
@@ -177,7 +177,7 @@ export default function Home() {
                     setIsServicesOpen(!isServicesOpen);
                     setIsIndustriesOpen(false);
                   }}
-                  className={`flex items-center gap-2 px-4 py-2.5 rounded-none transition-all duration-300 cursor-pointer ${
+                  className={`flex items-center gap-2 px-4 py-2.5 rounded-xl transition-all duration-300 cursor-pointer ${
                     isHeaderWhite
                       ? isServicesOpen
                         ? "text-black"
@@ -199,7 +199,7 @@ export default function Home() {
                     setIsIndustriesOpen(!isIndustriesOpen);
                     setIsServicesOpen(false);
                   }}
-                  className={`flex items-center gap-2 px-4 py-2.5 rounded-none transition-all duration-300 cursor-pointer ${
+                  className={`flex items-center gap-2 px-4 py-2.5 rounded-xl transition-all duration-300 cursor-pointer ${
                     isHeaderWhite
                       ? isIndustriesOpen
                         ? "text-black"
@@ -240,7 +240,7 @@ export default function Home() {
 
                 {isLanguageOpen && (
                   <div
-                    className="absolute top-full right-0 mt-2 w-48 bg-white rounded-none shadow-xl border border-gray-100 py-2 z-[200]"
+                    className="absolute top-full right-0 mt-2 w-48 bg-white rounded-xl shadow-xl border border-gray-100 py-2 z-[200]"
                     onClick={(e) => e.stopPropagation()}
                   >
                     {languages.map((lang) => (
@@ -250,7 +250,7 @@ export default function Home() {
                           setLanguage(lang.name);
                           setIsLanguageOpen(false);
                         }}
-                        className={`w-full text-left px-4 py-2 text-[16px] hover:bg-gray-50 transition-colors cursor-pointer rounded-none flex items-center gap-3 ${language === lang.name ? "text-black font-bold" : "text-gray-500"}`}
+                        className={`w-full text-left px-4 py-2 text-[16px] hover:bg-gray-50 transition-colors cursor-pointer rounded-lg flex items-center gap-3 ${language === lang.name ? "text-black font-bold" : "text-gray-500"}`}
                       >
                         <div className="w-6 h-6 rounded-full border border-gray-300 flex items-center justify-center shrink-0 overflow-hidden bg-white">
                           <img
@@ -300,7 +300,7 @@ export default function Home() {
                 <img src="/images/logo.png" alt="Logo" className="h-12 w-auto" />
                 <button
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="p-2 hover:bg-gray-100 rounded-none transition-colors"
+                  className="p-2 hover:bg-gray-100 rounded-xl transition-colors"
                 >
                   <X size={24} />
                 </button>
@@ -309,13 +309,13 @@ export default function Home() {
               <div className="flex-1 overflow-y-auto p-6 space-y-4">
                 <a
                   href="#"
-                  className="block text-[16px] hover:text-primary transition-colors p-3 rounded-none"
+                  className="block text-[16px] hover:text-primary transition-colors p-3 rounded-xl"
                 >
                   Pricing
                 </a>
                 <a
                   href="#"
-                  className="block text-[16px] hover:text-primary transition-colors p-3 rounded-none"
+                  className="block text-[16px] hover:text-primary transition-colors p-3 rounded-xl"
                 >
                   About
                 </a>
@@ -325,7 +325,7 @@ export default function Home() {
                       setIsMobileServicesOpen(!isMobileServicesOpen);
                       setIsMobileIndustriesOpen(false);
                     }}
-                    className={`w-full flex items-center justify-between text-[16px] transition-all duration-300 p-3 rounded-none ${isMobileServicesOpen ? "bg-black text-white" : "hover:text-primary"}`}
+                    className={`w-full flex items-center justify-between text-[16px] transition-all duration-300 p-3 rounded-xl ${isMobileServicesOpen ? "bg-black text-white" : "hover:text-primary"}`}
                   >
                     Services
                     <ChevronDown
@@ -336,7 +336,7 @@ export default function Home() {
                   <div
                     className={`overflow-hidden transition-all duration-500 ease-in-out ${isMobileServicesOpen ? "max-h-[2000px] opacity-100 mt-2" : "max-h-0 opacity-0"}`}
                   >
-                    <div className="bg-[#F9FAFB] rounded-none border border-gray-100 p-4 space-y-8">
+                    <div className="bg-[#F9FAFB] rounded-xl border border-gray-100 p-4 space-y-8">
                       <div className="space-y-4">
                         <h4 className="text-[16px] font-sans text-gray-400 px-3">
                           Search & Strategy
@@ -362,7 +362,7 @@ export default function Home() {
                             <a
                               key={item.name}
                               href="#"
-                              className="flex items-start gap-4 p-3 rounded-none hover:bg-white transition-all duration-300 group"
+                              className="flex items-start gap-4 p-3 rounded-xl hover:bg-white transition-all duration-300 group"
                             >
                               <img src={item.icon} alt={item.name} className="w-8 h-8 object-contain brightness-0 mt-1 shrink-0" />
                               <div className="space-y-1">
@@ -403,7 +403,7 @@ export default function Home() {
                             <a
                               key={item.name}
                               href="#"
-                              className="flex items-start gap-4 p-3 rounded-none hover:bg-white transition-all duration-300 group"
+                              className="flex items-start gap-4 p-3 rounded-xl hover:bg-white transition-all duration-300 group"
                             >
                               <img src={item.icon} alt={item.name} className="w-8 h-8 object-contain brightness-0 mt-1 shrink-0" />
                               <div className="space-y-1">
@@ -444,7 +444,7 @@ export default function Home() {
                             <a
                               key={item.name}
                               href="#"
-                              className="flex items-start gap-4 p-3 rounded-none hover:bg-white transition-all duration-300 group"
+                              className="flex items-start gap-4 p-3 rounded-xl hover:bg-white transition-all duration-300 group"
                             >
                               <img src={item.icon} alt={item.name} className="w-8 h-8 object-contain brightness-0 mt-1 shrink-0" />
                               <div className="space-y-1">
@@ -464,8 +464,8 @@ export default function Home() {
                         <h4 className="text-[16px] font-sans text-gray-400 px-3">
                           Our Blog
                         </h4>
-                        <div className="group cursor-pointer p-3 rounded-none hover:bg-white transition-all duration-300">
-                          <div className="aspect-[16/9] bg-primary/10 rounded-none mb-4 flex items-center justify-center overflow-hidden">
+                        <div className="group cursor-pointer p-3 rounded-xl hover:bg-white transition-all duration-300">
+                          <div className="aspect-[16/9] bg-primary/10 rounded-xl mb-4 flex items-center justify-center overflow-hidden">
                             <div className="text-primary font-bold text-2xl italic tracking-tighter">
                               Insights
                             </div>
@@ -495,7 +495,7 @@ export default function Home() {
                       setIsMobileIndustriesOpen(!isMobileIndustriesOpen);
                       setIsMobileServicesOpen(false);
                     }}
-                    className={`w-full flex items-center justify-between text-[16px] transition-all duration-300 p-3 rounded-none ${isMobileIndustriesOpen ? "bg-black text-white" : "hover:text-primary"}`}
+                    className={`w-full flex items-center justify-between text-[16px] transition-all duration-300 p-3 rounded-xl ${isMobileIndustriesOpen ? "bg-black text-white" : "hover:text-primary"}`}
                   >
                     Industries
                     <ChevronDown
@@ -506,7 +506,7 @@ export default function Home() {
                   <div
                     className={`overflow-hidden transition-all duration-500 ease-in-out ${isMobileIndustriesOpen ? "max-h-[2000px] opacity-100 mt-2" : "max-h-0 opacity-0"}`}
                   >
-                    <div className="bg-[#F9FAFB] rounded-none border border-gray-100 p-4 space-y-8">
+                    <div className="bg-[#F9FAFB] rounded-xl border border-gray-100 p-4 space-y-8">
                       <div className="space-y-4">
                         <h4 className="text-[16px] font-sans text-gray-400 px-3">
                           Industries We Serve
@@ -552,7 +552,7 @@ export default function Home() {
                             <a
                               key={item.name}
                               href="#"
-                              className="flex items-start gap-4 p-3 rounded-none hover:bg-white transition-all duration-300 group"
+                              className="flex items-start gap-4 p-3 rounded-xl hover:bg-white transition-all duration-300 group"
                             >
                               <item.icon className="w-6 h-6 text-gray-400 group-hover:text-black mt-1 shrink-0" />
                               <div className="space-y-1">
@@ -571,8 +571,8 @@ export default function Home() {
                         <h4 className="text-[16px] font-sans text-gray-400 px-3">
                           Success Stories
                         </h4>
-                        <div className="group cursor-pointer p-3 rounded-none hover:bg-white transition-all duration-300">
-                          <div className="aspect-[16/9] bg-[#0F0F23] rounded-none mb-4 flex items-center justify-center overflow-hidden">
+                        <div className="group cursor-pointer p-3 rounded-xl hover:bg-white transition-all duration-300">
+                          <div className="aspect-[16/9] bg-[#0F0F23] rounded-xl mb-4 flex items-center justify-center overflow-hidden">
                             <div className="text-white font-bold text-2xl italic tracking-tighter">
                               Success
                             </div>
@@ -598,7 +598,7 @@ export default function Home() {
                       onClick={() =>
                         setIsMobileLanguageOpen(!isMobileLanguageOpen)
                       }
-                      className={`w-full flex items-center justify-between text-[16px] transition-all duration-300 p-3 rounded-none ${isMobileLanguageOpen ? "bg-black text-white" : "hover:text-primary"}`}
+                      className={`w-full flex items-center justify-between text-[16px] transition-all duration-300 p-3 rounded-xl ${isMobileLanguageOpen ? "bg-black text-white" : "hover:text-primary"}`}
                     >
                       <div className="flex items-center gap-3">
                         <div className="w-6 h-6 rounded-full border border-gray-300 flex items-center justify-center shrink-0 overflow-hidden bg-white">
@@ -620,7 +620,7 @@ export default function Home() {
                     <div
                       className={`overflow-y-auto transition-all duration-300 ${isMobileLanguageOpen ? "max-h-[300px] opacity-100" : "max-h-0 opacity-0"}`}
                     >
-                      <div className="bg-gray-50 rounded-none p-2 space-y-1">
+                      <div className="bg-gray-50 rounded-xl p-2 space-y-1">
                         {languages.map((lang) => (
                           <button
                             key={lang.code}
@@ -628,7 +628,7 @@ export default function Home() {
                               setLanguage(lang.name);
                               setIsMobileLanguageOpen(false);
                             }}
-                            className={`w-full text-left px-4 py-3 text-[16px] rounded-none transition-colors cursor-pointer flex items-center gap-3 ${language === lang.name ? "text-black font-bold" : "text-gray-500"}`}
+                            className={`w-full text-left px-4 py-3 text-[16px] rounded-lg transition-colors cursor-pointer flex items-center gap-3 ${language === lang.name ? "text-black font-bold" : "text-gray-500"}`}
                           >
                             <div className="w-6 h-6 rounded-full border border-gray-300 flex items-center justify-center shrink-0 overflow-hidden bg-white">
                               <img
@@ -671,7 +671,7 @@ export default function Home() {
                   <div className="grid grid-cols-3 gap-1">
                     <a
                       href="#"
-                      className="flex items-start gap-3 p-3 rounded-none hover:bg-[#F9FAFB] transition-all duration-300 group/item overflow-hidden"
+                      className="flex items-start gap-3 p-3 rounded-xl hover:bg-[#F9FAFB] transition-all duration-300 group/item overflow-hidden"
                     >
                       <img src="/images/local-seo.webp" alt="Local SEO" className="w-6 h-6 object-contain brightness-0 mt-1 shrink-0" />
                       <div className="grid transition-all duration-300 grid-rows-[auto_0fr] group-hover/section:grid-rows-[auto_1fr]">
@@ -687,7 +687,7 @@ export default function Home() {
                     </a>
                     <a
                       href="#"
-                      className="flex items-start gap-3 p-3 rounded-none hover:bg-[#F9FAFB] transition-all duration-300 group/item overflow-hidden"
+                      className="flex items-start gap-3 p-3 rounded-xl hover:bg-[#F9FAFB] transition-all duration-300 group/item overflow-hidden"
                     >
                       <img src="/images/ai-search-optimization.webp" alt="AI Search Optimization" className="w-6 h-6 object-contain brightness-0 mt-1 shrink-0" />
                       <div className="grid transition-all duration-300 grid-rows-[auto_0fr] group-hover/section:grid-rows-[auto_1fr]">
@@ -703,7 +703,7 @@ export default function Home() {
                     </a>
                     <a
                       href="#"
-                      className="flex items-start gap-3 p-3 rounded-none hover:bg-[#F9FAFB] transition-all duration-300 group/item overflow-hidden"
+                      className="flex items-start gap-3 p-3 rounded-xl hover:bg-[#F9FAFB] transition-all duration-300 group/item overflow-hidden"
                     >
                       <img src="/images/organic-seo.webp" alt="Organic SEO" className="w-6 h-6 object-contain brightness-0 mt-1 shrink-0" />
                       <div className="grid transition-all duration-300 grid-rows-[auto_0fr] group-hover/section:grid-rows-[auto_1fr]">
@@ -727,7 +727,7 @@ export default function Home() {
                   <div className="grid grid-cols-3 gap-1">
                     <a
                       href="#"
-                      className="flex items-start gap-3 p-3 rounded-none hover:bg-[#F9FAFB] transition-all duration-300 group/item overflow-hidden"
+                      className="flex items-start gap-3 p-3 rounded-xl hover:bg-[#F9FAFB] transition-all duration-300 group/item overflow-hidden"
                     >
                       <img src="/images/pay-per-click.webp" alt="Pay-Per-Click" className="w-6 h-6 object-contain brightness-0 mt-1 shrink-0" />
                       <div className="grid transition-all duration-300 grid-rows-[auto_0fr] group-hover/section:grid-rows-[auto_1fr]">
@@ -743,7 +743,7 @@ export default function Home() {
                     </a>
                     <a
                       href="#"
-                      className="flex items-start gap-3 p-3 rounded-none hover:bg-[#F9FAFB] transition-all duration-300 group/item overflow-hidden"
+                      className="flex items-start gap-3 p-3 rounded-xl hover:bg-[#F9FAFB] transition-all duration-300 group/item overflow-hidden"
                     >
                       <img src="/images/lsa-management.webp" alt="LSA Management" className="w-6 h-6 object-contain brightness-0 mt-1 shrink-0" />
                       <div className="grid transition-all duration-300 grid-rows-[auto_0fr] group-hover/section:grid-rows-[auto_1fr]">
@@ -759,7 +759,7 @@ export default function Home() {
                     </a>
                     <a
                       href="#"
-                      className="flex items-start gap-3 p-3 rounded-none hover:bg-[#F9FAFB] transition-all duration-300 group/item overflow-hidden"
+                      className="flex items-start gap-3 p-3 rounded-xl hover:bg-[#F9FAFB] transition-all duration-300 group/item overflow-hidden"
                     >
                       <img src="/images/ott-advertising.webp" alt="OTT Advertising" className="w-6 h-6 object-contain brightness-0 mt-1 shrink-0" />
                       <div className="grid transition-all duration-300 grid-rows-[auto_0fr] group-hover/section:grid-rows-[auto_1fr]">
@@ -783,7 +783,7 @@ export default function Home() {
                   <div className="grid grid-cols-3 gap-1">
                     <a
                       href="#"
-                      className="flex items-start gap-3 p-3 rounded-none hover:bg-[#F9FAFB] transition-all duration-300 group/item overflow-hidden"
+                      className="flex items-start gap-3 p-3 rounded-xl hover:bg-[#F9FAFB] transition-all duration-300 group/item overflow-hidden"
                     >
                       <img src="/images/website-design.webp" alt="Website Design" className="w-6 h-6 object-contain brightness-0 mt-1 shrink-0" />
                       <div className="grid transition-all duration-300 grid-rows-[auto_0fr] group-hover/section:grid-rows-[auto_1fr]">
@@ -799,7 +799,7 @@ export default function Home() {
                     </a>
                     <a
                       href="#"
-                      className="flex items-start gap-3 p-3 rounded-none hover:bg-[#F9FAFB] transition-all duration-300 group/item overflow-hidden"
+                      className="flex items-start gap-3 p-3 rounded-xl hover:bg-[#F9FAFB] transition-all duration-300 group/item overflow-hidden"
                     >
                       <img src="/images/digital-pr.webp" alt="Digital PR" className="w-6 h-6 object-contain brightness-0 mt-1 shrink-0" />
                       <div className="grid transition-all duration-300 grid-rows-[auto_0fr] group-hover/section:grid-rows-[auto_1fr]">
@@ -815,7 +815,7 @@ export default function Home() {
                     </a>
                     <a
                       href="#"
-                      className="flex items-start gap-3 p-3 rounded-none hover:bg-[#F9FAFB] transition-all duration-300 group/item overflow-hidden"
+                      className="flex items-start gap-3 p-3 rounded-xl hover:bg-[#F9FAFB] transition-all duration-300 group/item overflow-hidden"
                     >
                       <img src="/images/social-media.webp" alt="Social Media" className="w-6 h-6 object-contain brightness-0 mt-1 shrink-0" />
                       <div className="grid transition-all duration-300 grid-rows-[auto_0fr] group-hover/section:grid-rows-[auto_1fr]">
@@ -838,7 +838,7 @@ export default function Home() {
                 </h4>
                 <div className="space-y-8">
                   <div className="group cursor-pointer">
-                    <div className="aspect-[16/9] bg-primary/10 rounded-none mb-4 flex items-center justify-center overflow-hidden">
+                    <div className="aspect-[16/9] bg-primary/10 rounded-xl mb-4 flex items-center justify-center overflow-hidden">
                       <div className="text-primary font-bold text-2xl italic tracking-tighter">
                         Insights
                       </div>
@@ -915,7 +915,7 @@ export default function Home() {
                       <a
                         key={item.name}
                         href="#"
-                        className="flex items-start gap-3 p-3 rounded-none hover:bg-[#F9FAFB] transition-all duration-300 group/item overflow-hidden"
+                        className="flex items-start gap-3 p-3 rounded-xl hover:bg-[#F9FAFB] transition-all duration-300 group/item overflow-hidden"
                       >
                         <item.icon className="w-5 h-5 text-gray-400 group-hover/item:text-black mt-1 shrink-0" />
                         <div className="grid transition-all duration-300 grid-rows-[auto_0fr] group-hover/section:grid-rows-[auto_1fr]">
@@ -939,7 +939,7 @@ export default function Home() {
                 </h4>
                 <div className="space-y-8">
                   <div className="group cursor-pointer">
-                    <div className="aspect-[16/9] bg-[#0F0F23] rounded-none mb-4 flex items-center justify-center overflow-hidden">
+                    <div className="aspect-[16/9] bg-[#0F0F23] rounded-xl mb-4 flex items-center justify-center overflow-hidden">
                       <div className="text-white font-bold text-2xl italic tracking-tighter">
                         Success
                       </div>
