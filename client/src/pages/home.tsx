@@ -150,7 +150,7 @@ export default function Home() {
                 <img
                   src="/images/logo.png"
                   alt="Logo"
-                  className={`h-8 md:h-10 w-auto object-contain transition-all duration-300 ${!isHeaderWhite ? "invert" : ""}`}
+                  className={`h-12 md:h-10 w-auto object-contain transition-all duration-300 ${!isHeaderWhite ? "invert" : ""}`}
                 />
               </Link>
 
@@ -297,7 +297,7 @@ export default function Home() {
             />
             <div className="absolute top-0 right-0 bottom-0 w-full bg-white text-black flex flex-col shadow-2xl overflow-hidden">
               <div className="flex items-center justify-between p-6 border-b border-gray-100">
-                <img src="/images/logo.png" alt="Logo" className="h-8 w-auto" />
+                <img src="/images/logo.png" alt="Logo" className="h-12 w-auto" />
                 <button
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="p-2 hover:bg-gray-100 rounded-none transition-colors"
