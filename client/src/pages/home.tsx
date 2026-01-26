@@ -346,17 +346,17 @@ export default function Home() {
                             {
                               name: "Local SEO",
                               desc: "Dominate local search results in your service area",
-                              icon: "/images/local-seo.png",
+                              icon: "/images/local-seo.webp",
                             },
                             {
                               name: "AI Search Optimization",
                               desc: "Future-proof your presence for AI-driven search",
-                              icon: "/images/ai-search-optimization.png",
+                              icon: "/images/ai-search-optimization.webp",
                             },
                             {
                               name: "Organic SEO",
                               desc: "Build long-term authority and organic traffic",
-                              icon: "/images/organic-seo.png",
+                              icon: "/images/organic-seo.webp",
                             },
                           ].map((item) => (
                             <a
@@ -387,17 +387,17 @@ export default function Home() {
                             {
                               name: "Pay-Per-Click",
                               desc: "Instant leads through Google Ads and Bing",
-                              icon: "/images/pay-per-click.png",
+                              icon: "/images/pay-per-click.webp",
                             },
                             {
                               name: "LSA Management",
                               desc: "Maximize your Google Local Services Ads ROI",
-                              icon: "/images/lsa-management.png",
+                              icon: "/images/lsa-management.webp",
                             },
                             {
                               name: "OTT Advertising",
                               desc: "Reach homeowners on streaming TV platforms",
-                              icon: "/images/ott-advertising.png",
+                              icon: "/images/ott-advertising.webp",
                             },
                           ].map((item) => (
                             <a
@@ -428,17 +428,17 @@ export default function Home() {
                             {
                               name: "Website Design",
                               desc: "High-converting websites for home services",
-                              icon: "/images/website-design.png",
+                              icon: "/images/website-design.webp",
                             },
                             {
                               name: "Digital PR",
                               desc: "Earn mentions and backlinks from top publications",
-                              icon: "/images/digital-pr.png",
+                              icon: "/images/digital-pr.webp",
                             },
                             {
                               name: "Social Media",
                               desc: "Build a community and brand on social platforms",
-                              icon: "/images/social-media.png",
+                              icon: "/images/social-media.webp",
                             },
                           ].map((item) => (
                             <a
@@ -673,7 +673,7 @@ export default function Home() {
                       href="#"
                       className="flex items-start gap-3 p-3 rounded-none hover:bg-[#F9FAFB] transition-all duration-300 group/item overflow-hidden"
                     >
-                      <img src="/images/local-seo.png" alt="Local SEO" className="w-6 h-6 object-contain brightness-0 mt-1 shrink-0" />
+                      <img src="/images/local-seo.webp" alt="Local SEO" className="w-6 h-6 object-contain brightness-0 mt-1 shrink-0" />
                       <div className="grid transition-all duration-300 grid-rows-[auto_0fr] group-hover/section:grid-rows-[auto_1fr]">
                         <span className="text-base text-black block transition-colors leading-tight">
                           Local SEO
@@ -689,7 +689,7 @@ export default function Home() {
                       href="#"
                       className="flex items-start gap-3 p-3 rounded-none hover:bg-[#F9FAFB] transition-all duration-300 group/item overflow-hidden"
                     >
-                      <img src="/images/ai-search-optimization.png" alt="AI Search Optimization" className="w-6 h-6 object-contain brightness-0 mt-1 shrink-0" />
+                      <img src="/images/ai-search-optimization.webp" alt="AI Search Optimization" className="w-6 h-6 object-contain brightness-0 mt-1 shrink-0" />
                       <div className="grid transition-all duration-300 grid-rows-[auto_0fr] group-hover/section:grid-rows-[auto_1fr]">
                         <span className="text-base text-black block transition-colors leading-tight">
                           AI Search Optimization
@@ -705,7 +705,7 @@ export default function Home() {
                       href="#"
                       className="flex items-start gap-3 p-3 rounded-none hover:bg-[#F9FAFB] transition-all duration-300 group/item overflow-hidden"
                     >
-                      <img src="/images/organic-seo.png" alt="Organic SEO" className="w-6 h-6 object-contain brightness-0 mt-1 shrink-0" />
+                      <img src="/images/organic-seo.webp" alt="Organic SEO" className="w-6 h-6 object-contain brightness-0 mt-1 shrink-0" />
                       <div className="grid transition-all duration-300 grid-rows-[auto_0fr] group-hover/section:grid-rows-[auto_1fr]">
                         <span className="text-base text-black block transition-colors leading-tight">
                           Organic SEO
@@ -729,7 +729,7 @@ export default function Home() {
                       href="#"
                       className="flex items-start gap-3 p-3 rounded-none hover:bg-[#F9FAFB] transition-all duration-300 group/item overflow-hidden"
                     >
-                      <img src="/images/pay-per-click.png" alt="Pay-Per-Click" className="w-6 h-6 object-contain brightness-0 mt-1 shrink-0" />
+                      <img src="/images/pay-per-click.webp" alt="Pay-Per-Click" className="w-6 h-6 object-contain brightness-0 mt-1 shrink-0" />
                       <div className="grid transition-all duration-300 grid-rows-[auto_0fr] group-hover/section:grid-rows-[auto_1fr]">
                         <span className="text-base text-black block transition-colors leading-tight">
                           Pay-Per-Click
@@ -745,7 +745,7 @@ export default function Home() {
                       href="#"
                       className="flex items-start gap-3 p-3 rounded-none hover:bg-[#F9FAFB] transition-all duration-300 group/item overflow-hidden"
                     >
-                      <img src="/images/lsa-management.png" alt="LSA Management" className="w-6 h-6 object-contain brightness-0 mt-1 shrink-0" />
+                      <img src="/images/lsa-management.webp" alt="LSA Management" className="w-6 h-6 object-contain brightness-0 mt-1 shrink-0" />
                       <div className="grid transition-all duration-300 grid-rows-[auto_0fr] group-hover/section:grid-rows-[auto_1fr]">
                         <span className="text-base text-black block transition-colors leading-tight">
                           LSA Management
@@ -761,7 +761,7 @@ export default function Home() {
                       href="#"
                       className="flex items-start gap-3 p-3 rounded-none hover:bg-[#F9FAFB] transition-all duration-300 group/item overflow-hidden"
                     >
-                      <img src="/images/ott-advertising.png" alt="OTT Advertising" className="w-6 h-6 object-contain brightness-0 mt-1 shrink-0" />
+                      <img src="/images/ott-advertising.webp" alt="OTT Advertising" className="w-6 h-6 object-contain brightness-0 mt-1 shrink-0" />
                       <div className="grid transition-all duration-300 grid-rows-[auto_0fr] group-hover/section:grid-rows-[auto_1fr]">
                         <span className="text-base text-black block transition-colors leading-tight">
                           OTT Advertising
@@ -785,7 +785,7 @@ export default function Home() {
                       href="#"
                       className="flex items-start gap-3 p-3 rounded-none hover:bg-[#F9FAFB] transition-all duration-300 group/item overflow-hidden"
                     >
-                      <img src="/images/website-design.png" alt="Website Design" className="w-6 h-6 object-contain brightness-0 mt-1 shrink-0" />
+                      <img src="/images/website-design.webp" alt="Website Design" className="w-6 h-6 object-contain brightness-0 mt-1 shrink-0" />
                       <div className="grid transition-all duration-300 grid-rows-[auto_0fr] group-hover/section:grid-rows-[auto_1fr]">
                         <span className="text-base text-black block transition-colors leading-tight">
                           Website Design
@@ -801,7 +801,7 @@ export default function Home() {
                       href="#"
                       className="flex items-start gap-3 p-3 rounded-none hover:bg-[#F9FAFB] transition-all duration-300 group/item overflow-hidden"
                     >
-                      <img src="/images/digital-pr.png" alt="Digital PR" className="w-6 h-6 object-contain brightness-0 mt-1 shrink-0" />
+                      <img src="/images/digital-pr.webp" alt="Digital PR" className="w-6 h-6 object-contain brightness-0 mt-1 shrink-0" />
                       <div className="grid transition-all duration-300 grid-rows-[auto_0fr] group-hover/section:grid-rows-[auto_1fr]">
                         <span className="text-base text-black block transition-colors leading-tight">
                           Digital PR
@@ -817,7 +817,7 @@ export default function Home() {
                       href="#"
                       className="flex items-start gap-3 p-3 rounded-none hover:bg-[#F9FAFB] transition-all duration-300 group/item overflow-hidden"
                     >
-                      <img src="/images/social-media.png" alt="Social Media" className="w-6 h-6 object-contain brightness-0 mt-1 shrink-0" />
+                      <img src="/images/social-media.webp" alt="Social Media" className="w-6 h-6 object-contain brightness-0 mt-1 shrink-0" />
                       <div className="grid transition-all duration-300 grid-rows-[auto_0fr] group-hover/section:grid-rows-[auto_1fr]">
                         <span className="text-base text-black block transition-colors leading-tight">
                           Social Media
