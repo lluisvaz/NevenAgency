@@ -110,15 +110,15 @@ export default function Home() {
   }, [isLanguageOpen]);
 
   useEffect(() => {
-    if (isMobileMenuOpen) {
+    if (isServicesOpen || isIndustriesOpen || isMobileMenuOpen) {
       document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = "unset";
+      document.body.style.overflow = "auto";
     }
     return () => {
-      document.body.style.overflow = "unset";
+      document.body.style.overflow = "auto";
     };
-  }, [isMobileMenuOpen]);
+  }, [isServicesOpen, isIndustriesOpen, isMobileMenuOpen]);
 
   return (
     <div className="relative w-full bg-black text-white font-sans min-h-screen">
@@ -346,17 +346,17 @@ export default function Home() {
                             {
                               name: "Local SEO",
                               desc: "Dominate local search results in your service area",
-                              icon: BarChart3,
+                              icon: "/images/local-seo.png",
                             },
                             {
                               name: "AI Search Optimization",
                               desc: "Future-proof your presence for AI-driven search",
-                              icon: Terminal,
+                              icon: "/images/ai-search-optimization.png",
                             },
                             {
                               name: "Organic SEO",
                               desc: "Build long-term authority and organic traffic",
-                              icon: Globe,
+                              icon: "/images/organic-seo.png",
                             },
                           ].map((item) => (
                             <a
@@ -364,7 +364,7 @@ export default function Home() {
                               href="#"
                               className="flex items-start gap-4 p-3 rounded-none hover:bg-white transition-all duration-300 group"
                             >
-                              <item.icon className="w-6 h-6 text-gray-400 group-hover:text-black mt-1 shrink-0" />
+                              <img src={item.icon} alt={item.name} className="w-8 h-8 object-contain brightness-0 mt-1 shrink-0" />
                               <div className="space-y-1">
                                 <span className="text-[16px] text-black block leading-tight">
                                   {item.name}
@@ -387,17 +387,17 @@ export default function Home() {
                             {
                               name: "Pay-Per-Click",
                               desc: "Instant leads through Google Ads and Bing",
-                              icon: CircleDollarSign,
+                              icon: "/images/pay-per-click.png",
                             },
                             {
                               name: "LSA Management",
                               desc: "Maximize your Google Local Services Ads ROI",
-                              icon: Users,
+                              icon: "/images/lsa-management.png",
                             },
                             {
                               name: "OTT Advertising",
                               desc: "Reach homeowners on streaming TV platforms",
-                              icon: Layers,
+                              icon: "/images/ott-advertising.png",
                             },
                           ].map((item) => (
                             <a
@@ -405,7 +405,7 @@ export default function Home() {
                               href="#"
                               className="flex items-start gap-4 p-3 rounded-none hover:bg-white transition-all duration-300 group"
                             >
-                              <item.icon className="w-6 h-6 text-gray-400 group-hover:text-black mt-1 shrink-0" />
+                              <img src={item.icon} alt={item.name} className="w-8 h-8 object-contain brightness-0 mt-1 shrink-0" />
                               <div className="space-y-1">
                                 <span className="text-[16px] text-black block leading-tight">
                                   {item.name}
@@ -428,17 +428,17 @@ export default function Home() {
                             {
                               name: "Website Design",
                               desc: "High-converting websites for home services",
-                              icon: PenTool,
+                              icon: "/images/website-design.png",
                             },
                             {
                               name: "Digital PR",
                               desc: "Earn mentions and backlinks from top publications",
-                              icon: Rocket,
+                              icon: "/images/digital-pr.png",
                             },
                             {
                               name: "Social Media",
                               desc: "Build a community and brand on social platforms",
-                              icon: Handshake,
+                              icon: "/images/social-media.png",
                             },
                           ].map((item) => (
                             <a
@@ -446,7 +446,7 @@ export default function Home() {
                               href="#"
                               className="flex items-start gap-4 p-3 rounded-none hover:bg-white transition-all duration-300 group"
                             >
-                              <item.icon className="w-6 h-6 text-gray-400 group-hover:text-black mt-1 shrink-0" />
+                              <img src={item.icon} alt={item.name} className="w-8 h-8 object-contain brightness-0 mt-1 shrink-0" />
                               <div className="space-y-1">
                                 <span className="text-[16px] text-black block leading-tight">
                                   {item.name}
@@ -673,7 +673,7 @@ export default function Home() {
                       href="#"
                       className="flex items-start gap-3 p-3 rounded-none hover:bg-[#F9FAFB] transition-all duration-300 group/item overflow-hidden"
                     >
-                      <BarChart3 className="w-5 h-5 text-gray-400 group-hover/item:text-black mt-1 shrink-0" />
+                      <img src="/images/local-seo.png" alt="Local SEO" className="w-6 h-6 object-contain brightness-0 mt-1 shrink-0" />
                       <div className="grid transition-all duration-300 grid-rows-[auto_0fr] group-hover/section:grid-rows-[auto_1fr]">
                         <span className="text-base text-black block transition-colors leading-tight">
                           Local SEO
@@ -689,7 +689,7 @@ export default function Home() {
                       href="#"
                       className="flex items-start gap-3 p-3 rounded-none hover:bg-[#F9FAFB] transition-all duration-300 group/item overflow-hidden"
                     >
-                      <Terminal className="w-5 h-5 text-gray-400 group-hover/item:text-black mt-1 shrink-0" />
+                      <img src="/images/ai-search-optimization.png" alt="AI Search Optimization" className="w-6 h-6 object-contain brightness-0 mt-1 shrink-0" />
                       <div className="grid transition-all duration-300 grid-rows-[auto_0fr] group-hover/section:grid-rows-[auto_1fr]">
                         <span className="text-base text-black block transition-colors leading-tight">
                           AI Search Optimization
@@ -705,7 +705,7 @@ export default function Home() {
                       href="#"
                       className="flex items-start gap-3 p-3 rounded-none hover:bg-[#F9FAFB] transition-all duration-300 group/item overflow-hidden"
                     >
-                      <Globe className="w-5 h-5 text-gray-400 group-hover/item:text-black mt-1 shrink-0" />
+                      <img src="/images/organic-seo.png" alt="Organic SEO" className="w-6 h-6 object-contain brightness-0 mt-1 shrink-0" />
                       <div className="grid transition-all duration-300 grid-rows-[auto_0fr] group-hover/section:grid-rows-[auto_1fr]">
                         <span className="text-base text-black block transition-colors leading-tight">
                           Organic SEO
@@ -720,7 +720,7 @@ export default function Home() {
                   </div>
                   <div className="h-px bg-gray-100 w-full mt-4"></div>
                 </div>
-                <div className="group/section">
+                    <div className="group/section">
                   <h4 className="text-[16px] font-sans text-gray-400 mb-3">
                     Paid Media & Lead Gen
                   </h4>
@@ -729,7 +729,7 @@ export default function Home() {
                       href="#"
                       className="flex items-start gap-3 p-3 rounded-none hover:bg-[#F9FAFB] transition-all duration-300 group/item overflow-hidden"
                     >
-                      <CircleDollarSign className="w-5 h-5 text-gray-400 group-hover/item:text-black mt-1 shrink-0" />
+                      <img src="/images/pay-per-click.png" alt="Pay-Per-Click" className="w-6 h-6 object-contain brightness-0 mt-1 shrink-0" />
                       <div className="grid transition-all duration-300 grid-rows-[auto_0fr] group-hover/section:grid-rows-[auto_1fr]">
                         <span className="text-base text-black block transition-colors leading-tight">
                           Pay-Per-Click
@@ -745,7 +745,7 @@ export default function Home() {
                       href="#"
                       className="flex items-start gap-3 p-3 rounded-none hover:bg-[#F9FAFB] transition-all duration-300 group/item overflow-hidden"
                     >
-                      <Users className="w-5 h-5 text-gray-400 group-hover/item:text-black mt-1 shrink-0" />
+                      <img src="/images/lsa-management.png" alt="LSA Management" className="w-6 h-6 object-contain brightness-0 mt-1 shrink-0" />
                       <div className="grid transition-all duration-300 grid-rows-[auto_0fr] group-hover/section:grid-rows-[auto_1fr]">
                         <span className="text-base text-black block transition-colors leading-tight">
                           LSA Management
@@ -761,7 +761,7 @@ export default function Home() {
                       href="#"
                       className="flex items-start gap-3 p-3 rounded-none hover:bg-[#F9FAFB] transition-all duration-300 group/item overflow-hidden"
                     >
-                      <Layers className="w-5 h-5 text-gray-400 group-hover/item:text-black mt-1 shrink-0" />
+                      <img src="/images/ott-advertising.png" alt="OTT Advertising" className="w-6 h-6 object-contain brightness-0 mt-1 shrink-0" />
                       <div className="grid transition-all duration-300 grid-rows-[auto_0fr] group-hover/section:grid-rows-[auto_1fr]">
                         <span className="text-base text-black block transition-colors leading-tight">
                           OTT Advertising
@@ -785,7 +785,7 @@ export default function Home() {
                       href="#"
                       className="flex items-start gap-3 p-3 rounded-none hover:bg-[#F9FAFB] transition-all duration-300 group/item overflow-hidden"
                     >
-                      <PenTool className="w-5 h-5 text-gray-400 group-hover/item:text-black mt-1 shrink-0" />
+                      <img src="/images/website-design.png" alt="Website Design" className="w-6 h-6 object-contain brightness-0 mt-1 shrink-0" />
                       <div className="grid transition-all duration-300 grid-rows-[auto_0fr] group-hover/section:grid-rows-[auto_1fr]">
                         <span className="text-base text-black block transition-colors leading-tight">
                           Website Design
@@ -801,7 +801,7 @@ export default function Home() {
                       href="#"
                       className="flex items-start gap-3 p-3 rounded-none hover:bg-[#F9FAFB] transition-all duration-300 group/item overflow-hidden"
                     >
-                      <Rocket className="w-5 h-5 text-gray-400 group-hover/item:text-black mt-1 shrink-0" />
+                      <img src="/images/digital-pr.png" alt="Digital PR" className="w-6 h-6 object-contain brightness-0 mt-1 shrink-0" />
                       <div className="grid transition-all duration-300 grid-rows-[auto_0fr] group-hover/section:grid-rows-[auto_1fr]">
                         <span className="text-base text-black block transition-colors leading-tight">
                           Digital PR
@@ -817,7 +817,7 @@ export default function Home() {
                       href="#"
                       className="flex items-start gap-3 p-3 rounded-none hover:bg-[#F9FAFB] transition-all duration-300 group/item overflow-hidden"
                     >
-                      <Handshake className="w-5 h-5 text-gray-400 group-hover/item:text-black mt-1 shrink-0" />
+                      <img src="/images/social-media.png" alt="Social Media" className="w-6 h-6 object-contain brightness-0 mt-1 shrink-0" />
                       <div className="grid transition-all duration-300 grid-rows-[auto_0fr] group-hover/section:grid-rows-[auto_1fr]">
                         <span className="text-base text-black block transition-colors leading-tight">
                           Social Media
